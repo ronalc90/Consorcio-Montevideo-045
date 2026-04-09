@@ -32,8 +32,8 @@ El sistema calcula el presupuesto actualizado con base en los **Analisis de Prec
 | | |
 |---|---|
 | **URL** | [ronalc90.github.io/Consorcio-Montevideo-045](https://ronalc90.github.io/Consorcio-Montevideo-045/) |
-| **Usuario** | `johan` |
-| **Contrasena** | `1234` |
+
+> Acceso restringido. Credenciales proporcionadas al personal autorizado.
 
 ## Funcionalidades
 
