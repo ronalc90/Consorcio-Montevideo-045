@@ -1,0 +1,8 @@
+.claude/
+CLAUDE.md
+memory/
+*.xlsx
+serve.py
+budget_data.json
+civs_detail.json
+.DS_Store

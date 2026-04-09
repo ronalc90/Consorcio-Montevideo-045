@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presupuesto CTO 1752 - IDU</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --primary: #1a365d;
+  --primary-light: #2c5282;
+  --accent: #ed8936;
+  --accent2: #48bb78;
+  --danger: #e53e3e;
+  --bg: #f7fafc;
+  --card: #fff;
+  --border: #e2e8f0;
+  --text: #2d3748;
+  --text-light: #718096;
+  --shadow: 0 1px 3px rgba(0,0,0,.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+/* LOGIN */
+#loginScreen {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #2b6cb0 100%);
+  display: flex; align-items: center; justify-content: center; z-index: 9999;
+}
+.login-box {
+  background: #fff; border-radius: 16px; padding: 48px 40px; width: 400px; max-width: 90vw;
+  box-shadow: 0 25px 50px rgba(0,0,0,.25); text-align: center;
+}
+.login-box h2 { color: var(--primary); font-size: 1.5em; margin-bottom: 4px; }
+.login-box .login-sub { color: var(--text-light); font-size: .85em; margin-bottom: 28px; }
+.login-box .login-icon { width: 64px; height: 64px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.login-box .login-icon svg { width: 32px; height: 32px; fill: #fff; }
+.login-field { margin-bottom: 16px; text-align: left; }
+.login-field label { display: block; font-size: .8em; font-weight: 600; color: var(--text-light); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; }
+.login-field input {
+  width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 8px;
+  font-size: 1em; transition: .2s; outline: none;
+}
+.login-field input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(44,82,130,.15); }
+.login-btn {
+  width: 100%; padding: 14px; background: var(--primary); color: #fff; border: none;
+  border-radius: 8px; font-size: 1em; font-weight: 600; cursor: pointer; transition: .2s; margin-top: 8px;
+}
+.login-btn:hover { background: var(--primary-light); }
+.login-error { color: var(--danger); font-size: .85em; margin-top: 12px; display: none; }
+.login-footer { margin-top: 24px; font-size: .75em; color: var(--text-light); }
+
+/* APP */
+#app { display: none; }
+.header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff; padding: 20px 30px;
+}
+.header-top { display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 1.4em; font-weight: 600; }
+.header p { opacity: .85; font-size: .85em; margin-top: 4px; }
+.header-meta { display: flex; gap: 24px; margin-top: 12px; flex-wrap: wrap; }
+.header-meta span { background: rgba(255,255,255,.15); padding: 4px 12px; border-radius: 4px; font-size: .8em; }
+.logout-btn {
+  background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3); color: #fff;
+  padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: .85em; transition: .2s;
+}
+.logout-btn:hover { background: rgba(255,255,255,.25); }
+.user-badge { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.9); font-size: .85em; }
+.user-badge svg { width: 20px; height: 20px; fill: rgba(255,255,255,.9); }
+
+.tabs {
+  display: flex; background: #fff; border-bottom: 2px solid var(--border);
+  padding: 0 30px; overflow-x: auto;
+}
+.tab {
+  padding: 12px 20px; cursor: pointer; border-bottom: 3px solid transparent;
+  font-weight: 500; color: var(--text-light); white-space: nowrap; transition: .2s;
+}
+.tab:hover { color: var(--primary); }
+.tab.active { color: var(--primary); border-bottom-color: var(--accent); }
+
+.content { padding: 20px 30px; max-width: 1600px; margin: 0 auto; }
+
+.dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.stat-card {
+  background: var(--card); border-radius: 8px; padding: 16px; box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary);
+}
+.stat-card.accent { border-left-color: var(--accent); }
+.stat-card.green { border-left-color: var(--accent2); }
+.stat-card.red { border-left-color: var(--danger); }
+.stat-label { font-size: .75em; color: var(--text-light); text-transform: uppercase; letter-spacing: .5px; }
+.stat-value { font-size: 1.5em; font-weight: 700; margin-top: 4px; }
+.stat-sub { font-size: .75em; color: var(--text-light); margin-top: 2px; }
+
+.table-wrap { background: var(--card); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; margin-bottom: 24px; }
+.table-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.table-header h3 { font-size: 1em; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.controls input, .controls select { padding: 6px 12px; border: 1px solid var(--border); border-radius: 4px; font-size: .85em; }
+.controls input { width: 220px; }
+.btn { padding: 6px 14px; border: none; border-radius: 4px; cursor: pointer; font-size: .85em; font-weight: 500; transition: .2s; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-light); }
+.btn-accent { background: var(--accent); color: #fff; }
+.btn-accent:hover { opacity:.9; }
+.btn-green { background: var(--accent2); color: #fff; }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+.btn-outline:hover { background: #f0f0f0; }
+
+table { width: 100%; border-collapse: collapse; font-size: .82em; }
+th { background: #f8fafc; padding: 8px 10px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 2; }
+td { padding: 6px 10px; border-bottom: 1px solid #f0f4f8; }
+tr:hover td { background: #f7fafc; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.section-row { background: #edf2f7; font-weight: 600; }
+.section-row td { padding: 8px 10px; color: var(--primary); }
+.positive { color: var(--accent2); }
+.negative { color: var(--danger); }
+.scroll-table { max-height: 70vh; overflow: auto; }
+
+.civ-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.civ-card { background: var(--card); border-radius: 8px; padding: 16px; box-shadow: var(--shadow); cursor: pointer; transition: .2s; border: 2px solid transparent; }
+.civ-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.civ-card .civ-id { font-weight: 700; color: var(--primary); }
+.civ-card .civ-name { font-size: .85em; color: var(--text-light); margin-top: 2px; }
+.civ-card .civ-total { font-size: 1.2em; font-weight: 700; margin-top: 8px; }
+.civ-card .civ-meta { display: flex; gap: 12px; margin-top: 6px; font-size: .75em; color: var(--text-light); }
+.civ-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: .7em; font-weight: 600; }
+.badge-s2 { background: #ebf4ff; color: #2b6cb0; }
+.badge-s5 { background: #f0fff4; color: #276749; }
+.progress-bar { height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 3px; transition: width .3s; }
+
+.hidden { display: none; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* Charts */
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+.chart-card { background: var(--card); border-radius: 8px; padding: 20px; box-shadow: var(--shadow); position: relative; }
+.chart-card h4 { font-size: .95em; margin-bottom: 12px; color: var(--primary); }
+.chart-card canvas { max-height: 380px; }
+.chart-full { grid-column: 1 / -1; }
+.chart-card.chart-full canvas { max-height: 500px; }
+.chart-actions { position: absolute; top: 16px; right: 16px; display: flex; gap: 6px; }
+.chart-actions button { padding: 4px 10px; font-size: .75em; }
+
+@media print {
+  #loginScreen { display: none !important; }
+  .header { padding: 10px; }
+  .tabs, .controls, .btn, .logout-btn, .chart-actions { display: none; }
+  .content { padding: 10px; }
+  .scroll-table { max-height: none; overflow: visible; }
+  .chart-grid { break-inside: avoid; }
+  .chart-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+}
+
+@media (max-width: 768px) {
+  .chart-grid { grid-template-columns: 1fr; }
+  .login-box { padding: 32px 24px; }
+}
+
+#loading { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; display: flex; align-items: center; justify-content: center; z-index: 998; }
+#loading .spinner { width: 40px; height: 40px; border: 4px solid #e2e8f0; border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+    </div>
+    <h2>Consorcio Montevideo 045</h2>
+    <p class="login-sub">Sistema de Presupuesto - Contrato IDU 1752</p>
+    <form id="loginForm">
+      <div class="login-field">
+        <label>Usuario</label>
+        <input type="text" id="loginUser" placeholder="Ingrese su usuario" autocomplete="off" required>
+      </div>
+      <div class="login-field">
+        <label>Contrasena</label>
+        <input type="password" id="loginPass" placeholder="Ingrese su contrasena" required>
+      </div>
+      <button type="submit" class="login-btn">Iniciar Sesion</button>
+      <div class="login-error" id="loginError">Usuario o contrasena incorrectos</div>
+    </form>
+    <div class="login-footer">Instituto de Desarrollo Urbano - IDU</div>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div id="loading" style="display:none"><div class="spinner"></div></div>
+
+<!-- APP -->
+<div id="app">
+<div class="header">
+  <div class="header-top">
+    <div>
+      <h1>Presupuesto Real - Contrato IDU 1752 de 2021</h1>
+      <p>Construccion de Vias y Espacio Publico - Zonas Industriales Montevideo y Puente Aranda - Grupo 2</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <div class="user-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        <span id="currentUser"></span>
+      </div>
+      <button class="logout-btn" onclick="logout()">Cerrar Sesion</button>
+    </div>
+  </div>
+  <div class="header-meta">
+    <span>APU VISOR: Mayo 7, 2025</span>
+    <span>AIU: 34.01%</span>
+    <span>27 Frentes / CIVs</span>
+    <span id="headerTotal"></span>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" data-tab="resumen">Resumen General</div>
+  <div class="tab" data-tab="reportes">Reportes Gerencia</div>
+  <div class="tab" data-tab="frentes">Frentes (27 CIVs)</div>
+  <div class="tab" data-tab="presupuesto">Presupuesto Detallado</div>
+  <div class="tab" data-tab="comparativo">Comparativo Contratista</div>
+</div>
+
+<div class="content">
+  <!-- RESUMEN -->
+  <div class="panel active" id="panel-resumen">
+    <div class="dashboard" id="dashboardCards"></div>
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>Resumen por Frente (CIV)</h3>
+        <div class="controls">
+          <select id="filterSubgrupo"><option value="all">Todos los subgrupos</option><option value="2">Subgrupo 2 - Montevideo</option><option value="5">Subgrupo 5 - Puente Aranda</option></select>
+          <button class="btn btn-outline" onclick="exportTableCSV('resumenTable')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table">
+        <table id="resumenTable">
+          <thead><tr><th>#</th><th>CIV</th><th>Nomenclatura</th><th>Tramo</th><th>Area (m2)</th><th class="num">Costo Directo</th><th class="num">AIU (34.01%)</th><th class="num">Total con AIU</th><th class="num">$/m2</th><th>% Incidencia</th></tr></thead>
+          <tbody id="resumenBody"></tbody>
+          <tfoot id="resumenFoot"></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <div class="table-header"><h3>Resumen por Capitulo</h3></div>
+      <div class="scroll-table">
+        <table id="chapterTable">
+          <thead><tr><th>Capitulo</th><th class="num">Costo Directo</th><th class="num">Total con AIU</th><th>% Incidencia</th></tr></thead>
+          <tbody id="chapterBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPORTES GERENCIA -->
+  <div class="panel" id="panel-reportes">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+      <h2 style="font-size:1.2em;color:var(--primary)">Reportes para Alta Gerencia</h2>
+      <div class="controls">
+        <button class="btn btn-primary" onclick="window.print()">Imprimir Reporte</button>
+      </div>
+    </div>
+
+    <div class="dashboard" id="reportDashboard"></div>
+
+    <div class="chart-grid">
+      <div class="chart-card chart-full">
+        <h4>Presupuesto por Frente (CIV) - Total con AIU</h4>
+        <div class="chart-actions"><button class="btn btn-outline" onclick="downloadChart('chartBarFrente')">PNG</button></div>
+        <canvas id="chartBarFrente"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h4>Distribucion por Subgrupo</h4>
+        <div class="chart-actions"><button class="btn btn-outline" onclick="downloadChart('chartDona')">PNG</button></div>
+        <canvas id="chartDona"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h4>Composicion por Capitulo</h4>
+        <div class="chart-actions"><button class="btn btn-outline" onclick="downloadChart('chartCapitulo')">PNG</button></div>
+        <canvas id="chartCapitulo"></canvas>
+      </div>
+
+      <div class="chart-card chart-full">
+        <h4>Presupuesto Acumulado por Frente (Curva S)</h4>
+        <div class="chart-actions"><button class="btn btn-outline" onclick="downloadChart('chartAcumulado')">PNG</button></div>
+        <canvas id="chartAcumulado"></canvas>
+      </div>
+
+      <div class="chart-card chart-full">
+        <h4>Top 15 Items con Mayor Incidencia en el Presupuesto</h4>
+        <div class="chart-actions"><button class="btn btn-outline" onclick="downloadChart('chartTopItems')">PNG</button></div>
+        <canvas id="chartTopItems"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRENTES -->
+  <div class="panel" id="panel-frentes">
+    <div class="controls" style="margin-bottom:16px">
+      <select id="filterSubgrupoFrente"><option value="all">Todos</option><option value="2">Subgrupo 2</option><option value="5">Subgrupo 5</option></select>
+      <input type="text" id="searchCiv" placeholder="Buscar CIV o nomenclatura...">
+    </div>
+    <div class="civ-grid" id="civGrid"></div>
+    <div id="civDetail" class="hidden">
+      <div class="table-wrap">
+        <div class="table-header">
+          <h3 id="civDetailTitle"></h3>
+          <div class="controls">
+            <button class="btn btn-outline" onclick="closeCivDetail()">Volver a frentes</button>
+            <button class="btn btn-outline" onclick="exportTableCSV('civDetailTable')">Exportar CSV</button>
+          </div>
+        </div>
+        <div class="scroll-table">
+          <table id="civDetailTable">
+            <thead><tr><th>Item</th><th>Codigo IDU</th><th>Descripcion</th><th>Und</th><th class="num">Cantidad</th><th class="num">VU VISOR (CD)</th><th class="num">VU con AIU</th><th class="num">Total con AIU</th></tr></thead>
+            <tbody id="civDetailBody"></tbody>
+            <tfoot id="civDetailFoot"></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRESUPUESTO DETALLADO -->
+  <div class="panel" id="panel-presupuesto">
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>Presupuesto Completo - Precios VISOR Mayo 2025</h3>
+        <div class="controls">
+          <input type="text" id="searchItem" placeholder="Buscar item, codigo o descripcion...">
+          <select id="filterChapter"><option value="all">Todos los capitulos</option></select>
+          <button class="btn btn-outline" onclick="exportTableCSV('fullBudgetTable')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table">
+        <table id="fullBudgetTable">
+          <thead><tr><th>Item</th><th>Codigo</th><th>Descripcion</th><th>Und</th><th class="num">Cantidad Total</th><th class="num">VU Original (CD)</th><th class="num">VU VISOR (CD)</th><th class="num">Dif. VU</th><th class="num">Total VISOR+AIU</th></tr></thead>
+          <tbody id="fullBudgetBody"></tbody>
+          <tfoot id="fullBudgetFoot"></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARATIVO -->
+  <div class="panel" id="panel-comparativo">
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>Comparativo: Presupuesto IDU vs Contratista</h3>
+        <div class="controls">
+          <button class="btn btn-accent" onclick="showContractorInput()">Ingresar Presupuesto Contratista</button>
+          <button class="btn btn-outline" id="btnExportComp" onclick="exportTableCSV('compareTable')" style="display:none">Exportar CSV</button>
+        </div>
+      </div>
+      <p style="padding:16px 20px;color:var(--text-light);font-size:.9em;">
+        Aqui podras comparar el presupuesto real (calculado con precios VISOR Mayo 2025 + AIU 34.01%)
+        con el presupuesto que presente el contratista para cada frente.
+      </p>
+      <div id="contractorInputArea" class="hidden" style="padding:0 20px 20px">
+        <div style="display:flex;gap:12px;margin-bottom:12px;align-items:center;flex-wrap:wrap">
+          <select id="compareCiv" style="padding:6px 12px;border:1px solid var(--border);border-radius:4px;"><option value="all">Todos los frentes</option></select>
+          <span style="color:var(--text-light);font-size:.85em;">Ingresa los valores del contratista por item</span>
+        </div>
+        <div class="scroll-table" style="max-height:60vh">
+          <table id="compareTable">
+            <thead><tr><th>Item</th><th>Descripcion</th><th>Und</th><th class="num">Cant.</th><th class="num">VU IDU (AIU)</th><th class="num">Total IDU</th><th class="num">VU Contratista</th><th class="num">Total Contratista</th><th class="num">Diferencia</th><th>%</th></tr></thead>
+            <tbody id="compareBody"></tbody>
+            <tfoot id="compareFoot"></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+// ── AUTH ──
+const VALID_USER = 'johan', VALID_PASS = '1234';
+
+function checkAuth() {
+  if (sessionStorage.getItem('auth') === 'true') { showApp(); return; }
+  document.getElementById('loginScreen').style.display = 'flex';
+}
+
+document.getElementById('loginForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const u = document.getElementById('loginUser').value.trim().toLowerCase();
+  const p = document.getElementById('loginPass').value;
+  if (u === VALID_USER && p === VALID_PASS) {
+    sessionStorage.setItem('auth', 'true');
+    sessionStorage.setItem('user', u);
+    showApp();
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+    document.getElementById('loginPass').value = '';
+  }
+});
+
+function showApp() {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('loading').style.display = 'flex';
+  document.getElementById('currentUser').textContent = sessionStorage.getItem('user') || VALID_USER;
+  loadData();
+}
+
+function logout() {
+  sessionStorage.clear();
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('loginUser').value = '';
+  document.getElementById('loginPass').value = '';
+  document.getElementById('loginError').style.display = 'none';
+}
+
+// ── DATA ──
+let DATA = null;
+const AIU = 1.3401;
+const fmt = n => n.toLocaleString('es-CO', {maximumFractionDigits:0});
+const fmtD = (n, d=2) => n.toLocaleString('es-CO', {maximumFractionDigits:d, minimumFractionDigits:d});
+const fmtB = n => { if (n >= 1e9) return '$'+fmtD(n/1e9,1)+' MM'; if (n >= 1e6) return '$'+fmtD(n/1e6,0)+' M'; return '$'+fmt(n); };
+
+function loadData() {
+  fetch('data.json').then(r=>r.json()).then(d => { DATA = d; init(); document.getElementById('loading').style.display='none'; });
+}
+
+function init() {
+  renderDashboard(); renderResumen(); renderChapters(); renderCivGrid();
+  renderFullBudget(); populateFilters(); setupEvents(); renderReportDashboard(); renderCharts();
+}
+
+function getItemsByCiv(civId) { return DATA.items.filter(i => i.type==='item' && i.cantidades[civId]>0); }
+
+function civTotal(civId) {
+  let cd=0;
+  DATA.items.forEach(i => { if(i.type!=='item') return; cd += (i.cantidades[civId]||0)*i.visor_sin_aiu; });
+  return { cd, total: Math.round(cd*AIU) };
+}
+
+// ── DASHBOARD ──
+function renderDashboard() {
+  let totalCD=0,totalAIU=0,totalArea=0,itemCount=0; const s2cd={},s5cd={};
+  DATA.civs.forEach(c => { const t=civTotal(c.id); totalCD+=t.cd; totalAIU+=t.total; totalArea+=c.area; if(c.subgrupo==='2') s2cd[c.id]=t.total; else s5cd[c.id]=t.total; });
+  DATA.items.forEach(i => { if(i.type==='item') itemCount++; });
+  const s2total=Object.values(s2cd).reduce((a,b)=>a+b,0), s5total=Object.values(s5cd).reduce((a,b)=>a+b,0);
+  document.getElementById('headerTotal').textContent='Total: $'+fmt(totalAIU);
+  document.getElementById('dashboardCards').innerHTML=`
+    <div class="stat-card"><div class="stat-label">Total Presupuesto (CD+AIU)</div><div class="stat-value">$${fmt(totalAIU)}</div><div class="stat-sub">Costo Directo: $${fmt(totalCD)}</div></div>
+    <div class="stat-card accent"><div class="stat-label">Subgrupo 2 - Montevideo</div><div class="stat-value">$${fmt(s2total)}</div><div class="stat-sub">7 CIVs | ${fmtD((s2total/totalAIU)*100,1)}%</div></div>
+    <div class="stat-card green"><div class="stat-label">Subgrupo 5 - Puente Aranda</div><div class="stat-value">$${fmt(s5total)}</div><div class="stat-sub">20 CIVs | ${fmtD((s5total/totalAIU)*100,1)}%</div></div>
+    <div class="stat-card"><div class="stat-label">Items de Presupuesto</div><div class="stat-value">${itemCount}</div><div class="stat-sub">27 frentes | ${fmtD(totalArea,0)} m2 total</div></div>
+    <div class="stat-card accent"><div class="stat-label">Costo Promedio / m2</div><div class="stat-value">$${fmt(Math.round(totalAIU/totalArea))}</div><div class="stat-sub">Con AIU incluido</div></div>`;
+}
+
+// ── REPORT DASHBOARD ──
+function renderReportDashboard() {
+  let totalAIU=0, s2t=0, s5t=0, totalArea=0, maxCiv={id:'',total:0}, minCiv={id:'',total:Infinity};
+  DATA.civs.forEach(c => { const t=civTotal(c.id); totalAIU+=t.total; totalArea+=c.area;
+    if(c.subgrupo==='2') s2t+=t.total; else s5t+=t.total;
+    if(t.total>maxCiv.total) maxCiv={id:c.id,nom:c.nomenclatura,total:t.total};
+    if(t.total<minCiv.total) minCiv={id:c.id,nom:c.nomenclatura,total:t.total};
+  });
+  document.getElementById('reportDashboard').innerHTML=`
+    <div class="stat-card"><div class="stat-label">Valor Total del Proyecto</div><div class="stat-value">${fmtB(totalAIU)}</div><div class="stat-sub">Incluye AIU 34.01%</div></div>
+    <div class="stat-card accent"><div class="stat-label">Frente de Mayor Valor</div><div class="stat-value">${maxCiv.nom}</div><div class="stat-sub">CIV ${maxCiv.id} | ${fmtB(maxCiv.total)}</div></div>
+    <div class="stat-card green"><div class="stat-label">Frente de Menor Valor</div><div class="stat-value">${minCiv.nom}</div><div class="stat-sub">CIV ${minCiv.id} | ${fmtB(minCiv.total)}</div></div>
+    <div class="stat-card"><div class="stat-label">Area Total Intervencion</div><div class="stat-value">${fmtD(totalArea,0)} m2</div><div class="stat-sub">Montevideo + Puente Aranda</div></div>
+    <div class="stat-card red"><div class="stat-label">Promedio por Frente</div><div class="stat-value">${fmtB(Math.round(totalAIU/27))}</div><div class="stat-sub">27 frentes totales</div></div>`;
+}
+
+// ── CHARTS ──
+const chartInstances = {};
+
+function renderCharts() {
+  renderBarFrente(); renderDona(); renderCapitulo(); renderAcumulado(); renderTopItems();
+}
+
+function renderBarFrente() {
+  const labels=[], dataS2=[], dataS5=[], colors=[];
+  const sorted=[...DATA.civs].sort((a,b)=>civTotal(b.id).total-civTotal(a.id).total);
+  sorted.forEach(c => {
+    labels.push(c.nomenclatura+' '+c.desde_hasta);
+    const t=civTotal(c.id).total;
+    if(c.subgrupo==='2'){dataS2.push(t);dataS5.push(0);} else {dataS2.push(0);dataS5.push(t);}
+  });
+  if(chartInstances.chartBarFrente) chartInstances.chartBarFrente.destroy();
+  chartInstances.chartBarFrente=new Chart(document.getElementById('chartBarFrente'),{
+    type:'bar', data:{labels, datasets:[
+      {label:'Subgrupo 2 - Montevideo',data:dataS2,backgroundColor:'#3182ce'},
+      {label:'Subgrupo 5 - Puente Aranda',data:dataS5,backgroundColor:'#38a169'}
+    ]}, options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': $'+fmt(ctx.raw)}}},scales:{x:{ticks:{callback:v=>fmtB(v)}}}}
+  });
+  document.getElementById('chartBarFrente').parentElement.style.height='550px';
+}
+
+function renderDona() {
+  let s2=0,s5=0;
+  DATA.civs.forEach(c=>{const t=civTotal(c.id).total; if(c.subgrupo==='2') s2+=t; else s5+=t;});
+  if(chartInstances.chartDona) chartInstances.chartDona.destroy();
+  chartInstances.chartDona=new Chart(document.getElementById('chartDona'),{
+    type:'doughnut', data:{labels:['SG2 - Montevideo','SG5 - Puente Aranda'],datasets:[{data:[s2,s5],backgroundColor:['#3182ce','#38a169'],borderWidth:2}]},
+    options:{responsive:true,plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:ctx=>ctx.label+': $'+fmt(ctx.raw)+' ('+fmtD((ctx.raw/(s2+s5))*100,1)+'%)'}}}}
+  });
+}
+
+function renderCapitulo() {
+  const chapters={};let cur='';
+  DATA.items.forEach(i=>{if(i.type==='section'&&!i.item_pago.includes('.'))cur=i.descripcion;if(i.type==='item'){const ch=cur||'Otros';if(!chapters[ch])chapters[ch]=0;chapters[ch]+=i.cantidad_total*i.visor_con_aiu;}});
+  const sorted=Object.entries(chapters).sort((a,b)=>b[1]-a[1]);
+  const colors=['#3182ce','#38a169','#ed8936','#e53e3e','#805ad5','#d69e2e','#319795','#dd6b20','#e53e3e','#38b2ac','#667eea','#f56565'];
+  if(chartInstances.chartCapitulo) chartInstances.chartCapitulo.destroy();
+  chartInstances.chartCapitulo=new Chart(document.getElementById('chartCapitulo'),{
+    type:'pie',data:{labels:sorted.map(s=>s[0].substring(0,30)),datasets:[{data:sorted.map(s=>Math.round(s[1])),backgroundColor:colors.slice(0,sorted.length),borderWidth:2}]},
+    options:{responsive:true,plugins:{legend:{position:'bottom',labels:{font:{size:10}}},tooltip:{callbacks:{label:ctx=>{const total=sorted.reduce((a,s)=>a+s[1],0);return ctx.label+': $'+fmt(ctx.raw)+' ('+fmtD((ctx.raw/total)*100,1)+'%)'}}}}}
+  });
+}
+
+function renderAcumulado() {
+  const sorted=[...DATA.civs].sort((a,b)=>civTotal(b.id).total-civTotal(a.id).total);
+  const labels=[], acum=[], vals=[];
+  let running=0, totalAll=0;
+  sorted.forEach(c=>totalAll+=civTotal(c.id).total);
+  sorted.forEach(c=>{const t=civTotal(c.id).total; running+=t; labels.push(c.nomenclatura); acum.push(((running/totalAll)*100).toFixed(1)); vals.push(t);});
+  if(chartInstances.chartAcumulado) chartInstances.chartAcumulado.destroy();
+  chartInstances.chartAcumulado=new Chart(document.getElementById('chartAcumulado'),{
+    type:'bar',data:{labels,datasets:[
+      {type:'line',label:'% Acumulado',data:acum,borderColor:'#e53e3e',backgroundColor:'rgba(229,62,62,.1)',yAxisID:'y1',pointRadius:4,tension:.3,fill:true},
+      {type:'bar',label:'Valor por Frente',data:vals,backgroundColor:sorted.map(c=>c.subgrupo==='2'?'rgba(49,130,206,.7)':'rgba(56,161,105,.7)'),yAxisID:'y'}
+    ]},options:{responsive:true,plugins:{legend:{position:'top'},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+(ctx.datasetIndex===0?ctx.raw+'%':'$'+fmt(ctx.raw))}}},scales:{y:{position:'left',ticks:{callback:v=>fmtB(v)}},y1:{position:'right',min:0,max:100,ticks:{callback:v=>v+'%'},grid:{drawOnChartArea:false}}}}
+  });
+}
+
+function renderTopItems() {
+  const items=DATA.items.filter(i=>i.type==='item').map(i=>({desc:i.descripcion.substring(0,50),total:Math.round(i.cantidad_total*i.visor_con_aiu),item:i.item_pago})).sort((a,b)=>b.total-a.total).slice(0,15);
+  if(chartInstances.chartTopItems) chartInstances.chartTopItems.destroy();
+  chartInstances.chartTopItems=new Chart(document.getElementById('chartTopItems'),{
+    type:'bar',data:{labels:items.map(i=>i.item+' '+i.desc),datasets:[{label:'Total con AIU',data:items.map(i=>i.total),backgroundColor:items.map((_,idx)=>`hsl(${210+idx*10},70%,${50+idx*2}%)`),borderRadius:4}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'$'+fmt(ctx.raw)}}},scales:{x:{ticks:{callback:v=>fmtB(v)}}}}
+  });
+  document.getElementById('chartTopItems').parentElement.style.height='450px';
+}
+
+function downloadChart(id) {
+  const canvas=document.getElementById(id);
+  const link=document.createElement('a');
+  link.download=`reporte_${id}_${new Date().toISOString().split('T')[0]}.png`;
+  link.href=canvas.toDataURL('image/png',1.0);
+  link.click();
+}
+
+// ── RESUMEN TABLE ──
+function renderResumen() {
+  const tbody=document.getElementById('resumenBody'); let totalCD=0,totalAIU_all=0,totalArea=0,rows='';
+  ['2','5'].forEach(sg=>{
+    const civs=DATA.civs.filter(c=>c.subgrupo===sg), sgName=sg==='2'?'SUBGRUPO 2 - MONTEVIDEO':'SUBGRUPO 5 - PUENTE ARANDA';
+    rows+=`<tr class="section-row"><td colspan="10">${sgName}</td></tr>`;
+    let sgCD=0,sgTotal=0,sgArea=0;
+    civs.forEach(c=>{const t=civTotal(c.id),aiuVal=t.total-t.cd,perM2=c.area>0?Math.round(t.total/c.area):0;sgCD+=t.cd;sgTotal+=t.total;sgArea+=c.area;totalCD+=t.cd;totalAIU_all+=t.total;totalArea+=c.area;
+      rows+=`<tr data-sg="${sg}"><td>${c.numero}</td><td><strong>${c.id}</strong></td><td>${c.nomenclatura}</td><td>${c.desde_hasta}</td><td class="num">${fmtD(c.area,0)}</td><td class="num">$${fmt(t.cd)}</td><td class="num">$${fmt(aiuVal)}</td><td class="num"><strong>$${fmt(t.total)}</strong></td><td class="num">$${fmt(perM2)}</td><td class="num">${fmtD((t.total/(totalCD*AIU||1))*100,2)}%</td></tr>`;
+    });
+    rows+=`<tr style="background:#edf2f7;font-weight:600"><td colspan="4">Subtotal ${sgName}</td><td class="num">${fmtD(sgArea,0)}</td><td class="num">$${fmt(sgCD)}</td><td class="num">$${fmt(sgTotal-sgCD)}</td><td class="num">$${fmt(sgTotal)}</td><td class="num">$${fmt(Math.round(sgTotal/sgArea))}</td><td></td></tr>`;
+  });
+  tbody.innerHTML=rows;
+  document.getElementById('resumenFoot').innerHTML=`<tr style="background:#2d3748;color:#fff;font-weight:700"><td colspan="4">TOTAL GENERAL</td><td class="num">${fmtD(totalArea,0)}</td><td class="num">$${fmt(totalCD)}</td><td class="num">$${fmt(totalAIU_all-totalCD)}</td><td class="num">$${fmt(totalAIU_all)}</td><td class="num">$${fmt(Math.round(totalAIU_all/totalArea))}</td><td class="num">100%</td></tr>`;
+}
+
+function renderChapters() {
+  const chapters={};let cur='';
+  DATA.items.forEach(i=>{if(i.type==='section'&&!i.item_pago.includes('.'))cur=i.descripcion;if(i.type==='item'){const ch=cur||'Sin Capitulo';if(!chapters[ch])chapters[ch]={cd:0,total:0};chapters[ch].cd+=i.cantidad_total*i.visor_sin_aiu;chapters[ch].total+=i.cantidad_total*i.visor_con_aiu;}});
+  const grandTotal=Object.values(chapters).reduce((a,c)=>a+c.total,0);let rows='';
+  for(const[ch,vals]of Object.entries(chapters)){rows+=`<tr><td>${ch}</td><td class="num">$${fmt(vals.cd)}</td><td class="num"><strong>$${fmt(vals.total)}</strong></td><td class="num">${fmtD((vals.total/grandTotal)*100,2)}%</td></tr>`;}
+  document.getElementById('chapterBody').innerHTML=rows;
+}
+
+function renderCivGrid() {
+  const grid=document.getElementById('civGrid');let totalAll=0;DATA.civs.forEach(c=>{totalAll+=civTotal(c.id).total;});let html='';
+  DATA.civs.forEach(c=>{const t=civTotal(c.id),items=getItemsByCiv(c.id),pct=((t.total/totalAll)*100).toFixed(1);
+    html+=`<div class="civ-card" onclick="showCivDetail('${c.id}')" data-sg="${c.subgrupo}"><div style="display:flex;justify-content:space-between;align-items:center"><div><span class="civ-badge ${c.subgrupo==='2'?'badge-s2':'badge-s5'}">SG-${c.subgrupo}</span><span class="civ-id" style="margin-left:6px">CIV ${c.id}</span></div><span style="font-size:.75em;color:var(--text-light)">#${c.numero}</span></div><div class="civ-name">${c.nomenclatura} | ${c.desde_hasta}</div><div class="civ-total">$${fmt(t.total)}</div><div class="progress-bar" style="margin-top:6px"><div class="progress-fill" style="width:${pct}%;background:${c.subgrupo==='2'?'#3182ce':'#38a169'}"></div></div><div class="civ-meta"><span>${items.length} items</span><span>${fmtD(c.area,0)} m2</span><span>${pct}% del total</span>${c.area>0?`<span>$${fmt(Math.round(t.total/c.area))}/m2</span>`:''}</div></div>`;
+  });grid.innerHTML=html;
+}
+
+function showCivDetail(civId) {
+  const civ=DATA.civs.find(c=>c.id===civId),t=civTotal(civId);
+  document.getElementById('civDetail').classList.remove('hidden');document.getElementById('civGrid').style.display='none';
+  document.getElementById('civDetailTitle').textContent=`CIV ${civId} - ${civ.nomenclatura} | ${civ.desde_hasta} | Total: $${fmt(t.total)}`;
+  const tbody=document.getElementById('civDetailBody');let rows='',totalCD=0,totalAIU=0;
+  DATA.items.forEach(i=>{if(i.type==='section'){rows+=`<tr class="section-row"><td colspan="8">${i.item_pago} - ${i.descripcion}</td></tr>`;return;}if(i.type!=='item')return;const cant=i.cantidades[civId]||0;if(cant<=0)return;const totalItem=Math.round(cant*i.visor_con_aiu);totalCD+=cant*i.visor_sin_aiu;totalAIU+=totalItem;
+    rows+=`<tr><td>${i.item_pago}</td><td>${i.codigo_idu}</td><td>${i.descripcion.substring(0,80)}${i.descripcion.length>80?'...':''}</td><td>${i.und}</td><td class="num">${fmtD(cant,2)}</td><td class="num">$${fmt(i.visor_sin_aiu)}</td><td class="num">$${fmt(i.visor_con_aiu)}</td><td class="num"><strong>$${fmt(totalItem)}</strong></td></tr>`;
+  });tbody.innerHTML=rows;
+  document.getElementById('civDetailFoot').innerHTML=`<tr style="background:#2d3748;color:#fff;font-weight:700"><td colspan="5">TOTAL CIV ${civId}</td><td class="num">$${fmt(Math.round(totalCD))}</td><td></td><td class="num">$${fmt(Math.round(totalAIU))}</td></tr>`;
+}
+function closeCivDetail(){document.getElementById('civDetail').classList.add('hidden');document.getElementById('civGrid').style.display='grid';}
+
+function renderFullBudget() {
+  const tbody=document.getElementById('fullBudgetBody');let rows='',grandTotalVisor=0;
+  DATA.items.forEach(i=>{if(i.type==='section'){rows+=`<tr class="section-row"><td colspan="9">${i.item_pago} - ${i.descripcion}</td></tr>`;return;}if(i.type!=='item')return;
+    const totalVisor=Math.round(i.cantidad_total*i.visor_con_aiu),diffVU=i.visor_sin_aiu-i.vr_original_sin_aiu,diffClass=diffVU>0?'negative':diffVU<0?'positive':'';grandTotalVisor+=totalVisor;
+    rows+=`<tr data-chapter="${i.chapter||''}"><td>${i.item_pago}</td><td>${i.codigo_idu}</td><td title="${i.descripcion}">${i.descripcion.substring(0,70)}${i.descripcion.length>70?'...':''}</td><td>${i.und}</td><td class="num">${fmtD(i.cantidad_total,2)}</td><td class="num">$${fmt(i.vr_original_sin_aiu)}</td><td class="num">$${fmt(i.visor_sin_aiu)}</td><td class="num ${diffClass}">${diffVU>=0?'+':''}$${fmt(diffVU)}</td><td class="num"><strong>$${fmt(totalVisor)}</strong></td></tr>`;
+  });tbody.innerHTML=rows;
+  document.getElementById('fullBudgetFoot').innerHTML=`<tr style="background:#2d3748;color:#fff;font-weight:700"><td colspan="8">TOTAL PRESUPUESTO VISOR MAYO 2025 + AIU 34.01%</td><td class="num">$${fmt(grandTotalVisor)}</td></tr>`;
+}
+
+function showContractorInput(){document.getElementById('contractorInputArea').classList.remove('hidden');document.getElementById('btnExportComp').style.display='';renderCompareTable();}
+
+function renderCompareTable() {
+  const civId=document.getElementById('compareCiv').value,tbody=document.getElementById('compareBody');let rows='',totalIDU=0;
+  DATA.items.forEach(i=>{if(i.type==='section'){rows+=`<tr class="section-row"><td colspan="10">${i.item_pago} - ${i.descripcion}</td></tr>`;return;}if(i.type!=='item')return;
+    let cant=civId==='all'?i.cantidad_total:(i.cantidades[civId]||0);if(cant<=0)return;const totalIdu=Math.round(cant*i.visor_con_aiu);totalIDU+=totalIdu;const inputId=`vc_${i.codigo_idu}_${civId}`;
+    rows+=`<tr><td>${i.item_pago}</td><td title="${i.descripcion}">${i.descripcion.substring(0,50)}...</td><td>${i.und}</td><td class="num">${fmtD(cant,2)}</td><td class="num">$${fmt(i.visor_con_aiu)}</td><td class="num">$${fmt(totalIdu)}</td><td><input type="number" id="${inputId}" style="width:100px;padding:4px;border:1px solid #ddd;border-radius:3px" onchange="updateCompare('${i.codigo_idu}','${civId}',${cant})" placeholder="0"></td><td class="num" id="tc_${i.codigo_idu}_${civId}">$0</td><td class="num" id="diff_${i.codigo_idu}_${civId}">-</td><td class="num" id="pct_${i.codigo_idu}_${civId}">-</td></tr>`;
+  });tbody.innerHTML=rows;
+  document.getElementById('compareFoot').innerHTML=`<tr style="background:#2d3748;color:#fff;font-weight:700"><td colspan="5">TOTALES</td><td class="num" id="totalIDUComp">$${fmt(totalIDU)}</td><td></td><td class="num" id="totalContComp">$0</td><td class="num" id="totalDiffComp">-</td><td class="num" id="totalPctComp">-</td></tr>`;
+}
+
+function updateCompare(codigoIdu,civId,cant) {
+  const vu=parseFloat(document.getElementById(`vc_${codigoIdu}_${civId}`).value)||0,totalCont=Math.round(cant*vu),item=DATA.items.find(i=>i.type==='item'&&i.codigo_idu===codigoIdu),totalIdu=Math.round(cant*item.visor_con_aiu),diff=totalCont-totalIdu,pct=totalIdu>0?((diff/totalIdu)*100):0;
+  document.getElementById(`tc_${codigoIdu}_${civId}`).textContent=`$${fmt(totalCont)}`;
+  const de=document.getElementById(`diff_${codigoIdu}_${civId}`);de.textContent=`${diff>=0?'+':''}$${fmt(diff)}`;de.className=`num ${diff>0?'negative':diff<0?'positive':''}`;
+  const pe=document.getElementById(`pct_${codigoIdu}_${civId}`);pe.textContent=`${pct>=0?'+':''}${fmtD(pct,1)}%`;pe.className=`num ${pct>0?'negative':pct<0?'positive':''}`;
+  recalcCompareTotals(civId);
+}
+
+function recalcCompareTotals(civId) {
+  let totalIDU=0,totalCont=0;
+  DATA.items.forEach(i=>{if(i.type!=='item')return;let cant=civId==='all'?i.cantidad_total:(i.cantidades[civId]||0);if(cant<=0)return;totalIDU+=Math.round(cant*i.visor_con_aiu);const vu=parseFloat(document.getElementById(`vc_${i.codigo_idu}_${civId}`)?.value)||0;totalCont+=Math.round(cant*vu);});
+  const diff=totalCont-totalIDU,pct=totalIDU>0?((diff/totalIDU)*100):0;
+  document.getElementById('totalIDUComp').textContent=`$${fmt(totalIDU)}`;document.getElementById('totalContComp').textContent=`$${fmt(totalCont)}`;
+  const de=document.getElementById('totalDiffComp');de.textContent=`${diff>=0?'+':''}$${fmt(diff)}`;de.className=`num ${diff>0?'negative':diff<0?'positive':''}`;
+  const pe=document.getElementById('totalPctComp');pe.textContent=`${pct>=0?'+':''}${fmtD(pct,1)}%`;pe.className=`num ${pct>0?'negative':pct<0?'positive':''}`;
+}
+
+function populateFilters() {
+  const chapters=new Set();let cur='';DATA.items.forEach(i=>{if(i.type==='section'&&!i.item_pago.includes('.'))cur=i.descripcion;if(i.type==='item'&&cur)chapters.add(cur);});
+  const sel=document.getElementById('filterChapter');chapters.forEach(ch=>{const o=document.createElement('option');o.value=ch;o.textContent=ch;sel.appendChild(o);});
+  const cs=document.getElementById('compareCiv');DATA.civs.forEach(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=`CIV ${c.id} - ${c.nomenclatura} (${c.desde_hasta})`;cs.appendChild(o);});
+}
+
+function setupEvents() {
+  document.querySelectorAll('.tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));tab.classList.add('active');document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+    if(tab.dataset.tab==='reportes')setTimeout(()=>{Object.values(chartInstances).forEach(c=>c.resize());},100);
+  });});
+  document.getElementById('filterSubgrupo').addEventListener('change',e=>{const sg=e.target.value;document.querySelectorAll('#resumenBody tr[data-sg]').forEach(tr=>{tr.style.display=sg==='all'||tr.dataset.sg===sg?'':'none';});});
+  document.getElementById('filterSubgrupoFrente').addEventListener('change',e=>{const sg=e.target.value;document.querySelectorAll('.civ-card[data-sg]').forEach(card=>{card.style.display=sg==='all'||card.dataset.sg===sg?'':'none';});});
+  document.getElementById('searchCiv').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('.civ-card').forEach(card=>{card.style.display=card.textContent.toLowerCase().includes(q)?'':'none';});});
+  document.getElementById('searchItem').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('#fullBudgetBody tr').forEach(tr=>{if(tr.classList.contains('section-row')){tr.style.display=q?'none':'';return;}tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});});
+  document.getElementById('filterChapter').addEventListener('change',e=>{const ch=e.target.value;document.querySelectorAll('#fullBudgetBody tr').forEach(tr=>{if(ch==='all'){tr.style.display='';return;}if(tr.classList.contains('section-row')){tr.style.display='none';return;}tr.style.display=tr.dataset.chapter===ch?'':'none';});});
+  document.getElementById('compareCiv').addEventListener('change',renderCompareTable);
+}
+
+function exportTableCSV(tableId) {
+  const table=document.getElementById(tableId);let csv=[];
+  table.querySelectorAll('tr').forEach(tr=>{if(tr.style.display==='none')return;let row=[];tr.querySelectorAll('th, td').forEach(td=>{let val=td.textContent.replace(/"/g,'""').trim();row.push(`"${val}"`);});csv.push(row.join(','));});
+  const blob=new Blob(['\ufeff'+csv.join('\n')],{type:'text/csv;charset=utf-8;'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`presupuesto_${tableId}_${new Date().toISOString().split('T')[0]}.csv`;link.click();
+}
+
+// ── INIT ──
+checkAuth();
+</script>
+</body>
+</html>
