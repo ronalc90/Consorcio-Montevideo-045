@@ -1,0 +1,2923 @@
+{
+  "meta": {
+    "fuente": "PRESUPUESTO 01-09-2026 75MM 8 MESES (V4) vs comparativa.json (V1/V2)",
+    "aiu_factor": 0.31849,
+    "fecha_analisis": "2026-09-26"
+  },
+  "inventario": {
+    "renglones_np": 105,
+    "codigos_np_unicos_item_pago": 81,
+    "codigos_np_unicos_incluye_codigo_idu": 81,
+    "suma_valor_aiu": 14150924549.0,
+    "por_unidad": {
+      "M3": {
+        "renglones": 7,
+        "valor_aiu": 5857209779.0
+      },
+      "UN": {
+        "renglones": 56,
+        "valor_aiu": 4005241645.0
+      },
+      "ML": {
+        "renglones": 30,
+        "valor_aiu": 2431794663.0
+      },
+      "M2": {
+        "renglones": 1,
+        "valor_aiu": 1107150225.0
+      },
+      "UND": {
+        "renglones": 6,
+        "valor_aiu": 544744650.0
+      },
+      "HR": {
+        "renglones": 1,
+        "valor_aiu": 103278240.0
+      },
+      "GLB/MES": {
+        "renglones": 2,
+        "valor_aiu": 64475225.0
+      },
+      "KG": {
+        "renglones": 1,
+        "valor_aiu": 26838000.0
+      },
+      "VIAJE": {
+        "renglones": 1,
+        "valor_aiu": 10192122.0
+      }
+    },
+    "por_capitulo": {
+      "5. REDES HIDROSANITARIAS": {
+        "renglones": 77,
+        "valor_aiu": 5164749894.0
+      },
+      "2. PAVIMENTOS": {
+        "renglones": 1,
+        "valor_aiu": 3269600612.0
+      },
+      "1. PRELIMINARES": {
+        "renglones": 4,
+        "valor_aiu": 2634804002.0
+      },
+      "6. REDES SECAS": {
+        "renglones": 18,
+        "valor_aiu": 1918131522.0
+      },
+      "3. ESPACIO PÚBLICO": {
+        "renglones": 5,
+        "valor_aiu": 1163638519.0
+      }
+    },
+    "por_subcapitulo": {
+      "OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB": {
+        "renglones": 11,
+        "valor_aiu": 2726071891.0
+      },
+      "RELLENOS Y CAPAS GRANULARES (BASE Y SUBBASE)": {
+        "renglones": 2,
+        "valor_aiu": 2570328777.0
+      },
+      "INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN": {
+        "renglones": 9,
+        "valor_aiu": 1701878488.0
+      },
+      "OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU": {
+        "renglones": 16,
+        "valor_aiu": 1202119306.0
+      },
+      "Andenes, Prefabricados y Pisos": {
+        "renglones": 1,
+        "valor_aiu": 1107150225.0
+      },
+      "OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB": {
+        "renglones": 12,
+        "valor_aiu": 708949238.0
+      },
+      "OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU": {
+        "renglones": 27,
+        "valor_aiu": 464083001.0
+      },
+      "INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO": {
+        "renglones": 3,
+        "valor_aiu": 103100240.0
+      },
+      "INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN": {
+        "renglones": 5,
+        "valor_aiu": 99642107.0
+      },
+      "EXCAVACIONES": {
+        "renglones": 2,
+        "valor_aiu": 64475225.0
+      },
+      "OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB": {
+        "renglones": 11,
+        "valor_aiu": 63526458.0
+      },
+      "Mobiliario y Paisajismo": {
+        "renglones": 3,
+        "valor_aiu": 51025466.0
+      },
+      "INSTALACIONES VANTI": {
+        "renglones": 1,
+        "valor_aiu": 13510687.0
+      },
+      "Excavaciones, Demoliciones y Rellenos": {
+        "renglones": 1,
+        "valor_aiu": 5462828.0
+      }
+    }
+  },
+  "cambios_v2_v4": {
+    "nps_v2_total_keys": 103,
+    "nps_v4_total_keys": 81,
+    "comunes_count": 81,
+    "eliminados_v2_ausentes_v4_count": 22,
+    "nuevos_solo_v4_count": 0,
+    "eliminados_v2_ausentes_v4": [
+      {
+        "code": "NP-06",
+        "descripcion": "2 DUCTOS D=6\" + 2 DUCTOS D=3\" PVC TDP (Incluye suministro e instalación. No Incluye rellenos)",
+        "und": "ML",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "6. REDES SECAS (ENEL, ETB, Vanti)"
+      },
+      {
+        "code": "NP-08",
+        "descripcion": "4 DUCTOS D=4\" + 2 DUCTOS D=3\" PVC TDP (Incluye suministro e instalación. No Incluye rellenos)",
+        "und": "ML",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "6. REDES SECAS (ENEL, ETB, Vanti)"
+      },
+      {
+        "code": "NP-106",
+        "descripcion": "CARCAMO DE PROTECCION CON ELEMENTOS PREFABRICADOS PARA PROTECCION DE 6 DUCTOS D=6\" + 2 DUCTOS D=3\" DE ENEL",
+        "und": "ML",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "6. REDES SECAS (ENEL, ETB, Vanti)"
+      },
+      {
+        "code": "NP-11",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "6. REDES SECAS (ENEL, ETB, Vanti)"
+      },
+      {
+        "code": "NP-126",
+        "descripcion": "MALLA PUESTA A TIERRA PARA CAMARA CS 535, SUBESTACION  (Incluye suministro e instalación de varilla copperweld de 5/8\", cable No. 2/0 AWG THHN-600V Cobre, soldadura exotérmica 90 g",
+        "und": "UN",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "6. REDES SECAS (ENEL, ETB, Vanti)"
+      },
+      {
+        "code": "NP-127",
+        "descripcion": "MALLA PUESTA A TIERRA PARA CAJA CS 290 (Incluye suministro e instalación de varilla copperweld de 5/8\", cable No. 2/0 AWG THHN-600V Cobre, soldadura exotérmica 90 gr y molde para s",
+        "und": "UN",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "6. REDES SECAS (ENEL, ETB, Vanti)"
+      },
+      {
+        "code": "NP-128",
+        "descripcion": "INSTALACIÓN DE MATERIAL DE FRESADO. (EXTENDIDO Y COMPACTACIÓN CON VIBROCOMPACTADOR).",
+        "und": "M3",
+        "cant_v2": 4383.925,
+        "valor_v2_cd": 113622568,
+        "chapter": "1. PRELIMINARES"
+      },
+      {
+        "code": "NP-129",
+        "descripcion": "CONTRATO 1752 - 2021 - DETECCIÓN DEL REFUERZO UTILIZANDO FERROSCAN (POR ELEMNTO) (INCLUYE LABORATORISTA, AUXILIAR Y VEHICULO DE TRANSPORTE)",
+        "und": "UN",
+        "cant_v2": 20,
+        "valor_v2_cd": 5221620,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-130",
+        "descripcion": "CONTRATO 1752 - 2021 - OBTENCION DE NUCLEOS DE CONCRETO ENDURECIDO (NUCLEOS DE 3\"). Norma técnica: INVE-418-13 NTC-3658-18. (INCLUYE LABORATORISTA, AUXILIAR Y VEHICULO DE TRANSPORT",
+        "und": "UN",
+        "cant_v2": 7,
+        "valor_v2_cd": 1972334,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-131",
+        "descripcion": "CONTRATO 1752 - 2021 - DETERMINACION DE LA PROFUNDIDAD DE CARBONATACION EN CONCRETO ENDURECIDO Y PUESTO EN SERVICIO. Norma técnica: UNE-112011-11 CPC-18-88. (INCLUYE LABORATORISTA,",
+        "und": "UN",
+        "cant_v2": 7,
+        "valor_v2_cd": 624715,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-132",
+        "descripcion": "CONTRATO 1752 - 2021 - METODO PARA DETERMINAR EL NUMERO DE REBOTE (INDICE ESCLEROMETRICO) EN EL CONCRETO ENDURECIDO, ZONA POR ELEMENTO. Norma técnica: INVE-413-13 NTC-3692-18 ASTM ",
+        "und": "UN",
+        "cant_v2": 15,
+        "valor_v2_cd": 2138355,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-135",
+        "descripcion": "CONTRATO 1752-2021 - BOX CULVERT TIPO POZO, Ancho Int: 1.88 m, Alto Int: 1.80m, Longitud 2.00m, Espesores: 0,30m, Cuantia: 268,4 Kg/m3, Profundidad : 0,00 m . MEZCLA HUMEDA (Incluy",
+        "und": "UN",
+        "cant_v2": 3,
+        "valor_v2_cd": 103358232,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-25",
+        "descripcion": "TUBERIA CONCRETO D=36\" CL. IV REFORZADO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 26.17,
+        "valor_v2_cd": 46115047,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-67",
+        "descripcion": "ESTABILIZACIÓN DE SUBRASANTE CON RAJÓN, INCLUYE EQUIPO DE COMPACTACIÓN (SUMINISTRO, EXTENDIDO, NIVELACIÓN Y COMPACTACIÓN CON EQUIPO MECÁNICO. NO INCLUYE MATERIAL DE SELLO)",
+        "und": "M3",
+        "cant_v2": 526.39,
+        "valor_v2_cd": 80682954,
+        "chapter": "3. ESPACIO PÚBLICO"
+      },
+      {
+        "code": "NP-70",
+        "descripcion": "CONTRATO 1752 - 2021 - APUNTALAMIENTO TEMPORAL DE MURO PREDIO IDPAC CON PLANCHONES TRANSVERSALES \n(2.90X0.18X0.04M), VIGAS LONGITUDINALES (0.2X0.1X3M) Y CODALES DE MADERA (D=0.15M)",
+        "und": "ML",
+        "cant_v2": 103,
+        "valor_v2_cd": 62686006,
+        "chapter": "1. PRELIMINARES"
+      },
+      {
+        "code": "NP-76",
+        "descripcion": "TRANSPORTE DE PETREOS",
+        "und": "M3",
+        "cant_v2": 16.940000000000005,
+        "valor_v2_cd": 640332,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-77",
+        "descripcion": "BASE Y CAÑUELA PARA CAJA DE INSPECION 0.8X0.8 M, CONSTRUIDA IN SITU (Incluye relleno, concreto impermeabilizado de 3000 PSI, acero de refuerzo)",
+        "und": "UN",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-78",
+        "descripcion": "PASO PLASTICO PARA CAJA Y/O POZOS DE INSPECION CON ALTURA SUPERIOR A 1.20M (INCLUYE SUMINISTRO E INSTALACION)",
+        "und": "UN",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "6. REDES SECAS (ENEL, ETB, Vanti)"
+      },
+      {
+        "code": "NP-81",
+        "descripcion": "TUBERIA CONCRETO REFORZADO CON RECUBRIMIENTO INTERNO EN POLIETILENO D=32\" (INCLUYE SUMINISTRO E INSTALACIÓN). INCLUYE MORTERO 2000 PSI PARA RECUBRIMIENTO DE JUNTA.",
+        "und": "ML",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-82",
+        "descripcion": "TUBERIA CONCRETO REFORZADO  D=32\" (INCLUYE SUMINISTRO E INSTALACIÓN). INCLUYE MORTERO 2000 PSI PARA RECUBRIMIENTO DE JUNTA.",
+        "und": "ML",
+        "cant_v2": 235.10000000000002,
+        "valor_v2_cd": 369257464,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-89",
+        "descripcion": "CONEXIONES KIT SILLA YEE 400 X 160 PVC. SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "valor_v2_cd": 0,
+        "chapter": "5. REDES HIDROSANITARIAS (Acueducto/Alcantarillado)"
+      },
+      {
+        "code": "NP-95",
+        "descripcion": "FRESADO PAVIMENTO ASFÁLTICO (INCLUYE CARGUE) INCLUYE AGUA, PUNTAS. NO INCLUYE TRANSPORTE DE MAQUINARIA, TRANSPORTE DEL FRESADO NI DISPOSICIÓN FINAL).",
+        "und": "M3",
+        "cant_v2": 1045.58,
+        "valor_v2_cd": 137998785,
+        "chapter": "1. PRELIMINARES"
+      }
+    ],
+    "nuevos_solo_v4": [],
+    "comunes": [
+      {
+        "code": "NP-01",
+        "descripcion": "CONSTRUCCION  DE  CAJA  DE INSPECCIÓN PARA ALUMBRADO PUBLICO Y  ACOMETIDAS  EN  BAJA  NORMA CODENSA  CS  274  (Norma  2018-2019) (Incluye concreto de base, muro de espesor 0.15 m, ",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 63,
+        "delta_cant": 63,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 71400732.65629622,
+        "delta_valor_cd": 71400732.65629622,
+        "fila_v4": 608
+      },
+      {
+        "code": "NP-02",
+        "descripcion": "CONSTRUCCION DE CAJA DE INSPECCIÓN SENCILLA PARA CANALIZACION EN M.T. Y B.T. NORMA CODENSA CS 275 (Norma 2018-2019) (Incluye concreto de base, muros de espesor 0.25m, pañete, receb",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 3,
+        "delta_cant": 3,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 6630678.275906529,
+        "delta_valor_cd": 6630678.275906529,
+        "fila_v4": 609
+      },
+      {
+        "code": "NP-03",
+        "descripcion": "CONSTRUCCION DE CAJA DE INSPECCION DOBLE PARA CANALIZACION DE M.T. Y B.T. TIPO CS 276 (Norma 2018) (Incluye concreto de base, muro de espesor 0.25m, pañete, recebo común, escalera ",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 165,
+        "delta_cant": 165,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 590381610.7820309,
+        "delta_valor_cd": 590381610.7820309,
+        "fila_v4": 547
+      },
+      {
+        "code": "NP-04",
+        "descripcion": "CONSTRUCCION  DE  CAJA  DE INSPECCIÓN  TIPO  VEHICULAR  NORMA CODENSA  CS  280  (Norma  2018)  (Incluye concreto de base, muro de espesor 0.25 m, pañete, recebo comun, concreto par",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 12,
+        "delta_cant": 12,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 56889214.17682349,
+        "delta_valor_cd": 56889214.17682349,
+        "fila_v4": 548
+      },
+      {
+        "code": "NP-05",
+        "descripcion": "'1 DUCTO D=3\" PVC-TDP (INCLUYE SUMINISTRO E INSTALACIÓN. NO INCLUYE RELLENOS) NORMA CS220.",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 5.73,
+        "delta_cant": 5.73,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 164282.6263377045,
+        "delta_valor_cd": 164282.6263377045,
+        "fila_v4": 610
+      },
+      {
+        "code": "NP-07",
+        "descripcion": "6 DUCTOS D=6\" PVC-TDP (INCLUYE SUMINISTRO E INSTALACIÓN. NO INCLUYE RELLENOS). NORMA CS212.",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 619.86,
+        "delta_cant": 619.86,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 229500850.97346207,
+        "delta_valor_cd": 229500850.97346207,
+        "fila_v4": 551
+      },
+      {
+        "code": "NP-09",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=2\" (Suministro e Instalación)",
+        "und": "UN",
+        "cant_v2": 60,
+        "cant_v4": 60,
+        "delta_cant": 0,
+        "valor_v2_cd": 522480,
+        "valor_v4_cd": 500527.1181427239,
+        "delta_valor_cd": -21952.88185727608,
+        "fila_v4": 553
+      },
+      {
+        "code": "NP-10",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=3\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 760,
+        "delta_cant": 760,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 9268208.329225099,
+        "delta_valor_cd": 9268208.329225099,
+        "fila_v4": 554
+      },
+      {
+        "code": "NP-101",
+        "descripcion": "TRANSPORTE DE MATERIAL FRESADO PROVENIENTE DE SITIO DE OBRA AL SITIO DISPUESTO PARA MEZCLAS, ESTABILIZAR O DEJAR EN PATIOS DE ACOPIO DEL IDU.",
+        "und": "M3",
+        "cant_v2": 4244.22,
+        "cant_v4": 466.43,
+        "delta_cant": -3777.7900000000004,
+        "valor_v2_cd": 39950843,
+        "valor_v4_cd": 4143245.6825611116,
+        "delta_valor_cd": -35807597.317438886,
+        "fila_v4": 59
+      },
+      {
+        "code": "NP-105",
+        "descripcion": "CARCAMO DE PROTECCION PARA DE RED DE GAS DE D=6\" CON MURO DOBLE EN LADRILLO TOLETE DE 24X12X6 CM Y CON DIMENSIONES: Ancho 0,88 m y alto 0,44 m (Incluye: Solado de 0,08 m en concret",
+        "und": "ML",
+        "cant_v2": 35.3,
+        "cant_v4": 35.3,
+        "delta_cant": 0.0,
+        "valor_v2_cd": 9023315,
+        "valor_v4_cd": 10247090.990451198,
+        "delta_valor_cd": 1223775.990451198,
+        "fila_v4": 674
+      },
+      {
+        "code": "NP-109",
+        "descripcion": "CONTRATO 1752 - 2021 IMPLEMENTACIÓN DE LA FASE DE RESCATE ARQUEOLÓGICO PARA UNA CUADRÍCULA MÍNIMA PARA UN CORTE ARQUEOLÓGICO ( 1m x 1m) PARA LA IMPLEMENTACIÓN DEL MANEJO DE ARQUEOL",
+        "und": "GLB/MES",
+        "cant_v2": 2,
+        "cant_v4": 2,
+        "delta_cant": 0,
+        "valor_v2_cd": 29993782,
+        "valor_v4_cd": 29993782.281245973,
+        "delta_valor_cd": 0.28124597296118736,
+        "fila_v4": 16
+      },
+      {
+        "code": "NP-110",
+        "descripcion": "CONTRATO 1752 - 2021 - EJECUCIÓN DE LABORATORIO DE ARQUEOLOGÍA PARA ANÁLISIS DEL MATERIAL ENCONTRADO DURANTE LA IMPLEMENTACIÓN DEL PLAN DE MANEJO ARQUEOLÓGICO. (LAVADO, CLASIFICACI",
+        "und": "GLB/MES",
+        "cant_v2": 1,
+        "cant_v4": 1,
+        "delta_cant": 0,
+        "valor_v2_cd": 18907025,
+        "valor_v4_cd": 18907024.70250059,
+        "delta_valor_cd": -0.2974994108080864,
+        "fila_v4": 17
+      },
+      {
+        "code": "NP-118",
+        "descripcion": "DEMOLICION DE CANALIZACION DE REDES DE COMUNICACIONES DUCTOS PVC-TDP (INCLUYE RETIRO Y DISPOSICION DE ESCOMBROS)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 2157.2499999999995,
+        "delta_cant": 2157.2499999999995,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 21317423.719557982,
+        "delta_valor_cd": 21317423.719557982,
+        "fila_v4": 518
+      },
+      {
+        "code": "NP-119",
+        "descripcion": "NIVELACIÓN DE CAJA CS 275 EN ANDEN H= 0.40M (INCLUYE CONCRETO 2500 PSI HECHO EN OBRA, LADRILLO TOLETE RECOCIDO 24X12X6. MORTERO 1:5 HECHO EN OBRA. INCLUYE REPOSICIÓN DE MARCO Y TAP",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 1,
+        "delta_cant": 1,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 802151.7038430326,
+        "delta_valor_cd": 802151.7038430326,
+        "fila_v4": 519
+      },
+      {
+        "code": "NP-12",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 2688,
+        "delta_cant": 2688,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 83747583.97864224,
+        "delta_valor_cd": 83747583.97864224,
+        "fila_v4": 562
+      },
+      {
+        "code": "NP-120",
+        "descripcion": "NIVELACION DE CAJA CS276 EN ANDEN H= 0.42M (INCLUYE CONCRETO 2500 PSI HECHO EN OBRA, LADRILLO TOLETE RECOCIDO 24X12X6. MORTERO 1:5 HECHO EN OBRA. INCL. REPOSICION DE MARCO Y TAPA P",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 33,
+        "delta_cant": 33,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 50002825.201556325,
+        "delta_valor_cd": 50002825.201556325,
+        "fila_v4": 520
+      },
+      {
+        "code": "NP-121",
+        "descripcion": "NIVELACIÓN DE CAJA DE INSPECCIÓN TIPO VEHICULAR NORMA CODENSA CS 280 H=0,5M (INCLUYE CONCRETO 3000 PSI PREMEZCLADO, LADRILLO TOLETE RECOCIDO 24X12X6. MORTERO 1:4 IMPERMEABILIZADO H",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 1,
+        "delta_cant": 1,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 2951059.924610729,
+        "delta_valor_cd": 2951059.924610729,
+        "fila_v4": 521
+      },
+      {
+        "code": "NP-122",
+        "descripcion": "CONSTRUCCION DE CAJA DE INSPECCION DOBLE PARA CANALIZACION DE M.T. Y B.T. TIPO CS 276 (Norma 2025) (Incluye concreto de base, muro doble, pañete, recebo común, paso plástico en pol",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 73,
+        "delta_cant": 73,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 245165535.5747863,
+        "delta_valor_cd": 245165535.5747863,
+        "fila_v4": 561
+      },
+      {
+        "code": "NP-123",
+        "descripcion": "MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTICO CA 14 (Suministro, Extendido, Nivelación y Compactación\nmecánica con vibrocompactador y compactador de llantas)",
+        "und": "M3",
+        "cant_v2": 1686.0999999999997,
+        "cant_v4": 2089.45,
+        "delta_cant": 403.35000000000014,
+        "valor_v2_cd": 2120591109,
+        "valor_v4_cd": 2479806909.4191084,
+        "delta_valor_cd": 359215800.4191084,
+        "fila_v4": 39
+      },
+      {
+        "code": "NP-124",
+        "descripcion": "BASE GRANULAR CLASE A (BG_A) CON RECICLADO DE CONCRETO HIDRAULICO (SUMINISTRO, EXTENDIDO, NIVELACIÓN, HUMEDECIMIENTO Y COMPACTACIÓN CON VIBROCOMPACTADOR)",
+        "und": "M3",
+        "cant_v2": 7495.05,
+        "cant_v4": 10476.554999999998,
+        "delta_cant": 2981.5049999999983,
+        "valor_v2_cd": 1448148591,
+        "valor_v4_cd": 1910156251.469484,
+        "delta_valor_cd": 462007660.4694841,
+        "fila_v4": 30
+      },
+      {
+        "code": "NP-133",
+        "descripcion": "CONTRATO 1752-2021 - BOX CULVERT PREFABRICADO TIPO 1, Ancho Int: 1.875 m, Alto Int: 1.80m, Longitud: 1.00m, Espesores de muros y placa fondo : 0,30m, Espesor de placa superior 0,25",
+        "und": "UN",
+        "cant_v2": 126,
+        "cant_v4": 110,
+        "delta_cant": -16,
+        "valor_v2_cd": 1555213842,
+        "valor_v4_cd": 1425680391.963534,
+        "delta_valor_cd": -129533450.03646588,
+        "fila_v4": 479
+      },
+      {
+        "code": "NP-134",
+        "descripcion": "CONTRATO 1752-2021 - BOX CULVERT PREFABRICADO TIPO SUMIDERO, Ancho Int: 1.875 m, Alto Int: 1.80m, Longitud 1.00m, Espesores de muros y placa fondo : 0,30m, Espesor de placa superio",
+        "und": "UN",
+        "cant_v2": 2,
+        "cant_v4": 2,
+        "delta_cant": 0,
+        "valor_v2_cd": 29396310,
+        "valor_v4_cd": 30584917.59512776,
+        "delta_valor_cd": 1188607.5951277614,
+        "fila_v4": 480
+      },
+      {
+        "code": "NP-16",
+        "descripcion": "ESTAMPADO PARA CONCRETO MR DE POMPEYANOS, ACCESOS VEHICULARES A PREDIOS Y VÍAS (ACABADO Y CURADO, SUMINISTRO Y MANO DE OBRA. INCLUYE JUEGO DE MOLDES, COLOR ENDURECEDOR DE CUARZO, D",
+        "und": "M2",
+        "cant_v2": 9540.779999999999,
+        "cant_v4": 18100.45,
+        "delta_cant": 8559.670000000002,
+        "valor_v2_cd": 442615866,
+        "valor_v4_cd": 839710748.6594514,
+        "delta_valor_cd": 397094882.65945137,
+        "fila_v4": 87
+      },
+      {
+        "code": "NP-17",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=24\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 97.96,
+        "cant_v4": 148.03,
+        "delta_cant": 50.07000000000001,
+        "valor_v2_cd": 70768949,
+        "valor_v4_cd": 106940893.74966818,
+        "delta_valor_cd": 36171944.74966818,
+        "fila_v4": 463
+      },
+      {
+        "code": "NP-18",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=27\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 108.96,
+        "delta_cant": 108.96,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 93320216.30804937,
+        "delta_valor_cd": 93320216.30804937,
+        "fila_v4": 464
+      },
+      {
+        "code": "NP-19",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=36\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 52.29,
+        "cant_v4": 122.00999999999999,
+        "delta_cant": 69.72,
+        "valor_v2_cd": 98468659,
+        "valor_v4_cd": 229760221.92053032,
+        "delta_valor_cd": 131291562.92053032,
+        "fila_v4": 465
+      },
+      {
+        "code": "NP-20",
+        "descripcion": "TUBERIA CONCRETO D=10\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 202.39000000000001,
+        "delta_cant": 202.39000000000001,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 29063946.63592443,
+        "delta_valor_cd": 29063946.63592443,
+        "fila_v4": 409
+      },
+      {
+        "code": "NP-21",
+        "descripcion": "TUBERIA CONCRETO D=16\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 72.15,
+        "delta_cant": 72.15,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 22960946.992392816,
+        "delta_valor_cd": 22960946.992392816,
+        "fila_v4": 410
+      },
+      {
+        "code": "NP-22",
+        "descripcion": "TUBERIA CONCRETO D=18\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 199.94,
+        "delta_cant": 199.94,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 83498670.44877094,
+        "delta_valor_cd": 83498670.44877094,
+        "fila_v4": 411
+      },
+      {
+        "code": "NP-23",
+        "descripcion": "TUBERIA CONCRETO D=24\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 39.14,
+        "delta_cant": 39.14,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 27836127.691525914,
+        "delta_valor_cd": 27836127.691525914,
+        "fila_v4": 412
+      },
+      {
+        "code": "NP-24",
+        "descripcion": "TUBERIA CONCRETO D=27\" CL. IV REFORZADO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 70.9,
+        "cant_v4": 70.9,
+        "delta_cant": 0.0,
+        "valor_v2_cd": 80561543,
+        "valor_v4_cd": 80561562.84840992,
+        "delta_valor_cd": 19.848409920930862,
+        "fila_v4": 470
+      },
+      {
+        "code": "NP-26",
+        "descripcion": "PLACA FONDO D=1.70M POZO INSPEC. (PREFABRICADA. INCL. SUMIN, INST.)",
+        "und": "UND",
+        "cant_v2": 0,
+        "cant_v4": 21.8,
+        "delta_cant": 21.8,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 24340492.533125017,
+        "delta_valor_cd": 24340492.533125017,
+        "fila_v4": 471
+      },
+      {
+        "code": "NP-27",
+        "descripcion": "PLACA CUBIERTA D=1.70M POZO INSPEC. (PREFABRICADA. INCLUYE SUMINISTRO E INSTALACIÓN. INCLUYE TAPA)",
+        "und": "UND",
+        "cant_v2": 0,
+        "cant_v4": 21.8,
+        "delta_cant": 21.8,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 40926490.9100562,
+        "delta_valor_cd": 40926490.9100562,
+        "fila_v4": 472
+      },
+      {
+        "code": "NP-28",
+        "descripcion": "CONCRETO 2000 PSI PARA REDES (Hecho en Obra 1:3:3 con arena de río y triturado de 3/4\")  (Suministro y Colocación)",
+        "und": "M3",
+        "cant_v2": 0,
+        "cant_v4": 6.2700000000000005,
+        "delta_cant": 6.2700000000000005,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 3940933.188723464,
+        "delta_valor_cd": 3940933.188723464,
+        "fila_v4": 473
+      },
+      {
+        "code": "NP-29",
+        "descripcion": "CILINDRO POZO INSP. EN MAMPOSTERIA E=0.25M (INC. SUMIN. Y CONST, ACERO PARA ESCALERAS, GEOTEXTIL NO TEJIDO CON RESISTENCIA A LA TENSION GRAB: ENTRE 450 N Y 500 N Y PAÑETE IMPERMEAB",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 35.619,
+        "delta_cant": 35.619,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 26920415.020212516,
+        "delta_valor_cd": 26920415.020212516,
+        "fila_v4": 474
+      },
+      {
+        "code": "NP-30",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=6\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 989.3199999999998,
+        "delta_cant": 989.3199999999998,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 63181148.13157476,
+        "delta_valor_cd": 63181148.13157476,
+        "fila_v4": 358
+      },
+      {
+        "code": "NP-31",
+        "descripcion": "CONEXIONES KIT SILLA YEE 315 X 160 PVC. SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 21,
+        "delta_cant": 21,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 7789904.360290939,
+        "delta_valor_cd": 7789904.360290939,
+        "fila_v4": 359
+      },
+      {
+        "code": "NP-32",
+        "descripcion": "TUBERIA PVC D=3\" TIPO U.M. RDE 21 (SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 1.27,
+        "delta_cant": 1.27,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 74157.55902585534,
+        "delta_valor_cd": 74157.55902585534,
+        "fila_v4": 232
+      },
+      {
+        "code": "NP-33",
+        "descripcion": "TUBERIA PVC D=8\" TIPO U.M. RDE 21 (SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 55.82,
+        "delta_cant": 55.82,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 13717980.416992165,
+        "delta_valor_cd": 13717980.416992165,
+        "fila_v4": 233
+      },
+      {
+        "code": "NP-34",
+        "descripcion": "TUBERIA DE ACERO AL CARBON SIN COSTURA SCH40 D=4\". SUMINISTRO E INSTALACION.",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 49.86,
+        "delta_cant": 49.86,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 9565100.228291456,
+        "delta_valor_cd": 9565100.228291456,
+        "fila_v4": 164
+      },
+      {
+        "code": "NP-35",
+        "descripcion": "TUBERIA DE ACERO AL CARBON SIN COSTURA SCH40 D=6\". SUMINISTRO E INSTALACION.",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 160.49999999999997,
+        "delta_cant": 160.49999999999997,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 60668243.21762016,
+        "delta_valor_cd": 60668243.21762016,
+        "fila_v4": 165
+      },
+      {
+        "code": "NP-36",
+        "descripcion": "DEMOLICION O RETIRO MANUAL DE TUBERIAS DE AC Ø < 12\" (INCLUYE CARGUE).",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 1154.19,
+        "delta_cant": 1154.19,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 4030285.402240442,
+        "delta_valor_cd": 4030285.402240442,
+        "fila_v4": 166
+      },
+      {
+        "code": "NP-37",
+        "descripcion": "TAPON HD EXTREMO LISO D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 2,
+        "delta_cant": 2,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 394944.2164900758,
+        "delta_valor_cd": 394944.2164900758,
+        "fila_v4": 167
+      },
+      {
+        "code": "NP-38",
+        "descripcion": "CODO HD 11.25° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 6,
+        "delta_cant": 6,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 1476120.4104695523,
+        "delta_valor_cd": 1476120.4104695523,
+        "fila_v4": 168
+      },
+      {
+        "code": "NP-39",
+        "descripcion": "CODO HD 11.25° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 10,
+        "delta_cant": 10,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 3969897.3826119276,
+        "delta_valor_cd": 3969897.3826119276,
+        "fila_v4": 169
+      },
+      {
+        "code": "NP-40",
+        "descripcion": "CODO HD 22.5° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 2,
+        "cant_v4": 2,
+        "delta_cant": 0,
+        "valor_v2_cd": 510302,
+        "valor_v4_cd": 510301.9363059257,
+        "delta_valor_cd": -0.0636940742842853,
+        "fila_v4": 240
+      },
+      {
+        "code": "NP-41",
+        "descripcion": "CODO HD 45° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 126,
+        "delta_cant": 126,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 34450199.84982821,
+        "delta_valor_cd": 34450199.84982821,
+        "fila_v4": 171
+      },
+      {
+        "code": "NP-42",
+        "descripcion": "CODO HD 45° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 220,
+        "delta_cant": 220,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 106777146.58435029,
+        "delta_valor_cd": 106777146.58435029,
+        "fila_v4": 172
+      },
+      {
+        "code": "NP-43",
+        "descripcion": "CODO HD 45° EXTREMO LISO PARA PVC D=8\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 4,
+        "delta_cant": 4,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 3908289.0275997543,
+        "delta_valor_cd": 3908289.0275997543,
+        "fila_v4": 173
+      },
+      {
+        "code": "NP-44",
+        "descripcion": "CODO HD 90° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 7,
+        "cant_v4": 8,
+        "delta_cant": 1,
+        "valor_v2_cd": 2121301,
+        "valor_v4_cd": 2424342.9984300225,
+        "delta_valor_cd": 303041.9984300225,
+        "fila_v4": 244
+      },
+      {
+        "code": "NP-45",
+        "descripcion": "CODO HD 90° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 1,
+        "cant_v4": 14,
+        "delta_cant": 13,
+        "valor_v2_cd": 567821,
+        "valor_v4_cd": 7949490.705276491,
+        "delta_valor_cd": 7381669.705276491,
+        "fila_v4": 245
+      },
+      {
+        "code": "NP-46",
+        "descripcion": "TEE HD EXTREMO LISO 8\"X6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 1,
+        "cant_v4": 1,
+        "delta_cant": 0,
+        "valor_v2_cd": 1217321,
+        "valor_v4_cd": 1217321.3297029177,
+        "delta_valor_cd": 0.32970291771925986,
+        "fila_v4": 246
+      },
+      {
+        "code": "NP-47",
+        "descripcion": "TEE HD EXTREMO LISO 8\"X4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 2,
+        "delta_cant": 2,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 2329622.5227343403,
+        "delta_valor_cd": 2329622.5227343403,
+        "fila_v4": 177
+      },
+      {
+        "code": "NP-48",
+        "descripcion": "TEE HD EXTREMO LISO 6\"X4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 7,
+        "delta_cant": 7,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 4028887.59110801,
+        "delta_valor_cd": 4028887.59110801,
+        "fila_v4": 178
+      },
+      {
+        "code": "NP-49",
+        "descripcion": "TEE HD EXTREMO LISO 4\"X4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 9,
+        "cant_v4": 11,
+        "delta_cant": 2,
+        "valor_v2_cd": 3729222,
+        "valor_v4_cd": 4557939.005984118,
+        "delta_valor_cd": 828717.0059841182,
+        "fila_v4": 249
+      },
+      {
+        "code": "NP-50",
+        "descripcion": "TEE HD EXTREMO LISO 6\"X6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 10,
+        "cant_v4": 10,
+        "delta_cant": 0,
+        "valor_v2_cd": 7132170,
+        "valor_v4_cd": 7132166.34180009,
+        "delta_valor_cd": -3.6581999100744724,
+        "fila_v4": 250
+      },
+      {
+        "code": "NP-51",
+        "descripcion": "REDUCCION CONCENTRICA HD 6\" X 4\" (SUMINISTRO E INSTALACIÓN).",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 5,
+        "delta_cant": 5,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 2356259.81236111,
+        "delta_valor_cd": 2356259.81236111,
+        "fila_v4": 181
+      },
+      {
+        "code": "NP-52",
+        "descripcion": "REDUCCIÓN CONCENTRICA HD EL 4\" X 3\". SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 4,
+        "delta_cant": 4,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 835276.7180638458,
+        "delta_valor_cd": 835276.7180638458,
+        "fila_v4": 182
+      },
+      {
+        "code": "NP-53",
+        "descripcion": "UNION DRESSER D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 8,
+        "delta_cant": 8,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 1818546.9741901723,
+        "delta_valor_cd": 1818546.9741901723,
+        "fila_v4": 183
+      },
+      {
+        "code": "NP-54",
+        "descripcion": "UNION DRESSER D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 15,
+        "delta_cant": 15,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 6291265.007698201,
+        "delta_valor_cd": 6291265.007698201,
+        "fila_v4": 184
+      },
+      {
+        "code": "NP-55",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PVC 3\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 4,
+        "delta_cant": 4,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 810427.079462112,
+        "delta_valor_cd": 810427.079462112,
+        "fila_v4": 185
+      },
+      {
+        "code": "NP-56",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PVC 4\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 42,
+        "delta_cant": 42,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 12119027.068843905,
+        "delta_valor_cd": 12119027.068843905,
+        "fila_v4": 186
+      },
+      {
+        "code": "NP-58",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PVC 8\" LINEAL SEGÚN NORMA NS-023. SUMINISTRO E INSTALACIÓN. (INCLUYE ACCESORIOS).",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 1,
+        "delta_cant": 1,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 1188680.2326904263,
+        "delta_valor_cd": 1188680.2326904263,
+        "fila_v4": 257
+      },
+      {
+        "code": "NP-59",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PEAD 6\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 1,
+        "cant_v4": 1,
+        "delta_cant": 0,
+        "valor_v2_cd": 2024939,
+        "valor_v4_cd": 2024939.1349194914,
+        "delta_valor_cd": 0.1349194913636893,
+        "fila_v4": 258
+      },
+      {
+        "code": "NP-60",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PEAD 8\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 1,
+        "delta_cant": 1,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 2319677.8132560733,
+        "delta_valor_cd": 2319677.8132560733,
+        "fila_v4": 189
+      },
+      {
+        "code": "NP-61",
+        "descripcion": "CAJA PARA VALVULA 0.4X0.4M H=0.8M (INCLUYE MARCO Y TAPA)",
+        "und": "UN",
+        "cant_v2": 28,
+        "cant_v4": 28,
+        "delta_cant": 0,
+        "valor_v2_cd": 7383908,
+        "valor_v4_cd": 7383901.281010854,
+        "delta_valor_cd": -6.718989145942032,
+        "fila_v4": 261
+      },
+      {
+        "code": "NP-62",
+        "descripcion": "CONTRATO DE OBRA IDU-1752-2021 - SERVICIO DE VÁCTOR PARA LIMPIEZA Y LAVADO DE TUBERÍA DE REDES DE ALCANTARILLADO COMO POZOS, TUBERIAS, SUMIDEROS, CAMARAS CON GRADOS DE COLMATACION ",
+        "und": "HR",
+        "cant_v2": 0,
+        "cant_v4": 216,
+        "delta_cant": 216,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 78330696.47854744,
+        "delta_valor_cd": 78330696.47854744,
+        "fila_v4": 360
+      },
+      {
+        "code": "NP-63",
+        "descripcion": "CONTRATO DE OBRA IDU-1752-2021 - SERVICIO DE SUMINISTRO DE AGUA MEDIANTE CARRO TANQUE IRRIGADOR PARA LIMPIEZA Y LAVADO DE REDES DE ALCANTARILLADO COMO POZOS, TUBERIAS, SUMIDEROS, C",
+        "und": "VIAJE",
+        "cant_v2": 0,
+        "cant_v4": 27,
+        "delta_cant": 27,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 7730147.365546952,
+        "delta_valor_cd": 7730147.365546952,
+        "fila_v4": 361
+      },
+      {
+        "code": "NP-64",
+        "descripcion": "CONTRATO DE OBRA IDU-1752-2021 - CARGUE, TRANSPORTE, TRATAMIENTO Y DISPOSICIÓN DE LODOS NO PELIGROSOS PROVENIENTES DE LA LIMPIEZA DE REDES DE ALCANTARILLADO (INCLUYE MANO DE OBRA, ",
+        "und": "KG",
+        "cant_v2": 0,
+        "cant_v4": 54000,
+        "delta_cant": 54000,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 20355103.1862206,
+        "delta_valor_cd": 20355103.1862206,
+        "fila_v4": 362
+      },
+      {
+        "code": "NP-65",
+        "descripcion": "INSPECCIÓN DE REDES DE ALCANTARILLADO CON SISTEMAS CCTV PARA DIÁMETROS MAYORES A 36\"",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 104.3,
+        "delta_cant": 104.3,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 1525631.5937170552,
+        "delta_valor_cd": 1525631.5937170552,
+        "fila_v4": 363
+      },
+      {
+        "code": "NP-66",
+        "descripcion": "CAJILLA PLASTICA Y TAPA EN POLIPROPILENO PARA MEDIDOR. SUMINISTRO E INSTALACION",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 129,
+        "delta_cant": 129,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 51952025.42302179,
+        "delta_valor_cd": 51952025.42302179,
+        "fila_v4": 190
+      },
+      {
+        "code": "NP-71",
+        "descripcion": "TUBERIA CONCRETO ALTA RESISTENCIA D= 10\" (INCLUYE SUMINISTRO, INSTALACIÓN Y MORTERO 2000 PSI PARA RECUBRIMIENTO DE JUNTA).",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 599.07,
+        "delta_cant": 599.07,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 208326184.4989344,
+        "delta_valor_cd": 208326184.4989344,
+        "fila_v4": 418
+      },
+      {
+        "code": "NP-72",
+        "descripcion": "TUBERIA DE CONCRETO DE ALTA RESISTENCIA D= 16\" (INCLUYE MORTERO DE INSTALACION). SUMINISTRO E INSTALACION",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 119.01000000000002,
+        "delta_cant": 119.01000000000002,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 78254745.95939295,
+        "delta_valor_cd": 78254745.95939295,
+        "fila_v4": 419
+      },
+      {
+        "code": "NP-73",
+        "descripcion": "TUBERIA DE CONCRETO DE ALTA RESISTENCIA D= 18\" (INCLUYE MORTERO DE INSTALACION). SUMINISTRO E INSTALACION",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 17.24,
+        "delta_cant": 17.24,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 13632046.5077475,
+        "delta_valor_cd": 13632046.5077475,
+        "fila_v4": 420
+      },
+      {
+        "code": "NP-75",
+        "descripcion": "CURVA 90° PVC D= 2\". SUMINISTRO E INSTALACION. NO INCLUYE RELLENOS",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 6,
+        "delta_cant": 6,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 177239.11444152024,
+        "delta_valor_cd": 177239.11444152024,
+        "fila_v4": 556
+      },
+      {
+        "code": "NP-79",
+        "descripcion": "CAÑUELA EN CONCRETO 2500 PSI IMPERMEABILIZADO, PARA POZO DE INSPECCIÓN DE ALCANTARILLADO D=1,20 m - NORMA EAAB NS-029. SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 21.8,
+        "delta_cant": 21.8,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 4594618.085840621,
+        "delta_valor_cd": 4594618.085840621,
+        "fila_v4": 478
+      },
+      {
+        "code": "NP-83",
+        "descripcion": "TUBERIA DE CONCRETO DE ALTA RESISTENCIA D= 14\" (INCLUYE MORTERO 2000 PSI PARA RECUBRIMIENTO DE JUNTA). SUMINISTRO E INSTALACION.",
+        "und": "ML",
+        "cant_v2": 0,
+        "cant_v4": 25.5,
+        "delta_cant": 25.5,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 15182488.301011005,
+        "delta_valor_cd": 15182488.301011005,
+        "fila_v4": 422
+      },
+      {
+        "code": "NP-84",
+        "descripcion": "TRATAMIENTO INTEGRAL DE ÁRBOLES DE 1M A 5M. (INCLUYE RIEGO, FERTILIZACIÓN EDÁFICA, MANO DE OBRA, PODA GENERAL Y RADICULAR).",
+        "und": "UN",
+        "cant_v2": 34,
+        "cant_v4": 34,
+        "delta_cant": 0,
+        "valor_v2_cd": 15392786,
+        "valor_v4_cd": 14525446.533534573,
+        "delta_valor_cd": -867339.4664654266,
+        "fila_v4": 98
+      },
+      {
+        "code": "NP-85",
+        "descripcion": "TRATAMIENTO INTEGRAL DE ÁRBOLES MAYORES A 5M. (INCLUYE RIEGO, FERTILIZACIÓN EDÁFICA, MANO DE OBRA, PODA GENERAL Y RADICULAR).",
+        "und": "UN",
+        "cant_v2": 44,
+        "cant_v4": 44,
+        "delta_cant": 0,
+        "valor_v2_cd": 23779140,
+        "valor_v4_cd": 22439235.79245956,
+        "delta_valor_cd": -1339904.2075404413,
+        "fila_v4": 99
+      },
+      {
+        "code": "NP-86",
+        "descripcion": "ELIMINACIÓN DE SETO (H> 2M) INCLUYE DESENRAIZAMIENTO, TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS EN SITIO AUTORIZADO (DISTANCIA DE TRANSPORTE 28 KM)",
+        "und": "ML",
+        "cant_v2": 46,
+        "cant_v4": 46,
+        "delta_cant": 0,
+        "valor_v2_cd": 1838850,
+        "valor_v4_cd": 1735244.1049989003,
+        "delta_valor_cd": -103605.89500109968,
+        "fila_v4": 100
+      },
+      {
+        "code": "NP-88",
+        "descripcion": "CONEXIONES KIT SILLA YEE 250 X 160 PVC. SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cant_v2": 0,
+        "cant_v4": 11,
+        "delta_cant": 11,
+        "valor_v2_cd": 0,
+        "valor_v4_cd": 2605547.254814219,
+        "delta_valor_cd": 2605547.254814219,
+        "fila_v4": 365
+      }
+    ]
+  },
+  "objetados_incluidos": [
+    {
+      "item_pago_objetado": "NP-68",
+      "codigo_idu_objetado": "10074",
+      "descripcion": "VALLA UNA CARA, DE 3.0M X 6.0M CON ESTRUCTURA METÁLICA - ESTRUCTURA TIPO VALLA EN CERCHA + BANNER. INCLUYE SUMINISTRO E INSTALACIÓN. IMPRESIÓN 720 DPI; TINTAS PARA EXTERIORES. ESTRUCTURA METÁLICA, INC",
+      "und": "UN",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 6942537.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-69",
+      "codigo_idu_objetado": "4946",
+      "descripcion": "ALQUILER DE CERRAMIENTO TIPO 2: CONSTA DE POSTES ROLLIZOS DE 1.90MT DE ALTURA LIBRE CON BASE EN CONCRETO 1500 PSI DE 30CM X 30CM, DOBLE CINTA PELIGRO CAL. 4, TELA PARA CERRAMIENTO.(INCL INSTALACION, M",
+      "und": "ML/MES",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 33864.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-90",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "SUMINISTRO E INSTALACION DE PLASTICO NEGRO CALIBRE 6 PARA CONTROL DE POLUCIÓN.",
+      "und": "M2",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 2187.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-91",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "SUMINISTRO E INSTALACION DE PUNTO ECOLOGICO 12 LITROS ESTRUCTURA 3 PUESTOS.",
+      "und": "UN",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 145000.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-92",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "CAPACITACION NIVEL ENTRANTE ESPACIOS CONFINADOS",
+      "und": "UN",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 320000.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-93",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "CAPACITACION NIVEL VIGIA ESPACIOS CONFINADOS",
+      "und": "UN",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 250000.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-94",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "CAPACITACION NIVEL SUPERVISOR ESPACIOS CONFINADOS",
+      "und": "UN",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 330000.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-97",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "PUNTO DE HIDRATACION, (SUMINISTRO DE BOTELLON DE 20000 ML, 20 LITROS O 5 GALONES)",
+      "und": "UN",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 17483.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-100",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "SUMINISTRO DE KIT ANTIDERRAMES DE 5 GALONES",
+      "und": "",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 171083.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-96",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "CAPACITACION NIVEL SUPERVISOR DE IZAJES",
+      "und": "UN",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 400000.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-98",
+      "codigo_idu_objetado": "7873",
+      "descripcion": "TRATAMIENTO Y DISPOSICIÓN FINAL DE RESIDUOS PELIGROSOS.",
+      "und": "KG",
+      "categoria": "Sistema de Gestión Ambiental, Seguridad",
+      "fila_v4": null,
+      "vu_cd_v2": 1314.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-108",
+      "codigo_idu_objetado": "6874",
+      "descripcion": "ENCUESTA DE PERCEPCIÓN CIUDADANA. INCL. FORMATO DE ENCUESTA DE PERCEPCIÓN CIUDADANA, DISEÑO DE MUESTRA Y METODOLOGÍA DE RECOLECCIÓN EN CAMPO, BASE DE DATOS EN FORMATO EXCEL, PRESENTACIÓN DE RESULTADOS",
+      "und": "UN",
+      "categoria": "Diálogo Ciudadano y Comunicación",
+      "fila_v4": null,
+      "vu_cd_v2": 105494.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-99",
+      "codigo_idu_objetado": "NO",
+      "descripcion": "FLECHA LUMINOSA INTERMITENTE DE 1.10 MTS DE LONGITUD Y 40 CMS DE ANCHO CON ESTRUCTURA EN TUBO CUADRADO DE 1\" DE 1.60 CMS DE ALTO. (INCLUYE SUMINISTRO, BATERIA 12V 5 AH E INSTALACIÓN)",
+      "und": "UN",
+      "categoria": "Plan de Manejo de Tráfico",
+      "fila_v4": null,
+      "vu_cd_v2": 1251176.0,
+      "estado": "NO_APARECE_EN_V4"
+    },
+    {
+      "item_pago_objetado": "NP-107",
+      "codigo_idu_objetado": "7508",
+      "descripcion": "BARRERA RELLENABLE (2.00X0.55X1.00M) CON CINTA REFLECTIVA (INCLUYE SUMINISTRO E INSTALACIÓN)",
+      "und": "UN",
+      "categoria": "Plan de Manejo de Tráfico",
+      "fila_v4": null,
+      "vu_cd_v2": 522726.0,
+      "estado": "NO_APARECE_EN_V4"
+    }
+  ],
+  "nps_glb_mes": [],
+  "top20": [
+    {
+      "item_pago": "NP-123",
+      "codigo_idu": "8618",
+      "descripcion": "MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTICO CA 14 (Suministro, Extendido, Nivelación y Compactación\nmecánica con vibrocompactador y compactador de llantas)",
+      "und": "M3",
+      "cantidad": 2089.45,
+      "K_vu_cd": 1186823,
+      "L_vu_cd_aiu": 1564814,
+      "valor_aiu": 3269600612,
+      "chapter": "2. PAVIMENTOS",
+      "fila": 39,
+      "civs_count": 27,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-124",
+      "codigo_idu": "4744",
+      "descripcion": "BASE GRANULAR CLASE A (BG_A) CON RECICLADO DE CONCRETO HIDRAULICO (SUMINISTRO, EXTENDIDO, NIVELACIÓN, HUMEDECIMIENTO Y COMPACTACIÓN CON VIBROCOMPACTADOR)",
+      "und": "M3",
+      "cantidad": 10476.554999999998,
+      "K_vu_cd": 182327,
+      "L_vu_cd_aiu": 240396,
+      "valor_aiu": 2518521916,
+      "chapter": "1. PRELIMINARES",
+      "fila": 30,
+      "civs_count": 27,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-133",
+      "codigo_idu": "N/A",
+      "descripcion": "CONTRATO 1752-2021 - BOX CULVERT PREFABRICADO TIPO 1, Ancho Int: 1.875 m, Alto Int: 1.80m, Longitud: 1.00m, Espesores de muros y placa fondo : 0,30m, Espesor de placa superior 0,25 m, Cuantía : 206,5 Kg/m3 - MEZCLA SECA ",
+      "und": "UN",
+      "cantidad": 110,
+      "K_vu_cd": 12960731,
+      "L_vu_cd_aiu": 17088594,
+      "valor_aiu": 1879745340,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 479,
+      "civs_count": 1,
+      "civs": [
+        "16000010"
+      ]
+    },
+    {
+      "item_pago": "NP-16",
+      "codigo_idu": "10271",
+      "descripcion": "ESTAMPADO PARA CONCRETO MR DE POMPEYANOS, ACCESOS VEHICULARES A PREDIOS Y VÍAS (ACABADO Y CURADO, SUMINISTRO Y MANO DE OBRA. INCLUYE JUEGO DE MOLDES, COLOR ENDURECEDOR DE CUARZO, DESMOLDANTE EN POLVO COLOR, SELLADOR ACRÍ",
+      "und": "M2",
+      "cantidad": 18100.45,
+      "K_vu_cd": 46392,
+      "L_vu_cd_aiu": 61167,
+      "valor_aiu": 1107150225,
+      "chapter": "3. ESPACIO PÚBLICO",
+      "fila": 87,
+      "civs_count": 27,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-03",
+      "codigo_idu": "9032",
+      "descripcion": "CONSTRUCCION DE CAJA DE INSPECCION DOBLE PARA CANALIZACION DE M.T. Y B.T. TIPO CS 276 (Norma 2018) (Incluye concreto de base, muro de espesor 0.25m, pañete, recebo común, escalera de gato, concreto para viga de soporte d",
+      "und": "UN",
+      "cantidad": 165,
+      "K_vu_cd": 3578070,
+      "L_vu_cd_aiu": 4717650,
+      "valor_aiu": 778412250,
+      "chapter": "6. REDES SECAS",
+      "fila": 547,
+      "civs_count": 27,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-122",
+      "codigo_idu": "N/A",
+      "descripcion": "CONSTRUCCION DE CAJA DE INSPECCION DOBLE PARA CANALIZACION DE M.T. Y B.T. TIPO CS 276 (Norma 2025) (Incluye concreto de base, muro doble, pañete, recebo común, paso plástico en polipropileno, concreto para viga de soport",
+      "und": "UN",
+      "cantidad": 73,
+      "K_vu_cd": 3358432,
+      "L_vu_cd_aiu": 4428059,
+      "valor_aiu": 323248307,
+      "chapter": "6. REDES SECAS",
+      "fila": 561,
+      "civs_count": 26,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003968"
+      ]
+    },
+    {
+      "item_pago": "NP-19",
+      "codigo_idu": "7435",
+      "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=36\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+      "und": "ML",
+      "cantidad": 122.00999999999999,
+      "K_vu_cd": 1883126,
+      "L_vu_cd_aiu": 2482883,
+      "valor_aiu": 302936555,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 465,
+      "civs_count": 2,
+      "civs": [
+        "16000052",
+        "16000043"
+      ]
+    },
+    {
+      "item_pago": "NP-07",
+      "codigo_idu": "3408",
+      "descripcion": "6 DUCTOS D=6\" PVC-TDP (INCLUYE SUMINISTRO E INSTALACIÓN. NO INCLUYE RELLENOS). NORMA CS212.",
+      "und": "ML",
+      "cantidad": 619.86,
+      "K_vu_cd": 370246,
+      "L_vu_cd_aiu": 488166,
+      "valor_aiu": 302594577,
+      "chapter": "6. REDES SECAS",
+      "fila": 551,
+      "civs_count": 15,
+      "civs": [
+        "9004002",
+        "9003981",
+        "16000016",
+        "16000023",
+        "16000012",
+        "16000024"
+      ]
+    },
+    {
+      "item_pago": "NP-71",
+      "codigo_idu": "4892",
+      "descripcion": "TUBERIA CONCRETO ALTA RESISTENCIA D= 10\" (INCLUYE SUMINISTRO, INSTALACIÓN Y MORTERO 2000 PSI PARA RECUBRIMIENTO DE JUNTA).",
+      "und": "ML",
+      "cantidad": 599.07,
+      "K_vu_cd": 347749,
+      "L_vu_cd_aiu": 458504,
+      "valor_aiu": 274675991,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 418,
+      "civs_count": 15,
+      "civs": [
+        "16000016",
+        "16000007",
+        "16000023",
+        "16000012",
+        "16000010",
+        "16000013"
+      ]
+    },
+    {
+      "item_pago": "NP-27",
+      "codigo_idu": "3878",
+      "descripcion": "PLACA CUBIERTA D=1.70M POZO INSPEC. (PREFABRICADA. INCLUYE SUMINISTRO E INSTALACIÓN. INCLUYE TAPA)",
+      "und": "UND",
+      "cantidad": 73,
+      "K_vu_cd": 1877362,
+      "L_vu_cd_aiu": 2475283,
+      "valor_aiu": 180695659,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 355,
+      "civs_count": 25,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-29",
+      "codigo_idu": "3471",
+      "descripcion": "CILINDRO POZO INSP. EN MAMPOSTERIA E=0.25M (INC. SUMIN. Y CONST, ACERO PARA ESCALERAS, GEOTEXTIL NO TEJIDO CON RESISTENCIA A LA TENSION GRAB: ENTRE 450 N Y 500 N Y PAÑETE IMPERMEAB.)",
+      "und": "ML",
+      "cantidad": 157.63,
+      "K_vu_cd": 755788,
+      "L_vu_cd_aiu": 996499,
+      "valor_aiu": 157078137,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 357,
+      "civs_count": 25,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-17",
+      "codigo_idu": "7432",
+      "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=24\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+      "und": "ML",
+      "cantidad": 148.03,
+      "K_vu_cd": 722427,
+      "L_vu_cd_aiu": 952513,
+      "valor_aiu": 141000499,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 463,
+      "civs_count": 3,
+      "civs": [
+        "9003990",
+        "9003967",
+        "9003968"
+      ]
+    },
+    {
+      "item_pago": "NP-42",
+      "codigo_idu": "3306",
+      "descripcion": "CODO HD 45° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+      "und": "UN",
+      "cantidad": 220,
+      "K_vu_cd": 485351,
+      "L_vu_cd_aiu": 639930,
+      "valor_aiu": 140784600,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 172,
+      "civs_count": 22,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-19",
+      "codigo_idu": "7435",
+      "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=36\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+      "und": "ML",
+      "cantidad": 52.29,
+      "K_vu_cd": 1883126,
+      "L_vu_cd_aiu": 2482883,
+      "valor_aiu": 129829952,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 408,
+      "civs_count": 2,
+      "civs": [
+        "16000052",
+        "16000043"
+      ]
+    },
+    {
+      "item_pago": "NP-18",
+      "codigo_idu": "7433",
+      "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=27\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+      "und": "ML",
+      "cantidad": 108.96,
+      "K_vu_cd": 856463,
+      "L_vu_cd_aiu": 1129238,
+      "valor_aiu": 123041772,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 464,
+      "civs_count": 1,
+      "civs": [
+        "9003981"
+      ]
+    },
+    {
+      "item_pago": "NP-12",
+      "codigo_idu": "8081",
+      "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+      "und": "UN",
+      "cantidad": 2688,
+      "K_vu_cd": 31156,
+      "L_vu_cd_aiu": 41079,
+      "valor_aiu": 110420352,
+      "chapter": "6. REDES SECAS",
+      "fila": 562,
+      "civs_count": 27,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-22",
+      "codigo_idu": "3937",
+      "descripcion": "TUBERIA CONCRETO D=18\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+      "und": "ML",
+      "cantidad": 199.94,
+      "K_vu_cd": 417619,
+      "L_vu_cd_aiu": 550626,
+      "valor_aiu": 110092162,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 411,
+      "civs_count": 2,
+      "civs": [
+        "9003990",
+        "16000028"
+      ]
+    },
+    {
+      "item_pago": "NP-26",
+      "codigo_idu": "3879",
+      "descripcion": "PLACA FONDO D=1.70M POZO INSPEC. (PREFABRICADA. INCL. SUMIN, INST.)",
+      "und": "UND",
+      "cantidad": 73,
+      "K_vu_cd": 1116536,
+      "L_vu_cd_aiu": 1472142,
+      "valor_aiu": 107466366,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 354,
+      "civs_count": 25,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967"
+      ]
+    },
+    {
+      "item_pago": "NP-27",
+      "codigo_idu": "3878",
+      "descripcion": "PLACA CUBIERTA D=1.70M POZO INSPEC. (PREFABRICADA. INCLUYE SUMINISTRO E INSTALACIÓN. INCLUYE TAPA)",
+      "und": "UND",
+      "cantidad": 43.2,
+      "K_vu_cd": 1877362,
+      "L_vu_cd_aiu": 2475283,
+      "valor_aiu": 106932226,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 415,
+      "civs_count": 21,
+      "civs": [
+        "9004002",
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003968",
+        "16000016"
+      ]
+    },
+    {
+      "item_pago": "NP-24",
+      "codigo_idu": "3993",
+      "descripcion": "TUBERIA CONCRETO D=27\" CL. IV REFORZADO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+      "und": "ML",
+      "cantidad": 70.9,
+      "K_vu_cd": 1136270,
+      "L_vu_cd_aiu": 1498161,
+      "valor_aiu": 106219615,
+      "chapter": "5. REDES HIDROSANITARIAS",
+      "fila": 413,
+      "civs_count": 1,
+      "civs": [
+        "16000023"
+      ]
+    }
+  ],
+  "clasificacion": {
+    "totales": {
+      "aprobado": {
+        "renglones": 0,
+        "valor_aiu": 0
+      },
+      "en_revision": {
+        "renglones": 105,
+        "valor_aiu": 14150924549
+      },
+      "objetado": {
+        "renglones": 0,
+        "valor_aiu": 0
+      },
+      "nuevo": {
+        "renglones": 0,
+        "valor_aiu": 0
+      }
+    },
+    "aprobado": [],
+    "en_revision": [
+      {
+        "item_pago": "NP-109",
+        "codigo_idu": "NO",
+        "descripcion": "CONTRATO 1752 - 2021 IMPLEMENTACIÓN DE LA FASE DE RESCATE ARQUEOLÓGICO PARA UNA CUADRÍCULA MÍNIMA PARA UN CORTE ARQUEOLÓGICO ( 1m x 1m) PARA",
+        "und": "GLB/MES",
+        "cantidad": 2,
+        "valor_aiu": 39546502,
+        "fila": 16,
+        "chapter": "1. PRELIMINARES"
+      },
+      {
+        "item_pago": "NP-110",
+        "codigo_idu": "NO",
+        "descripcion": "CONTRATO 1752 - 2021 - EJECUCIÓN DE LABORATORIO DE ARQUEOLOGÍA PARA ANÁLISIS DEL MATERIAL ENCONTRADO DURANTE LA IMPLEMENTACIÓN DEL PLAN DE M",
+        "und": "GLB/MES",
+        "cantidad": 1,
+        "valor_aiu": 24928723,
+        "fila": 17,
+        "chapter": "1. PRELIMINARES"
+      },
+      {
+        "item_pago": "NP-101",
+        "codigo_idu": "5380",
+        "descripcion": "TRANSPORTE DE MATERIAL FRESADO PROVENIENTE DE SITIO DE OBRA AL SITIO DISPUESTO PARA MEZCLAS, ESTABILIZAR O DEJAR EN PATIOS DE ACOPIO DEL IDU",
+        "und": "M3",
+        "cantidad": 4423.4,
+        "valor_aiu": 51806861,
+        "fila": 29,
+        "chapter": "1. PRELIMINARES"
+      },
+      {
+        "item_pago": "NP-124",
+        "codigo_idu": "4744",
+        "descripcion": "BASE GRANULAR CLASE A (BG_A) CON RECICLADO DE CONCRETO HIDRAULICO (SUMINISTRO, EXTENDIDO, NIVELACIÓN, HUMEDECIMIENTO Y COMPACTACIÓN CON VIBR",
+        "und": "M3",
+        "cantidad": 10476.554999999998,
+        "valor_aiu": 2518521916,
+        "fila": 30,
+        "chapter": "1. PRELIMINARES"
+      },
+      {
+        "item_pago": "NP-123",
+        "codigo_idu": "8618",
+        "descripcion": "MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTICO CA 14 (Suministro, Extendido, Nivelación y Compactación\nmecánica con vibrocomp",
+        "und": "M3",
+        "cantidad": 2089.45,
+        "valor_aiu": 3269600612,
+        "fila": 39,
+        "chapter": "2. PAVIMENTOS"
+      },
+      {
+        "item_pago": "NP-101",
+        "codigo_idu": "5380",
+        "descripcion": "TRANSPORTE DE MATERIAL FRESADO PROVENIENTE DE SITIO DE OBRA AL SITIO DISPUESTO PARA MEZCLAS, ESTABILIZAR O DEJAR EN PATIOS DE ACOPIO DEL IDU",
+        "und": "M3",
+        "cantidad": 466.43,
+        "valor_aiu": 5462828,
+        "fila": 59,
+        "chapter": "3. ESPACIO PÚBLICO"
+      },
+      {
+        "item_pago": "NP-16",
+        "codigo_idu": "10271",
+        "descripcion": "ESTAMPADO PARA CONCRETO MR DE POMPEYANOS, ACCESOS VEHICULARES A PREDIOS Y VÍAS (ACABADO Y CURADO, SUMINISTRO Y MANO DE OBRA. INCLUYE JUEGO D",
+        "und": "M2",
+        "cantidad": 18100.45,
+        "valor_aiu": 1107150225,
+        "fila": 87,
+        "chapter": "3. ESPACIO PÚBLICO"
+      },
+      {
+        "item_pago": "NP-84",
+        "codigo_idu": "8534",
+        "descripcion": "TRATAMIENTO INTEGRAL DE ÁRBOLES DE 1M A 5M. (INCLUYE RIEGO, FERTILIZACIÓN EDÁFICA, MANO DE OBRA, PODA GENERAL Y RADICULAR).",
+        "und": "UN",
+        "cantidad": 34,
+        "valor_aiu": 19151656,
+        "fila": 98,
+        "chapter": "3. ESPACIO PÚBLICO"
+      },
+      {
+        "item_pago": "NP-85",
+        "codigo_idu": "8535",
+        "descripcion": "TRATAMIENTO INTEGRAL DE ÁRBOLES MAYORES A 5M. (INCLUYE RIEGO, FERTILIZACIÓN EDÁFICA, MANO DE OBRA, PODA GENERAL Y RADICULAR).",
+        "und": "UN",
+        "cantidad": 44,
+        "valor_aiu": 29585908,
+        "fila": 99,
+        "chapter": "3. ESPACIO PÚBLICO"
+      },
+      {
+        "item_pago": "NP-86",
+        "codigo_idu": "4997",
+        "descripcion": "ELIMINACIÓN DE SETO (H> 2M) INCLUYE DESENRAIZAMIENTO, TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS EN SITIO AUTORIZADO (DISTANCIA DE TRANSPOR",
+        "und": "ML",
+        "cantidad": 46,
+        "valor_aiu": 2287902,
+        "fila": 100,
+        "chapter": "3. ESPACIO PÚBLICO"
+      },
+      {
+        "item_pago": "NP-34",
+        "codigo_idu": "10612",
+        "descripcion": "TUBERIA DE ACERO AL CARBON SIN COSTURA SCH40 D=4\". SUMINISTRO E INSTALACION.",
+        "und": "ML",
+        "cantidad": 49.86,
+        "valor_aiu": 12611489,
+        "fila": 164,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-35",
+        "codigo_idu": "4809",
+        "descripcion": "TUBERIA DE ACERO AL CARBON SIN COSTURA SCH40 D=6\". SUMINISTRO E INSTALACION.",
+        "und": "ML",
+        "cantidad": 160.49999999999997,
+        "valor_aiu": 79990472,
+        "fila": 165,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-36",
+        "codigo_idu": "4849",
+        "descripcion": "DEMOLICION O RETIRO MANUAL DE TUBERIAS DE AC Ø < 12\" (INCLUYE CARGUE).",
+        "und": "ML",
+        "cantidad": 1154.19,
+        "valor_aiu": 5313891,
+        "fila": 166,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-37",
+        "codigo_idu": "3404",
+        "descripcion": "TAPON HD EXTREMO LISO D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 2,
+        "valor_aiu": 520730,
+        "fila": 167,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-38",
+        "codigo_idu": "3620",
+        "descripcion": "CODO HD 11.25° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 6,
+        "valor_aiu": 1946250,
+        "fila": 168,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-39",
+        "codigo_idu": "3317",
+        "descripcion": "CODO HD 11.25° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 10,
+        "valor_aiu": 5234270,
+        "fila": 169,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-40",
+        "codigo_idu": "3391",
+        "descripcion": "CODO HD 22.5° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 26,
+        "valor_aiu": 8746764,
+        "fila": 170,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-41",
+        "codigo_idu": "3305",
+        "descripcion": "CODO HD 45° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 126,
+        "valor_aiu": 45422244,
+        "fila": 171,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-42",
+        "codigo_idu": "3306",
+        "descripcion": "CODO HD 45° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 220,
+        "valor_aiu": 140784600,
+        "fila": 172,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-43",
+        "codigo_idu": "3307",
+        "descripcion": "CODO HD 45° EXTREMO LISO PARA PVC D=8\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 4,
+        "valor_aiu": 5153040,
+        "fila": 173,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-44",
+        "codigo_idu": "3293",
+        "descripcion": "CODO HD 90° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 7,
+        "valor_aiu": 2796913,
+        "fila": 174,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-45",
+        "codigo_idu": "3294",
+        "descripcion": "CODO HD 90° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 1,
+        "valor_aiu": 748666,
+        "fila": 175,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-46",
+        "codigo_idu": "3258",
+        "descripcion": "TEE HD EXTREMO LISO 8\"X6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 2,
+        "valor_aiu": 3210052,
+        "fila": 176,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-47",
+        "codigo_idu": "3257",
+        "descripcion": "TEE HD EXTREMO LISO 8\"X4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 2,
+        "valor_aiu": 3071584,
+        "fila": 177,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-48",
+        "codigo_idu": "3253",
+        "descripcion": "TEE HD EXTREMO LISO 6\"X4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 7,
+        "valor_aiu": 5312048,
+        "fila": 178,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-49",
+        "codigo_idu": "3282",
+        "descripcion": "TEE HD EXTREMO LISO 4\"X4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 9,
+        "valor_aiu": 4916943,
+        "fila": 179,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-50",
+        "codigo_idu": "3254",
+        "descripcion": "TEE HD EXTREMO LISO 6\"X6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 10,
+        "valor_aiu": 9403690,
+        "fila": 180,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-51",
+        "codigo_idu": "5750",
+        "descripcion": "REDUCCION CONCENTRICA HD 6\" X 4\" (SUMINISTRO E INSTALACIÓN).",
+        "und": "UN",
+        "cantidad": 5,
+        "valor_aiu": 3106705,
+        "fila": 181,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-52",
+        "codigo_idu": "4872",
+        "descripcion": "REDUCCIÓN CONCENTRICA HD EL 4\" X 3\". SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 4,
+        "valor_aiu": 1101304,
+        "fila": 182,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-53",
+        "codigo_idu": "4385",
+        "descripcion": "UNION DRESSER D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 8,
+        "valor_aiu": 2397736,
+        "fila": 183,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-54",
+        "codigo_idu": "4386",
+        "descripcion": "UNION DRESSER D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 15,
+        "valor_aiu": 8294970,
+        "fila": 184,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-55",
+        "codigo_idu": "4840",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PVC 3\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 4,
+        "valor_aiu": 1068540,
+        "fila": 185,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-56",
+        "codigo_idu": "4841",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PVC 4\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 42,
+        "valor_aiu": 15978816,
+        "fila": 186,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-59",
+        "codigo_idu": "8151",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PEAD 6\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 3,
+        "valor_aiu": 8009586,
+        "fila": 188,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-60",
+        "codigo_idu": "8181",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PEAD 8\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 1,
+        "valor_aiu": 3058472,
+        "fila": 189,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-66",
+        "codigo_idu": "8970",
+        "descripcion": "CAJILLA PLASTICA Y TAPA EN POLIPROPILENO PARA MEDIDOR. SUMINISTRO E INSTALACION",
+        "und": "UN",
+        "cantidad": 129,
+        "valor_aiu": 68498226,
+        "fila": 190,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-61",
+        "codigo_idu": "3687",
+        "descripcion": "CAJA PARA VALVULA 0.4X0.4M H=0.8M (INCLUYE MARCO Y TAPA)",
+        "und": "UN",
+        "cantidad": 50,
+        "valor_aiu": 17385000,
+        "fila": 191,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-32",
+        "codigo_idu": "3225",
+        "descripcion": "TUBERIA PVC D=3\" TIPO U.M. RDE 21 (SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 1.27,
+        "valor_aiu": 97776,
+        "fila": 232,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-33",
+        "codigo_idu": "3228",
+        "descripcion": "TUBERIA PVC D=8\" TIPO U.M. RDE 21 (SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 55.82,
+        "valor_aiu": 18087020,
+        "fila": 233,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-40",
+        "codigo_idu": "3391",
+        "descripcion": "CODO HD 22.5° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 2,
+        "valor_aiu": 672828,
+        "fila": 240,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-44",
+        "codigo_idu": "3293",
+        "descripcion": "CODO HD 90° EXTREMO LISO PARA PVC D=4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 8,
+        "valor_aiu": 3196472,
+        "fila": 244,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-45",
+        "codigo_idu": "3294",
+        "descripcion": "CODO HD 90° EXTREMO LISO PARA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 14,
+        "valor_aiu": 10481324,
+        "fila": 245,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-46",
+        "codigo_idu": "3258",
+        "descripcion": "TEE HD EXTREMO LISO 8\"X6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 1,
+        "valor_aiu": 1605026,
+        "fila": 246,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-49",
+        "codigo_idu": "3282",
+        "descripcion": "TEE HD EXTREMO LISO 4\"X4\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 11,
+        "valor_aiu": 6009597,
+        "fila": 249,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-50",
+        "codigo_idu": "3254",
+        "descripcion": "TEE HD EXTREMO LISO 6\"X6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 10,
+        "valor_aiu": 9403690,
+        "fila": 250,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-58",
+        "codigo_idu": "4845",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PVC 8\" LINEAL SEGÚN NORMA NS-023. SUMINISTRO E INSTALACIÓN. (INCLUYE ACCESORIOS).",
+        "und": "UN",
+        "cantidad": 1,
+        "valor_aiu": 1567263,
+        "fila": 257,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-59",
+        "codigo_idu": "8151",
+        "descripcion": "EMPATES DE TUBERÍA EN PVC A PEAD 6\" LINEAL SEGÚN NORMA NS-023 (INCLUYE ACCESORIOS). SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 1,
+        "valor_aiu": 2669862,
+        "fila": 258,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-61",
+        "codigo_idu": "3687",
+        "descripcion": "CAJA PARA VALVULA 0.4X0.4M H=0.8M (INCLUYE MARCO Y TAPA)",
+        "und": "UN",
+        "cantidad": 28,
+        "valor_aiu": 9735600,
+        "fila": 261,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-26",
+        "codigo_idu": "3879",
+        "descripcion": "PLACA FONDO D=1.70M POZO INSPEC. (PREFABRICADA. INCL. SUMIN, INST.)",
+        "und": "UND",
+        "cantidad": 73,
+        "valor_aiu": 107466366,
+        "fila": 354,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-27",
+        "codigo_idu": "3878",
+        "descripcion": "PLACA CUBIERTA D=1.70M POZO INSPEC. (PREFABRICADA. INCLUYE SUMINISTRO E INSTALACIÓN. INCLUYE TAPA)",
+        "und": "UND",
+        "cantidad": 73,
+        "valor_aiu": 180695659,
+        "fila": 355,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-28",
+        "codigo_idu": "3442",
+        "descripcion": "CONCRETO 2000 PSI PARA REDES (Hecho en Obra 1:3:3 con arena de río y triturado de 3/4\")  (Suministro y Colocación)",
+        "und": "M3",
+        "cantidad": 5.609999999999999,
+        "valor_aiu": 4649125,
+        "fila": 356,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-29",
+        "codigo_idu": "3471",
+        "descripcion": "CILINDRO POZO INSP. EN MAMPOSTERIA E=0.25M (INC. SUMIN. Y CONST, ACERO PARA ESCALERAS, GEOTEXTIL NO TEJIDO CON RESISTENCIA A LA TENSION GRAB",
+        "und": "ML",
+        "cantidad": 157.63,
+        "valor_aiu": 157078137,
+        "fila": 357,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-30",
+        "codigo_idu": "3042",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=6\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 989.3199999999998,
+        "valor_aiu": 83303712,
+        "fila": 358,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-31",
+        "codigo_idu": "4879",
+        "descripcion": "CONEXIONES KIT SILLA YEE 315 X 160 PVC. SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 21,
+        "valor_aiu": 10270911,
+        "fila": 359,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-62",
+        "codigo_idu": "7892",
+        "descripcion": "CONTRATO DE OBRA IDU-1752-2021 - SERVICIO DE VÁCTOR PARA LIMPIEZA Y LAVADO DE TUBERÍA DE REDES DE ALCANTARILLADO COMO POZOS, TUBERIAS, SUMID",
+        "und": "HR",
+        "cantidad": 216,
+        "valor_aiu": 103278240,
+        "fila": 360,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-63",
+        "codigo_idu": "9325",
+        "descripcion": "CONTRATO DE OBRA IDU-1752-2021 - SERVICIO DE SUMINISTRO DE AGUA MEDIANTE CARRO TANQUE IRRIGADOR PARA LIMPIEZA Y LAVADO DE REDES DE ALCANTARI",
+        "und": "VIAJE",
+        "cantidad": 27,
+        "valor_aiu": 10192122,
+        "fila": 361,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-64",
+        "codigo_idu": "9434",
+        "descripcion": "CONTRATO DE OBRA IDU-1752-2021 - CARGUE, TRANSPORTE, TRATAMIENTO Y DISPOSICIÓN DE LODOS NO PELIGROSOS PROVENIENTES DE LA LIMPIEZA DE REDES D",
+        "und": "KG",
+        "cantidad": 54000,
+        "valor_aiu": 26838000,
+        "fila": 362,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-65",
+        "codigo_idu": "8001",
+        "descripcion": "INSPECCIÓN DE REDES DE ALCANTARILLADO CON SISTEMAS CCTV PARA DIÁMETROS MAYORES A 36\"",
+        "und": "ML",
+        "cantidad": 104.3,
+        "valor_aiu": 2011530,
+        "fila": 363,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-79",
+        "codigo_idu": "N/A",
+        "descripcion": "CAÑUELA EN CONCRETO 2500 PSI IMPERMEABILIZADO, PARA POZO DE INSPECCIÓN DE ALCANTARILLADO D=1,20 m - NORMA EAAB NS-029. SUMINISTRO E INSTALAC",
+        "und": "UN",
+        "cantidad": 71,
+        "valor_aiu": 19730048,
+        "fila": 364,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-88",
+        "codigo_idu": "NO",
+        "descripcion": "CONEXIONES KIT SILLA YEE 250 X 160 PVC. SUMINISTRO E INSTALACIÓN.",
+        "und": "UN",
+        "cantidad": 11,
+        "valor_aiu": 3435388,
+        "fila": 365,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-17",
+        "codigo_idu": "7432",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=24\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 97.96,
+        "valor_aiu": 93308173,
+        "fila": 406,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-19",
+        "codigo_idu": "7435",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=36\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 52.29,
+        "valor_aiu": 129829952,
+        "fila": 408,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-20",
+        "codigo_idu": "4265",
+        "descripcion": "TUBERIA CONCRETO D=10\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 202.39000000000001,
+        "valor_aiu": 38320523,
+        "fila": 409,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-21",
+        "codigo_idu": "3936",
+        "descripcion": "TUBERIA CONCRETO D=16\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 72.15,
+        "valor_aiu": 30273779,
+        "fila": 410,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-22",
+        "codigo_idu": "3937",
+        "descripcion": "TUBERIA CONCRETO D=18\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 199.94,
+        "valor_aiu": 110092162,
+        "fila": 411,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-23",
+        "codigo_idu": "3939",
+        "descripcion": "TUBERIA CONCRETO D=24\" CL. II SIN REFUERZO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 39.14,
+        "valor_aiu": 36701656,
+        "fila": 412,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-24",
+        "codigo_idu": "3993",
+        "descripcion": "TUBERIA CONCRETO D=27\" CL. IV REFORZADO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 70.9,
+        "valor_aiu": 106219615,
+        "fila": 413,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-26",
+        "codigo_idu": "3879",
+        "descripcion": "PLACA FONDO D=1.70M POZO INSPEC. (PREFABRICADA. INCL. SUMIN, INST.)",
+        "und": "UND",
+        "cantidad": 43.2,
+        "valor_aiu": 63596534,
+        "fila": 414,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-27",
+        "codigo_idu": "3878",
+        "descripcion": "PLACA CUBIERTA D=1.70M POZO INSPEC. (PREFABRICADA. INCLUYE SUMINISTRO E INSTALACIÓN. INCLUYE TAPA)",
+        "und": "UND",
+        "cantidad": 43.2,
+        "valor_aiu": 106932226,
+        "fila": 415,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-28",
+        "codigo_idu": "3442",
+        "descripcion": "CONCRETO 2000 PSI PARA REDES (Hecho en Obra 1:3:3 con arena de río y triturado de 3/4\")  (Suministro y Colocación)",
+        "und": "M3",
+        "cantidad": 2.38,
+        "valor_aiu": 1972356,
+        "fila": 416,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-29",
+        "codigo_idu": "3471",
+        "descripcion": "CILINDRO POZO INSP. EN MAMPOSTERIA E=0.25M (INC. SUMIN. Y CONST, ACERO PARA ESCALERAS, GEOTEXTIL NO TEJIDO CON RESISTENCIA A LA TENSION GRAB",
+        "und": "ML",
+        "cantidad": 57.501,
+        "valor_aiu": 57299689,
+        "fila": 417,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-71",
+        "codigo_idu": "4892",
+        "descripcion": "TUBERIA CONCRETO ALTA RESISTENCIA D= 10\" (INCLUYE SUMINISTRO, INSTALACIÓN Y MORTERO 2000 PSI PARA RECUBRIMIENTO DE JUNTA).",
+        "und": "ML",
+        "cantidad": 599.07,
+        "valor_aiu": 274675991,
+        "fila": 418,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-72",
+        "codigo_idu": "5887",
+        "descripcion": "TUBERIA DE CONCRETO DE ALTA RESISTENCIA D= 16\" (INCLUYE MORTERO DE INSTALACION). SUMINISTRO E INSTALACION",
+        "und": "ML",
+        "cantidad": 119.01000000000002,
+        "valor_aiu": 103178100,
+        "fila": 419,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-73",
+        "codigo_idu": "5888",
+        "descripcion": "TUBERIA DE CONCRETO DE ALTA RESISTENCIA D= 18\" (INCLUYE MORTERO DE INSTALACION). SUMINISTRO E INSTALACION",
+        "und": "ML",
+        "cantidad": 17.24,
+        "valor_aiu": 17973717,
+        "fila": 420,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-79",
+        "codigo_idu": "N/A",
+        "descripcion": "CAÑUELA EN CONCRETO 2500 PSI IMPERMEABILIZADO, PARA POZO DE INSPECCIÓN DE ALCANTARILLADO D=1,20 m - NORMA EAAB NS-029. SUMINISTRO E INSTALAC",
+        "und": "UN",
+        "cantidad": 42.2,
+        "valor_aiu": 11726874,
+        "fila": 421,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-83",
+        "codigo_idu": "N/A",
+        "descripcion": "TUBERIA DE CONCRETO DE ALTA RESISTENCIA D= 14\" (INCLUYE MORTERO 2000 PSI PARA RECUBRIMIENTO DE JUNTA). SUMINISTRO E INSTALACION.",
+        "und": "ML",
+        "cantidad": 25.5,
+        "valor_aiu": 20017959,
+        "fila": 422,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-17",
+        "codigo_idu": "7432",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=24\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 148.03,
+        "valor_aiu": 141000499,
+        "fila": 463,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-18",
+        "codigo_idu": "7433",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=27\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 108.96,
+        "valor_aiu": 123041772,
+        "fila": 464,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-19",
+        "codigo_idu": "7435",
+        "descripcion": "TUBERIA PVC U.M. EXT CORRUGADO/INT LISO U.M. NORMA NTC 3722-1 D=36\" (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 122.00999999999999,
+        "valor_aiu": 302936555,
+        "fila": 465,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-24",
+        "codigo_idu": "3993",
+        "descripcion": "TUBERIA CONCRETO D=27\" CL. IV REFORZADO (INCLUYE SUMINISTRO E INSTALACIÓN)",
+        "und": "ML",
+        "cantidad": 70.9,
+        "valor_aiu": 106219615,
+        "fila": 470,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-26",
+        "codigo_idu": "3879",
+        "descripcion": "PLACA FONDO D=1.70M POZO INSPEC. (PREFABRICADA. INCL. SUMIN, INST.)",
+        "und": "UND",
+        "cantidad": 21.8,
+        "valor_aiu": 32092696,
+        "fila": 471,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-27",
+        "codigo_idu": "3878",
+        "descripcion": "PLACA CUBIERTA D=1.70M POZO INSPEC. (PREFABRICADA. INCLUYE SUMINISTRO E INSTALACIÓN. INCLUYE TAPA)",
+        "und": "UND",
+        "cantidad": 21.8,
+        "valor_aiu": 53961169,
+        "fila": 472,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-28",
+        "codigo_idu": "3442",
+        "descripcion": "CONCRETO 2000 PSI PARA REDES (Hecho en Obra 1:3:3 con arena de río y triturado de 3/4\")  (Suministro y Colocación)",
+        "und": "M3",
+        "cantidad": 6.2700000000000005,
+        "valor_aiu": 5196081,
+        "fila": 473,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-29",
+        "codigo_idu": "3471",
+        "descripcion": "CILINDRO POZO INSP. EN MAMPOSTERIA E=0.25M (INC. SUMIN. Y CONST, ACERO PARA ESCALERAS, GEOTEXTIL NO TEJIDO CON RESISTENCIA A LA TENSION GRAB",
+        "und": "ML",
+        "cantidad": 35.619,
+        "valor_aiu": 35494298,
+        "fila": 474,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-79",
+        "codigo_idu": "N/A",
+        "descripcion": "CAÑUELA EN CONCRETO 2500 PSI IMPERMEABILIZADO, PARA POZO DE INSPECCIÓN DE ALCANTARILLADO D=1,20 m - NORMA EAAB NS-029. SUMINISTRO E INSTALAC",
+        "und": "UN",
+        "cantidad": 21.8,
+        "valor_aiu": 6057958,
+        "fila": 478,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-133",
+        "codigo_idu": "N/A",
+        "descripcion": "CONTRATO 1752-2021 - BOX CULVERT PREFABRICADO TIPO 1, Ancho Int: 1.875 m, Alto Int: 1.80m, Longitud: 1.00m, Espesores de muros y placa fondo",
+        "und": "UN",
+        "cantidad": 110,
+        "valor_aiu": 1879745340,
+        "fila": 479,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-134",
+        "codigo_idu": "N/A",
+        "descripcion": "CONTRATO 1752-2021 - BOX CULVERT PREFABRICADO TIPO SUMIDERO, Ancho Int: 1.875 m, Alto Int: 1.80m, Longitud 1.00m, Espesores de muros y placa",
+        "und": "UN",
+        "cantidad": 2,
+        "valor_aiu": 40325908,
+        "fila": 480,
+        "chapter": "5. REDES HIDROSANITARIAS"
+      },
+      {
+        "item_pago": "NP-09",
+        "codigo_idu": "8737",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=2\" (Suministro e Instalación)",
+        "und": "UN",
+        "cantidad": 60,
+        "valor_aiu": 658500,
+        "fila": 514,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-118",
+        "codigo_idu": "7369",
+        "descripcion": "DEMOLICION DE CANALIZACION DE REDES DE COMUNICACIONES DUCTOS PVC-TDP (INCLUYE RETIRO Y DISPOSICION DE ESCOMBROS)",
+        "und": "ML",
+        "cantidad": 2157.2499999999995,
+        "valor_aiu": 28106810,
+        "fila": 518,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-119",
+        "codigo_idu": "4892",
+        "descripcion": "NIVELACIÓN DE CAJA CS 275 EN ANDEN H= 0.40M (INCLUYE CONCRETO 2500 PSI HECHO EN OBRA, LADRILLO TOLETE RECOCIDO 24X12X6. MORTERO 1:5 HECHO EN",
+        "und": "UN",
+        "cantidad": 1,
+        "valor_aiu": 1057629,
+        "fila": 519,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-120",
+        "codigo_idu": "5316",
+        "descripcion": "NIVELACION DE CAJA CS276 EN ANDEN H= 0.42M (INCLUYE CONCRETO 2500 PSI HECHO EN OBRA, LADRILLO TOLETE RECOCIDO 24X12X6. MORTERO 1:5 HECHO EN ",
+        "und": "UN",
+        "cantidad": 33,
+        "valor_aiu": 65928225,
+        "fila": 520,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-121",
+        "codigo_idu": "6423",
+        "descripcion": "NIVELACIÓN DE CAJA DE INSPECCIÓN TIPO VEHICULAR NORMA CODENSA CS 280 H=0,5M (INCLUYE CONCRETO 3000 PSI PREMEZCLADO, LADRILLO TOLETE RECOCIDO",
+        "und": "UN",
+        "cantidad": 1,
+        "valor_aiu": 3890943,
+        "fila": 521,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-02",
+        "codigo_idu": "9031",
+        "descripcion": "CONSTRUCCION DE CAJA DE INSPECCIÓN SENCILLA PARA CANALIZACION EN M.T. Y B.T. NORMA CODENSA CS 275 (Norma 2018-2019) (Incluye concreto de bas",
+        "und": "UN",
+        "cantidad": 34,
+        "valor_aiu": 99081474,
+        "fila": 546,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-03",
+        "codigo_idu": "9032",
+        "descripcion": "CONSTRUCCION DE CAJA DE INSPECCION DOBLE PARA CANALIZACION DE M.T. Y B.T. TIPO CS 276 (Norma 2018) (Incluye concreto de base, muro de espeso",
+        "und": "UN",
+        "cantidad": 165,
+        "valor_aiu": 778412250,
+        "fila": 547,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-04",
+        "codigo_idu": "9034",
+        "descripcion": "CONSTRUCCION  DE  CAJA  DE INSPECCIÓN  TIPO  VEHICULAR  NORMA CODENSA  CS  280  (Norma  2018)  (Incluye concreto de base, muro de espesor 0.",
+        "und": "UN",
+        "cantidad": 12,
+        "valor_aiu": 75007860,
+        "fila": 548,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-07",
+        "codigo_idu": "3408",
+        "descripcion": "6 DUCTOS D=6\" PVC-TDP (INCLUYE SUMINISTRO E INSTALACIÓN. NO INCLUYE RELLENOS). NORMA CS212.",
+        "und": "ML",
+        "cantidad": 619.86,
+        "valor_aiu": 302594577,
+        "fila": 551,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-09",
+        "codigo_idu": "8737",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=2\" (Suministro e Instalación)",
+        "und": "UN",
+        "cantidad": 60,
+        "valor_aiu": 659940,
+        "fila": 553,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-10",
+        "codigo_idu": "3413",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=3\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 760,
+        "valor_aiu": 12220040,
+        "fila": 554,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-75",
+        "codigo_idu": "5873",
+        "descripcion": "CURVA 90° PVC D= 2\". SUMINISTRO E INSTALACION. NO INCLUYE RELLENOS",
+        "und": "UN",
+        "cantidad": 6,
+        "valor_aiu": 233688,
+        "fila": 556,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-122",
+        "codigo_idu": "N/A",
+        "descripcion": "CONSTRUCCION DE CAJA DE INSPECCION DOBLE PARA CANALIZACION DE M.T. Y B.T. TIPO CS 276 (Norma 2025) (Incluye concreto de base, muro doble, pa",
+        "und": "UN",
+        "cantidad": 73,
+        "valor_aiu": 323248307,
+        "fila": 561,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-12",
+        "codigo_idu": "8081",
+        "descripcion": "ADAPTADOR TERMINAL CAMPANA PVC D=6\" (SUMINISTRO E INSTALACIÓN)",
+        "und": "UN",
+        "cantidad": 2688,
+        "valor_aiu": 110420352,
+        "fila": 562,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-01",
+        "codigo_idu": "9030",
+        "descripcion": "CONSTRUCCION  DE  CAJA  DE INSPECCIÓN PARA ALUMBRADO PUBLICO Y  ACOMETIDAS  EN  BAJA  NORMA CODENSA  CS  274  (Norma  2018-2019) (Incluye co",
+        "und": "UN",
+        "cantidad": 63,
+        "valor_aiu": 94141152,
+        "fila": 608,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-02",
+        "codigo_idu": "9031",
+        "descripcion": "CONSTRUCCION DE CAJA DE INSPECCIÓN SENCILLA PARA CANALIZACION EN M.T. Y B.T. NORMA CODENSA CS 275 (Norma 2018-2019) (Incluye concreto de bas",
+        "und": "UN",
+        "cantidad": 3,
+        "valor_aiu": 8742483,
+        "fila": 609,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-05",
+        "codigo_idu": "3382",
+        "descripcion": "'1 DUCTO D=3\" PVC-TDP (INCLUYE SUMINISTRO E INSTALACIÓN. NO INCLUYE RELLENOS) NORMA CS220.",
+        "und": "ML",
+        "cantidad": 5.73,
+        "valor_aiu": 216605,
+        "fila": 610,
+        "chapter": "6. REDES SECAS"
+      },
+      {
+        "item_pago": "NP-105",
+        "codigo_idu": "N/A",
+        "descripcion": "CARCAMO DE PROTECCION PARA DE RED DE GAS DE D=6\" CON MURO DOBLE EN LADRILLO TOLETE DE 24X12X6 CM Y CON DIMENSIONES: Ancho 0,88 m y alto 0,44",
+        "und": "ML",
+        "cantidad": 35.3,
+        "valor_aiu": 13510687,
+        "fila": 674,
+        "chapter": "6. REDES SECAS"
+      }
+    ],
+    "objetado": [],
+    "nuevo": []
+  },
+  "hallazgos": [
+    {
+      "id": "H-NP-06",
+      "severidad": "INFO",
+      "titulo": "22 NPs de V2 fueron eliminados en V4",
+      "descripcion": "Reduce en $924.318.412 (CD) frente a V2. Verificar si son NPs anulados o solo re-etiquetados.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": null,
+      "impacto_pesos": -924318412,
+      "recomendacion": "Revisar en el balance de NPs anulados / rechazados que estos coincidan con los eliminados."
+    },
+    {
+      "id": "H-NP-07",
+      "severidad": "ALTA",
+      "titulo": "2 NPs con salto >50% en cantidad y >$100M CD entre V2 y V4",
+      "descripcion": "NP-16 Δcant=8559.7 (M2) ΔCD=$397.094.883; NP-19 Δcant=69.7 (ML) ΔCD=$131.291.563",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "87,465",
+      "impacto_pesos": 528386445.5799817,
+      "recomendacion": "Solicitar memoria de cantidad actualizada para cada NP con salto y explicación del cambio."
+    }
+  ]
+}

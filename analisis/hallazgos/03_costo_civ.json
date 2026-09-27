@@ -1,0 +1,2967 @@
+{
+  "meta": {
+    "fuente_hoja_principal": "PRESUPUESTO TODOS LOS CIV 84 NP",
+    "fuente_json_canonico": "analisis/datos/presupuesto_2026_09.json",
+    "aiu_factor": 0.31849,
+    "fecha_analisis": "2026-09-26"
+  },
+  "criterio_reparto": {
+    "criterio": "Proporcional al costo directo de obras por CIV (V4, hoja principal, excluyendo bloque ACEROS filas 682-687).",
+    "formula": "componentes_civ = 17.229.641.399 × (obras_cd_civ / Σ obras_cd_civ)",
+    "notas": [
+      "Se descartó reparto proporcional al área porque las áreas de data.json difieren entre subgrupos y no reflejan intensidad real de obra (redes, señalización).",
+      "El costo directo es más representativo que el AIU porque el AIU es proporcional (mismo factor 31,849%) y no aporta información adicional al reparto.",
+      "Componentes fijos que no dependen del CIV (Ajustes vigencia $4.555M, Actividades acero $2.977M, SDA, ensayos, etc.) se reparten con el mismo criterio; una vez seleccionado se aplica homogéneo a los 10 conceptos.",
+      "Alternativa evaluada: reparto por área. Se documenta en `dolarm2_total` para trazabilidad, pero no se usa como base."
+    ]
+  },
+  "verificacion_688": {
+    "calculado": 58196933869,
+    "esperado_58196933800": 58196933800,
+    "delta": 69
+  },
+  "verificacion_total": {
+    "calculado": 75426575268,
+    "esperado_75426575199": 75426575199,
+    "delta": 69
+  },
+  "verificacion_componentes": {
+    "suma_componentes": 17229641399,
+    "esperado_17229641399": 17229641399,
+    "delta": 0
+  },
+  "costo_por_civ": [
+    {
+      "id": "9004002",
+      "nomenclatura": "CL20",
+      "desde_hasta": "KR68A - KR68B",
+      "subgrupo": "2",
+      "area_m2": 2710.31,
+      "longitud_m": 134.44,
+      "obras_cd": 1611365289,
+      "obras_aiu": 513203731,
+      "obras_total": 2124569020,
+      "componentes_asignados": 628994689,
+      "total": 2753563709,
+      "dolarm2_obras": 783884,
+      "dolarm2_total": 1015959,
+      "dolarml_obras": 15803102,
+      "dolarml_total": 20481729,
+      "pct_np_en_obras": 19.47
+    },
+    {
+      "id": "9003990",
+      "nomenclatura": "CL20",
+      "desde_hasta": "KR68B - KR68C",
+      "subgrupo": "2",
+      "area_m2": 2979.83,
+      "longitud_m": 148.62,
+      "obras_cd": 2056373710,
+      "obras_aiu": 654934463,
+      "obras_total": 2711308173,
+      "componentes_asignados": 802703243,
+      "total": 3514011416,
+      "dolarm2_obras": 909887,
+      "dolarm2_total": 1179266,
+      "dolarml_obras": 18243225,
+      "dolarml_total": 23644270,
+      "pct_np_en_obras": 20.55
+    },
+    {
+      "id": "9003980",
+      "nomenclatura": "CL20",
+      "desde_hasta": "KR68C - AK68D",
+      "subgrupo": "2",
+      "area_m2": 2373.61,
+      "longitud_m": 118.09,
+      "obras_cd": 1952559633,
+      "obras_aiu": 621870718,
+      "obras_total": 2574430351,
+      "componentes_asignados": 762179531,
+      "total": 3336609882,
+      "dolarm2_obras": 1084605,
+      "dolarm2_total": 1405711,
+      "dolarml_obras": 21800579,
+      "dolarml_total": 28254805,
+      "pct_np_en_obras": 19.26
+    },
+    {
+      "id": "9003989",
+      "nomenclatura": "KR 68B",
+      "desde_hasta": "CL20 - CL21",
+      "subgrupo": "2",
+      "area_m2": 1404.75,
+      "longitud_m": 88.74,
+      "obras_cd": 1238497620,
+      "obras_aiu": 394449107,
+      "obras_total": 1632946727,
+      "componentes_asignados": 483446200,
+      "total": 2116392927,
+      "dolarm2_obras": 1162447,
+      "dolarm2_total": 1506598,
+      "dolarml_obras": 18401473,
+      "dolarml_total": 23849368,
+      "pct_np_en_obras": 21.66
+    },
+    {
+      "id": "9003981",
+      "nomenclatura": "KR 68B",
+      "desde_hasta": "CL21 - CL22",
+      "subgrupo": "2",
+      "area_m2": 1985.23,
+      "longitud_m": 100.62,
+      "obras_cd": 1545979024,
+      "obras_aiu": 492378859,
+      "obras_total": 2038357883,
+      "componentes_asignados": 603471232,
+      "total": 2641829115,
+      "dolarm2_obras": 1026762,
+      "dolarm2_total": 1330742,
+      "dolarml_obras": 20257979,
+      "dolarml_total": 26255507,
+      "pct_np_en_obras": 22.61
+    },
+    {
+      "id": "9003967",
+      "nomenclatura": "KR 68C",
+      "desde_hasta": "CL21 - CL22",
+      "subgrupo": "2",
+      "area_m2": 2419.5,
+      "longitud_m": 121.4,
+      "obras_cd": 1688637742,
+      "obras_aiu": 537814234,
+      "obras_total": 2226451976,
+      "componentes_asignados": 659157907,
+      "total": 2885609883,
+      "dolarm2_obras": 920212,
+      "dolarm2_total": 1192647,
+      "dolarml_obras": 18339802,
+      "dolarml_total": 23769439,
+      "pct_np_en_obras": 21.75
+    },
+    {
+      "id": "9003968",
+      "nomenclatura": "CL21",
+      "desde_hasta": "KR 68C - KR 68D",
+      "subgrupo": "2",
+      "area_m2": 1537.22,
+      "longitud_m": 109.88,
+      "obras_cd": 1236737004,
+      "obras_aiu": 393888368,
+      "obras_total": 1630625372,
+      "componentes_asignados": 482758945,
+      "total": 2113384317,
+      "dolarm2_obras": 1060763,
+      "dolarm2_total": 1374809,
+      "dolarml_obras": 14840056,
+      "dolarml_total": 19233567,
+      "pct_np_en_obras": 23.63
+    },
+    {
+      "id": "16000016",
+      "nomenclatura": "KR 66",
+      "desde_hasta": "CL17A - CL18",
+      "subgrupo": "5",
+      "area_m2": 1608.57,
+      "longitud_m": 87.9,
+      "obras_cd": 1324147371,
+      "obras_aiu": 421727696,
+      "obras_total": 1745875067,
+      "componentes_asignados": 516879487,
+      "total": 2262754554,
+      "dolarm2_obras": 1085358,
+      "dolarm2_total": 1406687,
+      "dolarml_obras": 19862060,
+      "dolarml_total": 25742373,
+      "pct_np_en_obras": 21.24
+    },
+    {
+      "id": "16000007",
+      "nomenclatura": "KR66",
+      "desde_hasta": "CL18A - CL18B",
+      "subgrupo": "5",
+      "area_m2": 1045.93,
+      "longitud_m": 71.59,
+      "obras_cd": 547389885,
+      "obras_aiu": 174338204,
+      "obras_total": 721728089,
+      "componentes_asignados": 213673047,
+      "total": 935401136,
+      "dolarm2_obras": 690035,
+      "dolarm2_total": 894325,
+      "dolarml_obras": 10081409,
+      "dolarml_total": 13066087,
+      "pct_np_en_obras": 23.58
+    },
+    {
+      "id": "16000023",
+      "nomenclatura": "CL17A",
+      "desde_hasta": "KR65B - KR66",
+      "subgrupo": "5",
+      "area_m2": 2852.0,
+      "longitud_m": 142.6,
+      "obras_cd": 1950832901,
+      "obras_aiu": 621320771,
+      "obras_total": 2572153672,
+      "componentes_asignados": 761505503,
+      "total": 3333659175,
+      "dolarm2_obras": 901877,
+      "dolarm2_total": 1168885,
+      "dolarml_obras": 18037543,
+      "dolarml_total": 23377694,
+      "pct_np_en_obras": 29.65
+    },
+    {
+      "id": "16000012",
+      "nomenclatura": "CL18A",
+      "desde_hasta": "KR65B - KR66",
+      "subgrupo": "5",
+      "area_m2": 2544.68,
+      "longitud_m": 128.26,
+      "obras_cd": 1780796661,
+      "obras_aiu": 567165929,
+      "obras_total": 2347962590,
+      "componentes_asignados": 695132041,
+      "total": 3043094631,
+      "dolarm2_obras": 922695,
+      "dolarm2_total": 1195865,
+      "dolarml_obras": 18306273,
+      "dolarml_total": 23725983,
+      "pct_np_en_obras": 20.95
+    },
+    {
+      "id": "16000010",
+      "nomenclatura": "CL18B",
+      "desde_hasta": "KR65B - KR66",
+      "subgrupo": "5",
+      "area_m2": 1704.36,
+      "longitud_m": 128.34,
+      "obras_cd": 2995929504,
+      "obras_aiu": 954173588,
+      "obras_total": 3950103092,
+      "componentes_asignados": 1169457826,
+      "total": 5119560918,
+      "dolarm2_obras": 2317646,
+      "dolarm2_total": 3003803,
+      "dolarml_obras": 30778425,
+      "dolarml_total": 39890610,
+      "pct_np_en_obras": 58.45
+    },
+    {
+      "id": "16000013",
+      "nomenclatura": "CL18B",
+      "desde_hasta": "KR65A - KR65B",
+      "subgrupo": "5",
+      "area_m2": 1541.61,
+      "longitud_m": 105.88,
+      "obras_cd": 1630604328,
+      "obras_aiu": 519331172,
+      "obras_total": 2149935500,
+      "componentes_asignados": 636504627,
+      "total": 2786440127,
+      "dolarm2_obras": 1394604,
+      "dolarm2_total": 1807487,
+      "dolarml_obras": 20305398,
+      "dolarml_total": 26316964,
+      "pct_np_en_obras": 21.28
+    },
+    {
+      "id": "16000024",
+      "nomenclatura": "KR 65A",
+      "desde_hasta": "CL18 - CL18A",
+      "subgrupo": "5",
+      "area_m2": 2402.99,
+      "longitud_m": 120.33,
+      "obras_cd": 4474207593,
+      "obras_aiu": 1424990376,
+      "obras_total": 5899197969,
+      "componentes_asignados": 1746502071,
+      "total": 7645700040,
+      "dolarm2_obras": 2454941,
+      "dolarm2_total": 3181744,
+      "dolarml_obras": 49025164,
+      "dolarml_total": 63539434,
+      "pct_np_en_obras": 17.23
+    },
+    {
+      "id": "16000017",
+      "nomenclatura": "KR 65A",
+      "desde_hasta": "CL18A - CL18B",
+      "subgrupo": "5",
+      "area_m2": 1361.36,
+      "longitud_m": 68.0,
+      "obras_cd": 2098657534,
+      "obras_aiu": 668401438,
+      "obras_total": 2767058972,
+      "componentes_asignados": 819208688,
+      "total": 3586267660,
+      "dolarm2_obras": 2032570,
+      "dolarm2_total": 2634327,
+      "dolarml_obras": 40692044,
+      "dolarml_total": 52739230,
+      "pct_np_en_obras": 19.49
+    },
+    {
+      "id": "16000029",
+      "nomenclatura": "CL18",
+      "desde_hasta": "KR65 - KR65A",
+      "subgrupo": "5",
+      "area_m2": 939.76,
+      "longitud_m": 69.1,
+      "obras_cd": 616196110,
+      "obras_aiu": 196252299,
+      "obras_total": 812448409,
+      "componentes_asignados": 240531482,
+      "total": 1052979891,
+      "dolarm2_obras": 864528,
+      "dolarm2_total": 1120477,
+      "dolarml_obras": 11757575,
+      "dolarml_total": 15238493,
+      "pct_np_en_obras": 17.24
+    },
+    {
+      "id": "16000028",
+      "nomenclatura": "CL18A",
+      "desde_hasta": "KR63 - KR65A",
+      "subgrupo": "5",
+      "area_m2": 2749.3,
+      "longitud_m": 139.7,
+      "obras_cd": 1826050939,
+      "obras_aiu": 581578964,
+      "obras_total": 2407629903,
+      "componentes_asignados": 712797000,
+      "total": 3120426903,
+      "dolarm2_obras": 875725,
+      "dolarm2_total": 1134990,
+      "dolarml_obras": 17234287,
+      "dolarml_total": 22336628,
+      "pct_np_en_obras": 22.43
+    },
+    {
+      "id": "16000060",
+      "nomenclatura": "KR63",
+      "desde_hasta": "ACCESO VIA 17 - CL17",
+      "subgrupo": "5",
+      "area_m2": 1593.8,
+      "longitud_m": 79.69,
+      "obras_cd": 1231917770,
+      "obras_aiu": 392353491,
+      "obras_total": 1624271261,
+      "componentes_asignados": 480877763,
+      "total": 2105149024,
+      "dolarm2_obras": 1019119,
+      "dolarm2_total": 1320836,
+      "dolarml_obras": 20382372,
+      "dolarml_total": 26416728,
+      "pct_np_en_obras": 22.42
+    },
+    {
+      "id": "16000052",
+      "nomenclatura": "KR63",
+      "desde_hasta": "ACCESO VIA 17B - CL17B",
+      "subgrupo": "5",
+      "area_m2": 1791.31,
+      "longitud_m": 89.12,
+      "obras_cd": 1660994703,
+      "obras_aiu": 529010203,
+      "obras_total": 2190004906,
+      "componentes_asignados": 648367477,
+      "total": 2838372383,
+      "dolarm2_obras": 1222572,
+      "dolarm2_total": 1584523,
+      "dolarml_obras": 24573664,
+      "dolarml_total": 31848882,
+      "pct_np_en_obras": 25.83
+    },
+    {
+      "id": "16000043",
+      "nomenclatura": "KR 63",
+      "desde_hasta": "CL17B - CL18",
+      "subgrupo": "5",
+      "area_m2": 1519.4,
+      "longitud_m": 75.97,
+      "obras_cd": 1357960466,
+      "obras_aiu": 432496829,
+      "obras_total": 1790457295,
+      "componentes_asignados": 530078392,
+      "total": 2320535687,
+      "dolarm2_obras": 1178398,
+      "dolarm2_total": 1527271,
+      "dolarml_obras": 23567952,
+      "dolarml_total": 30545422,
+      "pct_np_en_obras": 29.94
+    },
+    {
+      "id": "16000032",
+      "nomenclatura": "KR 63",
+      "desde_hasta": "CL18 - CL18A",
+      "subgrupo": "5",
+      "area_m2": 1835.68,
+      "longitud_m": 92.06,
+      "obras_cd": 1422389187,
+      "obras_aiu": 453016732,
+      "obras_total": 1875405919,
+      "componentes_asignados": 555228073,
+      "total": 2430633992,
+      "dolarm2_obras": 1021641,
+      "dolarm2_total": 1324106,
+      "dolarml_obras": 20371561,
+      "dolarml_total": 26402716,
+      "pct_np_en_obras": 21.0
+    },
+    {
+      "id": "16000027",
+      "nomenclatura": "KR 63",
+      "desde_hasta": "CL18A - CL19",
+      "subgrupo": "5",
+      "area_m2": 1958.61,
+      "longitud_m": 78.47,
+      "obras_cd": 1340562830,
+      "obras_aiu": 426955856,
+      "obras_total": 1767518686,
+      "componentes_asignados": 523287244,
+      "total": 2290805930,
+      "dolarm2_obras": 902435,
+      "dolarm2_total": 1169608,
+      "dolarml_obras": 22524770,
+      "dolarml_total": 29193398,
+      "pct_np_en_obras": 21.39
+    },
+    {
+      "id": "16000038",
+      "nomenclatura": "CL18A",
+      "desde_hasta": "KR62 - KR63",
+      "subgrupo": "5",
+      "area_m2": 2644.76,
+      "longitud_m": 116.1,
+      "obras_cd": 1941792950,
+      "obras_aiu": 618441637,
+      "obras_total": 2560234587,
+      "componentes_asignados": 757976768,
+      "total": 3318211355,
+      "dolarm2_obras": 968040,
+      "dolarm2_total": 1254636,
+      "dolarml_obras": 22051977,
+      "dolarml_total": 28580632,
+      "pct_np_en_obras": 25.7
+    },
+    {
+      "id": "16000057",
+      "nomenclatura": "CL17B",
+      "desde_hasta": "KR63 - KR62",
+      "subgrupo": "5",
+      "area_m2": 1996.95,
+      "longitud_m": 133.13,
+      "obras_cd": 1357056660,
+      "obras_aiu": 432208975,
+      "obras_total": 1789265635,
+      "componentes_asignados": 529725592,
+      "total": 2318991227,
+      "dolarm2_obras": 895999,
+      "dolarm2_total": 1161267,
+      "dolarml_obras": 13439988,
+      "dolarml_total": 17418998,
+      "pct_np_en_obras": 20.23
+    },
+    {
+      "id": "500002375",
+      "nomenclatura": "KR65",
+      "desde_hasta": "CL17 - CL18",
+      "subgrupo": "5",
+      "area_m2": 1159.92,
+      "longitud_m": 71.6,
+      "obras_cd": 1127652890,
+      "obras_aiu": 359146169,
+      "obras_total": 1486799059,
+      "componentes_asignados": 440178080,
+      "total": 1926977139,
+      "dolarm2_obras": 1281812,
+      "dolarm2_total": 1661302,
+      "dolarml_obras": 20765350,
+      "dolarml_total": 26913089,
+      "pct_np_en_obras": 20.7
+    },
+    {
+      "id": "16000047",
+      "nomenclatura": "KR65",
+      "desde_hasta": "CL17 - CL18",
+      "subgrupo": "5",
+      "area_m2": 2387.64,
+      "longitud_m": 118.2,
+      "obras_cd": 1290776334,
+      "obras_aiu": 411099354,
+      "obras_total": 1701875688,
+      "componentes_asignados": 503853139,
+      "total": 2205728827,
+      "dolarm2_obras": 712786,
+      "dolarm2_total": 923811,
+      "dolarml_obras": 14398271,
+      "dolarml_total": 18660988,
+      "pct_np_en_obras": 20.68
+    },
+    {
+      "id": "16000077",
+      "nomenclatura": "CL14",
+      "desde_hasta": "KR65 - CL CIEGA",
+      "subgrupo": "5",
+      "area_m2": 1237.01,
+      "longitud_m": 107.1,
+      "obras_cd": 833012058,
+      "obras_aiu": 265306010,
+      "obras_total": 1098318068,
+      "componentes_asignados": 325165351,
+      "total": 1423483419,
+      "dolarm2_obras": 887881,
+      "dolarm2_total": 1150745,
+      "dolarml_obras": 10255071,
+      "dolarml_total": 13291162,
+      "pct_np_en_obras": 25.92
+    }
+  ],
+  "desglose_por_capitulo_civ": [
+    {
+      "id": "9004002",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 229770811,
+      "aiu": 73179705,
+      "total": 302950516
+    },
+    {
+      "id": "9004002",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 559773940,
+      "aiu": 178282402,
+      "total": 738056342
+    },
+    {
+      "id": "9004002",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 210418921,
+      "aiu": 67016322,
+      "total": 277435243
+    },
+    {
+      "id": "9004002",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33757526,
+      "aiu": 10751435,
+      "total": 44508961
+    },
+    {
+      "id": "9004002",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 392146449,
+      "aiu": 124894723,
+      "total": 517041172
+    },
+    {
+      "id": "9004002",
+      "capitulo": "6. REDES SECAS",
+      "cd": 185497642,
+      "aiu": 59079144,
+      "total": 244576786
+    },
+    {
+      "id": "9003990",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 293412021,
+      "aiu": 93448794,
+      "total": 386860815
+    },
+    {
+      "id": "9003990",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 719678836,
+      "aiu": 229210513,
+      "total": 948889349
+    },
+    {
+      "id": "9003990",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 300873558,
+      "aiu": 95825220,
+      "total": 396698778
+    },
+    {
+      "id": "9003990",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "9003990",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 397082550,
+      "aiu": 126466822,
+      "total": 523549372
+    },
+    {
+      "id": "9003990",
+      "capitulo": "6. REDES SECAS",
+      "cd": 312076568,
+      "aiu": 99393266,
+      "total": 411469834
+    },
+    {
+      "id": "9003980",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 295308394,
+      "aiu": 94052770,
+      "total": 389361164
+    },
+    {
+      "id": "9003980",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 641056705,
+      "aiu": 204170150,
+      "total": 845226855
+    },
+    {
+      "id": "9003980",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 255060810,
+      "aiu": 81234318,
+      "total": 336295128
+    },
+    {
+      "id": "9003980",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "9003980",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 470232997,
+      "aiu": 149764507,
+      "total": 619997504
+    },
+    {
+      "id": "9003980",
+      "capitulo": "6. REDES SECAS",
+      "cd": 257650551,
+      "aiu": 82059124,
+      "total": 339709675
+    },
+    {
+      "id": "9003989",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 187488476,
+      "aiu": 59713205,
+      "total": 247201681
+    },
+    {
+      "id": "9003989",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 364636105,
+      "aiu": 116132953,
+      "total": 480769058
+    },
+    {
+      "id": "9003989",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 85328855,
+      "aiu": 27176387,
+      "total": 112505242
+    },
+    {
+      "id": "9003989",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "9003989",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 461451853,
+      "aiu": 146967801,
+      "total": 608419654
+    },
+    {
+      "id": "9003989",
+      "capitulo": "6. REDES SECAS",
+      "cd": 106342154,
+      "aiu": 33868913,
+      "total": 140211067
+    },
+    {
+      "id": "9003981",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 220224726,
+      "aiu": 70139373,
+      "total": 290364099
+    },
+    {
+      "id": "9003981",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 391064313,
+      "aiu": 124550073,
+      "total": 515614386
+    },
+    {
+      "id": "9003981",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 198602127,
+      "aiu": 63252791,
+      "total": 261854918
+    },
+    {
+      "id": "9003981",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "9003981",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 551504666,
+      "aiu": 175648721,
+      "total": 727153387
+    },
+    {
+      "id": "9003981",
+      "capitulo": "6. REDES SECAS",
+      "cd": 151333016,
+      "aiu": 48198052,
+      "total": 199531068
+    },
+    {
+      "id": "9003967",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 274137109,
+      "aiu": 87309928,
+      "total": 361447037
+    },
+    {
+      "id": "9003967",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 570943506,
+      "aiu": 181839797,
+      "total": 752783303
+    },
+    {
+      "id": "9003967",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 230077034,
+      "aiu": 73277235,
+      "total": 303354269
+    },
+    {
+      "id": "9003967",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "9003967",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 483981203,
+      "aiu": 154143173,
+      "total": 638124376
+    },
+    {
+      "id": "9003967",
+      "capitulo": "6. REDES SECAS",
+      "cd": 96248713,
+      "aiu": 30654253,
+      "total": 126902966
+    },
+    {
+      "id": "9003968",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 194180309,
+      "aiu": 61844486,
+      "total": 256024795
+    },
+    {
+      "id": "9003968",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 277116567,
+      "aiu": 88258856,
+      "total": 365375423
+    },
+    {
+      "id": "9003968",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 171431842,
+      "aiu": 54599328,
+      "total": 226031170
+    },
+    {
+      "id": "9003968",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "9003968",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 381398889,
+      "aiu": 121471732,
+      "total": 502870621
+    },
+    {
+      "id": "9003968",
+      "capitulo": "6. REDES SECAS",
+      "cd": 179359220,
+      "aiu": 57124118,
+      "total": 236483338
+    },
+    {
+      "id": "16000016",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 272743857,
+      "aiu": 86866191,
+      "total": 359610048
+    },
+    {
+      "id": "16000016",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 556546654,
+      "aiu": 177254544,
+      "total": 733801198
+    },
+    {
+      "id": "16000016",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 196213482,
+      "aiu": 62492032,
+      "total": 258705514
+    },
+    {
+      "id": "16000016",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 34621576,
+      "aiu": 11026626,
+      "total": 45648202
+    },
+    {
+      "id": "16000016",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 156703544,
+      "aiu": 49908512,
+      "total": 206612056
+    },
+    {
+      "id": "16000016",
+      "capitulo": "6. REDES SECAS",
+      "cd": 107318257,
+      "aiu": 34179792,
+      "total": 141498049
+    },
+    {
+      "id": "16000007",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 79676074,
+      "aiu": 25376033,
+      "total": 105052107
+    },
+    {
+      "id": "16000007",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 158269082,
+      "aiu": 50407120,
+      "total": 208676202
+    },
+    {
+      "id": "16000007",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 72400822,
+      "aiu": 23058938,
+      "total": 95459760
+    },
+    {
+      "id": "16000007",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000007",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 89527504,
+      "aiu": 28513615,
+      "total": 118041119
+    },
+    {
+      "id": "16000007",
+      "capitulo": "6. REDES SECAS",
+      "cd": 114266226,
+      "aiu": 36392650,
+      "total": 150658876
+    },
+    {
+      "id": "16000023",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 293854324,
+      "aiu": 93589664,
+      "total": 387443988
+    },
+    {
+      "id": "16000023",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 602352428,
+      "aiu": 191843225,
+      "total": 794195653
+    },
+    {
+      "id": "16000023",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 214711409,
+      "aiu": 68383436,
+      "total": 283094845
+    },
+    {
+      "id": "16000023",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 34261523,
+      "aiu": 10911953,
+      "total": 45173476
+    },
+    {
+      "id": "16000023",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 566555205,
+      "aiu": 180442167,
+      "total": 746997372
+    },
+    {
+      "id": "16000023",
+      "capitulo": "6. REDES SECAS",
+      "cd": 239098012,
+      "aiu": 76150326,
+      "total": 315248338
+    },
+    {
+      "id": "16000012",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 327573960,
+      "aiu": 104329031,
+      "total": 431902991
+    },
+    {
+      "id": "16000012",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 666445729,
+      "aiu": 212256300,
+      "total": 878702029
+    },
+    {
+      "id": "16000012",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 225230775,
+      "aiu": 71733749,
+      "total": 296964524
+    },
+    {
+      "id": "16000012",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000012",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 311116088,
+      "aiu": 99087363,
+      "total": 410203451
+    },
+    {
+      "id": "16000012",
+      "capitulo": "6. REDES SECAS",
+      "cd": 217179933,
+      "aiu": 69169637,
+      "total": 286349570
+    },
+    {
+      "id": "16000010",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 270344898,
+      "aiu": 86102146,
+      "total": 356447044
+    },
+    {
+      "id": "16000010",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 540786706,
+      "aiu": 172235158,
+      "total": 713021864
+    },
+    {
+      "id": "16000010",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 220821786,
+      "aiu": 70329530,
+      "total": 291151316
+    },
+    {
+      "id": "16000010",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000010",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 1729458200,
+      "aiu": 550815142,
+      "total": 2280273342
+    },
+    {
+      "id": "16000010",
+      "capitulo": "6. REDES SECAS",
+      "cd": 201267739,
+      "aiu": 64101762,
+      "total": 265369501
+    },
+    {
+      "id": "16000013",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 288679688,
+      "aiu": 91941594,
+      "total": 380621282
+    },
+    {
+      "id": "16000013",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 608780150,
+      "aiu": 193890390,
+      "total": 802670540
+    },
+    {
+      "id": "16000013",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 318289370,
+      "aiu": 101371982,
+      "total": 419661352
+    },
+    {
+      "id": "16000013",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000013",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 294020406,
+      "aiu": 93642559,
+      "total": 387662965
+    },
+    {
+      "id": "16000013",
+      "capitulo": "6. REDES SECAS",
+      "cd": 87584537,
+      "aiu": 27894799,
+      "total": 115479336
+    },
+    {
+      "id": "16000024",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 746152543,
+      "aiu": 237642124,
+      "total": 983794667
+    },
+    {
+      "id": "16000024",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 1470103308,
+      "aiu": 468213203,
+      "total": 1938316511
+    },
+    {
+      "id": "16000024",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 371291764,
+      "aiu": 118252714,
+      "total": 489544478
+    },
+    {
+      "id": "16000024",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 35015515,
+      "aiu": 11152092,
+      "total": 46167607
+    },
+    {
+      "id": "16000024",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 1581121732,
+      "aiu": 503571460,
+      "total": 2084693192
+    },
+    {
+      "id": "16000024",
+      "capitulo": "6. REDES SECAS",
+      "cd": 270522730,
+      "aiu": 86158784,
+      "total": 356681514
+    },
+    {
+      "id": "16000017",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 445890133,
+      "aiu": 142011548,
+      "total": 587901681
+    },
+    {
+      "id": "16000017",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 946686959,
+      "aiu": 301510330,
+      "total": 1248197289
+    },
+    {
+      "id": "16000017",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 233037259,
+      "aiu": 74220037,
+      "total": 307257296
+    },
+    {
+      "id": "16000017",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 35526298,
+      "aiu": 11314770,
+      "total": 46841068
+    },
+    {
+      "id": "16000017",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 298148406,
+      "aiu": 94957286,
+      "total": 393105692
+    },
+    {
+      "id": "16000017",
+      "capitulo": "6. REDES SECAS",
+      "cd": 139368479,
+      "aiu": 44387467,
+      "total": 183755946
+    },
+    {
+      "id": "16000029",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 128960306,
+      "aiu": 41072568,
+      "total": 170032874
+    },
+    {
+      "id": "16000029",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 262312989,
+      "aiu": 83544064,
+      "total": 345857053
+    },
+    {
+      "id": "16000029",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 27870584,
+      "aiu": 8876502,
+      "total": 36747086
+    },
+    {
+      "id": "16000029",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 34261523,
+      "aiu": 10911953,
+      "total": 45173476
+    },
+    {
+      "id": "16000029",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 105443625,
+      "aiu": 33582740,
+      "total": 139026365
+    },
+    {
+      "id": "16000029",
+      "capitulo": "6. REDES SECAS",
+      "cd": 57347083,
+      "aiu": 18264472,
+      "total": 75611555
+    },
+    {
+      "id": "16000028",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 318669231,
+      "aiu": 101492964,
+      "total": 420162195
+    },
+    {
+      "id": "16000028",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 647940647,
+      "aiu": 206362617,
+      "total": 854303264
+    },
+    {
+      "id": "16000028",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 260769633,
+      "aiu": 83052521,
+      "total": 343822154
+    },
+    {
+      "id": "16000028",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 34749903,
+      "aiu": 11067496,
+      "total": 45817399
+    },
+    {
+      "id": "16000028",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 349229252,
+      "aiu": 111226024,
+      "total": 460455276
+    },
+    {
+      "id": "16000028",
+      "capitulo": "6. REDES SECAS",
+      "cd": 214692273,
+      "aiu": 68377342,
+      "total": 283069615
+    },
+    {
+      "id": "16000060",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 202742750,
+      "aiu": 64571539,
+      "total": 267314289
+    },
+    {
+      "id": "16000060",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 414119073,
+      "aiu": 131892783,
+      "total": 546011856
+    },
+    {
+      "id": "16000060",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 120637751,
+      "aiu": 38421917,
+      "total": 159059668
+    },
+    {
+      "id": "16000060",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000060",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 306845637,
+      "aiu": 97727267,
+      "total": 404572904
+    },
+    {
+      "id": "16000060",
+      "capitulo": "6. REDES SECAS",
+      "cd": 154322383,
+      "aiu": 49150136,
+      "total": 203472519
+    },
+    {
+      "id": "16000052",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 233213983,
+      "aiu": 74276321,
+      "total": 307490304
+    },
+    {
+      "id": "16000052",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 475779963,
+      "aiu": 151531161,
+      "total": 627311124
+    },
+    {
+      "id": "16000052",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 140262606,
+      "aiu": 44672238,
+      "total": 184934844
+    },
+    {
+      "id": "16000052",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000052",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 612550096,
+      "aiu": 195091080,
+      "total": 807641176
+    },
+    {
+      "id": "16000052",
+      "capitulo": "6. REDES SECAS",
+      "cd": 165937878,
+      "aiu": 52849555,
+      "total": 218787433
+    },
+    {
+      "id": "16000043",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 193868647,
+      "aiu": 61745225,
+      "total": 255613872
+    },
+    {
+      "id": "16000043",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 393986849,
+      "aiu": 125480872,
+      "total": 519467721
+    },
+    {
+      "id": "16000043",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 114505697,
+      "aiu": 36468920,
+      "total": 150974617
+    },
+    {
+      "id": "16000043",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33610229,
+      "aiu": 10704522,
+      "total": 44314751
+    },
+    {
+      "id": "16000043",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 475164770,
+      "aiu": 151335227,
+      "total": 626499997
+    },
+    {
+      "id": "16000043",
+      "capitulo": "6. REDES SECAS",
+      "cd": 146824274,
+      "aiu": 46762063,
+      "total": 193586337
+    },
+    {
+      "id": "16000032",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 256114289,
+      "aiu": 81569840,
+      "total": 337684129
+    },
+    {
+      "id": "16000032",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 522712058,
+      "aiu": 166478563,
+      "total": 689190621
+    },
+    {
+      "id": "16000032",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 144594319,
+      "aiu": 46051845,
+      "total": 190646164
+    },
+    {
+      "id": "16000032",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33121600,
+      "aiu": 10548899,
+      "total": 43670499
+    },
+    {
+      "id": "16000032",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 330013804,
+      "aiu": 105106097,
+      "total": 435119901
+    },
+    {
+      "id": "16000032",
+      "capitulo": "6. REDES SECAS",
+      "cd": 135833116,
+      "aiu": 43261489,
+      "total": 179094605
+    },
+    {
+      "id": "16000027",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 248793559,
+      "aiu": 79238260,
+      "total": 328031819
+    },
+    {
+      "id": "16000027",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 508472066,
+      "aiu": 161943268,
+      "total": 670415334
+    },
+    {
+      "id": "16000027",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 123924134,
+      "aiu": 39468597,
+      "total": 163392731
+    },
+    {
+      "id": "16000027",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33121600,
+      "aiu": 10548899,
+      "total": 43670499
+    },
+    {
+      "id": "16000027",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 300430781,
+      "aiu": 95684199,
+      "total": 396114980
+    },
+    {
+      "id": "16000027",
+      "capitulo": "6. REDES SECAS",
+      "cd": 125820691,
+      "aiu": 40072632,
+      "total": 165893323
+    },
+    {
+      "id": "16000038",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 314426402,
+      "aiu": 100141665,
+      "total": 414568067
+    },
+    {
+      "id": "16000038",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 645203791,
+      "aiu": 205490955,
+      "total": 850694746
+    },
+    {
+      "id": "16000038",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 217187002,
+      "aiu": 69171888,
+      "total": 286358890
+    },
+    {
+      "id": "16000038",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 34749903,
+      "aiu": 11067496,
+      "total": 45817399
+    },
+    {
+      "id": "16000038",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 466306435,
+      "aiu": 148513937,
+      "total": 614820372
+    },
+    {
+      "id": "16000038",
+      "capitulo": "6. REDES SECAS",
+      "cd": 263919418,
+      "aiu": 84055695,
+      "total": 347975113
+    },
+    {
+      "id": "16000057",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 227299403,
+      "aiu": 72392587,
+      "total": 299691990
+    },
+    {
+      "id": "16000057",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 378829599,
+      "aiu": 120653439,
+      "total": 499483038
+    },
+    {
+      "id": "16000057",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 209340154,
+      "aiu": 66672745,
+      "total": 276012899
+    },
+    {
+      "id": "16000057",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000057",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 281880713,
+      "aiu": 89776188,
+      "total": 371656901
+    },
+    {
+      "id": "16000057",
+      "capitulo": "6. REDES SECAS",
+      "cd": 226456615,
+      "aiu": 72124167,
+      "total": 298580782
+    },
+    {
+      "id": "500002375",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 197241868,
+      "aiu": 62819563,
+      "total": 260061431
+    },
+    {
+      "id": "500002375",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 399875025,
+      "aiu": 127356197,
+      "total": 527231222
+    },
+    {
+      "id": "500002375",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 117415850,
+      "aiu": 37395774,
+      "total": 154811624
+    },
+    {
+      "id": "500002375",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33696290,
+      "aiu": 10731931,
+      "total": 44428221
+    },
+    {
+      "id": "500002375",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 316585208,
+      "aiu": 100829223,
+      "total": 417414431
+    },
+    {
+      "id": "500002375",
+      "capitulo": "6. REDES SECAS",
+      "cd": 62838649,
+      "aiu": 20013481,
+      "total": 82852130
+    },
+    {
+      "id": "16000047",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 199000024,
+      "aiu": 63379517,
+      "total": 262379541
+    },
+    {
+      "id": "16000047",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 403784347,
+      "aiu": 128601277,
+      "total": 532385624
+    },
+    {
+      "id": "16000047",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 170771027,
+      "aiu": 54388864,
+      "total": 225159891
+    },
+    {
+      "id": "16000047",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33121600,
+      "aiu": 10548899,
+      "total": 43670499
+    },
+    {
+      "id": "16000047",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 292477159,
+      "aiu": 93151050,
+      "total": 385628209
+    },
+    {
+      "id": "16000047",
+      "capitulo": "6. REDES SECAS",
+      "cd": 191622177,
+      "aiu": 61029747,
+      "total": 252651924
+    },
+    {
+      "id": "16000077",
+      "capitulo": "1. PRELIMINARES",
+      "cd": 111061118,
+      "aiu": 35371855,
+      "total": 146432973
+    },
+    {
+      "id": "16000077",
+      "capitulo": "2. PAVIMENTOS",
+      "cd": 195547592,
+      "aiu": 62279953,
+      "total": 257827545
+    },
+    {
+      "id": "16000077",
+      "capitulo": "3. ESPACIO PÚBLICO",
+      "cd": 158907168,
+      "aiu": 50610344,
+      "total": 209517512
+    },
+    {
+      "id": "16000077",
+      "capitulo": "4. SEÑALIZACIÓN Y DEMARCACIÓN",
+      "cd": 33250176,
+      "aiu": 10589849,
+      "total": 43840025
+    },
+    {
+      "id": "16000077",
+      "capitulo": "5. REDES HIDROSANITARIAS",
+      "cd": 211544915,
+      "aiu": 67374940,
+      "total": 278919855
+    },
+    {
+      "id": "16000077",
+      "capitulo": "6. REDES SECAS",
+      "cd": 122701088,
+      "aiu": 39079070,
+      "total": 161780158
+    }
+  ],
+  "desglose_np_vs_contractual": [
+    {
+      "id": "9004002",
+      "contractual_total": 1711007819,
+      "np_total": 413561201,
+      "pct_np": 19.47
+    },
+    {
+      "id": "9003990",
+      "contractual_total": 2154033081,
+      "np_total": 557275092,
+      "pct_np": 20.55
+    },
+    {
+      "id": "9003980",
+      "contractual_total": 2078638810,
+      "np_total": 495791541,
+      "pct_np": 19.26
+    },
+    {
+      "id": "9003989",
+      "contractual_total": 1279318883,
+      "np_total": 353627844,
+      "pct_np": 21.66
+    },
+    {
+      "id": "9003981",
+      "contractual_total": 1577535652,
+      "np_total": 460822231,
+      "pct_np": 22.61
+    },
+    {
+      "id": "9003967",
+      "contractual_total": 1742167344,
+      "np_total": 484284632,
+      "pct_np": 21.75
+    },
+    {
+      "id": "9003968",
+      "contractual_total": 1245329889,
+      "np_total": 385295483,
+      "pct_np": 23.63
+    },
+    {
+      "id": "16000016",
+      "contractual_total": 1374972968,
+      "np_total": 370902099,
+      "pct_np": 21.24
+    },
+    {
+      "id": "16000007",
+      "contractual_total": 551520281,
+      "np_total": 170207808,
+      "pct_np": 23.58
+    },
+    {
+      "id": "16000023",
+      "contractual_total": 1809437754,
+      "np_total": 762715918,
+      "pct_np": 29.65
+    },
+    {
+      "id": "16000012",
+      "contractual_total": 1855973889,
+      "np_total": 491988701,
+      "pct_np": 20.95
+    },
+    {
+      "id": "16000010",
+      "contractual_total": 1641253281,
+      "np_total": 2308849811,
+      "pct_np": 58.45
+    },
+    {
+      "id": "16000013",
+      "contractual_total": 1692490026,
+      "np_total": 457445474,
+      "pct_np": 21.28
+    },
+    {
+      "id": "16000024",
+      "contractual_total": 4882494422,
+      "np_total": 1016703547,
+      "pct_np": 17.23
+    },
+    {
+      "id": "16000017",
+      "contractual_total": 2227765877,
+      "np_total": 539293095,
+      "pct_np": 19.49
+    },
+    {
+      "id": "16000029",
+      "contractual_total": 672399443,
+      "np_total": 140048966,
+      "pct_np": 17.24
+    },
+    {
+      "id": "16000028",
+      "contractual_total": 1867680571,
+      "np_total": 539949332,
+      "pct_np": 22.43
+    },
+    {
+      "id": "16000060",
+      "contractual_total": 1260150391,
+      "np_total": 364120870,
+      "pct_np": 22.42
+    },
+    {
+      "id": "16000052",
+      "contractual_total": 1624351384,
+      "np_total": 565653522,
+      "pct_np": 25.83
+    },
+    {
+      "id": "16000043",
+      "contractual_total": 1254424864,
+      "np_total": 536032431,
+      "pct_np": 29.94
+    },
+    {
+      "id": "16000032",
+      "contractual_total": 1481597428,
+      "np_total": 393808491,
+      "pct_np": 21.0
+    },
+    {
+      "id": "16000027",
+      "contractual_total": 1389457672,
+      "np_total": 378061014,
+      "pct_np": 21.39
+    },
+    {
+      "id": "16000038",
+      "contractual_total": 1902141359,
+      "np_total": 658093228,
+      "pct_np": 25.7
+    },
+    {
+      "id": "16000057",
+      "contractual_total": 1427306961,
+      "np_total": 361958674,
+      "pct_np": 20.23
+    },
+    {
+      "id": "500002375",
+      "contractual_total": 1178996057,
+      "np_total": 307803002,
+      "pct_np": 20.7
+    },
+    {
+      "id": "16000047",
+      "contractual_total": 1349980309,
+      "np_total": 351895379,
+      "pct_np": 20.68
+    },
+    {
+      "id": "16000077",
+      "contractual_total": 813582897,
+      "np_total": 284735171,
+      "pct_np": 25.92
+    }
+  ],
+  "redes_vs_sin_redes": [
+    {
+      "id": "9004002",
+      "redes_total": 761617958,
+      "sin_redes_total": 1362951062,
+      "pct_redes": 35.85
+    },
+    {
+      "id": "9003990",
+      "redes_total": 935019206,
+      "sin_redes_total": 1776288967,
+      "pct_redes": 34.49
+    },
+    {
+      "id": "9003980",
+      "redes_total": 959707179,
+      "sin_redes_total": 1614723172,
+      "pct_redes": 37.28
+    },
+    {
+      "id": "9003989",
+      "redes_total": 748630721,
+      "sin_redes_total": 884316006,
+      "pct_redes": 45.85
+    },
+    {
+      "id": "9003981",
+      "redes_total": 926684455,
+      "sin_redes_total": 1111673428,
+      "pct_redes": 45.46
+    },
+    {
+      "id": "9003967",
+      "redes_total": 765027342,
+      "sin_redes_total": 1461424634,
+      "pct_redes": 34.36
+    },
+    {
+      "id": "9003968",
+      "redes_total": 739353959,
+      "sin_redes_total": 891271413,
+      "pct_redes": 45.34
+    },
+    {
+      "id": "16000016",
+      "redes_total": 348110105,
+      "sin_redes_total": 1397764962,
+      "pct_redes": 19.94
+    },
+    {
+      "id": "16000007",
+      "redes_total": 268699995,
+      "sin_redes_total": 453028094,
+      "pct_redes": 37.23
+    },
+    {
+      "id": "16000023",
+      "redes_total": 1062245710,
+      "sin_redes_total": 1509907962,
+      "pct_redes": 41.3
+    },
+    {
+      "id": "16000012",
+      "redes_total": 696553021,
+      "sin_redes_total": 1651409569,
+      "pct_redes": 29.67
+    },
+    {
+      "id": "16000010",
+      "redes_total": 2545642843,
+      "sin_redes_total": 1404460249,
+      "pct_redes": 64.44
+    },
+    {
+      "id": "16000013",
+      "redes_total": 503142301,
+      "sin_redes_total": 1646793199,
+      "pct_redes": 23.4
+    },
+    {
+      "id": "16000024",
+      "redes_total": 2441374706,
+      "sin_redes_total": 3457823263,
+      "pct_redes": 41.38
+    },
+    {
+      "id": "16000017",
+      "redes_total": 576861638,
+      "sin_redes_total": 2190197334,
+      "pct_redes": 20.85
+    },
+    {
+      "id": "16000029",
+      "redes_total": 214637920,
+      "sin_redes_total": 597810489,
+      "pct_redes": 26.42
+    },
+    {
+      "id": "16000028",
+      "redes_total": 743524891,
+      "sin_redes_total": 1664105012,
+      "pct_redes": 30.88
+    },
+    {
+      "id": "16000060",
+      "redes_total": 608045423,
+      "sin_redes_total": 1016225838,
+      "pct_redes": 37.43
+    },
+    {
+      "id": "16000052",
+      "redes_total": 1026428609,
+      "sin_redes_total": 1163576297,
+      "pct_redes": 46.87
+    },
+    {
+      "id": "16000043",
+      "redes_total": 820086334,
+      "sin_redes_total": 970370961,
+      "pct_redes": 45.8
+    },
+    {
+      "id": "16000032",
+      "redes_total": 614214506,
+      "sin_redes_total": 1261191413,
+      "pct_redes": 32.75
+    },
+    {
+      "id": "16000027",
+      "redes_total": 562008303,
+      "sin_redes_total": 1205510383,
+      "pct_redes": 31.8
+    },
+    {
+      "id": "16000038",
+      "redes_total": 962795485,
+      "sin_redes_total": 1597439102,
+      "pct_redes": 37.61
+    },
+    {
+      "id": "16000057",
+      "redes_total": 670237683,
+      "sin_redes_total": 1119027952,
+      "pct_redes": 37.46
+    },
+    {
+      "id": "500002375",
+      "redes_total": 500266561,
+      "sin_redes_total": 986532498,
+      "pct_redes": 33.65
+    },
+    {
+      "id": "16000047",
+      "redes_total": 638280133,
+      "sin_redes_total": 1063595555,
+      "pct_redes": 37.5
+    },
+    {
+      "id": "16000077",
+      "redes_total": 440700013,
+      "sin_redes_total": 657618055,
+      "pct_redes": 40.12
+    }
+  ],
+  "comparativa_v1_v2_v4": [
+    {
+      "id": "9004002",
+      "nomenclatura": "CL20",
+      "subgrupo": "2",
+      "area_m2": 2710.31,
+      "v1_cd": 2032334187.0,
+      "v1_aiu": 647278115.0,
+      "v1_total": 2679612302.0,
+      "v1_dolarm2": 988674.0,
+      "v2_cd": 1774805356.0,
+      "v2_aiu": 565257758.0,
+      "v2_total": 2340063114.0,
+      "v2_dolarm2": 988927.0,
+      "v4_obras_cd": 1611365289,
+      "v4_obras_aiu_solo": 513203731,
+      "v4_obras_aiu": 2124569020,
+      "v4_dolarm2": 783884,
+      "delta_v4_v1": -555043282,
+      "delta_v4_v1_pct": -20.71,
+      "delta_v4_v2": -215494094,
+      "delta_v4_v2_pct": -9.21
+    },
+    {
+      "id": "9003990",
+      "nomenclatura": "CL20",
+      "subgrupo": "2",
+      "area_m2": 2979.83,
+      "v1_cd": 1924797173.0,
+      "v1_aiu": 613028652.0,
+      "v1_total": 2537825825.0,
+      "v1_dolarm2": 851668.0,
+      "v2_cd": 2023023619.0,
+      "v2_aiu": 644312792.0,
+      "v2_total": 2667336411.0,
+      "v2_dolarm2": 1025279.0,
+      "v4_obras_cd": 2056373710,
+      "v4_obras_aiu_solo": 654934463,
+      "v4_obras_aiu": 2711308173,
+      "v4_dolarm2": 909887,
+      "delta_v4_v1": 173482348,
+      "delta_v4_v1_pct": 6.84,
+      "delta_v4_v2": 43971762,
+      "delta_v4_v2_pct": 1.65
+    },
+    {
+      "id": "9003980",
+      "nomenclatura": "CL20",
+      "subgrupo": "2",
+      "area_m2": 2373.61,
+      "v1_cd": 1754184447.0,
+      "v1_aiu": 558690205.0,
+      "v1_total": 2312874652.0,
+      "v1_dolarm2": 974412.0,
+      "v2_cd": 1854123283.0,
+      "v2_aiu": 590519724.0,
+      "v2_total": 2444643007.0,
+      "v2_dolarm2": 1179673.0,
+      "v4_obras_cd": 1952559633,
+      "v4_obras_aiu_solo": 621870718,
+      "v4_obras_aiu": 2574430351,
+      "v4_dolarm2": 1084605,
+      "delta_v4_v1": 261555699,
+      "delta_v4_v1_pct": 11.31,
+      "delta_v4_v2": 129787344,
+      "delta_v4_v2_pct": 5.31
+    },
+    {
+      "id": "9003989",
+      "nomenclatura": "KR 68B",
+      "subgrupo": "2",
+      "area_m2": 1404.75,
+      "v1_cd": 1080613654.0,
+      "v1_aiu": 344164643.0,
+      "v1_total": 1424778297.0,
+      "v1_dolarm2": 1014258.0,
+      "v2_cd": 1167057612.0,
+      "v2_aiu": 371696179.0,
+      "v2_total": 1538753791.0,
+      "v2_dolarm2": 1254659.0,
+      "v4_obras_cd": 1238497620,
+      "v4_obras_aiu_solo": 394449107,
+      "v4_obras_aiu": 1632946727,
+      "v4_dolarm2": 1162447,
+      "delta_v4_v1": 208168430,
+      "delta_v4_v1_pct": 14.61,
+      "delta_v4_v2": 94192936,
+      "delta_v4_v2_pct": 6.12
+    },
+    {
+      "id": "9003981",
+      "nomenclatura": "KR 68B",
+      "subgrupo": "2",
+      "area_m2": 1985.23,
+      "v1_cd": 1496185891.0,
+      "v1_aiu": 476520244.0,
+      "v1_total": 1972706135.0,
+      "v1_dolarm2": 993691.0,
+      "v2_cd": 1548150048.0,
+      "v2_aiu": 493070309.0,
+      "v2_total": 2041220357.0,
+      "v2_dolarm2": 1177700.0,
+      "v4_obras_cd": 1545979024,
+      "v4_obras_aiu_solo": 492378859,
+      "v4_obras_aiu": 2038357883,
+      "v4_dolarm2": 1026762,
+      "delta_v4_v1": 65651748,
+      "delta_v4_v1_pct": 3.33,
+      "delta_v4_v2": -2862474,
+      "delta_v4_v2_pct": -0.14
+    },
+    {
+      "id": "9003967",
+      "nomenclatura": "KR 68C",
+      "subgrupo": "2",
+      "area_m2": 2419.5,
+      "v1_cd": 1403395840.0,
+      "v1_aiu": 446967541.0,
+      "v1_total": 1850363381.0,
+      "v1_dolarm2": 764771.0,
+      "v2_cd": 1574052878.0,
+      "v2_aiu": 501320101.0,
+      "v2_total": 2075372979.0,
+      "v2_dolarm2": 982485.0,
+      "v4_obras_cd": 1688637742,
+      "v4_obras_aiu_solo": 537814234,
+      "v4_obras_aiu": 2226451976,
+      "v4_dolarm2": 920212,
+      "delta_v4_v1": 376088595,
+      "delta_v4_v1_pct": 20.33,
+      "delta_v4_v2": 151078997,
+      "delta_v4_v2_pct": 7.28
+    },
+    {
+      "id": "9003968",
+      "nomenclatura": "CL21",
+      "subgrupo": "2",
+      "area_m2": 1537.22,
+      "v1_cd": 1340214480.0,
+      "v1_aiu": 426844910.0,
+      "v1_total": 1767059390.0,
+      "v1_dolarm2": 1149516.0,
+      "v2_cd": 1408344909.0,
+      "v2_aiu": 448543770.0,
+      "v2_total": 1856888679.0,
+      "v2_dolarm2": 1383584.0,
+      "v4_obras_cd": 1236737004,
+      "v4_obras_aiu_solo": 393888368,
+      "v4_obras_aiu": 1630625372,
+      "v4_dolarm2": 1060763,
+      "delta_v4_v1": -136434018,
+      "delta_v4_v1_pct": -7.72,
+      "delta_v4_v2": -226263307,
+      "delta_v4_v2_pct": -12.19
+    },
+    {
+      "id": "16000016",
+      "nomenclatura": "KR 66",
+      "subgrupo": "5",
+      "area_m2": 1608.57,
+      "v1_cd": 878013435.0,
+      "v1_aiu": 279638499.0,
+      "v1_total": 1157651934.0,
+      "v1_dolarm2": 719678.0,
+      "v2_cd": 985951338.0,
+      "v2_aiu": 314015642.0,
+      "v2_total": 1299966980.0,
+      "v2_dolarm2": 925652.0,
+      "v4_obras_cd": 1324147371,
+      "v4_obras_aiu_solo": 421727696,
+      "v4_obras_aiu": 1745875067,
+      "v4_dolarm2": 1085358,
+      "delta_v4_v1": 588223133,
+      "delta_v4_v1_pct": 50.81,
+      "delta_v4_v2": 445908087,
+      "delta_v4_v2_pct": 34.3
+    },
+    {
+      "id": "16000007",
+      "nomenclatura": "KR66",
+      "subgrupo": "5",
+      "area_m2": 1045.93,
+      "v1_cd": 528213681.0,
+      "v1_aiu": 168230775.0,
+      "v1_total": 696444456.0,
+      "v1_dolarm2": 665861.0,
+      "v2_cd": 618420078.0,
+      "v2_aiu": 196960611.0,
+      "v2_total": 815380689.0,
+      "v2_dolarm2": 892922.0,
+      "v4_obras_cd": 547389885,
+      "v4_obras_aiu_solo": 174338204,
+      "v4_obras_aiu": 721728089,
+      "v4_dolarm2": 690035,
+      "delta_v4_v1": 25283633,
+      "delta_v4_v1_pct": 3.63,
+      "delta_v4_v2": -93652600,
+      "delta_v4_v2_pct": -11.49
+    },
+    {
+      "id": "16000023",
+      "nomenclatura": "CL17A",
+      "subgrupo": "5",
+      "area_m2": 2852.0,
+      "v1_cd": 2086898647.0,
+      "v1_aiu": 664656350.0,
+      "v1_total": 2751554997.0,
+      "v1_dolarm2": 964781.0,
+      "v2_cd": 2184936913.0,
+      "v2_aiu": 695880557.0,
+      "v2_total": 2880817470.0,
+      "v2_dolarm2": 1156969.0,
+      "v4_obras_cd": 1950832901,
+      "v4_obras_aiu_solo": 621320771,
+      "v4_obras_aiu": 2572153672,
+      "v4_dolarm2": 901877,
+      "delta_v4_v1": -179401325,
+      "delta_v4_v1_pct": -6.52,
+      "delta_v4_v2": -308663798,
+      "delta_v4_v2_pct": -10.71
+    },
+    {
+      "id": "16000012",
+      "nomenclatura": "CL18A",
+      "subgrupo": "5",
+      "area_m2": 2544.68,
+      "v1_cd": 1688814223.0,
+      "v1_aiu": 537870442.0,
+      "v1_total": 2226684665.0,
+      "v1_dolarm2": 875035.0,
+      "v2_cd": 1788526279.0,
+      "v2_aiu": 569627735.0,
+      "v2_total": 2358154014.0,
+      "v2_dolarm2": 1061438.0,
+      "v4_obras_cd": 1780796661,
+      "v4_obras_aiu_solo": 567165929,
+      "v4_obras_aiu": 2347962590,
+      "v4_dolarm2": 922695,
+      "delta_v4_v1": 121277925,
+      "delta_v4_v1_pct": 5.45,
+      "delta_v4_v2": -10191424,
+      "delta_v4_v2_pct": -0.43
+    },
+    {
+      "id": "16000010",
+      "nomenclatura": "CL18B",
+      "subgrupo": "5",
+      "area_m2": 1704.36,
+      "v1_cd": 1292656467.0,
+      "v1_aiu": 411698158.0,
+      "v1_total": 1704354625.0,
+      "v1_dolarm2": 999997.0,
+      "v2_cd": 2903236769.0,
+      "v2_aiu": 924651879.0,
+      "v2_total": 3827888648.0,
+      "v2_dolarm2": 2572489.0,
+      "v4_obras_cd": 2995929504,
+      "v4_obras_aiu_solo": 954173588,
+      "v4_obras_aiu": 3950103092,
+      "v4_dolarm2": 2317646,
+      "delta_v4_v1": 2245748467,
+      "delta_v4_v1_pct": 131.77,
+      "delta_v4_v2": 122214444,
+      "delta_v4_v2_pct": 3.19
+    },
+    {
+      "id": "16000013",
+      "nomenclatura": "CL18B",
+      "subgrupo": "5",
+      "area_m2": 1541.61,
+      "v1_cd": 1436380163.0,
+      "v1_aiu": 457472718.0,
+      "v1_total": 1893852881.0,
+      "v1_dolarm2": 1228490.0,
+      "v2_cd": 954515326.0,
+      "v2_aiu": 304003586.0,
+      "v2_total": 1258518912.0,
+      "v2_dolarm2": 935063.0,
+      "v4_obras_cd": 1630604328,
+      "v4_obras_aiu_solo": 519331172,
+      "v4_obras_aiu": 2149935500,
+      "v4_dolarm2": 1394604,
+      "delta_v4_v1": 256082619,
+      "delta_v4_v1_pct": 13.52,
+      "delta_v4_v2": 891416588,
+      "delta_v4_v2_pct": 70.83
+    },
+    {
+      "id": "16000024",
+      "nomenclatura": "KR 65A",
+      "subgrupo": "5",
+      "area_m2": 2402.99,
+      "v1_cd": 2845771164.0,
+      "v1_aiu": 906349658.0,
+      "v1_total": 3752120822.0,
+      "v1_dolarm2": 1561438.0,
+      "v2_cd": 3214415107.0,
+      "v2_aiu": 1023759067.0,
+      "v2_total": 4238174174.0,
+      "v2_dolarm2": 2020145.0,
+      "v4_obras_cd": 4474207593,
+      "v4_obras_aiu_solo": 1424990376,
+      "v4_obras_aiu": 5899197969,
+      "v4_dolarm2": 2454941,
+      "delta_v4_v1": 2147077147,
+      "delta_v4_v1_pct": 57.22,
+      "delta_v4_v2": 1661023795,
+      "delta_v4_v2_pct": 39.19
+    },
+    {
+      "id": "16000017",
+      "nomenclatura": "KR 65A",
+      "subgrupo": "5",
+      "area_m2": 1361.36,
+      "v1_cd": 1163368827.0,
+      "v1_aiu": 370521338.0,
+      "v1_total": 1533890165.0,
+      "v1_dolarm2": 1126734.0,
+      "v2_cd": 1432071978.0,
+      "v2_aiu": 456100604.0,
+      "v2_total": 1888172582.0,
+      "v2_dolarm2": 1588636.0,
+      "v4_obras_cd": 2098657534,
+      "v4_obras_aiu_solo": 668401438,
+      "v4_obras_aiu": 2767058972,
+      "v4_dolarm2": 2032570,
+      "delta_v4_v1": 1233168807,
+      "delta_v4_v1_pct": 80.39,
+      "delta_v4_v2": 878886390,
+      "delta_v4_v2_pct": 46.55
+    },
+    {
+      "id": "16000029",
+      "nomenclatura": "CL18",
+      "subgrupo": "5",
+      "area_m2": 939.76,
+      "v1_cd": 444362479.0,
+      "v1_aiu": 141525006.0,
+      "v1_total": 585887485.0,
+      "v1_dolarm2": 623444.0,
+      "v2_cd": 596011993.0,
+      "v2_aiu": 189823860.0,
+      "v2_total": 785835853.0,
+      "v2_dolarm2": 957790.0,
+      "v4_obras_cd": 616196110,
+      "v4_obras_aiu_solo": 196252299,
+      "v4_obras_aiu": 812448409,
+      "v4_dolarm2": 864528,
+      "delta_v4_v1": 226560924,
+      "delta_v4_v1_pct": 38.67,
+      "delta_v4_v2": 26612556,
+      "delta_v4_v2_pct": 3.39
+    },
+    {
+      "id": "16000028",
+      "nomenclatura": "CL18A",
+      "subgrupo": "5",
+      "area_m2": 2749.3,
+      "v1_cd": 1553976468.0,
+      "v1_aiu": 494925965.0,
+      "v1_total": 2048902433.0,
+      "v1_dolarm2": 745245.0,
+      "v2_cd": 1672496538.0,
+      "v2_aiu": 532673422.0,
+      "v2_total": 2205169960.0,
+      "v2_dolarm2": 918704.0,
+      "v4_obras_cd": 1826050939,
+      "v4_obras_aiu_solo": 581578964,
+      "v4_obras_aiu": 2407629903,
+      "v4_dolarm2": 875725,
+      "delta_v4_v1": 358727470,
+      "delta_v4_v1_pct": 17.51,
+      "delta_v4_v2": 202459943,
+      "delta_v4_v2_pct": 9.18
+    },
+    {
+      "id": "16000060",
+      "nomenclatura": "KR63",
+      "subgrupo": "5",
+      "area_m2": 1593.8,
+      "v1_cd": 1147497177.0,
+      "v1_aiu": 365466376.0,
+      "v1_total": 1512963553.0,
+      "v1_dolarm2": 949281.0,
+      "v2_cd": 1381929856.0,
+      "v2_aiu": 440130840.0,
+      "v2_total": 1822060696.0,
+      "v2_dolarm2": 1309437.0,
+      "v4_obras_cd": 1231917770,
+      "v4_obras_aiu_solo": 392353491,
+      "v4_obras_aiu": 1624271261,
+      "v4_dolarm2": 1019119,
+      "delta_v4_v1": 111307708,
+      "delta_v4_v1_pct": 7.36,
+      "delta_v4_v2": -197789435,
+      "delta_v4_v2_pct": -10.86
+    },
+    {
+      "id": "16000052",
+      "nomenclatura": "KR63",
+      "subgrupo": "5",
+      "area_m2": 1791.31,
+      "v1_cd": 1583183372.0,
+      "v1_aiu": 504228072.0,
+      "v1_total": 2087411444.0,
+      "v1_dolarm2": 1165299.0,
+      "v2_cd": 1644450972.0,
+      "v2_aiu": 523741190.0,
+      "v2_total": 2168192162.0,
+      "v2_dolarm2": 1386381.0,
+      "v4_obras_cd": 1660994703,
+      "v4_obras_aiu_solo": 529010203,
+      "v4_obras_aiu": 2190004906,
+      "v4_dolarm2": 1222572,
+      "delta_v4_v1": 102593462,
+      "delta_v4_v1_pct": 4.91,
+      "delta_v4_v2": 21812744,
+      "delta_v4_v2_pct": 1.01
+    },
+    {
+      "id": "16000043",
+      "nomenclatura": "KR 63",
+      "subgrupo": "5",
+      "area_m2": 1519.4,
+      "v1_cd": 1377000843.0,
+      "v1_aiu": 438560998.0,
+      "v1_total": 1815561841.0,
+      "v1_dolarm2": 1194920.0,
+      "v2_cd": 1462309463.0,
+      "v2_aiu": 465730941.0,
+      "v2_total": 1928040404.0,
+      "v2_dolarm2": 1453448.0,
+      "v4_obras_cd": 1357960466,
+      "v4_obras_aiu_solo": 432496829,
+      "v4_obras_aiu": 1790457295,
+      "v4_dolarm2": 1178398,
+      "delta_v4_v1": -25104546,
+      "delta_v4_v1_pct": -1.38,
+      "delta_v4_v2": -137583109,
+      "delta_v4_v2_pct": -7.14
+    },
+    {
+      "id": "16000032",
+      "nomenclatura": "KR 63",
+      "subgrupo": "5",
+      "area_m2": 1835.68,
+      "v1_cd": 1246362178.0,
+      "v1_aiu": 396953890.0,
+      "v1_total": 1643316068.0,
+      "v1_dolarm2": 895208.0,
+      "v2_cd": 1596220570.0,
+      "v2_aiu": 508380289.0,
+      "v2_total": 2104600859.0,
+      "v2_dolarm2": 1313192.0,
+      "v4_obras_cd": 1422389187,
+      "v4_obras_aiu_solo": 453016732,
+      "v4_obras_aiu": 1875405919,
+      "v4_dolarm2": 1021641,
+      "delta_v4_v1": 232089851,
+      "delta_v4_v1_pct": 14.12,
+      "delta_v4_v2": -229194940,
+      "delta_v4_v2_pct": -10.89
+    },
+    {
+      "id": "16000027",
+      "nomenclatura": "KR 63",
+      "subgrupo": "5",
+      "area_m2": 1958.61,
+      "v1_cd": 1243386353.0,
+      "v1_aiu": 396006120.0,
+      "v1_total": 1639392473.0,
+      "v1_dolarm2": 837018.0,
+      "v2_cd": 1590415208.0,
+      "v2_aiu": 506531340.0,
+      "v2_total": 2096946548.0,
+      "v2_dolarm2": 1226295.0,
+      "v4_obras_cd": 1340562830,
+      "v4_obras_aiu_solo": 426955856,
+      "v4_obras_aiu": 1767518686,
+      "v4_dolarm2": 902435,
+      "delta_v4_v1": 128126213,
+      "delta_v4_v1_pct": 7.82,
+      "delta_v4_v2": -329427862,
+      "delta_v4_v2_pct": -15.71
+    },
+    {
+      "id": "16000038",
+      "nomenclatura": "CL18A",
+      "subgrupo": "5",
+      "area_m2": 2644.76,
+      "v1_cd": 1471361381.0,
+      "v1_aiu": 468613886.0,
+      "v1_total": 1939975267.0,
+      "v1_dolarm2": 733517.0,
+      "v2_cd": 1644191304.0,
+      "v2_aiu": 523658488.0,
+      "v2_total": 2167849792.0,
+      "v2_dolarm2": 938855.0,
+      "v4_obras_cd": 1941792950,
+      "v4_obras_aiu_solo": 618441637,
+      "v4_obras_aiu": 2560234587,
+      "v4_dolarm2": 968040,
+      "delta_v4_v1": 620259320,
+      "delta_v4_v1_pct": 31.97,
+      "delta_v4_v2": 392384795,
+      "delta_v4_v2_pct": 18.1
+    },
+    {
+      "id": "16000057",
+      "nomenclatura": "CL17B",
+      "subgrupo": "5",
+      "area_m2": 1996.95,
+      "v1_cd": 1276337728.0,
+      "v1_aiu": 406500803.0,
+      "v1_total": 1682838531.0,
+      "v1_dolarm2": 842704.0,
+      "v2_cd": 1362595699.0,
+      "v2_aiu": 433973104.0,
+      "v2_total": 1796568803.0,
+      "v2_dolarm2": 1030463.0,
+      "v4_obras_cd": 1357056660,
+      "v4_obras_aiu_solo": 432208975,
+      "v4_obras_aiu": 1789265635,
+      "v4_dolarm2": 895999,
+      "delta_v4_v1": 106427104,
+      "delta_v4_v1_pct": 6.32,
+      "delta_v4_v2": -7303168,
+      "delta_v4_v2_pct": -0.41
+    },
+    {
+      "id": "500002375",
+      "nomenclatura": "KR65",
+      "subgrupo": "5",
+      "area_m2": 1159.92,
+      "v1_cd": 1072518372.0,
+      "v1_aiu": 341586376.0,
+      "v1_total": 1414104748.0,
+      "v1_dolarm2": 1219140.0,
+      "v2_cd": 1187261698.0,
+      "v2_aiu": 378130978.0,
+      "v2_total": 1565392676.0,
+      "v2_dolarm2": 1545791.0,
+      "v4_obras_cd": 1127652890,
+      "v4_obras_aiu_solo": 359146169,
+      "v4_obras_aiu": 1486799059,
+      "v4_dolarm2": 1281812,
+      "delta_v4_v1": 72694311,
+      "delta_v4_v1_pct": 5.14,
+      "delta_v4_v2": -78593617,
+      "delta_v4_v2_pct": -5.02
+    },
+    {
+      "id": "16000047",
+      "nomenclatura": "KR65",
+      "subgrupo": "5",
+      "area_m2": 2387.64,
+      "v1_cd": 1322307703.0,
+      "v1_aiu": 421141780.0,
+      "v1_total": 1743449483.0,
+      "v1_dolarm2": 730198.0,
+      "v2_cd": 1479395318.0,
+      "v2_aiu": 471172615.0,
+      "v2_total": 1950567933.0,
+      "v2_dolarm2": 935724.0,
+      "v4_obras_cd": 1290776334,
+      "v4_obras_aiu_solo": 411099354,
+      "v4_obras_aiu": 1701875688,
+      "v4_dolarm2": 712786,
+      "delta_v4_v1": -41573795,
+      "delta_v4_v1_pct": -2.38,
+      "delta_v4_v2": -248692245,
+      "delta_v4_v2_pct": -12.75
+    },
+    {
+      "id": "16000077",
+      "nomenclatura": "CL14",
+      "subgrupo": "5",
+      "area_m2": 1237.01,
+      "v1_cd": 832440915.0,
+      "v1_aiu": 265124107.0,
+      "v1_total": 1097565022.0,
+      "v1_dolarm2": 887273.0,
+      "v2_cd": 879372580.0,
+      "v2_aiu": 280071373.0,
+      "v2_total": 1159443953.0,
+      "v2_dolarm2": 1073574.0,
+      "v4_obras_cd": 833012058,
+      "v4_obras_aiu_solo": 265306010,
+      "v4_obras_aiu": 1098318068,
+      "v4_dolarm2": 887881,
+      "delta_v4_v1": 753046,
+      "delta_v4_v1_pct": 0.07,
+      "delta_v4_v2": -61125885,
+      "delta_v4_v2_pct": -5.27
+    }
+  ],
+  "grupos_hoja1": {
+    "ya_iniciados": {
+      "ids_originales": [
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967",
+        "9003968",
+        "16000077",
+        "16000057",
+        "16000010"
+      ],
+      "ids_normalizados": [
+        "9003990",
+        "9003980",
+        "9003989",
+        "9003981",
+        "9003967",
+        "9003968",
+        "16000077",
+        "16000057",
+        "16000010"
+      ],
+      "cantidad_civs": 9,
+      "obras_total": 19651807277,
+      "componentes_total": 5818065828,
+      "total": 25469873105
+    },
+    "por_iniciar": {
+      "ids_originales": [
+        "16000038",
+        "16000027",
+        "16000032",
+        "16000043",
+        "16000016",
+        "16000023",
+        "16000028",
+        "16000052",
+        "9004002"
+      ],
+      "ids_normalizados": [
+        "16000038",
+        "16000027",
+        "16000032",
+        "16000043",
+        "16000016",
+        "16000023",
+        "16000028",
+        "16000052",
+        "9004002"
+      ],
+      "cantidad_civs": 9,
+      "obras_total": 19033849055,
+      "componentes_total": 5635114633,
+      "total": 24668963688
+    },
+    "no_alcanza": {
+      "ids_originales": [
+        "16000013",
+        "16000024",
+        "16000017",
+        "16000029",
+        "16004876",
+        "16000047",
+        "16000007",
+        "16000012",
+        "16000060"
+      ],
+      "ids_normalizados": [
+        "16000013",
+        "16000024",
+        "16000017",
+        "16000029",
+        "500002375",
+        "16000047",
+        "16000007",
+        "16000012",
+        "16000060"
+      ],
+      "cantidad_civs": 9,
+      "obras_total": 19511277537,
+      "componentes_total": 5776460938,
+      "total": 25287738475
+    }
+  },
+  "estadistica_dolarm2": {
+    "obras": {
+      "media": 1132564,
+      "mediana": 1019119,
+      "p25": 898938,
+      "p75": 1170422,
+      "min": 690035,
+      "max": 2454941,
+      "std": 444212
+    },
+    "total": {
+      "media": 1467868,
+      "mediana": 1320836,
+      "p25": 1165076,
+      "p75": 1516934,
+      "min": 894325,
+      "max": 3181744,
+      "std": 575724
+    },
+    "subgrupo_2_obras": {
+      "media": 992651,
+      "mediana": 1026762,
+      "p25": 915049,
+      "p75": 1072684,
+      "min": 783884,
+      "max": 1162447,
+      "std": 128303
+    },
+    "subgrupo_5_obras": {
+      "media": 1181533,
+      "mediana": 993580,
+      "p25": 893970,
+      "p75": 1237382,
+      "min": 690035,
+      "max": 2454941,
+      "std": 505062
+    },
+    "limite_outlier_sup": 1426345,
+    "limite_outlier_inf": 611893,
+    "iqr": 271484
+  },
+  "outliers": [
+    {
+      "id": "16000024",
+      "nomenclatura": "KR 65A",
+      "subgrupo": "5",
+      "area_m2": 2402.99,
+      "dolarm2_obras": 2454941,
+      "obras_aiu": 5899197969,
+      "veces_sobre_mediana": 2.41,
+      "explicacion_top_5_items": [
+        {
+          "row": 34,
+          "item_pago": "2.003",
+          "descripcion": "LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEADO, COLOCACIÓN, CURADO, JUNTAS Y ACABADO. INCLUYE CANASTILLA PASA JUNTA.",
+          "und": "M3",
+          "chapter": "2. PAVIMENTOS",
+          "is_np": false,
+          "valor_aiu": 1527099650,
+          "cantidad": 1022.734192
+        },
+        {
+          "row": 369,
+          "item_pago": "5.037",
+          "descripcion": "Proyecto: factibilidad, estudios y diseños de aceras, ciclorutas y conexiones peatonales en la ciudad de Bogotá D.C. Pro",
+          "und": "M2",
+          "chapter": "5. REDES HIDROSANITARIAS",
+          "is_np": false,
+          "valor_aiu": 701876415,
+          "cantidad": 10554.85
+        },
+        {
+          "row": 405,
+          "item_pago": "3.012",
+          "descripcion": "SUBBASE GRANULAR CLASE B (SBG_B) CON RECICLADO DE CONCRETO HIDRAULICO (SUMINISTRO, EXTENDIDO MANUAL, HUMEDECIMIENTO Y CO",
+          "und": "M3",
+          "chapter": "5. REDES HIDROSANITARIAS",
+          "is_np": false,
+          "valor_aiu": 595505259,
+          "cantidad": 2916.97
+        },
+        {
+          "row": 39,
+          "item_pago": "NP-123",
+          "descripcion": "MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTICO CA 14 (Suministro, Extendido, Nivelación y Compactación\nme",
+          "und": "M3",
+          "chapter": "2. PAVIMENTOS",
+          "is_np": true,
+          "valor_aiu": 367762586,
+          "cantidad": 235.02
+        },
+        {
+          "row": 14,
+          "item_pago": "1.006",
+          "descripcion": "TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS EN SITIO AUTORIZADO (DISTANCIA DE TRANSPORTE 21 KM). A DISTANCIA MAYOR DEL A",
+          "und": "M3",
+          "chapter": "1. PRELIMINARES",
+          "is_np": false,
+          "valor_aiu": 333613447,
+          "cantidad": 6049.64
+        }
+      ]
+    },
+    {
+      "id": "16000010",
+      "nomenclatura": "CL18B",
+      "subgrupo": "5",
+      "area_m2": 1704.36,
+      "dolarm2_obras": 2317646,
+      "obras_aiu": 3950103092,
+      "veces_sobre_mediana": 2.27,
+      "explicacion_top_5_items": [
+        {
+          "row": 479,
+          "item_pago": "NP-133",
+          "descripcion": "CONTRATO 1752-2021 - BOX CULVERT PREFABRICADO TIPO 1, Ancho Int: 1.875 m, Alto Int: 1.80m, Longitud: 1.00m, Espesores de",
+          "und": "UN",
+          "chapter": "5. REDES HIDROSANITARIAS",
+          "is_np": true,
+          "valor_aiu": 1879745340,
+          "cantidad": 110
+        },
+        {
+          "row": 34,
+          "item_pago": "2.003",
+          "descripcion": "LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEADO, COLOCACIÓN, CURADO, JUNTAS Y ACABADO. INCLUYE CANASTILLA PASA JUNTA.",
+          "und": "M3",
+          "chapter": "2. PAVIMENTOS",
+          "is_np": false,
+          "valor_aiu": 556140139,
+          "cantidad": 372.46
+        },
+        {
+          "row": 39,
+          "item_pago": "NP-123",
+          "descripcion": "MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTICO CA 14 (Suministro, Extendido, Nivelación y Compactación\nme",
+          "und": "M3",
+          "chapter": "2. PAVIMENTOS",
+          "is_np": true,
+          "valor_aiu": 121429566,
+          "cantidad": 77.6
+        },
+        {
+          "row": 14,
+          "item_pago": "1.006",
+          "descripcion": "TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS EN SITIO AUTORIZADO (DISTANCIA DE TRANSPORTE 21 KM). A DISTANCIA MAYOR DEL A",
+          "und": "M3",
+          "chapter": "1. PRELIMINARES",
+          "is_np": false,
+          "valor_aiu": 110418836,
+          "cantidad": 2002.3
+        },
+        {
+          "row": 531,
+          "item_pago": "6.007",
+          "descripcion": "6 DUCTOS D=6\" + 2 DUCTOS D=3\" PVC TDP. SUMINISTRO E INSTALACION. (NO INCLUYE RELLENOS).",
+          "und": "ML",
+          "chapter": "6. REDES SECAS",
+          "is_np": false,
+          "valor_aiu": 104391873,
+          "cantidad": 187.98
+        }
+      ]
+    },
+    {
+      "id": "16000017",
+      "nomenclatura": "KR 65A",
+      "subgrupo": "5",
+      "area_m2": 1361.36,
+      "dolarm2_obras": 2032570,
+      "obras_aiu": 2767058972,
+      "veces_sobre_mediana": 1.99,
+      "explicacion_top_5_items": [
+        {
+          "row": 34,
+          "item_pago": "2.003",
+          "descripcion": "LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEADO, COLOCACIÓN, CURADO, JUNTAS Y ACABADO. INCLUYE CANASTILLA PASA JUNTA.",
+          "und": "M3",
+          "chapter": "2. PAVIMENTOS",
+          "is_np": false,
+          "valor_aiu": 1004653737,
+          "cantidad": 672.84
+        },
+        {
+          "row": 39,
+          "item_pago": "NP-123",
+          "descripcion": "MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTICO CA 14 (Suministro, Extendido, Nivelación y Compactación\nme",
+          "und": "M3",
+          "chapter": "2. PAVIMENTOS",
+          "is_np": true,
+          "valor_aiu": 219371275,
+          "cantidad": 140.19
+        },
+        {
+          "row": 14,
+          "item_pago": "1.006",
+          "descripcion": "TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS EN SITIO AUTORIZADO (DISTANCIA DE TRANSPORTE 21 KM). A DISTANCIA MAYOR DEL A",
+          "und": "M3",
+          "chapter": "1. PRELIMINARES",
+          "is_np": false,
+          "valor_aiu": 198973386,
+          "cantidad": 3608.12
+        },
+        {
+          "row": 20,
+          "item_pago": "1.008",
+          "descripcion": "ESTABILIZACIÓN DE SUBRASANTE CON RAJÓN, INCLUYE EQUIPO DE COMPACTACIÓN (SUMINISTRO, EXTENDIDO, NIVELACIÓN Y COMPACTACIÓN",
+          "und": "M3",
+          "chapter": "1. PRELIMINARES",
+          "is_np": false,
+          "valor_aiu": 174637170,
+          "cantidad": 981.24
+        },
+        {
+          "row": 30,
+          "item_pago": "NP-124",
+          "descripcion": "BASE GRANULAR CLASE A (BG_A) CON RECICLADO DE CONCRETO HIDRAULICO (SUMINISTRO, EXTENDIDO, NIVELACIÓN, HUMEDECIMIENTO Y C",
+          "und": "M3",
+          "chapter": "1. PRELIMINARES",
+          "is_np": true,
+          "valor_aiu": 168491152,
+          "cantidad": 700.89
+        }
+      ]
+    }
+  ],
+  "distribucion_subgrupo": {
+    "sg2": {
+      "civs": 7,
+      "obras_aiu": 14938689502,
+      "total": 19361401249
+    },
+    "sg5": {
+      "civs": 20,
+      "obras_aiu": 43258244367,
+      "total": 56065174019
+    }
+  },
+  "hallazgos": [
+    {
+      "id": "H03-01",
+      "severidad": "INFO",
+      "titulo": "Suma de obras con AIU por CIV cuadra a fila 688",
+      "descripcion": "Suma de it.civ[cid].valor (excluye ACEROS) = $58,196,933,869. Esperado (fila 688 col M) = $58,196,933,800. Δ = $69",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 688,
+      "impacto_pesos": 69,
+      "recomendacion": "Cuadre verificado; no requiere acción si Δ es residual (<$1.000). Si es mayor, revisar redondeos por CIV."
+    },
+    {
+      "id": "H03-02",
+      "severidad": "INFO",
+      "titulo": "Suma total con componentes cuadra a fila 703",
+      "descripcion": "Obras+componentes por CIV = $75,426,575,268. Esperado = $75,426,575,199. Δ = $69",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 703,
+      "impacto_pesos": 69,
+      "recomendacion": "Cuadre verificado si Δ residual. En caso contrario, revisar reparto de componentes."
+    },
+    {
+      "id": "H03-OUT-16000024",
+      "severidad": "ALTA",
+      "titulo": "CIV 16000024 (KR 65A) es outlier de $/m² con $2,454,941/m²",
+      "descripcion": "$/m² = $2,454,941 (2.41× mediana $1,019,119/m²). Obras con AIU = $5,899,197,969. Top 3 renglones: [2] LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEADO, COLOCACIÓN, $1,527,099,650; [5] Proyecto: factibilidad, estudios y diseños de aceras, ciclor $701,876,415; [5] SUBBASE GRANULAR CLASE B (SBG_B) CON RECICLADO DE CONCRETO H $595,505,259",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "múltiples",
+      "impacto_pesos": 5899197969,
+      "recomendacion": "Solicitar al contratista soporte técnico y de cantidades para renglones dominantes. Comparar con V1/V2 y verificar consistencia con memorias de cantidades."
+    },
+    {
+      "id": "H03-OUT-16000010",
+      "severidad": "ALTA",
+      "titulo": "CIV 16000010 (CL18B) es outlier de $/m² con $2,317,646/m²",
+      "descripcion": "$/m² = $2,317,646 (2.27× mediana $1,019,119/m²). Obras con AIU = $3,950,103,092. Top 3 renglones: [5] CONTRATO 1752-2021 - BOX CULVERT PREFABRICADO TIPO 1, Ancho  $1,879,745,340; [2] LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEADO, COLOCACIÓN, $556,140,139; [2] MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTIC $121,429,566",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "múltiples",
+      "impacto_pesos": 3950103092,
+      "recomendacion": "Solicitar al contratista soporte técnico y de cantidades para renglones dominantes. Comparar con V1/V2 y verificar consistencia con memorias de cantidades."
+    },
+    {
+      "id": "H03-OUT-16000017",
+      "severidad": "ALTA",
+      "titulo": "CIV 16000017 (KR 65A) es outlier de $/m² con $2,032,570/m²",
+      "descripcion": "$/m² = $2,032,570 (1.99× mediana $1,019,119/m²). Obras con AIU = $2,767,058,972. Top 3 renglones: [2] LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEADO, COLOCACIÓN, $1,004,653,737; [2] MEZCLA ASFÁLTICA EN CALIENTE DENSA MD19 CON CEMENTO ASFÁLTIC $219,371,275; [1] TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS EN SITIO AUTORIZ $198,973,386",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "múltiples",
+      "impacto_pesos": 2767058972,
+      "recomendacion": "Solicitar al contratista soporte técnico y de cantidades para renglones dominantes. Comparar con V1/V2 y verificar consistencia con memorias de cantidades."
+    },
+    {
+      "id": "H03-NP-16000010",
+      "severidad": "MEDIA",
+      "titulo": "CIV 16000010: 58.45% del valor viene de NPs",
+      "descripcion": "Contractual $1,641,253,281 + NP $2,308,849,811 = obras totales. Alta dependencia de precios no pactados.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "múltiples",
+      "impacto_pesos": 2308849811,
+      "recomendacion": "Auditar NPs asignados a este CIV, verificar códigos IDU, análisis de precios unitarios y actas de fijación."
+    }
+  ]
+}

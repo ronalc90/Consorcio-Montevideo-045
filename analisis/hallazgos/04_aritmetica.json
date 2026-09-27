@@ -1,0 +1,3891 @@
+{
+ "meta": {
+  "fuente": "4. PRESUPUESTO 01-09-2026 75MM (8 MESES).xlsx",
+  "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+  "aiu_factor": 0.31849,
+  "fecha_analisis": "2026-09-26"
+ },
+ "formulas": {
+  "conteo_formulas": 30456,
+  "conteo_hardcoded": 16394,
+  "ejemplos_formulas": [
+   {
+    "celda": "T7",
+    "formula": "=SUM(T8:T11)"
+   },
+   {
+    "celda": "V7",
+    "formula": "=SUM(V8:V11)"
+   },
+   {
+    "celda": "X7",
+    "formula": "=SUM(X8:X11)"
+   },
+   {
+    "celda": "Z7",
+    "formula": "=SUM(Z8:Z11)"
+   },
+   {
+    "celda": "AB7",
+    "formula": "=SUM(AB8:AB11)"
+   },
+   {
+    "celda": "AD7",
+    "formula": "=SUM(AD8:AD11)"
+   },
+   {
+    "celda": "AF7",
+    "formula": "=SUM(AF8:AF11)"
+   },
+   {
+    "celda": "AH7",
+    "formula": "=SUM(AH8:AH11)"
+   },
+   {
+    "celda": "AK7",
+    "formula": "=SUM(AK8:AK11)"
+   },
+   {
+    "celda": "AM7",
+    "formula": "=SUM(AM8:AM11)"
+   },
+   {
+    "celda": "AO7",
+    "formula": "=SUM(AO8:AO11)"
+   },
+   {
+    "celda": "AQ7",
+    "formula": "=SUM(AQ8:AQ11)"
+   },
+   {
+    "celda": "AS7",
+    "formula": "=SUM(AS8:AS11)"
+   },
+   {
+    "celda": "AU7",
+    "formula": "=SUM(AU8:AU11)"
+   },
+   {
+    "celda": "AW7",
+    "formula": "=SUM(AW8:AW11)"
+   },
+   {
+    "celda": "AY7",
+    "formula": "=SUM(AY8:AY11)"
+   },
+   {
+    "celda": "BA7",
+    "formula": "=SUM(BA8:BA11)"
+   },
+   {
+    "celda": "BC7",
+    "formula": "=SUM(BC8:BC11)"
+   },
+   {
+    "celda": "BE7",
+    "formula": "=SUM(BE8:BE11)"
+   },
+   {
+    "celda": "BG7",
+    "formula": "=SUM(BG8:BG11)"
+   }
+  ],
+  "celdas_error": []
+ },
+ "rangos_incompletos": [],
+ "desviaciones_aiu_L": [],
+ "desviaciones_M_N_O_Q": [
+  {
+   "row": 34,
+   "columna": "N",
+   "actual": 12357428721.0,
+   "esperado": 12357342504,
+   "delta": 86217.0
+  },
+  {
+   "row": 34,
+   "columna": "O",
+   "actual": 2351966086.0,
+   "esperado": 2352052303,
+   "delta": -86217.0
+  }
+ ],
+ "desviaciones_CB_vs_M": [],
+ "consistencia_hojas": [
+  {
+   "hoja": "Presupuesto estimado",
+   "celda": "A11",
+   "valor": 74667840865,
+   "esperado": 75426575199,
+   "delta": -758734334
+  },
+  {
+   "hoja": "EJECUTIVO",
+   "celda": "H56",
+   "valor": 59426575199,
+   "esperado": 58196933800,
+   "delta": 1229641399
+  }
+ ],
+ "duplicados": [
+  {
+   "codigo_idu": "5196",
+   "filas": [
+    10,
+    58
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [10, 58] subcapitulos=['PRELIMINARES', 'Excavaciones, Demoliciones y Rellenos'] H=[418.0, 0] I=[211.23999999999998, 1554.6599999999999]"
+  },
+  {
+   "codigo_idu": "3017",
+   "filas": [
+    14,
+    47,
+    124,
+    194,
+    266,
+    318,
+    370,
+    427,
+    495,
+    536,
+    575,
+    599,
+    613,
+    632,
+    654,
+    667
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [14, 47, 124, 194, 266, 318, 370, 427, 495, 536, 575, 599, 613, 632, 654, 667] subcapitulos=['EXCAVACIONES', 'Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[38572.0, 0, 1066.0, 0, 6103.0, 0, 0, 0, 4587.0, 0, 0, 0, 0, 0, 0, 0] I=[52468.569999999985, 6026.9400000000005, 1061.46, 643.09, 912.5999999999999, 12747.180000000002, 10058.77, 4096.65, 218.18, 5842.25, 0, 327.03999999999996, 6.87, 0, 1.98198, 350.81800000000004]"
+  },
+  {
+   "codigo_idu": "4390",
+   "filas": [
+    15,
+    46
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [15, 46] subcapitulos=['EXCAVACIONES', 'Excavaciones, Demoliciones y Rellenos'] H=[0, 7383.0] I=[27.62, 5854.52]"
+  },
+  {
+   "codigo_idu": "NO",
+   "filas": [
+    16,
+    17,
+    313,
+    365
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [16, 17, 313, 365] subcapitulos=['EXCAVACIONES', 'EXCAVACIONES', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0, 0, 0] I=[2.0, 1.0, 0, 11.0]"
+  },
+  {
+   "codigo_idu": "6486",
+   "filas": [
+    21,
+    49
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [21, 49] subcapitulos=['RELLENOS Y CAPAS GRANULARES (BASE Y SUBBASE)', 'Excavaciones, Demoliciones y Rellenos'] H=[8688.0, 392.0] I=[0, 72.61]"
+  },
+  {
+   "codigo_idu": "4030",
+   "filas": [
+    22,
+    60
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [22, 60] subcapitulos=['RELLENOS Y CAPAS GRANULARES (BASE Y SUBBASE)', 'Excavaciones, Demoliciones y Rellenos'] H=[36297.0, 0] I=[0, 17109.11]"
+  },
+  {
+   "codigo_idu": "5380",
+   "filas": [
+    29,
+    59
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [29, 59] subcapitulos=['RELLENOS Y CAPAS GRANULARES (BASE Y SUBBASE)', 'Excavaciones, Demoliciones y Rellenos'] H=[0, 0] I=[4423.4, 466.43]"
+  },
+  {
+   "codigo_idu": "3837",
+   "filas": [
+    36,
+    84
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [36, 84] subcapitulos=['PAVIMENTOS', 'Andenes, Prefabricados y Pisos'] H=[14656.0, 820.0] I=[17049.629999999997, 1596.86758]"
+  },
+  {
+   "codigo_idu": "4032",
+   "filas": [
+    38,
+    52
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [38, 52] subcapitulos=['PAVIMENTOS', 'Excavaciones, Demoliciones y Rellenos'] H=[0, 20379.0] I=[36885.9, 0]"
+  },
+  {
+   "codigo_idu": "4754",
+   "filas": [
+    54,
+    157,
+    227,
+    301,
+    353,
+    405,
+    462,
+    504,
+    665
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [54, 157, 227, 301, 353, 405, 462, 504, 665] subcapitulos=['Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES MOVISTAR'] H=[392.0, 0, 0, 0, 0, 0, 0, 0, 0] I=[558.62, 135.95, 71.09, 405.0, 5904.465176464074, 3917.669999999999, 877.1600000000001, 3.9400000000000004, 74.94]"
+  },
+  {
+   "codigo_idu": "4907",
+   "filas": [
+    55,
+    158,
+    228,
+    503,
+    544,
+    583,
+    607,
+    634
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [55, 158, 228, 503, 544, 583, 607, 634] subcapitulos=['Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU'] H=[2274.0, 0, 0, 0, 0, 0, 0, 0] I=[1843.42, 460.3600000000001, 292.51, 49.739999999999995, 1635.21, 0, 137.22999999999996, 1.26]"
+  },
+  {
+   "codigo_idu": "3009",
+   "filas": [
+    123,
+    193,
+    263,
+    315,
+    367,
+    424,
+    494,
+    535,
+    574,
+    598,
+    612,
+    636,
+    666
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [123, 193, 263, 315, 367, 424, 494, 535, 574, 598, 612, 636, 666] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[853.0, 0, 1471.0, 0, 0, 0, 3669.0, 0, 0, 0, 0, 0, 0] I=[816.4899999999999, 497.19, 202.5, 639.1400000000001, 540.0, 270.0, 167.85, 4494.0, 0, 251.53000000000003, 5.279999999999999, 1.98198, 269.85999999999996]"
+  },
+  {
+   "codigo_idu": "3539",
+   "filas": [
+    125,
+    195
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [125, 195] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[10.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3523",
+   "filas": [
+    126,
+    196
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [126, 196] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[24.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3515",
+   "filas": [
+    127,
+    197
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [127, 197] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[21.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3540",
+   "filas": [
+    128,
+    198
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [128, 198] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[9.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3315",
+   "filas": [
+    129,
+    199
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [129, 199] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[1.0, 0] I=[37.0, 1.0]"
+  },
+  {
+   "codigo_idu": "3524",
+   "filas": [
+    130,
+    200
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [130, 200] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[48.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3516",
+   "filas": [
+    131,
+    201
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [131, 201] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[25.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "7419",
+   "filas": [
+    132,
+    202
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [132, 202] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[10.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "7421",
+   "filas": [
+    133,
+    203
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [133, 203] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[4.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "7423",
+   "filas": [
+    134,
+    204
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [134, 204] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[19.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4402",
+   "filas": [
+    135,
+    205
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [135, 205] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[17.0, 0] I=[21.0, 14.0]"
+  },
+  {
+   "codigo_idu": "3324",
+   "filas": [
+    136,
+    206
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [136, 206] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[28.0, 0] I=[29.0, 17.0]"
+  },
+  {
+   "codigo_idu": "4979",
+   "filas": [
+    137,
+    207
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [137, 207] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[45.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4841",
+   "filas": [
+    138,
+    186,
+    208,
+    256
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [138, 186, 208, 256] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[28.0, 0, 0, 0] I=[0, 42.0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4839",
+   "filas": [
+    139,
+    209
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [139, 209] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[43.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4842",
+   "filas": [
+    140,
+    210
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [140, 210] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[3.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3328",
+   "filas": [
+    141,
+    211
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [141, 211] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[8.0, 0] I=[1.0, 9.0]"
+  },
+  {
+   "codigo_idu": "3329",
+   "filas": [
+    142,
+    212
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [142, 212] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[13.0, 0] I=[6.0, 11.0]"
+  },
+  {
+   "codigo_idu": "4858",
+   "filas": [
+    143,
+    213
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [143, 213] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[9.0, 0] I=[6.0, 11.0]"
+  },
+  {
+   "codigo_idu": "4901",
+   "filas": [
+    144,
+    214
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [144, 214] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[8.0, 0] I=[1.0, 9.0]"
+  },
+  {
+   "codigo_idu": "4411",
+   "filas": [
+    145,
+    215
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [145, 215] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[2.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4420",
+   "filas": [
+    146,
+    216
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [146, 216] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[8.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3405",
+   "filas": [
+    147,
+    217
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [147, 217] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[13.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3246",
+   "filas": [
+    148,
+    218
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [148, 218] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[538.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3226",
+   "filas": [
+    149,
+    219
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [149, 219] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[283.0, 0] I=[860.56, 421.43]"
+  },
+  {
+   "codigo_idu": "3227",
+   "filas": [
+    150,
+    220
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [150, 220] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[571.0, 0] I=[1398.3899999999996, 907.0799999999999]"
+  },
+  {
+   "codigo_idu": "3247",
+   "filas": [
+    151,
+    221
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [151, 221] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[674.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "8637",
+   "filas": [
+    152,
+    222
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [152, 222] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[1.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "8318",
+   "filas": [
+    153,
+    223
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [153, 223] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[13.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "8319",
+   "filas": [
+    154,
+    224
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [154, 224] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[26.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4851",
+   "filas": [
+    155,
+    225
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [155, 225] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[31.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "7947",
+   "filas": [
+    156,
+    226
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [156, 226] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[101.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4848",
+   "filas": [
+    159,
+    229,
+    267,
+    319,
+    371,
+    428
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [159, 229, 267, 319, 371, 428] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 3537.0, 0, 0, 0] I=[1306.3000000000002, 0, 9.35, 1715.6799999999998, 6.95, 0]"
+  },
+  {
+   "codigo_idu": "3024",
+   "filas": [
+    160,
+    230,
+    496,
+    537,
+    576,
+    600,
+    614,
+    633,
+    655,
+    668
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [160, 230, 496, 537, 576, 600, 614, 633, 655, 668] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[0, 0, 609.0, 0, 0, 0, 0, 0, 0, 0] I=[292.44, 174.42, 50.04, 1028.8500000000004, 0, 45.89000000000001, 1.13, 324.0, 135.0, 58.65]"
+  },
+  {
+   "codigo_idu": "8655",
+   "filas": [
+    161,
+    231,
+    282,
+    334,
+    386,
+    443
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [161, 231, 282, 334, 386, 443] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 936.0, 0, 0, 0] I=[51.3, 25.46, 17.540000000000003, 1062.79, 1465.1099999999997, 852.87]"
+  },
+  {
+   "codigo_idu": "3225",
+   "filas": [
+    162,
+    232
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [162, 232] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[0, 1.27]"
+  },
+  {
+   "codigo_idu": "3228",
+   "filas": [
+    163,
+    233
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [163, 233] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[0, 55.82]"
+  },
+  {
+   "codigo_idu": "10612",
+   "filas": [
+    164,
+    234
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [164, 234] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[49.86, 0]"
+  },
+  {
+   "codigo_idu": "4809",
+   "filas": [
+    165,
+    235
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [165, 235] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[160.49999999999997, 0]"
+  },
+  {
+   "codigo_idu": "4849",
+   "filas": [
+    166,
+    236,
+    488,
+    529,
+    568,
+    592,
+    620,
+    642
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [166, 236, 488, 529, 568, 592, 620, 642] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[0, 0, 2883.0, 0, 0, 0, 3002.0, 0] I=[1154.19, 0, 0, 0, 0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3404",
+   "filas": [
+    167,
+    237
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [167, 237] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[2.0, 0]"
+  },
+  {
+   "codigo_idu": "3620",
+   "filas": [
+    168,
+    238
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [168, 238] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[6.0, 0]"
+  },
+  {
+   "codigo_idu": "3317",
+   "filas": [
+    169,
+    239
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [169, 239] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[10.0, 0]"
+  },
+  {
+   "codigo_idu": "3391",
+   "filas": [
+    170,
+    240
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [170, 240] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[26.0, 2.0]"
+  },
+  {
+   "codigo_idu": "3305",
+   "filas": [
+    171,
+    241
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [171, 241] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[126.0, 0]"
+  },
+  {
+   "codigo_idu": "3306",
+   "filas": [
+    172,
+    242
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [172, 242] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[220.0, 0]"
+  },
+  {
+   "codigo_idu": "3307",
+   "filas": [
+    173,
+    243
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [173, 243] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[4.0, 0]"
+  },
+  {
+   "codigo_idu": "3293",
+   "filas": [
+    174,
+    244
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [174, 244] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[7.0, 8.0]"
+  },
+  {
+   "codigo_idu": "3294",
+   "filas": [
+    175,
+    245
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [175, 245] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[1.0, 14.0]"
+  },
+  {
+   "codigo_idu": "3258",
+   "filas": [
+    176,
+    246
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [176, 246] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[2.0, 1.0]"
+  },
+  {
+   "codigo_idu": "3257",
+   "filas": [
+    177,
+    247
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [177, 247] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[2.0, 0]"
+  },
+  {
+   "codigo_idu": "3253",
+   "filas": [
+    178,
+    248
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [178, 248] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[7.0, 0]"
+  },
+  {
+   "codigo_idu": "3282",
+   "filas": [
+    179,
+    249
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [179, 249] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[9.0, 11.0]"
+  },
+  {
+   "codigo_idu": "3254",
+   "filas": [
+    180,
+    250
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [180, 250] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[10.0, 10.0]"
+  },
+  {
+   "codigo_idu": "5750",
+   "filas": [
+    181,
+    251
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [181, 251] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[5.0, 0]"
+  },
+  {
+   "codigo_idu": "4872",
+   "filas": [
+    182,
+    252
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [182, 252] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[4.0, 0]"
+  },
+  {
+   "codigo_idu": "4385",
+   "filas": [
+    183,
+    253
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [183, 253] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[8.0, 0]"
+  },
+  {
+   "codigo_idu": "4386",
+   "filas": [
+    184,
+    254
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [184, 254] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[15.0, 0]"
+  },
+  {
+   "codigo_idu": "4840",
+   "filas": [
+    185,
+    255
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [185, 255] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[4.0, 0]"
+  },
+  {
+   "codigo_idu": "4845",
+   "filas": [
+    187,
+    257
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [187, 257] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[0, 1.0]"
+  },
+  {
+   "codigo_idu": "8151",
+   "filas": [
+    188,
+    258
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [188, 258] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[3.0, 1.0]"
+  },
+  {
+   "codigo_idu": "8181",
+   "filas": [
+    189,
+    259
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [189, 259] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[1.0, 0]"
+  },
+  {
+   "codigo_idu": "8970",
+   "filas": [
+    190,
+    260
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [190, 260] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[129.0, 0]"
+  },
+  {
+   "codigo_idu": "3687",
+   "filas": [
+    191,
+    261
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [191, 261] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[50.0, 28.0]"
+  },
+  {
+   "codigo_idu": "4262",
+   "filas": [
+    264,
+    316,
+    368,
+    425
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [264, 316, 368, 425] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[3411.0, 0, 0, 0] I=[499.5, 9177.68, 7197.5, 2937.3]"
+  },
+  {
+   "codigo_idu": "8643",
+   "filas": [
+    265,
+    317,
+    369,
+    426
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [265, 317, 369, 426] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[5801.0, 0, 0, 0] I=[0, 18442.509999999995, 17457.17, 4973.43]"
+  },
+  {
+   "codigo_idu": "3919",
+   "filas": [
+    268,
+    320,
+    372,
+    429
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [268, 320, 372, 429] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[639.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3920",
+   "filas": [
+    269,
+    321,
+    373,
+    430
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [269, 321, 373, 430] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[84.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3922",
+   "filas": [
+    270,
+    322,
+    374,
+    431
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [270, 322, 374, 431] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[172.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3923",
+   "filas": [
+    271,
+    323,
+    375,
+    432
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [271, 323, 375, 432] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[257.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3924",
+   "filas": [
+    272,
+    324,
+    376,
+    433
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [272, 324, 376, 433] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[14.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3043",
+   "filas": [
+    273,
+    325,
+    377,
+    434
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [273, 325, 377, 434] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[1949.0, 0, 0, 0] I=[92.2, 2304.44, 0, 0]"
+  },
+  {
+   "codigo_idu": "3044",
+   "filas": [
+    274,
+    326,
+    378,
+    435
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [274, 326, 378, 435] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[239.0, 0, 0, 0] I=[0, 552.95, 624.89, 0]"
+  },
+  {
+   "codigo_idu": "3045",
+   "filas": [
+    275,
+    327,
+    379,
+    436
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [275, 327, 379, 436] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[712.0, 0, 0, 0] I=[0, 700.9699999999999, 278.78, 0]"
+  },
+  {
+   "codigo_idu": "6538",
+   "filas": [
+    276,
+    328,
+    380,
+    437
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [276, 328, 380, 437] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[119.0, 0, 0, 0] I=[0, 0, 134.41, 0]"
+  },
+  {
+   "codigo_idu": "3046",
+   "filas": [
+    277,
+    329,
+    381,
+    438
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [277, 329, 381, 438] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[443.0, 0, 0, 0] I=[11.0, 206.2, 84.0, 132.25]"
+  },
+  {
+   "codigo_idu": "3047",
+   "filas": [
+    278,
+    330,
+    382,
+    439
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [278, 330, 382, 439] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[39.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3048",
+   "filas": [
+    279,
+    331,
+    383,
+    440
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [279, 331, 383, 440] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[43.0, 0, 0, 0] I=[0, 0, 108.26, 40.0]"
+  },
+  {
+   "codigo_idu": "7447",
+   "filas": [
+    280,
+    332,
+    384,
+    441
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [280, 332, 384, 441] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[120.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4896",
+   "filas": [
+    281,
+    333,
+    385,
+    442
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [281, 333, 385, 442] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[1945.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4792",
+   "filas": [
+    283,
+    335,
+    387,
+    444
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [283, 335, 387, 444] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[5348.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4291",
+   "filas": [
+    284,
+    336,
+    388,
+    445
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [284, 336, 388, 445] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[454.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "7876",
+   "filas": [
+    285,
+    337,
+    389,
+    446
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [285, 337, 389, 446] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[247.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "6188",
+   "filas": [
+    286,
+    338,
+    390,
+    447
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [286, 338, 390, 447] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[119.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4294",
+   "filas": [
+    287,
+    339,
+    391,
+    448
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [287, 339, 391, 448] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[61.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4296",
+   "filas": [
+    288,
+    340,
+    392,
+    449
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [288, 340, 392, 449] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[64.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4297",
+   "filas": [
+    289,
+    341,
+    393,
+    450
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [289, 341, 393, 450] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[214.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4299",
+   "filas": [
+    290,
+    342,
+    394,
+    451
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [290, 342, 394, 451] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[98.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4622",
+   "filas": [
+    291,
+    343,
+    395,
+    452
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [291, 343, 395, 452] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[168.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "7512",
+   "filas": [
+    292,
+    344,
+    396,
+    453,
+    630,
+    652
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [292, 344, 396, 453, 630, 652] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[58.0, 0, 0, 0, 16.0, 0] I=[2.0, 18.0, 38.0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4553",
+   "filas": [
+    293,
+    345,
+    397,
+    454
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [293, 345, 397, 454] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[99.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "7888",
+   "filas": [
+    294,
+    346,
+    398,
+    455
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [294, 346, 398, 455] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[99.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3895",
+   "filas": [
+    295,
+    347,
+    399,
+    456
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [295, 347, 399, 456] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[123.0, 0, 0, 0] I=[0, 0, 194.0, 0]"
+  },
+  {
+   "codigo_idu": "3155",
+   "filas": [
+    296,
+    348,
+    400,
+    457
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [296, 348, 400, 457] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[33.0, 0, 0, 0] I=[0, 0, 44.0, 0]"
+  },
+  {
+   "codigo_idu": "8545",
+   "filas": [
+    297,
+    349,
+    401,
+    458
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [297, 349, 401, 458] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[404.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "5015",
+   "filas": [
+    298,
+    350,
+    402,
+    459
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [298, 350, 402, 459] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[101.0, 0, 0, 0] I=[0, 128.0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4878",
+   "filas": [
+    299,
+    351,
+    403,
+    460
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [299, 351, 403, 460] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[101.0, 0, 0, 0] I=[0, 62.0, 2.0, 0]"
+  },
+  {
+   "codigo_idu": "4144",
+   "filas": [
+    300,
+    352,
+    404,
+    461
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [300, 352, 404, 461] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[815.0, 0, 0, 0] I=[4.0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3879",
+   "filas": [
+    302,
+    354,
+    414,
+    471
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [302, 354, 414, 471] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 73.0, 43.2, 21.8]"
+  },
+  {
+   "codigo_idu": "3878",
+   "filas": [
+    303,
+    355,
+    415,
+    472
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [303, 355, 415, 472] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 73.0, 43.2, 21.8]"
+  },
+  {
+   "codigo_idu": "3442",
+   "filas": [
+    304,
+    356,
+    416,
+    473
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [304, 356, 416, 473] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 5.609999999999999, 2.38, 6.2700000000000005]"
+  },
+  {
+   "codigo_idu": "3471",
+   "filas": [
+    305,
+    357,
+    417,
+    474
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [305, 357, 417, 474] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 157.63, 57.501, 35.619]"
+  },
+  {
+   "codigo_idu": "3042",
+   "filas": [
+    306,
+    358
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [306, 358] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 989.3199999999998]"
+  },
+  {
+   "codigo_idu": "4879",
+   "filas": [
+    307,
+    359
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [307, 359] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 21.0]"
+  },
+  {
+   "codigo_idu": "7892",
+   "filas": [
+    308,
+    360
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [308, 360] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 216.0]"
+  },
+  {
+   "codigo_idu": "9325",
+   "filas": [
+    309,
+    361
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [309, 361] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 27.0]"
+  },
+  {
+   "codigo_idu": "9434",
+   "filas": [
+    310,
+    362
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [310, 362] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 54000.0]"
+  },
+  {
+   "codigo_idu": "8001",
+   "filas": [
+    311,
+    363
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [311, 363] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 104.3]"
+  },
+  {
+   "codigo_idu": "N/A",
+   "filas": [
+    312,
+    364,
+    421,
+    422,
+    478,
+    479,
+    480,
+    481,
+    513,
+    522,
+    552,
+    561,
+    674
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [312, 364, 421, 422, 478, 479, 480, 481, 513, 522, 552, 561, 674] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES VANTI'] H=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] I=[0, 71.0, 42.2, 25.5, 21.8, 110.0, 2.0, 0, 0, 0, 0, 73.0, 35.3]"
+  },
+  {
+   "codigo_idu": "7432",
+   "filas": [
+    406,
+    463
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [406, 463] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[97.96, 148.03]"
+  },
+  {
+   "codigo_idu": "7433",
+   "filas": [
+    407,
+    464
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [407, 464] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[0, 108.96]"
+  },
+  {
+   "codigo_idu": "7435",
+   "filas": [
+    408,
+    465
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [408, 465] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[52.29, 122.00999999999999]"
+  },
+  {
+   "codigo_idu": "4265",
+   "filas": [
+    409,
+    466
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [409, 466] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[202.39000000000001, 0]"
+  },
+  {
+   "codigo_idu": "3936",
+   "filas": [
+    410,
+    467
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [410, 467] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[72.15, 0]"
+  },
+  {
+   "codigo_idu": "3937",
+   "filas": [
+    411,
+    468
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [411, 468] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[199.94, 0]"
+  },
+  {
+   "codigo_idu": "3939",
+   "filas": [
+    412,
+    469
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [412, 469] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[39.14, 0]"
+  },
+  {
+   "codigo_idu": "3993",
+   "filas": [
+    413,
+    470
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [413, 470] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[70.9, 70.9]"
+  },
+  {
+   "codigo_idu": "4892",
+   "filas": [
+    418,
+    475,
+    519,
+    558
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [418, 475, 519, 558] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0, 0, 0] I=[599.07, 0, 1.0, 0]"
+  },
+  {
+   "codigo_idu": "5887",
+   "filas": [
+    419,
+    476
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [419, 476] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[119.01000000000002, 0]"
+  },
+  {
+   "codigo_idu": "5888",
+   "filas": [
+    420,
+    477
+   ],
+   "es_reubicacion": false,
+   "comentario": "Filas [420, 477] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[17.24, 0]"
+  },
+  {
+   "codigo_idu": "6673",
+   "filas": [
+    484,
+    525,
+    564,
+    588
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [484, 525, 564, 588] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[50.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "6676",
+   "filas": [
+    485,
+    526,
+    565,
+    589
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [485, 526, 565, 589] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[73.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "8498",
+   "filas": [
+    486,
+    527,
+    566,
+    590
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [486, 527, 566, 590] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[1501.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "8131",
+   "filas": [
+    487,
+    528,
+    567,
+    591,
+    627,
+    649,
+    661,
+    671
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [487, 528, 567, 591, 627, 649, 661, 671] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR', 'INSTALACIONES UNE EPM'] H=[2539.0, 0, 0, 0, 186.0, 0, 1071.0, 1998.0] I=[0, 0, 0, 0, 0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3159",
+   "filas": [
+    489,
+    530,
+    569,
+    593
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [489, 530, 569, 593] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[3399.0, 0, 0, 0] I=[13.1, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "5182",
+   "filas": [
+    490,
+    531,
+    570,
+    594
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [490, 531, 570, 594] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[3399.0, 0, 0, 0] I=[7.6, 3912.249999999999, 0, 0]"
+  },
+  {
+   "codigo_idu": "3380",
+   "filas": [
+    491,
+    505,
+    532,
+    571,
+    595,
+    626,
+    648
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [491, 505, 532, 571, 595, 626, 648] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[155.0, 0, 0, 0, 0, 2870.0, 0] I=[0, 13.6, 0, 0, 0, 6.0, 0]"
+  },
+  {
+   "codigo_idu": "3379",
+   "filas": [
+    492,
+    533,
+    572,
+    596
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [492, 533, 572, 596] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[109.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "5023",
+   "filas": [
+    493,
+    534,
+    573,
+    597,
+    631,
+    653
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [493, 534, 573, 597, 631, 653] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[1080.0, 0, 0, 0, 0, 0] I=[367.1, 381.17, 0, 899.47, 0, 17.55]"
+  },
+  {
+   "codigo_idu": "4104",
+   "filas": [
+    497,
+    538,
+    577,
+    601
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [497, 538, 577, 601] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[8.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4106",
+   "filas": [
+    498,
+    539,
+    578,
+    602
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [498, 539, 578, 602] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[10.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "4107",
+   "filas": [
+    499,
+    540,
+    579,
+    603
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [499, 540, 579, 603] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[167.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3652",
+   "filas": [
+    500,
+    541,
+    580,
+    604
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [500, 541, 580, 604] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[4.0, 0, 0, 0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "9035",
+   "filas": [
+    501,
+    542,
+    581,
+    605
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [501, 542, 581, 605] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[17.0, 0, 0, 0] I=[0, 17.0, 0, 0]"
+  },
+  {
+   "codigo_idu": "5253",
+   "filas": [
+    502,
+    543,
+    582,
+    606
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [502, 543, 582, 606] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[5.0, 0, 0, 0] I=[0, 4.0, 0, 0]"
+  },
+  {
+   "codigo_idu": "9030",
+   "filas": [
+    506,
+    545,
+    584,
+    608
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [506, 545, 584, 608] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[0, 0, 0, 0] I=[0, 0, 0, 63.0]"
+  },
+  {
+   "codigo_idu": "9031",
+   "filas": [
+    507,
+    546,
+    585,
+    609
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [507, 546, 585, 609] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[0, 0, 0, 0] I=[0, 34.0, 0, 3.0]"
+  },
+  {
+   "codigo_idu": "9032",
+   "filas": [
+    508,
+    547
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [508, 547] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 165.0]"
+  },
+  {
+   "codigo_idu": "9034",
+   "filas": [
+    509,
+    548
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [509, 548] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 12.0]"
+  },
+  {
+   "codigo_idu": "3382",
+   "filas": [
+    510,
+    549,
+    586,
+    610
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [510, 549, 586, 610] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[0, 0, 0, 0] I=[0, 0, 0, 5.73]"
+  },
+  {
+   "codigo_idu": "8739",
+   "filas": [
+    511,
+    550
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [511, 550] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3408",
+   "filas": [
+    512,
+    551
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [512, 551] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 619.86]"
+  },
+  {
+   "codigo_idu": "8737",
+   "filas": [
+    514,
+    553
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [514, 553] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[60.0, 60.0]"
+  },
+  {
+   "codigo_idu": "3413",
+   "filas": [
+    515,
+    554
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [515, 554] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 760.0]"
+  },
+  {
+   "codigo_idu": "3414",
+   "filas": [
+    516,
+    555
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [516, 555] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "5873",
+   "filas": [
+    517,
+    556
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [517, 556] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 6.0]"
+  },
+  {
+   "codigo_idu": "7369",
+   "filas": [
+    518,
+    557
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [518, 557] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[2157.2499999999995, 0]"
+  },
+  {
+   "codigo_idu": "5316",
+   "filas": [
+    520,
+    559
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [520, 559] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[33.0, 0]"
+  },
+  {
+   "codigo_idu": "6423",
+   "filas": [
+    521,
+    560
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [521, 560] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[1.0, 0]"
+  },
+  {
+   "codigo_idu": "8081",
+   "filas": [
+    523,
+    562
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [523, 562] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 2688.0]"
+  },
+  {
+   "codigo_idu": "5875",
+   "filas": [
+    615,
+    637,
+    660,
+    672
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [615, 637, 660, 672] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR', 'INSTALACIONES UNE EPM'] H=[34.0, 0, 18.0, 1.0] I=[0, 0, 0, 0]"
+  },
+  {
+   "codigo_idu": "3654",
+   "filas": [
+    616,
+    638
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [616, 638] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[1.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4131",
+   "filas": [
+    617,
+    639
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [617, 639] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[3.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "8120",
+   "filas": [
+    618,
+    640
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [618, 640] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[3.0, 0] I=[6.0, 0]"
+  },
+  {
+   "codigo_idu": "3059",
+   "filas": [
+    619,
+    641
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [619, 641] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[7.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3057",
+   "filas": [
+    621,
+    643
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [621, 643] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[10.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "3795",
+   "filas": [
+    622,
+    644
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [622, 644] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[89.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "4912",
+   "filas": [
+    623,
+    645
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [623, 645] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[14.0, 0] I=[24.0, 0]"
+  },
+  {
+   "codigo_idu": "4913",
+   "filas": [
+    624,
+    646
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [624, 646] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[44.0, 0] I=[35.0, 0]"
+  },
+  {
+   "codigo_idu": "4914",
+   "filas": [
+    625,
+    647
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [625, 647] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[7.0, 0] I=[7.0, 0]"
+  },
+  {
+   "codigo_idu": "3653",
+   "filas": [
+    628,
+    650
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [628, 650] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[3.0, 0] I=[0, 0]"
+  },
+  {
+   "codigo_idu": "8121",
+   "filas": [
+    629,
+    651
+   ],
+   "es_reubicacion": true,
+   "comentario": "Filas [629, 651] subcapitulos=['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[5.0, 0] I=[2.0, 0]"
+  }
+ ],
+ "desviaciones_vu_visor": [],
+ "desviaciones_vu_contractual": [
+  {
+   "codigo_idu": "3007",
+   "row": 8,
+   "K_v4": 833.0,
+   "K_contractual": 807.0,
+   "delta_pct": 3.22
+  },
+  {
+   "codigo_idu": "3010",
+   "row": 9,
+   "K_v4": 35570.0,
+   "K_contractual": 34018.0,
+   "delta_pct": 4.56
+  },
+  {
+   "codigo_idu": "5196",
+   "row": 10,
+   "K_v4": 95648.0,
+   "K_contractual": 89578.0,
+   "delta_pct": 6.78
+  },
+  {
+   "codigo_idu": "4581",
+   "row": 11,
+   "K_v4": 2680.0,
+   "K_contractual": 2473.0,
+   "delta_pct": 8.37
+  },
+  {
+   "codigo_idu": "3710",
+   "row": 13,
+   "K_v4": 5266.0,
+   "K_contractual": 5043.0,
+   "delta_pct": 4.42
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 14,
+   "K_v4": 41825.0,
+   "K_contractual": 40317.0,
+   "delta_pct": 3.74
+  },
+  {
+   "codigo_idu": "4390",
+   "row": 15,
+   "K_v4": 96914.0,
+   "K_contractual": 90934.0,
+   "delta_pct": 6.58
+  },
+  {
+   "codigo_idu": "3800",
+   "row": 19,
+   "K_v4": 1612.0,
+   "K_contractual": 1556.0,
+   "delta_pct": 3.6
+  },
+  {
+   "codigo_idu": "6486",
+   "row": 21,
+   "K_v4": 58635.0,
+   "K_contractual": 56932.0,
+   "delta_pct": 2.99
+  },
+  {
+   "codigo_idu": "4158",
+   "row": 24,
+   "K_v4": 177992.0,
+   "K_contractual": 158793.0,
+   "delta_pct": 12.09
+  },
+  {
+   "codigo_idu": "4157",
+   "row": 25,
+   "K_v4": 174262.0,
+   "K_contractual": 167310.0,
+   "delta_pct": 4.16
+  },
+  {
+   "codigo_idu": "4159",
+   "row": 27,
+   "K_v4": 155185.0,
+   "K_contractual": 141769.0,
+   "delta_pct": 9.46
+  },
+  {
+   "codigo_idu": "6313",
+   "row": 33,
+   "K_v4": 1139177.0,
+   "K_contractual": 972660.0,
+   "delta_pct": 17.12
+  },
+  {
+   "codigo_idu": "7785",
+   "row": 34,
+   "K_v4": 1132473.0,
+   "K_contractual": 979106.0,
+   "delta_pct": 15.66
+  },
+  {
+   "codigo_idu": "3811",
+   "row": 35,
+   "K_v4": 2394.0,
+   "K_contractual": 2316.0,
+   "delta_pct": 3.37
+  },
+  {
+   "codigo_idu": "6710",
+   "row": 37,
+   "K_v4": 827462.0,
+   "K_contractual": 792012.0,
+   "delta_pct": 4.48
+  },
+  {
+   "codigo_idu": "3378",
+   "row": 42,
+   "K_v4": 3713.0,
+   "K_contractual": 3364.0,
+   "delta_pct": 10.37
+  },
+  {
+   "codigo_idu": "8606",
+   "row": 43,
+   "K_v4": 11761.0,
+   "K_contractual": 11280.0,
+   "delta_pct": 4.26
+  },
+  {
+   "codigo_idu": "3011",
+   "row": 44,
+   "K_v4": 5886.0,
+   "K_contractual": 5360.0,
+   "delta_pct": 9.81
+  },
+  {
+   "codigo_idu": "4592",
+   "row": 45,
+   "K_v4": 1615.0,
+   "K_contractual": 1512.0,
+   "delta_pct": 6.81
+  },
+  {
+   "codigo_idu": "4390",
+   "row": 46,
+   "K_v4": 96914.0,
+   "K_contractual": 90934.0,
+   "delta_pct": 6.58
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 47,
+   "K_v4": 41825.0,
+   "K_contractual": 40317.0,
+   "delta_pct": 3.74
+  },
+  {
+   "codigo_idu": "6486",
+   "row": 49,
+   "K_v4": 58635.0,
+   "K_contractual": 56932.0,
+   "delta_pct": 2.99
+  },
+  {
+   "codigo_idu": "4557",
+   "row": 50,
+   "K_v4": 158102.0,
+   "K_contractual": 143381.0,
+   "delta_pct": 10.27
+  },
+  {
+   "codigo_idu": "4755",
+   "row": 51,
+   "K_v4": 147743.0,
+   "K_contractual": 144799.0,
+   "delta_pct": 2.03
+  },
+  {
+   "codigo_idu": "4907",
+   "row": 55,
+   "K_v4": 151999.0,
+   "K_contractual": 137902.0,
+   "delta_pct": 10.22
+  },
+  {
+   "codigo_idu": "4908",
+   "row": 56,
+   "K_v4": 103363.0,
+   "K_contractual": 95574.0,
+   "delta_pct": 8.15
+  },
+  {
+   "codigo_idu": "7996",
+   "row": 57,
+   "K_v4": 98387.0,
+   "K_contractual": 94852.0,
+   "delta_pct": 3.73
+  },
+  {
+   "codigo_idu": "5196",
+   "row": 58,
+   "K_v4": 95648.0,
+   "K_contractual": 89578.0,
+   "delta_pct": 6.78
+  },
+  {
+   "codigo_idu": "3027",
+   "row": 62,
+   "K_v4": 73673.0,
+   "K_contractual": 72189.0,
+   "delta_pct": 2.06
+  },
+  {
+   "codigo_idu": "4088",
+   "row": 63,
+   "K_v4": 60070.0,
+   "K_contractual": 58419.0,
+   "delta_pct": 2.83
+  },
+  {
+   "codigo_idu": "4919",
+   "row": 64,
+   "K_v4": 117340.0,
+   "K_contractual": 105997.0,
+   "delta_pct": 10.7
+  },
+  {
+   "codigo_idu": "8452",
+   "row": 66,
+   "K_v4": 261305.0,
+   "K_contractual": 245742.0,
+   "delta_pct": 6.33
+  },
+  {
+   "codigo_idu": "8499",
+   "row": 67,
+   "K_v4": 121968.0,
+   "K_contractual": 113876.0,
+   "delta_pct": 7.11
+  },
+  {
+   "codigo_idu": "8212",
+   "row": 68,
+   "K_v4": 89032.0,
+   "K_contractual": 86742.0,
+   "delta_pct": 2.64
+  },
+  {
+   "codigo_idu": "8464",
+   "row": 69,
+   "K_v4": 53296.0,
+   "K_contractual": 50851.0,
+   "delta_pct": 4.81
+  },
+  {
+   "codigo_idu": "3210",
+   "row": 70,
+   "K_v4": 63326.0,
+   "K_contractual": 61676.0,
+   "delta_pct": 2.68
+  },
+  {
+   "codigo_idu": "3207",
+   "row": 71,
+   "K_v4": 53813.0,
+   "K_contractual": 52518.0,
+   "delta_pct": 2.47
+  },
+  {
+   "codigo_idu": "4085",
+   "row": 72,
+   "K_v4": 94651.0,
+   "K_contractual": 92745.0,
+   "delta_pct": 2.06
+  },
+  {
+   "codigo_idu": "5181",
+   "row": 73,
+   "K_v4": 57072.0,
+   "K_contractual": 55735.0,
+   "delta_pct": 2.4
+  },
+  {
+   "codigo_idu": "3751",
+   "row": 74,
+   "K_v4": 72639.0,
+   "K_contractual": 69109.0,
+   "delta_pct": 5.11
+  },
+  {
+   "codigo_idu": "8226",
+   "row": 75,
+   "K_v4": 54780.0,
+   "K_contractual": 51918.0,
+   "delta_pct": 5.51
+  },
+  {
+   "codigo_idu": "8229",
+   "row": 78,
+   "K_v4": 20274.0,
+   "K_contractual": 18428.0,
+   "delta_pct": 10.02
+  },
+  {
+   "codigo_idu": "4751",
+   "row": 79,
+   "K_v4": 13770.0,
+   "K_contractual": 13209.0,
+   "delta_pct": 4.25
+  },
+  {
+   "codigo_idu": "3204",
+   "row": 80,
+   "K_v4": 813511.0,
+   "K_contractual": 736832.0,
+   "delta_pct": 10.41
+  },
+  {
+   "codigo_idu": "3748",
+   "row": 81,
+   "K_v4": 850822.0,
+   "K_contractual": 738689.0,
+   "delta_pct": 15.18
+  },
+  {
+   "codigo_idu": "4239",
+   "row": 83,
+   "K_v4": 5970.0,
+   "K_contractual": 5707.0,
+   "delta_pct": 4.61
+  },
+  {
+   "codigo_idu": "3425",
+   "row": 85,
+   "K_v4": 76194.0,
+   "K_contractual": 73210.0,
+   "delta_pct": 4.08
+  },
+  {
+   "codigo_idu": "8476",
+   "row": 86,
+   "K_v4": 1915023.0,
+   "K_contractual": 1845132.0,
+   "delta_pct": 3.79
+  },
+  {
+   "codigo_idu": "8406",
+   "row": 89,
+   "K_v4": 2875373.0,
+   "K_contractual": 2024856.0,
+   "delta_pct": 42.0
+  },
+  {
+   "codigo_idu": "8114",
+   "row": 105,
+   "K_v4": 23969.0,
+   "K_contractual": 23328.0,
+   "delta_pct": 2.75
+  },
+  {
+   "codigo_idu": "5734",
+   "row": 107,
+   "K_v4": 53342.0,
+   "K_contractual": 51033.0,
+   "delta_pct": 4.52
+  },
+  {
+   "codigo_idu": "8092",
+   "row": 120,
+   "K_v4": 38301.0,
+   "K_contractual": 36339.0,
+   "delta_pct": 5.4
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 123,
+   "K_v4": 42540.0,
+   "K_contractual": 38523.0,
+   "delta_pct": 10.43
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 124,
+   "K_v4": 41825.0,
+   "K_contractual": 40317.0,
+   "delta_pct": 3.74
+  },
+  {
+   "codigo_idu": "3539",
+   "row": 125,
+   "K_v4": 122119.0,
+   "K_contractual": 111072.0,
+   "delta_pct": 9.95
+  },
+  {
+   "codigo_idu": "3523",
+   "row": 126,
+   "K_v4": 160656.0,
+   "K_contractual": 146103.0,
+   "delta_pct": 9.96
+  },
+  {
+   "codigo_idu": "3515",
+   "row": 127,
+   "K_v4": 169494.0,
+   "K_contractual": 154139.0,
+   "delta_pct": 9.96
+  },
+  {
+   "codigo_idu": "3540",
+   "row": 128,
+   "K_v4": 276773.0,
+   "K_contractual": 251648.0,
+   "delta_pct": 9.98
+  },
+  {
+   "codigo_idu": "3524",
+   "row": 130,
+   "K_v4": 299174.0,
+   "K_contractual": 272014.0,
+   "delta_pct": 9.98
+  },
+  {
+   "codigo_idu": "3516",
+   "row": 131,
+   "K_v4": 342932.0,
+   "K_contractual": 311796.0,
+   "delta_pct": 9.99
+  },
+  {
+   "codigo_idu": "7419",
+   "row": 132,
+   "K_v4": 259667.0,
+   "K_contractual": 236006.0,
+   "delta_pct": 10.03
+  },
+  {
+   "codigo_idu": "7421",
+   "row": 133,
+   "K_v4": 1762176.0,
+   "K_contractual": 1601923.0,
+   "delta_pct": 10.0
+  },
+  {
+   "codigo_idu": "7423",
+   "row": 134,
+   "K_v4": 685205.0,
+   "K_contractual": 622859.0,
+   "delta_pct": 10.01
+  },
+  {
+   "codigo_idu": "4841",
+   "row": 138,
+   "K_v4": 267066.0,
+   "K_contractual": 239369.0,
+   "delta_pct": 11.57
+  },
+  {
+   "codigo_idu": "4839",
+   "row": 139,
+   "K_v4": 605772.0,
+   "K_contractual": 542669.0,
+   "delta_pct": 11.63
+  },
+  {
+   "codigo_idu": "4842",
+   "row": 140,
+   "K_v4": 401008.0,
+   "K_contractual": 380684.0,
+   "delta_pct": 5.34
+  },
+  {
+   "codigo_idu": "4420",
+   "row": 146,
+   "K_v4": 113304.0,
+   "K_contractual": 103058.0,
+   "delta_pct": 9.94
+  },
+  {
+   "codigo_idu": "3246",
+   "row": 148,
+   "K_v4": 38931.0,
+   "K_contractual": 35444.0,
+   "delta_pct": 9.84
+  },
+  {
+   "codigo_idu": "3226",
+   "row": 149,
+   "K_v4": 68280.0,
+   "K_contractual": 62120.0,
+   "delta_pct": 9.92
+  },
+  {
+   "codigo_idu": "3227",
+   "row": 150,
+   "K_v4": 136786.0,
+   "K_contractual": 124384.0,
+   "delta_pct": 9.97
+  },
+  {
+   "codigo_idu": "3247",
+   "row": 151,
+   "K_v4": 78596.0,
+   "K_contractual": 71485.0,
+   "delta_pct": 9.95
+  },
+  {
+   "codigo_idu": "8637",
+   "row": 152,
+   "K_v4": 1918807.0,
+   "K_contractual": 1877021.0,
+   "delta_pct": 2.23
+  },
+  {
+   "codigo_idu": "4851",
+   "row": 155,
+   "K_v4": 28738.0,
+   "K_contractual": 26821.0,
+   "delta_pct": 7.15
+  },
+  {
+   "codigo_idu": "7947",
+   "row": 156,
+   "K_v4": 74659.0,
+   "K_contractual": 71084.0,
+   "delta_pct": 5.03
+  },
+  {
+   "codigo_idu": "4907",
+   "row": 158,
+   "K_v4": 151999.0,
+   "K_contractual": 137902.0,
+   "delta_pct": 10.22
+  },
+  {
+   "codigo_idu": "4848",
+   "row": 159,
+   "K_v4": 9626.0,
+   "K_contractual": 8906.0,
+   "delta_pct": 8.08
+  },
+  {
+   "codigo_idu": "3024",
+   "row": 160,
+   "K_v4": 141741.0,
+   "K_contractual": 138797.0,
+   "delta_pct": 2.12
+  },
+  {
+   "codigo_idu": "8655",
+   "row": 161,
+   "K_v4": 89872.0,
+   "K_contractual": 82808.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "4849",
+   "row": 166,
+   "K_v4": 3492.0,
+   "K_contractual": 2689.0,
+   "delta_pct": 29.86
+  },
+  {
+   "codigo_idu": "4841",
+   "row": 186,
+   "K_v4": 288548.0,
+   "K_contractual": 239369.0,
+   "delta_pct": 20.55
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 193,
+   "K_v4": 42540.0,
+   "K_contractual": 38523.0,
+   "delta_pct": 10.43
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 194,
+   "K_v4": 41825.0,
+   "K_contractual": 40317.0,
+   "delta_pct": 3.74
+  },
+  {
+   "codigo_idu": "3539",
+   "row": 195,
+   "K_v4": 122119.0,
+   "K_contractual": 111072.0,
+   "delta_pct": 9.95
+  },
+  {
+   "codigo_idu": "3523",
+   "row": 196,
+   "K_v4": 160656.0,
+   "K_contractual": 146103.0,
+   "delta_pct": 9.96
+  },
+  {
+   "codigo_idu": "3515",
+   "row": 197,
+   "K_v4": 169494.0,
+   "K_contractual": 154139.0,
+   "delta_pct": 9.96
+  },
+  {
+   "codigo_idu": "3540",
+   "row": 198,
+   "K_v4": 276773.0,
+   "K_contractual": 251648.0,
+   "delta_pct": 9.98
+  },
+  {
+   "codigo_idu": "3524",
+   "row": 200,
+   "K_v4": 299174.0,
+   "K_contractual": 272014.0,
+   "delta_pct": 9.98
+  },
+  {
+   "codigo_idu": "3516",
+   "row": 201,
+   "K_v4": 342932.0,
+   "K_contractual": 311796.0,
+   "delta_pct": 9.99
+  },
+  {
+   "codigo_idu": "7419",
+   "row": 202,
+   "K_v4": 259667.0,
+   "K_contractual": 236006.0,
+   "delta_pct": 10.03
+  },
+  {
+   "codigo_idu": "7421",
+   "row": 203,
+   "K_v4": 1762176.0,
+   "K_contractual": 1601923.0,
+   "delta_pct": 10.0
+  },
+  {
+   "codigo_idu": "7423",
+   "row": 204,
+   "K_v4": 685205.0,
+   "K_contractual": 622859.0,
+   "delta_pct": 10.01
+  },
+  {
+   "codigo_idu": "4841",
+   "row": 208,
+   "K_v4": 267066.0,
+   "K_contractual": 239369.0,
+   "delta_pct": 11.57
+  },
+  {
+   "codigo_idu": "4839",
+   "row": 209,
+   "K_v4": 605772.0,
+   "K_contractual": 542669.0,
+   "delta_pct": 11.63
+  },
+  {
+   "codigo_idu": "4842",
+   "row": 210,
+   "K_v4": 401008.0,
+   "K_contractual": 380684.0,
+   "delta_pct": 5.34
+  },
+  {
+   "codigo_idu": "4420",
+   "row": 216,
+   "K_v4": 113304.0,
+   "K_contractual": 103058.0,
+   "delta_pct": 9.94
+  },
+  {
+   "codigo_idu": "3246",
+   "row": 218,
+   "K_v4": 38931.0,
+   "K_contractual": 35444.0,
+   "delta_pct": 9.84
+  },
+  {
+   "codigo_idu": "3226",
+   "row": 219,
+   "K_v4": 68280.0,
+   "K_contractual": 62120.0,
+   "delta_pct": 9.92
+  },
+  {
+   "codigo_idu": "3227",
+   "row": 220,
+   "K_v4": 136786.0,
+   "K_contractual": 124384.0,
+   "delta_pct": 9.97
+  },
+  {
+   "codigo_idu": "3247",
+   "row": 221,
+   "K_v4": 78596.0,
+   "K_contractual": 71485.0,
+   "delta_pct": 9.95
+  },
+  {
+   "codigo_idu": "8637",
+   "row": 222,
+   "K_v4": 1918807.0,
+   "K_contractual": 1877021.0,
+   "delta_pct": 2.23
+  },
+  {
+   "codigo_idu": "4851",
+   "row": 225,
+   "K_v4": 28738.0,
+   "K_contractual": 26821.0,
+   "delta_pct": 7.15
+  },
+  {
+   "codigo_idu": "7947",
+   "row": 226,
+   "K_v4": 74659.0,
+   "K_contractual": 71084.0,
+   "delta_pct": 5.03
+  },
+  {
+   "codigo_idu": "4907",
+   "row": 228,
+   "K_v4": 151999.0,
+   "K_contractual": 137902.0,
+   "delta_pct": 10.22
+  },
+  {
+   "codigo_idu": "4848",
+   "row": 229,
+   "K_v4": 9626.0,
+   "K_contractual": 8906.0,
+   "delta_pct": 8.08
+  },
+  {
+   "codigo_idu": "3024",
+   "row": 230,
+   "K_v4": 141741.0,
+   "K_contractual": 138797.0,
+   "delta_pct": 2.12
+  },
+  {
+   "codigo_idu": "8655",
+   "row": 231,
+   "K_v4": 89872.0,
+   "K_contractual": 82808.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "4849",
+   "row": 236,
+   "K_v4": 3492.0,
+   "K_contractual": 2689.0,
+   "delta_pct": 29.86
+  },
+  {
+   "codigo_idu": "4841",
+   "row": 256,
+   "K_v4": 288548.0,
+   "K_contractual": 239369.0,
+   "delta_pct": 20.55
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 263,
+   "K_v4": 42540.0,
+   "K_contractual": 38523.0,
+   "delta_pct": 10.43
+  },
+  {
+   "codigo_idu": "4262",
+   "row": 264,
+   "K_v4": 5266.0,
+   "K_contractual": 5043.0,
+   "delta_pct": 4.42
+  },
+  {
+   "codigo_idu": "8643",
+   "row": 265,
+   "K_v4": 50435.0,
+   "K_contractual": 39997.0,
+   "delta_pct": 26.1
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 266,
+   "K_v4": 41825.0,
+   "K_contractual": 40317.0,
+   "delta_pct": 3.74
+  },
+  {
+   "codigo_idu": "4848",
+   "row": 267,
+   "K_v4": 9626.0,
+   "K_contractual": 8906.0,
+   "delta_pct": 8.08
+  },
+  {
+   "codigo_idu": "3919",
+   "row": 268,
+   "K_v4": 669924.0,
+   "K_contractual": 618533.0,
+   "delta_pct": 8.31
+  },
+  {
+   "codigo_idu": "3920",
+   "row": 269,
+   "K_v4": 799680.0,
+   "K_contractual": 721239.0,
+   "delta_pct": 10.88
+  },
+  {
+   "codigo_idu": "3922",
+   "row": 270,
+   "K_v4": 1340174.0,
+   "K_contractual": 1225201.0,
+   "delta_pct": 9.38
+  },
+  {
+   "codigo_idu": "3923",
+   "row": 271,
+   "K_v4": 1787034.0,
+   "K_contractual": 1626863.0,
+   "delta_pct": 9.85
+  },
+  {
+   "codigo_idu": "3924",
+   "row": 272,
+   "K_v4": 2373496.0,
+   "K_contractual": 2158419.0,
+   "delta_pct": 9.96
+  },
+  {
+   "codigo_idu": "3043",
+   "row": 273,
+   "K_v4": 81570.0,
+   "K_contractual": 73046.0,
+   "delta_pct": 11.67
+  },
+  {
+   "codigo_idu": "3044",
+   "row": 274,
+   "K_v4": 115526.0,
+   "K_contractual": 103382.0,
+   "delta_pct": 11.75
+  },
+  {
+   "codigo_idu": "3045",
+   "row": 275,
+   "K_v4": 162051.0,
+   "K_contractual": 144939.0,
+   "delta_pct": 11.81
+  },
+  {
+   "codigo_idu": "6538",
+   "row": 276,
+   "K_v4": 237714.0,
+   "K_contractual": 212979.0,
+   "delta_pct": 11.61
+  },
+  {
+   "codigo_idu": "3046",
+   "row": 277,
+   "K_v4": 288107.0,
+   "K_contractual": 257519.0,
+   "delta_pct": 11.88
+  },
+  {
+   "codigo_idu": "3047",
+   "row": 278,
+   "K_v4": 391575.0,
+   "K_contractual": 349918.0,
+   "delta_pct": 11.9
+  },
+  {
+   "codigo_idu": "3048",
+   "row": 279,
+   "K_v4": 477668.0,
+   "K_contractual": 426811.0,
+   "delta_pct": 11.92
+  },
+  {
+   "codigo_idu": "7447",
+   "row": 280,
+   "K_v4": 3526255.0,
+   "K_contractual": 3208470.0,
+   "delta_pct": 9.9
+  },
+  {
+   "codigo_idu": "4896",
+   "row": 281,
+   "K_v4": 413068.0,
+   "K_contractual": 380596.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "8655",
+   "row": 282,
+   "K_v4": 89872.0,
+   "K_contractual": 82808.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "4792",
+   "row": 283,
+   "K_v4": 91204.0,
+   "K_contractual": 87336.0,
+   "delta_pct": 4.43
+  },
+  {
+   "codigo_idu": "4291",
+   "row": 284,
+   "K_v4": 564169.0,
+   "K_contractual": 552757.0,
+   "delta_pct": 2.06
+  },
+  {
+   "codigo_idu": "7876",
+   "row": 285,
+   "K_v4": 1349981.0,
+   "K_contractual": 1307869.0,
+   "delta_pct": 3.22
+  },
+  {
+   "codigo_idu": "4294",
+   "row": 287,
+   "K_v4": 715237.0,
+   "K_contractual": 700274.0,
+   "delta_pct": 2.14
+  },
+  {
+   "codigo_idu": "4296",
+   "row": 288,
+   "K_v4": 775906.0,
+   "K_contractual": 760098.0,
+   "delta_pct": 2.08
+  },
+  {
+   "codigo_idu": "4297",
+   "row": 289,
+   "K_v4": 1032916.0,
+   "K_contractual": 1009588.0,
+   "delta_pct": 2.31
+  },
+  {
+   "codigo_idu": "4622",
+   "row": 291,
+   "K_v4": 397347.0,
+   "K_contractual": 384755.0,
+   "delta_pct": 3.27
+  },
+  {
+   "codigo_idu": "7512",
+   "row": 292,
+   "K_v4": 545547.0,
+   "K_contractual": 524207.0,
+   "delta_pct": 4.07
+  },
+  {
+   "codigo_idu": "4553",
+   "row": 293,
+   "K_v4": 3562276.0,
+   "K_contractual": 3486034.0,
+   "delta_pct": 2.19
+  },
+  {
+   "codigo_idu": "3895",
+   "row": 295,
+   "K_v4": 5181513.0,
+   "K_contractual": 5072732.0,
+   "delta_pct": 2.14
+  },
+  {
+   "codigo_idu": "3155",
+   "row": 296,
+   "K_v4": 173406.0,
+   "K_contractual": 168752.0,
+   "delta_pct": 2.76
+  },
+  {
+   "codigo_idu": "8545",
+   "row": 297,
+   "K_v4": 42975.0,
+   "K_contractual": 39121.0,
+   "delta_pct": 9.85
+  },
+  {
+   "codigo_idu": "5015",
+   "row": 298,
+   "K_v4": 565221.0,
+   "K_contractual": 548965.0,
+   "delta_pct": 2.96
+  },
+  {
+   "codigo_idu": "4878",
+   "row": 299,
+   "K_v4": 203484.0,
+   "K_contractual": 119332.0,
+   "delta_pct": 70.52
+  },
+  {
+   "codigo_idu": "4144",
+   "row": 300,
+   "K_v4": 84947.0,
+   "K_contractual": 77870.0,
+   "delta_pct": 9.09
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 315,
+   "K_v4": 42540.0,
+   "K_contractual": 38523.0,
+   "delta_pct": 10.43
+  },
+  {
+   "codigo_idu": "4262",
+   "row": 316,
+   "K_v4": 5266.0,
+   "K_contractual": 5043.0,
+   "delta_pct": 4.42
+  },
+  {
+   "codigo_idu": "8643",
+   "row": 317,
+   "K_v4": 50435.0,
+   "K_contractual": 39997.0,
+   "delta_pct": 26.1
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 318,
+   "K_v4": 41825.0,
+   "K_contractual": 40317.0,
+   "delta_pct": 3.74
+  },
+  {
+   "codigo_idu": "4848",
+   "row": 319,
+   "K_v4": 9626.0,
+   "K_contractual": 8906.0,
+   "delta_pct": 8.08
+  },
+  {
+   "codigo_idu": "3919",
+   "row": 320,
+   "K_v4": 669924.0,
+   "K_contractual": 618533.0,
+   "delta_pct": 8.31
+  },
+  {
+   "codigo_idu": "3920",
+   "row": 321,
+   "K_v4": 799680.0,
+   "K_contractual": 721239.0,
+   "delta_pct": 10.88
+  },
+  {
+   "codigo_idu": "3922",
+   "row": 322,
+   "K_v4": 1340174.0,
+   "K_contractual": 1225201.0,
+   "delta_pct": 9.38
+  },
+  {
+   "codigo_idu": "3923",
+   "row": 323,
+   "K_v4": 1787034.0,
+   "K_contractual": 1626863.0,
+   "delta_pct": 9.85
+  },
+  {
+   "codigo_idu": "3924",
+   "row": 324,
+   "K_v4": 2373496.0,
+   "K_contractual": 2158419.0,
+   "delta_pct": 9.96
+  },
+  {
+   "codigo_idu": "3043",
+   "row": 325,
+   "K_v4": 81570.0,
+   "K_contractual": 73046.0,
+   "delta_pct": 11.67
+  },
+  {
+   "codigo_idu": "3044",
+   "row": 326,
+   "K_v4": 115526.0,
+   "K_contractual": 103382.0,
+   "delta_pct": 11.75
+  },
+  {
+   "codigo_idu": "3045",
+   "row": 327,
+   "K_v4": 162051.0,
+   "K_contractual": 144939.0,
+   "delta_pct": 11.81
+  },
+  {
+   "codigo_idu": "6538",
+   "row": 328,
+   "K_v4": 237714.0,
+   "K_contractual": 212979.0,
+   "delta_pct": 11.61
+  },
+  {
+   "codigo_idu": "3046",
+   "row": 329,
+   "K_v4": 288107.0,
+   "K_contractual": 257519.0,
+   "delta_pct": 11.88
+  },
+  {
+   "codigo_idu": "3047",
+   "row": 330,
+   "K_v4": 391575.0,
+   "K_contractual": 349918.0,
+   "delta_pct": 11.9
+  },
+  {
+   "codigo_idu": "3048",
+   "row": 331,
+   "K_v4": 477668.0,
+   "K_contractual": 426811.0,
+   "delta_pct": 11.92
+  },
+  {
+   "codigo_idu": "7447",
+   "row": 332,
+   "K_v4": 3526255.0,
+   "K_contractual": 3208470.0,
+   "delta_pct": 9.9
+  },
+  {
+   "codigo_idu": "4896",
+   "row": 333,
+   "K_v4": 413068.0,
+   "K_contractual": 380596.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "8655",
+   "row": 334,
+   "K_v4": 89872.0,
+   "K_contractual": 82808.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "4792",
+   "row": 335,
+   "K_v4": 91204.0,
+   "K_contractual": 87336.0,
+   "delta_pct": 4.43
+  },
+  {
+   "codigo_idu": "4291",
+   "row": 336,
+   "K_v4": 564169.0,
+   "K_contractual": 552757.0,
+   "delta_pct": 2.06
+  },
+  {
+   "codigo_idu": "7876",
+   "row": 337,
+   "K_v4": 1349981.0,
+   "K_contractual": 1307869.0,
+   "delta_pct": 3.22
+  },
+  {
+   "codigo_idu": "4294",
+   "row": 339,
+   "K_v4": 715237.0,
+   "K_contractual": 700274.0,
+   "delta_pct": 2.14
+  },
+  {
+   "codigo_idu": "4296",
+   "row": 340,
+   "K_v4": 775906.0,
+   "K_contractual": 760098.0,
+   "delta_pct": 2.08
+  },
+  {
+   "codigo_idu": "4297",
+   "row": 341,
+   "K_v4": 1032916.0,
+   "K_contractual": 1009588.0,
+   "delta_pct": 2.31
+  },
+  {
+   "codigo_idu": "4622",
+   "row": 343,
+   "K_v4": 397347.0,
+   "K_contractual": 384755.0,
+   "delta_pct": 3.27
+  },
+  {
+   "codigo_idu": "7512",
+   "row": 344,
+   "K_v4": 545547.0,
+   "K_contractual": 524207.0,
+   "delta_pct": 4.07
+  },
+  {
+   "codigo_idu": "4553",
+   "row": 345,
+   "K_v4": 3562276.0,
+   "K_contractual": 3486034.0,
+   "delta_pct": 2.19
+  },
+  {
+   "codigo_idu": "3895",
+   "row": 347,
+   "K_v4": 5181513.0,
+   "K_contractual": 5072732.0,
+   "delta_pct": 2.14
+  },
+  {
+   "codigo_idu": "3155",
+   "row": 348,
+   "K_v4": 173406.0,
+   "K_contractual": 168752.0,
+   "delta_pct": 2.76
+  },
+  {
+   "codigo_idu": "8545",
+   "row": 349,
+   "K_v4": 42975.0,
+   "K_contractual": 39121.0,
+   "delta_pct": 9.85
+  },
+  {
+   "codigo_idu": "5015",
+   "row": 350,
+   "K_v4": 565221.0,
+   "K_contractual": 548965.0,
+   "delta_pct": 2.96
+  },
+  {
+   "codigo_idu": "4878",
+   "row": 351,
+   "K_v4": 203484.0,
+   "K_contractual": 119332.0,
+   "delta_pct": 70.52
+  },
+  {
+   "codigo_idu": "4144",
+   "row": 352,
+   "K_v4": 84947.0,
+   "K_contractual": 77870.0,
+   "delta_pct": 9.09
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 367,
+   "K_v4": 42540.0,
+   "K_contractual": 38523.0,
+   "delta_pct": 10.43
+  },
+  {
+   "codigo_idu": "4262",
+   "row": 368,
+   "K_v4": 5266.0,
+   "K_contractual": 5043.0,
+   "delta_pct": 4.42
+  },
+  {
+   "codigo_idu": "8643",
+   "row": 369,
+   "K_v4": 50435.0,
+   "K_contractual": 39997.0,
+   "delta_pct": 26.1
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 370,
+   "K_v4": 41825.0,
+   "K_contractual": 40317.0,
+   "delta_pct": 3.74
+  },
+  {
+   "codigo_idu": "4848",
+   "row": 371,
+   "K_v4": 9626.0,
+   "K_contractual": 8906.0,
+   "delta_pct": 8.08
+  },
+  {
+   "codigo_idu": "3919",
+   "row": 372,
+   "K_v4": 669924.0,
+   "K_contractual": 618533.0,
+   "delta_pct": 8.31
+  },
+  {
+   "codigo_idu": "3920",
+   "row": 373,
+   "K_v4": 799680.0,
+   "K_contractual": 721239.0,
+   "delta_pct": 10.88
+  },
+  {
+   "codigo_idu": "3922",
+   "row": 374,
+   "K_v4": 1340174.0,
+   "K_contractual": 1225201.0,
+   "delta_pct": 9.38
+  },
+  {
+   "codigo_idu": "3923",
+   "row": 375,
+   "K_v4": 1787034.0,
+   "K_contractual": 1626863.0,
+   "delta_pct": 9.85
+  },
+  {
+   "codigo_idu": "3924",
+   "row": 376,
+   "K_v4": 2373496.0,
+   "K_contractual": 2158419.0,
+   "delta_pct": 9.96
+  },
+  {
+   "codigo_idu": "3043",
+   "row": 377,
+   "K_v4": 81570.0,
+   "K_contractual": 73046.0,
+   "delta_pct": 11.67
+  },
+  {
+   "codigo_idu": "3044",
+   "row": 378,
+   "K_v4": 115526.0,
+   "K_contractual": 103382.0,
+   "delta_pct": 11.75
+  },
+  {
+   "codigo_idu": "3045",
+   "row": 379,
+   "K_v4": 162051.0,
+   "K_contractual": 144939.0,
+   "delta_pct": 11.81
+  },
+  {
+   "codigo_idu": "6538",
+   "row": 380,
+   "K_v4": 237714.0,
+   "K_contractual": 212979.0,
+   "delta_pct": 11.61
+  },
+  {
+   "codigo_idu": "3046",
+   "row": 381,
+   "K_v4": 288107.0,
+   "K_contractual": 257519.0,
+   "delta_pct": 11.88
+  },
+  {
+   "codigo_idu": "3047",
+   "row": 382,
+   "K_v4": 391575.0,
+   "K_contractual": 349918.0,
+   "delta_pct": 11.9
+  },
+  {
+   "codigo_idu": "3048",
+   "row": 383,
+   "K_v4": 477668.0,
+   "K_contractual": 426811.0,
+   "delta_pct": 11.92
+  },
+  {
+   "codigo_idu": "7447",
+   "row": 384,
+   "K_v4": 3526255.0,
+   "K_contractual": 3208470.0,
+   "delta_pct": 9.9
+  },
+  {
+   "codigo_idu": "4896",
+   "row": 385,
+   "K_v4": 413068.0,
+   "K_contractual": 380596.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "8655",
+   "row": 386,
+   "K_v4": 89872.0,
+   "K_contractual": 82808.0,
+   "delta_pct": 8.53
+  },
+  {
+   "codigo_idu": "4792",
+   "row": 387,
+   "K_v4": 91204.0,
+   "K_contractual": 87336.0,
+   "delta_pct": 4.43
+  }
+ ],
+ "efecto_precio_cantidad": [
+  {
+   "codigo_idu": "7785",
+   "row": 34,
+   "delta_valor": 2351966086,
+   "efecto_precio": 1673513595,
+   "efecto_cantidad": 2033522234,
+   "interaccion": 318530582
+  },
+  {
+   "codigo_idu": "6016",
+   "row": 20,
+   "delta_valor": 2348873855,
+   "efecto_precio": 2128630,
+   "efecto_cantidad": 2319766841,
+   "interaccion": 29111932
+  },
+  {
+   "codigo_idu": "5182",
+   "row": 490,
+   "delta_valor": -1883363119,
+   "efecto_precio": 142020241,
+   "efecto_cantidad": -1741659761,
+   "interaccion": -141702690
+  },
+  {
+   "codigo_idu": "3425",
+   "row": 85,
+   "delta_valor": 1542541484,
+   "efecto_precio": 448519,
+   "efecto_cantidad": 1482131040,
+   "interaccion": 60410860
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 14,
+   "delta_valor": 766340249,
+   "efecto_precio": 76692049,
+   "efecto_cantidad": 738707772,
+   "interaccion": 27630313
+  },
+  {
+   "codigo_idu": "4159",
+   "row": 27,
+   "delta_valor": 660384913,
+   "efecto_precio": 5094392,
+   "efecto_cantidad": 603293164,
+   "interaccion": 57091332
+  },
+  {
+   "codigo_idu": "3380",
+   "row": 626,
+   "delta_valor": -420761696,
+   "efecto_precio": 44739016,
+   "efecto_cantidad": -376116402,
+   "interaccion": -44645485
+  },
+  {
+   "codigo_idu": "5181",
+   "row": 73,
+   "delta_valor": 413740072,
+   "efecto_precio": 248558,
+   "efecto_cantidad": 404046825,
+   "interaccion": 9692484
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 266,
+   "delta_valor": -286229798,
+   "efecto_precio": 12134491,
+   "efecto_cantidad": -275909006,
+   "interaccion": -10319984
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 495,
+   "delta_valor": -240922948,
+   "efecto_precio": 9120254,
+   "efecto_cantidad": -232235817,
+   "interaccion": -8686450
+  },
+  {
+   "codigo_idu": "3043",
+   "row": 273,
+   "delta_valor": -199696983,
+   "efecto_precio": 21904438,
+   "efecto_cantidad": -178829189,
+   "interaccion": -20868220
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 494,
+   "delta_valor": -196376002,
+   "efecto_precio": 19432397,
+   "efecto_cantidad": -177831077,
+   "interaccion": -18543401
+  },
+  {
+   "codigo_idu": "4390",
+   "row": 46,
+   "delta_valor": -195309174,
+   "efecto_precio": 58211782,
+   "efecto_cantidad": -183257980,
+   "interaccion": -12051408
+  },
+  {
+   "codigo_idu": "3159",
+   "row": 489,
+   "delta_valor": -167940640,
+   "efecto_precio": 14224432,
+   "efecto_cantidad": -153771962,
+   "interaccion": -14169610
+  },
+  {
+   "codigo_idu": "3046",
+   "row": 277,
+   "delta_valor": -164102112,
+   "efecto_precio": 17866178,
+   "efecto_cantidad": -146679650,
+   "interaccion": -17422548
+  },
+  {
+   "codigo_idu": "3227",
+   "row": 150,
+   "delta_valor": 149220614,
+   "efecto_precio": 9336942,
+   "efecto_cantidad": 135691182,
+   "interaccion": 13529409
+  },
+  {
+   "codigo_idu": "3010",
+   "row": 9,
+   "delta_valor": -148475199,
+   "efecto_precio": 7164084,
+   "efecto_cantidad": -141995948,
+   "interaccion": -6478268
+  },
+  {
+   "codigo_idu": "8655",
+   "row": 282,
+   "delta_valor": -108832918,
+   "efecto_precio": 8717729,
+   "efecto_cantidad": -100278859,
+   "interaccion": -8554365
+  },
+  {
+   "codigo_idu": "3024",
+   "row": 496,
+   "delta_valor": -104460681,
+   "efecto_precio": 2363915,
+   "efecto_cantidad": -102291053,
+   "interaccion": -2169678
+  },
+  {
+   "codigo_idu": "3748",
+   "row": 81,
+   "delta_valor": 96526178,
+   "efecto_precio": 61208343,
+   "efecto_cantidad": 83804656,
+   "interaccion": 12721548
+  },
+  {
+   "codigo_idu": "4144",
+   "row": 300,
+   "delta_valor": -90833622,
+   "efecto_precio": 7604727,
+   "efecto_cantidad": -83266032,
+   "interaccion": -7567403
+  },
+  {
+   "codigo_idu": "3710",
+   "row": 13,
+   "delta_valor": 87560993,
+   "efecto_precio": 8002137,
+   "efecto_cantidad": 83855069,
+   "interaccion": 3708047
+  },
+  {
+   "codigo_idu": "4907",
+   "row": 55,
+   "delta_valor": -86292107,
+   "efecto_precio": 42266278,
+   "efecto_cantidad": -78289092,
+   "interaccion": -8003084
+  },
+  {
+   "codigo_idu": "4908",
+   "row": 56,
+   "delta_valor": -78114690,
+   "efecto_precio": 31137787,
+   "efecto_cantidad": -72228340,
+   "interaccion": -5886397
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 263,
+   "delta_valor": -71148896,
+   "efecto_precio": 7790967,
+   "efecto_cantidad": -64429893,
+   "interaccion": -6718451
+  },
+  {
+   "codigo_idu": "3454",
+   "row": 48,
+   "delta_valor": 68652015,
+   "efecto_precio": 96244,
+   "efecto_cantidad": 67594886,
+   "interaccion": 1057355
+  },
+  {
+   "codigo_idu": "3226",
+   "row": 149,
+   "delta_valor": 51995417,
+   "efecto_precio": 2298497,
+   "efecto_cantidad": 47304820,
+   "interaccion": 4690884
+  },
+  {
+   "codigo_idu": "3811",
+   "row": 35,
+   "delta_valor": 51924500,
+   "efecto_precio": 61397,
+   "efecto_cantidad": 50240127,
+   "interaccion": 1692025
+  },
+  {
+   "codigo_idu": "4848",
+   "row": 267,
+   "delta_valor": -44772934,
+   "efecto_precio": 3357719,
+   "efecto_cantidad": -41423331,
+   "interaccion": -3348843
+  },
+  {
+   "codigo_idu": "3800",
+   "row": 19,
+   "delta_valor": 42202067,
+   "efecto_precio": 2541121,
+   "efecto_cantidad": 40743770,
+   "interaccion": 1466357
+  },
+  {
+   "codigo_idu": "7512",
+   "row": 292,
+   "delta_valor": -40280688,
+   "efecto_precio": 1631921,
+   "efecto_cantidad": -38705054,
+   "interaccion": -1575648
+  },
+  {
+   "codigo_idu": "3837",
+   "row": 36,
+   "delta_valor": 39875482,
+   "efecto_precio": 1391313,
+   "efecto_cantidad": 39648542,
+   "interaccion": 227230
+  },
+  {
+   "codigo_idu": "8406",
+   "row": 89,
+   "delta_valor": -37911510,
+   "efecto_precio": 41491732,
+   "efecto_cantidad": -26697524,
+   "interaccion": -11213982
+  },
+  {
+   "codigo_idu": "4754",
+   "row": 54,
+   "delta_valor": 34015806,
+   "efecto_precio": 1521601,
+   "efecto_cantidad": 33369107,
+   "interaccion": 646758
+  },
+  {
+   "codigo_idu": "4912",
+   "row": 623,
+   "delta_valor": 31698950,
+   "efecto_precio": 632456,
+   "efecto_cantidad": 31247198,
+   "interaccion": 451754
+  },
+  {
+   "codigo_idu": "3329",
+   "row": 142,
+   "delta_valor": -26792437,
+   "efecto_precio": 224607,
+   "efecto_cantidad": -26671493,
+   "interaccion": -120942
+  },
+  {
+   "codigo_idu": "5196",
+   "row": 10,
+   "delta_valor": -26074710,
+   "efecto_precio": 3345352,
+   "efecto_cantidad": -24419947,
+   "interaccion": -1654749
+  },
+  {
+   "codigo_idu": "6486",
+   "row": 49,
+   "delta_valor": -24692041,
+   "efecto_precio": 880192,
+   "efecto_cantidad": -23974778,
+   "interaccion": -717155
+  },
+  {
+   "codigo_idu": "4913",
+   "row": 624,
+   "delta_valor": -24573060,
+   "efecto_precio": 1036006,
+   "efecto_cantidad": -24361146,
+   "interaccion": -211910
+  },
+  {
+   "codigo_idu": "5023",
+   "row": 493,
+   "delta_valor": -24567247,
+   "efecto_precio": 3286521,
+   "efecto_cantidad": -22398105,
+   "interaccion": -2169408
+  },
+  {
+   "codigo_idu": "3328",
+   "row": 141,
+   "delta_valor": -23946146,
+   "efecto_precio": 120932,
+   "efecto_cantidad": -23840328,
+   "interaccion": -105815
+  },
+  {
+   "codigo_idu": "4262",
+   "row": 264,
+   "delta_valor": -20214544,
+   "efecto_precio": 1002913,
+   "efecto_cantidad": -19358986,
+   "interaccion": -856049
+  },
+  {
+   "codigo_idu": "3315",
+   "row": 129,
+   "delta_valor": 17856000,
+   "efecto_precio": 4743,
+   "efecto_cantidad": 17685270,
+   "interaccion": 170734
+  },
+  {
+   "codigo_idu": "4128",
+   "row": 662,
+   "delta_valor": -15719798,
+   "efecto_precio": 4832437,
+   "efecto_cantidad": -14051835,
+   "interaccion": -1667970
+  },
+  {
+   "codigo_idu": "6710",
+   "row": 37,
+   "delta_valor": -15514020,
+   "efecto_precio": 1402214,
+   "efecto_cantidad": -14849376,
+   "interaccion": -664649
+  },
+  {
+   "codigo_idu": "4755",
+   "row": 51,
+   "delta_valor": 13283276,
+   "efecto_precio": 760800,
+   "efecto_cantidad": 13018564,
+   "interaccion": 264689
+  },
+  {
+   "codigo_idu": "3837",
+   "row": 84,
+   "delta_valor": 12941837,
+   "efecto_precio": 77844,
+   "efecto_cantidad": 12868182,
+   "interaccion": 73749
+  },
+  {
+   "codigo_idu": "3378",
+   "row": 42,
+   "delta_valor": -12309719,
+   "efecto_precio": 1434757,
+   "efecto_cantidad": -11151661,
+   "interaccion": -1156935
+  },
+  {
+   "codigo_idu": "4901",
+   "row": 144,
+   "delta_valor": -10122497,
+   "efecto_precio": 24334,
+   "efecto_cantidad": -10101205,
+   "interaccion": -21292
+  },
+  {
+   "codigo_idu": "8121",
+   "row": 629,
+   "delta_valor": -9160920,
+   "efecto_precio": 377042,
+   "efecto_cantidad": -8934695,
+   "interaccion": -226225
+  },
+  {
+   "codigo_idu": "3011",
+   "row": 44,
+   "delta_valor": -8845755,
+   "efecto_precio": 3543223,
+   "efecto_cantidad": -8054876,
+   "interaccion": -790460
+  },
+  {
+   "codigo_idu": "8120",
+   "row": 618,
+   "delta_valor": 8337378,
+   "efecto_precio": 204696,
+   "efecto_cantidad": 8132684,
+   "interaccion": 204696
+  },
+  {
+   "codigo_idu": "4239",
+   "row": 83,
+   "delta_valor": 6114725,
+   "efecto_precio": 284346,
+   "efecto_cantidad": 5845635,
+   "interaccion": 269389
+  },
+  {
+   "codigo_idu": "4402",
+   "row": 135,
+   "delta_valor": 5347444,
+   "efecto_precio": 56125,
+   "efecto_cantidad": 5334236,
+   "interaccion": 13206
+  },
+  {
+   "codigo_idu": "4858",
+   "row": 143,
+   "delta_valor": -4760523,
+   "efecto_precio": 146087,
+   "efecto_cantidad": -4711827,
+   "interaccion": -48696
+  },
+  {
+   "codigo_idu": "3007",
+   "row": 8,
+   "delta_valor": -4065861,
+   "efecto_precio": 1848486,
+   "efecto_cantidad": -3940039,
+   "interaccion": -126941
+  },
+  {
+   "codigo_idu": "3864",
+   "row": 32,
+   "delta_valor": 2988743,
+   "efecto_precio": 1089052,
+   "efecto_cantidad": 2958000,
+   "interaccion": 30351
+  },
+  {
+   "codigo_idu": "6309",
+   "row": 23,
+   "delta_valor": -2648059,
+   "efecto_precio": 242796,
+   "efecto_cantidad": -2631216,
+   "interaccion": -16901
+  },
+  {
+   "codigo_idu": "3324",
+   "row": 136,
+   "delta_valor": 2522721,
+   "efecto_precio": 92442,
+   "efecto_cantidad": 2519419,
+   "interaccion": 3301
+  },
+  {
+   "codigo_idu": "3009",
+   "row": 123,
+   "delta_valor": -2047809,
+   "efecto_precio": 4517807,
+   "efecto_cantidad": -1854423,
+   "interaccion": -193371
+  },
+  {
+   "codigo_idu": "3806",
+   "row": 82,
+   "delta_valor": 1191798,
+   "efecto_precio": 23691,
+   "efecto_cantidad": 1187814,
+   "interaccion": 4070
+  },
+  {
+   "codigo_idu": "4700",
+   "row": 90,
+   "delta_valor": -1067960,
+   "efecto_precio": 2499734,
+   "efecto_cantidad": -1048695,
+   "interaccion": -19266
+  },
+  {
+   "codigo_idu": "3017",
+   "row": 124,
+   "delta_valor": -250363,
+   "efecto_precio": 2119510,
+   "efecto_cantidad": -241335,
+   "interaccion": -9027
+  },
+  {
+   "codigo_idu": "7090",
+   "row": 96,
+   "delta_valor": -13041,
+   "efecto_precio": 5164689,
+   "efecto_cantidad": -12790,
+   "interaccion": -252
+  },
+  {
+   "codigo_idu": "5734",
+   "row": 107,
+   "delta_valor": 0,
+   "efecto_precio": 6155763,
+   "efecto_cantidad": 0,
+   "interaccion": 0
+  },
+  {
+   "codigo_idu": "8566",
+   "row": 108,
+   "delta_valor": 0,
+   "efecto_precio": 2106541,
+   "efecto_cantidad": 0,
+   "interaccion": 0
+  },
+  {
+   "codigo_idu": "7858",
+   "row": 112,
+   "delta_valor": 0,
+   "efecto_precio": 1385997,
+   "efecto_cantidad": 0,
+   "interaccion": 0
+  }
+ ],
+ "resumen_efecto_precio_cantidad_total": {
+  "efecto_precio_total": 2391076226,
+  "efecto_cantidad_total": 3802952844,
+  "interaccion_total": 183052834,
+  "delta_valor_total_M_menos_N": 3985894448,
+  "suma_p_q_i": 6377081904,
+  "verificacion_delta": 2391187456
+ },
+ "hallazgos": [
+  {
+   "id": "H01",
+   "severidad": "ALTA",
+   "titulo": "Inconsistencias aritmeticas en columnas M/N/O/Q (2 filas)",
+   "descripcion": "Distribucion por columna: {'N': 1, 'O': 1}. M=I*L, N=H*L, O=(I-H)*L, Q=O+P.",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": 34,
+   "impacto_pesos": 172434,
+   "recomendacion": "Solicitar re-calculo de columnas M/N/O/Q con formulas. Detectar filas de digitacion manual."
+  },
+  {
+   "id": "H02",
+   "severidad": "ALTA",
+   "titulo": "Codigos IDU repetidos en la hoja principal (174)",
+   "descripcion": "Total duplicados: 174. Aparentes reubicaciones: 158. Duplicados reales: 16.",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": null,
+   "impacto_pesos": null,
+   "recomendacion": "Revisar cada duplicado. Si son reubicaciones justificar el cambio de subcapitulo; si son sumas paralelas exigir consolidacion."
+  },
+  {
+   "id": "H03",
+   "severidad": "ALTA",
+   "titulo": "VU V4 desviado >2% del PRESUPUESTO CONTRACTUAL (367 items)",
+   "descripcion": "Top: 4878 70.52%, 4878 70.52%, 4878 70.52%, 4878 70.52%, 8406 42.0%",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": null,
+   "impacto_pesos": null,
+   "recomendacion": "Verificar autorizacion de cambio de VU respecto al contrato firmado. Los VU deben coincidir con el contractual."
+  },
+  {
+   "id": "H04",
+   "severidad": "MEDIA",
+   "titulo": "Inconsistencia entre hojas (2)",
+   "descripcion": "Totales no coinciden entre hojas de resumen y la hoja principal.",
+   "hoja": null,
+   "fila": null,
+   "impacto_pesos": 1988375733,
+   "recomendacion": "Alinear hojas resumen/EJECUTIVO/Presupuesto estimado con el total final $75.426.575.199."
+  }
+ ]
+}
