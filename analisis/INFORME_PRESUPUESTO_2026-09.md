@@ -38,8 +38,8 @@ Cifras verificadas al peso contra la fila 703 del Excel (`PRESUPUESTO TODOS LOS 
 | 3 | H01-013 | ALTA | 6.777.852.537 | Redes hidrosanitarias absorben el 49% del crecimiento de obras (cap. 5) |
 | 4 | H03-OUT · 16000024 | ALTA | 5.899.197.969 | CIV 16000024 KR 65A es outlier: $2.454.941/m² obras (2,4× mediana) |
 | 5 | H03-OUT · 16000010 | ALTA | 3.950.103.092 | CIV 16000010 CL18B es outlier: $2.317.646/m² obras (2,3× mediana) |
-| 6 | H01-014 | ALTA | 3.556.107.781 | Pavimentos (cap. 2) sube por reemplazo MD12 → NP-123 MD19 |
-| 7 | H02-101 | ALTA | 3.369.431.763 | CIV 16000024 KR 65A concentra el Δ obras más grande de los 27 CIVs |
+| 6 | H02-101 | ALTA | 3.672.527.262 | CIV 16000024 KR 65A concentra el Δ obras más grande de los 27 CIVs (+165%) |
+| 7 | H01-014 | ALTA | 3.556.107.781 | Pavimentos (cap. 2) sube por reemplazo MD12 → NP-123 MD19 |
 | 8 | H01-035 | ALTA | 3.269.600.612 | NP-123 MEZCLA ASFÁLTICA MD19 · $3.269M (reemplaza al contractual 2.002 MD12) |
 | 9 | H06-01 | ALTA | 2.977.517.840 | Riesgo de doble pago en acero: bloque interno ($3.052M) + bolsa fija F ($2.977M) coexisten |
 | 10 | H01-015 | ALTA | 2.787.734.305 | Preliminares (cap. 1) sube por rajón (fila 20: 965 → 14.163 m³) |
@@ -181,25 +181,30 @@ Los $17.229.641.399 de componentes (PMA-SST, Diálogo, PMT, ajustes, acero, labo
 
 ## 4. Variación por CIV — descomposición del Δ
 
-La reconstrucción de la línea base por CIV (usando `data.json → items[*].cantidades`) permite descomponer el Δ obras de cada CIV en 5 fuentes:
+La línea base inicial por CIV se reconstruye así: **cantidad contractual de cada fila V4 (col H) × proporción del CIV** para ese código IDU según el reparto del contrato (`data.json → items[*].cantidades`). Con esto la suma por CIV de cada fila cuadra con la col H y el Δ por CIV se valora al mismo precio (VU V4) en inicial y final, aislando el efecto cantidad. El Δ de cada CIV se descompone en 5 fuentes:
 
-- **Δ Aumentos**: renglones donde la cantidad final V4 supera la inicial V0.
-- **Δ Disminuciones**: renglones donde la cantidad final V4 es menor a la inicial V0.
+- **Δ Aumentos**: renglones donde la cantidad final V4 supera la inicial.
+- **Δ Disminuciones**: renglones donde la cantidad final V4 es menor a la inicial.
 - **Δ NP**: renglones no previstos (105 en total, $14.150.924.549).
-- **Δ Contractual nuevo**: renglones contractuales con H=0 que ahora tienen cantidad.
-- **Δ Eliminado**: renglones eliminados en V4 (I=0).
+- **Δ Contractual nuevo**: renglones contractuales sin cantidad inicial en ese CIV que ahora tienen cantidad.
+- **Δ Eliminado**: renglones con cantidad inicial en ese CIV que quedan en 0.
 
-Top 5 CIVs con mayor Δ absoluto de obras con AIU:
+CIVs con mayor Δ de obras con AIU (inicial → final):
 
-| CIV | Nomenclatura | Δ obras total | % NP |
-|---|---|---:|---:|
-| 16000024 | KR 65A | **+$3.369.431.763** | ~58% |
-| 16000010 | CL18B | **+$1.497.959.062** | ~58% |
-| 500002375 | KR65 | **+$1.486.799.059** | ~100% (era $0 inicial) |
-| 16000013 | CL18B | +$1.224.773.015 | — |
-| 16000017 | KR 65A | +$1.207.650.741 | — |
+| CIV | Tramo | Inicial | Final V4 | Δ | Δ % | NPs agregados | Eliminado |
+|---|---|---:|---:|---:|---:|---:|---:|
+| 16000024 | KR 65A CL18 - CL18A | $2.226.670.707 | $5.899.197.969 | **+$3.672.527.262** | +165% | $1.016.703.547 | −$1.071.759.634 |
+| 16000010 | CL18B KR65B - KR66 | $2.291.612.786 | $3.950.103.092 | **+$1.658.490.306** | +72% | $2.308.849.811 | −$1.428.432.706 |
+| 16000017 | KR 65A CL18A - CL18B | $1.441.265.454 | $2.767.058.972 | **+$1.325.793.518** | +92% | $539.293.095 | −$866.960.011 |
+| 16000013 | CL18B KR65A - KR65B | $828.228.169 | $2.149.935.500 | **+$1.321.707.331** | +160% | $457.445.474 | −$381.837.675 |
+| 9003980 | CL20 KR68C - AK68D | $1.773.268.906 | $2.574.430.351 | **+$801.161.445** | +45% | $495.791.541 | −$781.934.933 |
+| 16000052 | KR63 ACCESO VIA 17B - CL17B | $1.504.006.937 | $2.190.004.906 | **+$685.997.969** | +46% | $565.653.522 | −$741.865.242 |
 
-**Nota metodológica**: el Excel V4 no reparte la col H (cantidad inicial) por CIV — sólo la col I (cantidad final) tiene distribución por CIV en las columnas S:BW. La reconstrucción usa data.json (contrato firmado) prorrateando entre las N filas de V4 que comparten el mismo codigo_idu (evita doble conteo por reubicaciones). El delta reconstrucción vs col N global es de $1.104.996.296 (~2,5%), explicado por (a) ítems que ya no existen en V4 por reubicación con cambio de código, (b) NPs sin línea base.
+Los CIVs que menos cambian o bajan: 16000060 KR63 (−$87.706.928), 16000027 KR 63 (−$15.989.547), 16000047 KR65 (+$36.137.000).
+
+**Conciliación**: la línea base por CIV suma $41.842.985.108. La diferencia con la col N global ($44.303.294.799) son 40 filas contractuales por $2.460.223.472 cuyo código IDU no tiene reparto por CIV en el contrato (accesorios de redes, viga de cimentación, SBG_B, losa MR43, entre otras); se listan en `analisis/hallazgos/02_variacion_civ.json → conciliacion_total.detalle_sin_reparto`. El residual de $86.217 está en la fila 34 (2.003 losa MR45): su valor inicial en col N ($12.357.428.721) no es igual a H × L (8.276 × $1.493.154 = $12.357.342.504). Por eso la suma de los Δ por CIV (+$16.353.948.692) es mayor que el Δ global (+$13.893.639.001).
+
+**Corrección 27-09-2026**: la primera versión de este informe reportaba el CIV 500002375 (KR65 CL17–CL18) con inicial $0 y Δ +$1.486.799.059, porque la línea base se buscaba con el ID 16004876 cuando en el contrato ese CIV figura como 50002375. Corregido: su Δ real es +$563.530.517 (+61%).
 
 **Recomendación**: solicitar al contratista el reparto oficial de la cantidad inicial (col H) por CIV para poder auditar al peso la variación por frente.
 

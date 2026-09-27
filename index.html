@@ -947,9 +947,9 @@ tr:hover td { background: #f7fafc; }
           <th class="num">$/m² obras</th>
           <th class="num">$/m² total</th>
           <th class="num">% NP</th>
-          <th class="num">V1 total</th>
-          <th class="num">V2 total</th>
-          <th class="num">Δ V4-V2</th>
+          <th class="num">V1 obras+AIU</th>
+          <th class="num">V2 obras+AIU</th>
+          <th class="num">Δ obras V4-V2</th>
         </tr></thead><tbody id="p75CostoBody"></tbody><tfoot id="p75CostoFoot"></tfoot></table>
       </div>
     </div>
@@ -3443,7 +3443,19 @@ function downloadCompba(kind) {
 // ─────────────────────────────────────────────────────────────
 let P75_STATE = { view: 'renglon', filtered: null };
 
+function _p75NormalizeItems() {
+  // analisis_2026_09.json guarda K/L/M/N como K_vu_cd, L_vu_cd_aiu, M_valor_final, N_valor_inicial
+  const items = (P75 && P75.variacion_items && P75.variacion_items.items) || [];
+  items.forEach(i => {
+    if (i.K === undefined && i.K_vu_cd !== undefined) i.K = i.K_vu_cd;
+    if (i.L === undefined && i.L_vu_cd_aiu !== undefined) i.L = i.L_vu_cd_aiu;
+    if (i.M === undefined && i.M_valor_final !== undefined) i.M = i.M_valor_final;
+    if (i.N === undefined && i.N_valor_inicial !== undefined) i.N = i.N_valor_inicial;
+  });
+}
+
 function renderP75() {
+  _p75NormalizeItems();
   renderP75KPIs();
   renderP75Waterfall();
   renderP75Items();
@@ -3631,9 +3643,9 @@ function renderP75Reemplazos() {
   document.getElementById('p75ReemplazosBody').innerHTML = rs.map(r => {
     const c = r.contractual || {}, n = r.np || {};
     return `<tr>
-      <td><strong>${c.code||'-'}</strong> · fila ${c.row||'-'} · ${(c.desc||'').substring(0,60)}</td>
+      <td><strong>${c.code||c.item_pago||'-'}</strong> · fila ${c.row||'-'} · ${(c.desc||c.descripcion||'').substring(0,60)}</td>
       <td class="num positive">${fmt(c.delta_valor||0)}</td>
-      <td><strong>${n.code||'-'}</strong> · fila ${n.row||'-'} · ${(n.desc||'').substring(0,60)}</td>
+      <td><strong>${n.code||n.item_pago||'-'}</strong> · fila ${n.row||'-'} · ${(n.desc||n.descripcion||'').substring(0,60)}</td>
       <td class="num negative">+${fmt(n.delta_valor||0)}</td>
       <td class="num ${(r.sobrecosto_neto||0)>=0?'negative':'positive'}"><strong>${(r.sobrecosto_neto||0)>=0?'+':''}$${fmt(r.sobrecosto_neto||0)}</strong></td>
     </tr>`;
@@ -3692,7 +3704,7 @@ function renderP75Costo() {
   const filtered = costos.filter(c => sg === 'all' || String(c.subgrupo||'') === sg);
   const rows = filtered.map(c => {
     const cv = cmap[c.id] || {};
-    const dv = (c.total||0) - (cv.v2_total||0);
+    const dv = (cv.delta_v4_v2 !== undefined) ? cv.delta_v4_v2 : ((c.obras_total||0) - (cv.v2_total||0)); // obras V4 - obras V2 (ambas con AIU)
     const dvCls = dv>0 ? 'negative' : (dv<0 ? 'positive' : '');
     return `<tr>
       <td><strong>${c.id}</strong></td>
@@ -3705,7 +3717,7 @@ function renderP75Costo() {
       <td class="num"><strong>$${fmt(c.total||0)}</strong></td>
       <td class="num">$${fmt(c.dolarm2_obras||0)}</td>
       <td class="num">$${fmt(c.dolarm2_total||0)}</td>
-      <td class="num">${((c.pct_np_en_obras||0)*100).toFixed(1)}%</td>
+      <td class="num">${(((c.pct_np_en_obras||0) > 1 ? (c.pct_np_en_obras||0) : (c.pct_np_en_obras||0)*100)).toFixed(1)}%</td>
       <td class="num">$${fmt(cv.v1_total||0)}</td>
       <td class="num">$${fmt(cv.v2_total||0)}</td>
       <td class="num ${dvCls}">${dv>=0?'+':''}$${fmt(dv)}</td>
@@ -3761,24 +3773,25 @@ function renderP75Alcance() {
 function renderP75NPs() {
   const nps = (P75.nps && P75.nps.top20) || [];
   const objetados = (P75.nps && P75.nps.objetados_incluidos) || [];
-  const objetadoIds = new Set(objetados.map(o => o.item_pago));
+  const objetadoIds = new Set(objetados.filter(o => o.estado !== 'NO_APARECE_EN_V4').map(o => o.item_pago || o.item_pago_objetado));
   const clas = (P75.nps && P75.nps.clasificacion) || {};
   const clasMap = {};
   Object.entries(clas).forEach(([k,v]) => {
-    (v||[]).forEach(x => { const key = (typeof x === 'string') ? x : (x.item_pago || x.codigo_idu); if (key) clasMap[key] = k; });
+    if (!Array.isArray(v)) return; // 'totales' es un objeto resumen, no una lista
+    v.forEach(x => { const key = (typeof x === 'string') ? x : (x.item_pago || x.codigo_idu); if (key) clasMap[key] = k; });
   });
   const rows = nps.map(n => {
     const isObj = objetadoIds.has(n.item_pago);
     const cls = clasMap[n.item_pago] || 'nuevo';
     const bgColor = isObj ? '#fed7d7' : (cls==='aprobado' ? '#c6f6d5' : (cls==='en_revision' ? '#fefcbf' : (cls==='objetado' ? '#fed7d7' : '#e2e8f0')));
     return `<tr style="background:${bgColor}">
-      <td class="num">${n.row||'-'}</td>
+      <td class="num">${n.row||n.fila||'-'}</td>
       <td><strong>${n.item_pago||''}</strong></td>
       <td>${n.codigo_idu||'-'}</td>
       <td title="${(n.descripcion||'').replace(/"/g,'&quot;')}">${(n.descripcion||'').substring(0,60)}</td>
       <td>${n.und||''}</td>
       <td class="num">${fmtD(n.cantidad||0,2)}</td>
-      <td class="num">$${fmt(n.K||0)}</td>
+      <td class="num">$${fmt(n.K ?? n.K_vu_cd ?? 0)}</td>
       <td class="num"><strong>$${fmt(n.valor_aiu||0)}</strong></td>
       <td>${isObj ? '<strong style="color:#c53030">OBJETADO</strong>' : cls}</td>
     </tr>`;

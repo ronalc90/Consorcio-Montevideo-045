@@ -194,7 +194,7 @@ def main():
     headers = ["CIV", "Nomenclatura", "SG", "Área m²",
                "Obras CD", "Obras+AIU", "Componentes asignados", "Total con AIU",
                "$/m² obras", "$/m² total", "% NP obras",
-               "V1 total", "V2 total", "Δ V4-V2"]
+               "V1 obras+AIU", "V2 obras+AIU", "Δ obras V4-V2"]
     widths = [12, 14, 5, 12, 18, 18, 20, 18, 14, 14, 12, 18, 18, 18]
     for i, (h, w) in enumerate(zip(headers, widths)):
         ws.write(0, i, h, fmt_h2)
@@ -202,7 +202,8 @@ def main():
     ws.autofilter(0, 0, len(costos), 13)
     for r, c in enumerate(costos, 1):
         cv = cmap.get(c.get("id"), {})
-        dv = (c.get("total") or 0) - (cv.get("v2_total") or 0)
+        # Δ obras V4 vs obras V2 (ambas con AIU, sin componentes)
+        dv = cv["delta_v4_v2"] if cv.get("delta_v4_v2") is not None else (c.get("obras_total") or 0) - (cv.get("v2_total") or 0)
         ws.write(r, 0, c.get("id"), fmt_txt)
         ws.write(r, 1, c.get("nomenclatura") or "-", fmt_txt)
         ws.write(r, 2, c.get("subgrupo") or "-", fmt_txt)
@@ -213,7 +214,8 @@ def main():
         ws.write(r, 7, c.get("total") or 0, fmt_money_bold)
         ws.write(r, 8, c.get("dolarm2_obras") or 0, fmt_money)
         ws.write(r, 9, c.get("dolarm2_total") or 0, fmt_money)
-        ws.write(r, 10, c.get("pct_np_en_obras") or 0, fmt_pct)
+        pct_np = c.get("pct_np_en_obras") or 0
+        ws.write(r, 10, pct_np / 100 if pct_np > 1 else pct_np, fmt_pct)  # viene en %
         ws.write(r, 11, cv.get("v1_total") or 0, fmt_money)
         ws.write(r, 12, cv.get("v2_total") or 0, fmt_money)
         ws.write(r, 13, dv, fmt_delta)

@@ -125,25 +125,37 @@ def main():
         entry = data_items_by_code.setdefault(code, [])
         entry.append(it)
 
-    def cant_ini_civ(codigo_idu, cid_v4, num_filas_v4=1):
-        """Cantidad inicial (V0) para (codigo_idu, cid) desde data.json, prorrateando
-        entre las N filas de V4 que tienen ese mismo codigo_idu (evita doble conteo
-        cuando el codigo se repite en varios subcapitulos)."""
-        if not codigo_idu:
-            return 0.0
-        cid_data = "16004876" if cid_v4 == "500002375" else cid_v4
-        items = data_items_by_code.get(str(codigo_idu).strip(), [])
-        s = 0.0
-        for it in items:
-            q = it.get("cantidades", {}).get(cid_data)
-            if q:
+    # Proporcion de cada CIV dentro del codigo segun data.json (reparto del contrato).
+    # La linea base por CIV = cantidad contractual de la fila V4 (col H) x proporcion
+    # del CIV. Asi la suma por CIV de cada fila cuadra con la col H y el total con la
+    # col N; data.json solo aporta el REPARTO entre frentes, no la cantidad.
+    def _cid_data(cid_v4):
+        return "50002375" if cid_v4 == "500002375" else cid_v4  # data.json usa 50002375
+
+    shares_by_code = {}
+    for code, its in data_items_by_code.items():
+        tot = {}
+        for it in its:
+            for k, q in (it.get("cantidades") or {}).items():
                 try:
-                    s += float(q)
+                    qf = float(q or 0)
                 except (ValueError, TypeError):
-                    pass
-        # Prorrateo: si el codigo aparece N veces en V4 (num_filas_v4), cada fila V4
-        # se lleva 1/N de la cantidad inicial total (evita multiplicar por N).
-        return s / max(num_filas_v4, 1)
+                    qf = 0.0
+                if qf:
+                    tot[k] = tot.get(k, 0.0) + qf
+        ssum = sum(tot.values())
+        if ssum > 0:
+            shares_by_code[code] = {k: v / ssum for k, v in tot.items()}
+
+    def cant_ini_civ(codigo_idu, cid_v4, H_row):
+        """Cantidad inicial (V0) de la fila para el CIV = H_row x proporcion del CIV
+        en data.json para ese codigo. 0 si el codigo no tiene reparto conocido."""
+        if not codigo_idu or not H_row:
+            return 0.0
+        sh = shares_by_code.get(str(codigo_idu).strip())
+        if not sh:
+            return 0.0
+        return float(H_row) * sh.get(_cid_data(cid_v4), 0.0)
 
     # ---- 3. MATRIZ ITEM x CIV con INICIAL, FINAL, DELTA ----
     matriz = []
@@ -194,7 +206,7 @@ def main():
             q_fin = v.get("cant") or 0
             v_aiu = v.get("valor") or 0
             v_cd = round(v_aiu / AIU_FACTOR) if v_aiu else 0
-            q_ini = cant_ini_civ(code, cid, n_filas) if not is_np else 0.0
+            q_ini = cant_ini_civ(code, cid, it.get("cant_contractual") or 0) if not is_np else 0.0
             dq = q_fin - q_ini
             dv_cd = dq * K
             dv_aiu = dq * L if L else round(dv_cd * AIU_FACTOR)
@@ -294,15 +306,33 @@ def main():
             "civ": cid,
             "obras_iniciales_v4_reconstruidas_por_civ": v4_ini,
         })
+    # Filas con cantidad contractual cuyo codigo no tiene reparto por CIV en data.json
+    sin_reparto = []
+    for it in v4["items"]:
+        if it.get("chapter") == "8. ACTIVIDADES ACERO" or it.get("is_np"):
+            continue
+        H = it.get("cant_contractual") or 0
+        code = str(it.get("codigo_idu") or "").strip()
+        if H and code not in shares_by_code:
+            sin_reparto.append({"row": it["row"], "codigo_idu": code, "item_pago": it.get("item_pago"),
+                                "descripcion": it.get("descripcion"), "und": it.get("und"), "H": H,
+                                "valor_inicial_aiu": it.get("valor_inicial_aiu") or 0})
+    valor_sin_reparto = sum(x["valor_inicial_aiu"] for x in sin_reparto)
     conciliacion_total = {
         "col_N_global_v4": round(col_N_global),
         "obras_v0_contractual_firma": 44303294799,
-        "total_v4_reconstruidas_ini_por_civ": total_v4_ini,
+        "total_v4_reconstruidas_ini_por_civ": round(total_v4_ini),
         "delta_reconstruida_vs_col_N": round(total_v4_ini - col_N_global),
-        "nota": ("La col N total del V4 (excluyendo ACEROS) es la referencia canonica de la linea base. "
-                 "La suma por CIV reconstruida difiere porque los items ELIMINADOS en V4 (H>0 e I=0) "
-                 "no se reparten por CIV en la matriz S:BW; a nivel global la col N ya los incluye. "
-                 "La cifra a reportar en la app es la col N global ($44.303.294.799)."),
+        "filas_sin_reparto_por_civ": len(sin_reparto),
+        "valor_sin_reparto_por_civ": round(valor_sin_reparto),
+        "detalle_sin_reparto": sin_reparto,
+        "metodo": ("Linea base por CIV = cantidad contractual de cada fila V4 (col H) x proporcion del CIV "
+                   "para ese codigo IDU segun el reparto del contrato (data.json items[*].cantidades). "
+                   "La suma por CIV de cada fila cuadra con la col H; el total cuadra con la col N salvo "
+                   "las filas cuyo codigo no tiene reparto por CIV (detalle_sin_reparto)."),
+        "nota": ("La diferencia contra la col N corresponde exactamente a las filas sin reparto por CIV "
+                 "(codigos que no existen en el reparto del contrato). Se reportan aparte; la cifra "
+                 "global de referencia sigue siendo la col N ($44.303.294.799)."),
     }
 
     # ---- 5. METRICAS POR M2 y OUTLIERS ----
@@ -477,7 +507,7 @@ def main():
     md.append("")
     md.append("## Resumen ejecutivo")
     md.append("")
-    md.append(f"- 27 CIVs analizados (mapeo especial 500002375 -> 16004876).")
+    md.append(f"- 27 CIVs analizados (mapeo especial 500002375 -> 50002375 en data.json).")
     md.append(f"- Obras iniciales globales (col N Excel): ${fmt(conciliacion_total['col_N_global_v4'])}")
     md.append(f"- Contrato firmado (obras+AIU V0): ${fmt(conciliacion_total['obras_v0_contractual_firma'])}")
     md.append(f"- Reconstruccion por CIV (cant_data * L_v4): ${fmt(conciliacion_total['total_v4_reconstruidas_ini_por_civ'])}")

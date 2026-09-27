@@ -143,6 +143,9 @@ def main():
     # Copiar presupuesto_2026_09.json a la raiz
     shutil.copy2(PRES_SRC, PRES_DST)
     print(f"Copiado: {PRES_SRC.name} -> {PRES_DST}")
+    # La app carga analisis_2026_09.json desde la raiz: mantener ambas copias iguales
+    shutil.copy2(OUT, ROOT / OUT.name)
+    print(f"Copiado: {OUT.name} -> {ROOT / OUT.name}")
 
     # Resumen
     print()
