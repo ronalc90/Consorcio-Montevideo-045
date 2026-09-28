@@ -4,7 +4,7 @@
 
 Este registro deja por escrito (A) lo que está mal o es dudoso en el Excel del contratista, (B) lo que el propio análisis tuvo que corregir y en qué commit, (C) las preguntas que deben responder el contratista o el IDU antes de emitir concepto y (D) los supuestos del análisis. Cada asiento de la sección A se calcula leyendo el libro con openpyxl; el revisor puede repetirlo con la columna *Verificable con*.
 
-**Resumen:** 66 asientos · por tipo {'A': 25, 'B': 13, 'C': 16, 'D': 12} · por severidad {'ALTA': 20, 'MEDIA': 24, 'BAJA': 13, 'INFO': 9} · por estado {'ABIERTO': 28, 'DOCUMENTADO': 13, 'CORREGIDO': 13, 'LIMITACION': 12}.
+**Resumen:** 67 asientos · por tipo {'A': 25, 'B': 14, 'C': 16, 'D': 12} · por severidad {'ALTA': 20, 'MEDIA': 25, 'BAJA': 13, 'INFO': 9} · por estado {'ABIERTO': 28, 'DOCUMENTADO': 13, 'CORREGIDO': 14, 'LIMITACION': 12}.
 
 **Abiertos de severidad ALTA (resolver antes de firmar):** A-01, A-02, A-06, A-24, A-25, C-01, C-02, C-03, C-04, C-05.
 
@@ -1672,13 +1672,14 @@ La hoja PRESUPUESTO CONTRACTUAL MAYO 25 (fila 279) muestra el COSTO TOTAL DEL PR
 | B-04 | ALTA | `cf7bdd7` | El CIV 500002375 tenía línea base $0 por el alias de identificador | La hoja usa 500002375; data.json usa 50002375 y la comparativa 16004876. Se creó el alias y la línea base por CIV se ancló a la columna H repartida con la participación de data.json; 40 renglones sin reparto ($2.460.223.472) quedan explícitos en la conciliación. |
 | B-05 | MEDIA | `ad5b438` | El waterfall incluía la fila TOTAL GENERAL y duplicaba los totales; los negativos en miles de millones perdían el signo | WF() filtra la fila total; fmtB respeta el signo; los códigos 'NO'/'N/A' de los NP se excluyen del conteo de repetidos; se corrigió una precedencia ||/+ en el explorador. |
 | B-06 | BAJA | `5cb90b9` | Prioridad de revisión demasiado estricta (5 ítems 'Alta') y desbordes en móvil | La prioridad pasó a materialidad (|Δ| en miles de millones) → 48 ítems Alta; grid minmax(min(480px,100%),1fr); padding superior en gráficas para las etiquetas. |
-| B-07 | ALTA | `(este commit)` | Análisis 06: todas las referencias de fila estaban desplazadas (+4 en la hoja principal, +5 en PRESUPUESTO 63 mm) | El JSON y el MD del análisis 06 se escribieron a mano por el agente sin verificar contra openpyxl. corregir_06.py remapea 692→688, 696→692, …, 707→703, 733-742→729-738, 657→652 (63 mm), etc., y deja meta_correcciones. Las filas reales se verificaron celda a celda. |
-| B-08 | ALTA | `(este commit)` | H06-01 afirmaba un 'riesgo de doble pago en acero por $2.977M–$3.053M' que el libro no sustenta | La premisa era que el bloque ACEROS estaba 'cargado dentro de obras'. M688 = SUM(M8:M679) y CB688 = SUM(CB7:CB679)/2 excluyen las filas 680-687: no hay doble conteo en el Excel. El hallazgo se reescribe como MEDIA con impacto = diferencia bloque − bolsa F (75.469.677) y pregunta de cuál rige. Se ajustan resumen ejecutivo, XP, checklist e informe. |
-| B-09 | MEDIA | `(este commit)` | Análisis 04: dos falsos positivos de consistencia entre hojas y 16 'duplicados reales' que no lo eran | EJECUTIVO!H56 (59.426.575.199) es el valor actual del contrato, no el total de obras; Presupuesto estimado!A11 (74.667.840.865) excluye por definición la fase de obras iniciales (758.734.334). Los subcapítulos se truncaban a 50 caracteres y '…A CARGO DEL IDU' se confundía con '…A CARGO DE LA ESP'. H02 pasa de ALTA a INFO y H04 de MEDIA a INFO; las diferencias explicadas quedan en observaciones_hojas. |
-| B-10 | INFO | `(este commit)` | Consolidado de hallazgos recontado | Tras B-07 a B-09 y B-12 el consolidado pasa de 44 ALTA / 16 MEDIA / 4 BAJA / 6 INFO a la distribución que muestra la app (sección F); ninguna cifra del waterfall, de la variación por ítem ni del costo por CIV cambia. |
-| B-11 | ALTA | `(este commit)` | El chequeo del tope del 50 % (Ley 80 art. 40) usaba $59.426.575.199 como 'valor inicial' | El valor inicial del contrato es $50.793.789.333 (hoja PRESUPUESTO CONTRACTUAL MAYO 25 fila 279 = boletín IDU 2021); el 'valor actual' ya incluye $8.632.785.866 de incremento. normCheck() pasa a usar la base original y a acumular el incremento previo: 48,5 % nominal (antes se mostraba 26,9 %) y ~54 % del tope en SMMLV si el incremento previo se cuenta a SMMLV 2025. Tarjeta, ficha legal, XP y lista de chequeo actualizados; la duda queda como C-01. |
-| B-12 | ALTA | `(este commit)` | El análisis 04 llamaba 'VU contractual' a la columna Q (APU actualizado 13-09-2024) y truncaba la lista a 200 renglones | El VU pactado en el contrato es la columna M (propuesta VICON). Se agrega la comparación contra M (H04 nuevo: mediana +49,0 %, $15.086M con AIU), se retitula H03 y se guardan las listas completas (367 renglones vs referencia 2024; la sección H de la app mostraba 200 y un total de $3.259M que ahora es el total real). |
-| B-13 | MEDIA | `(este commit)` | 'Trasladado' de las reubicaciones (sección I e informe 8C) usaba el valor completo de los renglones | Se computaba min(Σ N de las filas que bajan, Σ M de las filas que suben), lo que contaba renglones que solo disminuyen o solo aumentan como si se movieran enteros ($6.462.266.802). Ahora trasladado = min(valor que sale, valor que entra), calculado en analisis_01 (campos valor_disminuido / valor_aumentado / trasladado): $5.807.343.956 en 32 códigos. Cambian 'eliminación real' y 'alcance nuevo real' del informe 8C. |
+| B-07 | ALTA | `0a1bae6` | Análisis 06: todas las referencias de fila estaban desplazadas (+4 en la hoja principal, +5 en PRESUPUESTO 63 mm) | El JSON y el MD del análisis 06 se escribieron a mano por el agente sin verificar contra openpyxl. corregir_06.py remapea 692→688, 696→692, …, 707→703, 733-742→729-738, 657→652 (63 mm), etc., y deja meta_correcciones. Las filas reales se verificaron celda a celda. |
+| B-08 | ALTA | `0a1bae6` | H06-01 afirmaba un 'riesgo de doble pago en acero por $2.977M–$3.053M' que el libro no sustenta | La premisa era que el bloque ACEROS estaba 'cargado dentro de obras'. M688 = SUM(M8:M679) y CB688 = SUM(CB7:CB679)/2 excluyen las filas 680-687: no hay doble conteo en el Excel. El hallazgo se reescribe como MEDIA con impacto = diferencia bloque − bolsa F (75.469.677) y pregunta de cuál rige. Se ajustan resumen ejecutivo, XP, checklist e informe. |
+| B-09 | MEDIA | `0a1bae6` | Análisis 04: dos falsos positivos de consistencia entre hojas y 16 'duplicados reales' que no lo eran | EJECUTIVO!H56 (59.426.575.199) es el valor actual del contrato, no el total de obras; Presupuesto estimado!A11 (74.667.840.865) excluye por definición la fase de obras iniciales (758.734.334). Los subcapítulos se truncaban a 50 caracteres y '…A CARGO DEL IDU' se confundía con '…A CARGO DE LA ESP'. H02 pasa de ALTA a INFO y H04 de MEDIA a INFO; las diferencias explicadas quedan en observaciones_hojas. |
+| B-10 | INFO | `0a1bae6` | Consolidado de hallazgos recontado | Tras B-07 a B-09 y B-12 el consolidado pasó de 44 ALTA / 16 MEDIA / 4 BAJA / 6 INFO a 44 / 15 / 4 / 8 (71); con B-14 queda en 44 / 18 / 4 / 8 (74). Ninguna cifra del waterfall, de la variación por ítem ni del costo por CIV cambia. |
+| B-11 | ALTA | `0a1bae6` | El chequeo del tope del 50 % (Ley 80 art. 40) usaba $59.426.575.199 como 'valor inicial' | El valor inicial del contrato es $50.793.789.333 (hoja PRESUPUESTO CONTRACTUAL MAYO 25 fila 279 = boletín IDU 2021); el 'valor actual' ya incluye $8.632.785.866 de incremento. normCheck() pasa a usar la base original y a acumular el incremento previo: 48,5 % nominal (antes se mostraba 26,9 %) y ~54 % del tope en SMMLV si el incremento previo se cuenta a SMMLV 2025. Tarjeta, ficha legal, XP y lista de chequeo actualizados; la duda queda como C-01. |
+| B-12 | ALTA | `0a1bae6` | El análisis 04 llamaba 'VU contractual' a la columna Q (APU actualizado 13-09-2024) y truncaba la lista a 200 renglones | El VU pactado en el contrato es la columna M (propuesta VICON). Se agrega la comparación contra M (H04 nuevo: mediana +49,0 %, $15.086M con AIU), se retitula H03 y se guardan las listas completas (367 renglones vs referencia 2024; la sección H de la app mostraba 200 y un total de $3.259M que ahora es el total real). |
+| B-13 | MEDIA | `0a1bae6` | 'Trasladado' de las reubicaciones (sección I e informe 8C) usaba el valor completo de los renglones | Se computaba min(Σ N de las filas que bajan, Σ M de las filas que suben), lo que contaba renglones que solo disminuyen o solo aumentan como si se movieran enteros ($6.462.266.802). Ahora trasladado = min(valor que sale, valor que entra), calculado en analisis_01 (campos valor_disminuido / valor_aumentado / trasladado): $5.807.343.956 en 32 códigos. Cambian 'eliminación real' y 'alcance nuevo real' del informe 8C. |
+| B-14 | MEDIA | `git log --grep=B-14` | Análisis 02: las métricas de intensidad de obra por m² (rajón, andén, MD12, BG_A) daban 0 en los 27 CIV | El script buscaba "1005", "3039", "2002" y "1012" como código IDU, pero son números de ítem sin punto (y 1.005 no es el rajón). Solo la métrica MD19 (buscada por NP-123) tenía datos, por eso la tabla "Intensidad de obra por m²" de cada ficha de CIV mostraba 0,000. Ahora se buscan por código IDU verificado: rajón 6016, andén 3425, mezcla asfáltica MD12 6313 + NP-123 8618 y base granular BG_A 4158 + NP-124 4744 (los contractuales fueron reemplazados por los NP). Los atípicos pasan de 2 a 5 hallazgos MEDIA (H02-200 a H02-204); el más alto es el andén del CIV 16000013 (5,5× la mediana). Ninguna cifra monetaria cambia. |
 
 ## C · Dudas abiertas para el contratista / IDU
 
@@ -1725,20 +1726,20 @@ La hoja PRESUPUESTO CONTRACTUAL MAYO 25 (fila 279) muestra el COSTO TOTAL DEL PR
 
 | Archivo | SHA-256 | Bytes |
 |---|---|---:|
-| `analisis_2026_09.json` | `90d6d421513c907ce91f1f858c7afc45d5f782b317ac884c9715ac8762b68f29` | 1,948,895 |
+| `analisis_2026_09.json` | `0b7894909eafa31cbc4a87b00582755b9198f1c702bcafea01ea50a43a6573b2` | 1,951,648 |
 | `presupuesto_2026_09.json` | `2bf751263eeb5c3c36a61096a6af52102d97dd3aef686077b1d48b144086e41a` | 862,572 |
 | `comparativa.json` | `e35372944224d32737df991b6b319604716d775dbc998102a20214a4125706af` | 1,428,481 |
 | `data.json` | `80279d1a8a41039f20ef9cc40e48d0425fe55a285940c2062a4a5bf91abe31b7` | 161,267 |
-| `analisis/Analisis_Presupuesto_2026-09.xlsx` | `e279d4df1585ad89e7348cb685e6807da19293f6b7274e0b70714851b7df04fd` | 93,958 |
-| `analisis/INFORME_PRESUPUESTO_2026-09.md` | `58b562a7c08305fe4ac457509f3d364e92e09080f81e0c9240876235aaca00b3` | 35,897 |
+| `analisis/Analisis_Presupuesto_2026-09.xlsx` | `66c26c6fd23fd307a81250f5a8abbeb3ab92f54a42523862483310b69accc73c` | 94,208 |
+| `analisis/INFORME_PRESUPUESTO_2026-09.md` | `c9a5c86c0ee31e15cb89ad935d1a8ea38970e13ef8ca6a25691155fe43164a51` | 36,907 |
 | `analisis/hallazgos/01_variacion_items.json` | `7c30fab4d00c7143cceea60c08b72695b69631139a009cc3e3cf78af9c586850` | 781,490 |
-| `analisis/hallazgos/02_variacion_civ.json` | `89bbaaa79a3f4d564f87488c318229c35ebf3acc5cae4625dc62858e5341208c` | 1,290,687 |
+| `analisis/hallazgos/02_variacion_civ.json` | `f00863768213976eaaeee1f580f86a2734ea25c2df610c3304f4be6344f98378` | 1,293,368 |
 | `analisis/hallazgos/03_costo_civ.json` | `3d6b9de83e041e8db5f127a0aee71883e8847b281604352902b878f951d5ade3` | 76,227 |
 | `analisis/hallazgos/04_aritmetica.json` | `ffc6f3f04def42aba9faf9d037fb056fe31198f25c66693387b42722b19cbefc` | 236,439 |
 | `analisis/hallazgos/05_nps.json` | `72e6b7fe22254a866be3c1ee91eaab5cd4c6d0f70c637e03aa9535c426951bbd` | 98,516 |
 | `analisis/hallazgos/06_versiones_plazo.json` | `82cf990357769c5fe09f00d936eee5d50f2da58815621e616543a15520325b6c` | 25,437 |
 
-- Entorno: Python 3.11.15 · openpyxl 3.1.5 · Linux-6.18.44-fc-v42-x86_64-with-glibc2.39 · commit base `5cb90b9` (main).
+- Entorno: Python 3.11.15 · openpyxl 3.1.5 · Linux-6.18.44-fc-v42-x86_64-with-glibc2.39 · commit base `7f1709e` (main).
 - Tolerancias aceptadas: Σ CIV vs M688 ≤ $100 (real +69); fila 34 $86.217; waterfall y NP al peso.
 - Reproducir todo:
 
@@ -1757,4 +1758,4 @@ python analisis/scripts/verificacion.py   # debe terminar en 'VERIFICACION COMPL
 python analisis/scripts/auditoria.py                 # este registro
 ```
 
-*Los asientos B con commit `(este commit)` corresponden al commit que introduce este registro; `git log -- analisis/auditoria/` lo identifica.*
+*Cada asiento B indica el commit de git que introdujo la corrección; `git show <commit>` muestra el cambio exacto.*

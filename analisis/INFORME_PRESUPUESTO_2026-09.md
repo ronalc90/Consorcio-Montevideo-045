@@ -280,7 +280,19 @@ VU idénticos en la mayoría de renglones — no es reindexación. El crecimient
 
 ## 7. Hallazgos por severidad
 
-**Distribución**: ALTA 45 · MEDIA 15 · BAJA 4 · INFO 6.
+**Distribución**: ALTA 44 · MEDIA 18 · BAJA 4 · INFO 8 (74 hallazgos).
+
+**Intensidad de obra por m² (corregida el 28-09-2026, registro de auditoría B-14).** Cantidad final V4 del CIV ÷ área del CIV, frente a la mediana de los 27 frentes. Cinco atípicos (> 2× la mediana), todos MEDIA:
+
+| Hallazgo | CIV | Indicador | Valor | Veces la mediana |
+|---|---|---|---:|---:|
+| H02-200 | 16000013 (CL18B KR65A-KR65B) | Andén (m² por m² de CIV) | 1,209 | 5,5× |
+| H02-201 | 16000017 (KR 65A CL18A-CL18B) | Andén | 0,842 | 3,8× |
+| H02-202 | 16000024 (KR 65A CL18-CL18A) | Andén | 0,732 | 3,3× |
+| H02-203 | 16000017 | Rajón (m³ por m²) | 0,721 | 2,8× |
+| H02-204 | 16000017 | Mezcla asfáltica MD12 + MD19 (m³ por m²) | 0,103 | 2,8× |
+
+En 16000017 y 16000024 el rajón, la mezcla asfáltica y la base granular salen todos con el mismo múltiplo de la mediana (2,79× y 2,65×): las cantidades de pavimento se repartieron entre CIVs con una misma proporción, no con una memoria por frente. Pedir la memoria de cantidades de pavimentos y andenes por CIV.
 
 Ver `analisis/analisis_2026_09.json → hallazgos` y las tablas de la app pestaña "Presupuesto 01-09-2026 · 75MM · 8 meses" para el listado completo con recomendación por hallazgo.
 
@@ -314,7 +326,7 @@ Fuentes consultadas el 27-09-2026 (verificar vigencia antes de citar en el infor
 | Ley 80 de 1993, art. 40 parágrafo | Los contratos no podrán adicionarse en más del 50% de su valor inicial, expresado en SMMLV. | **Base corregida (registro de auditoría B-11):** el valor inicial del contrato es **$50.793.789.333** (hoja PRESUPUESTO CONTRACTUAL MAYO 25, fila 279; coincide con el boletín del IDU de 2021), no los $59.426.575.199 "actuales", que ya traen $8.632.785.866 de incremento (adiciones 1-3 de la fase inicial, actualización de VU a insumos 13-09-2024 y reasignación del fondo de compensaciones). En pesos: $8.632.785.866 previos + $16.000.000.000 = $24.632.785.866 = **48,5% del valor inicial** (margen $764.108.801). En SMMLV: 55.908 SMMLV iniciales (2021, $908.526) → tope 27.954; adición 9.138 SMMLV (2026, $1.750.905) + incremento previo ≈ 6.064 SMMLV (si se cuenta a SMMLV 2025, $1.423.500) = 15.203 SMMLV = 54,4% del tope. Cabe en SMMLV pero queda al límite en pesos: el IDU debe precisar qué parte del incremento previo fue adición (cuenta) y qué parte reajuste (no cuenta). Duda C-01 del registro. |
 | Colombia Compra Eficiente, concepto C-466 de 2024 | En contratos a precios unitarios las mayores cantidades de obra no son adición ni cuentan para el tope; las obras adicionales sí. | El balance de mayores/menores cantidades es −$257.285.548 (no hay mayores cantidades netas). La adición se compone de NP ($14.150.924.549) y componentes por plazo (+$2.106.360.999): es adición en sentido estricto. |
 | Consejo de Estado, Sección Tercera, 10-10-2024, exp. 67.508 | Mayores cantidades se reconocen con medición y recibo; las obras adicionales exigen acuerdo escrito previo al pago. | Los 81 códigos NP (105 renglones) requieren otrosí y acta de fijación de precios antes de ejecutarse o pagarse. |
-| Ley 1474 de 2011, arts. 83–84 | Deber del interventor de informar oportunamente; responsabilidad solidaria si no lo hace (par. 3); falta gravísima (par. 1). | Los 44 hallazgos ALTA y 15 MEDIA, y los asientos ABIERTOS de severidad ALTA del registro de auditoría (A-01, A-02, A-06, A-24, A-25), deben quedar informados por escrito al IDU con soporte. |
+| Ley 1474 de 2011, arts. 83–84 | Deber del interventor de informar oportunamente; responsabilidad solidaria si no lo hace (par. 3); falta gravísima (par. 1). | Los 44 hallazgos ALTA y 18 MEDIA, y los asientos ABIERTOS de severidad ALTA del registro de auditoría (A-01, A-02, A-06, A-24, A-25), deben quedar informados por escrito al IDU con soporte. |
 | IDU, Manual de Gestión Contractual MG-GC-06 v19, §11.1.3 y §11.2.1 | Los ítems no previstos obligan a modificación contractual y cuentan para el tope del art. 40; las mayores cantidades no son modificación, pero el interventor verifica que el balanceo no afecte la funcionalidad. | Certificar funcionalidad tras eliminar 118 renglones (incluido todo el cap. 7 desvíos) y crear 93. |
 | IDU, Guía GUDP017 (presupuestos) | AIU = A + I + U; los imprevistos cubren contingencias normales; ajustes por cambio de vigencia = (valor ÷ meses) × meses en la nueva vigencia × inflación (ICCP para obra). | El componente de ajustes ($4.555.525.079) no cambia en V4 aunque los 8 meses cruzan a 2027: pedir recálculo o justificación. |
 | IDU, PR-IC-01 (base de precios / VISOR) | Base actualizada al menos una vez al año; ítems fuera de la base se soportan con APU (FO-GI-19) y cotizaciones. | Los 81 NP deben venir con APU y compararse con el VISOR vigente y con el ítem contractual más cercano. |

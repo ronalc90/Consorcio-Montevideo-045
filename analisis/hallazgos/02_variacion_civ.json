@@ -50748,311 +50748,326 @@
    "id": "9004002",
    "area_m2": 2710.31,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0275,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.1649,
+    "anden_m2_por_m2": 0.1366,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0275,
+    "base_granular_bga_m3_por_m2": 0.1375
    }
   },
   {
    "id": "9003990",
    "area_m2": 2979.83,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0352,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.1906,
+    "anden_m2_por_m2": 0.2202,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0352,
+    "base_granular_bga_m3_por_m2": 0.1589
    }
   },
   {
    "id": "9003980",
    "area_m2": 2373.61,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0363,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2176,
+    "anden_m2_por_m2": 0.258,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0363,
+    "base_granular_bga_m3_por_m2": 0.1813
    }
   },
   {
    "id": "9003989",
    "area_m2": 1404.75,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.041,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2755,
+    "anden_m2_por_m2": 0.1912,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.041,
+    "base_granular_bga_m3_por_m2": 0.2049
    }
   },
   {
    "id": "9003981",
    "area_m2": 1985.23,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.031,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.1882,
+    "anden_m2_por_m2": 0.2722,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.031,
+    "base_granular_bga_m3_por_m2": 0.155
    }
   },
   {
    "id": "9003967",
    "area_m2": 2419.5,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0325,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2187,
+    "anden_m2_por_m2": 0.2924,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0325,
+    "base_granular_bga_m3_por_m2": 0.1627
    }
   },
   {
    "id": "9003968",
    "area_m2": 1537.22,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0301,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.1604,
+    "anden_m2_por_m2": 0.3853,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0301,
+    "base_granular_bga_m3_por_m2": 0.1585
    }
   },
   {
    "id": "16000016",
    "area_m2": 1608.57,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0495,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.3463,
+    "anden_m2_por_m2": 0.3437,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0495,
+    "base_granular_bga_m3_por_m2": 0.2474
    }
   },
   {
    "id": "16000007",
    "area_m2": 1045.93,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0216,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.1511,
+    "anden_m2_por_m2": 0.2319,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0216,
+    "base_granular_bga_m3_por_m2": 0.1079
    }
   },
   {
    "id": "16000023",
    "area_m2": 2852.0,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.03,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.21,
+    "anden_m2_por_m2": 0.1908,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.03,
+    "base_granular_bga_m3_por_m2": 0.15
    }
   },
   {
    "id": "16000012",
    "area_m2": 2544.68,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0375,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2624,
+    "anden_m2_por_m2": 0.1826,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0375,
+    "base_granular_bga_m3_por_m2": 0.1874
    }
   },
   {
    "id": "16000010",
    "area_m2": 1704.36,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0455,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.3187,
+    "anden_m2_por_m2": 0.3613,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0455,
+    "base_granular_bga_m3_por_m2": 0.2276
    }
   },
   {
    "id": "16000013",
    "area_m2": 1541.61,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0585,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.4098,
+    "anden_m2_por_m2": 1.2087,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0585,
+    "base_granular_bga_m3_por_m2": 0.2927
    }
   },
   {
    "id": "16000024",
    "area_m2": 2402.99,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0978,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.6846,
+    "anden_m2_por_m2": 0.7324,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0978,
+    "base_granular_bga_m3_por_m2": 0.489
    }
   },
   {
    "id": "16000017",
    "area_m2": 1361.36,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.103,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.7208,
+    "anden_m2_por_m2": 0.8416,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.103,
+    "base_granular_bga_m3_por_m2": 0.5148
    }
   },
   {
    "id": "16000029",
    "area_m2": 939.76,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0402,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2811,
+    "anden_m2_por_m2": 0.0812,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0402,
+    "base_granular_bga_m3_por_m2": 0.2008
    }
   },
   {
    "id": "16000028",
    "area_m2": 2749.3,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0337,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.236,
+    "anden_m2_por_m2": 0.2198,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0337,
+    "base_granular_bga_m3_por_m2": 0.1686
    }
   },
   {
    "id": "16000060",
    "area_m2": 1593.8,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0371,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2594,
+    "anden_m2_por_m2": 0.2201,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0371,
+    "base_granular_bga_m3_por_m2": 0.1853
    }
   },
   {
    "id": "16000052",
    "area_m2": 1791.31,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.038,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2659,
+    "anden_m2_por_m2": 0.198,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.038,
+    "base_granular_bga_m3_por_m2": 0.19
    }
   },
   {
    "id": "16000043",
    "area_m2": 1519.4,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0369,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2586,
+    "anden_m2_por_m2": 0.1833,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0369,
+    "base_granular_bga_m3_por_m2": 0.1847
    }
   },
   {
    "id": "16000032",
    "area_m2": 1835.68,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0407,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2848,
+    "anden_m2_por_m2": 0.2079,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0407,
+    "base_granular_bga_m3_por_m2": 0.2034
    }
   },
   {
    "id": "16000027",
    "area_m2": 1958.61,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.037,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.259,
+    "anden_m2_por_m2": 0.1925,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.037,
+    "base_granular_bga_m3_por_m2": 0.185
    }
   },
   {
    "id": "16000038",
    "area_m2": 2644.76,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0347,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.243,
+    "anden_m2_por_m2": 0.1791,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0347,
+    "base_granular_bga_m3_por_m2": 0.1736
    }
   },
   {
    "id": "16000057",
    "area_m2": 1996.95,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0294,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.2021,
+    "anden_m2_por_m2": 0.2525,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0294,
+    "base_granular_bga_m3_por_m2": 0.1816
    }
   },
   {
    "id": "500002375",
    "area_m2": 1159.92,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0494,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.3459,
+    "anden_m2_por_m2": 0.1791,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0494,
+    "base_granular_bga_m3_por_m2": 0.2471
    }
   },
   {
    "id": "16000047",
    "area_m2": 2387.64,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.024,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.1681,
+    "anden_m2_por_m2": 0.2169,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.024,
+    "base_granular_bga_m3_por_m2": 0.12
    }
   },
   {
    "id": "16000077",
    "area_m2": 1237.01,
    "ratios": {
-    "rajon_m3_por_m2": 0.0,
-    "anden_m2_por_m2": 0.0,
-    "md12_m2_por_m2": 0.0,
-    "md19_m2_por_m2": 0.0223,
-    "bg_a_m3_por_m2": 0.0
+    "rajon_m3_por_m2": 0.1921,
+    "anden_m2_por_m2": 0.3275,
+    "mezcla_asfaltica_md12_md19_m3_por_m2": 0.0223,
+    "base_granular_bga_m3_por_m2": 0.1116
    }
   }
  ],
  "outliers_por_civ": [
   {
+   "id": "16000013",
+   "ratio_metric": "anden_m2_por_m2",
+   "valor": 1.2087,
+   "veces_sobre_mediana": 5.49
+  },
+  {
    "id": "16000017",
-   "ratio_metric": "md19_m2_por_m2",
+   "ratio_metric": "anden_m2_por_m2",
+   "valor": 0.8416,
+   "veces_sobre_mediana": 3.82
+  },
+  {
+   "id": "16000024",
+   "ratio_metric": "anden_m2_por_m2",
+   "valor": 0.7324,
+   "veces_sobre_mediana": 3.33
+  },
+  {
+   "id": "16000017",
+   "ratio_metric": "rajon_m3_por_m2",
+   "valor": 0.7208,
+   "veces_sobre_mediana": 2.79
+  },
+  {
+   "id": "16000017",
+   "ratio_metric": "mezcla_asfaltica_md12_md19_m3_por_m2",
    "valor": 0.103,
    "veces_sobre_mediana": 2.79
   },
   {
+   "id": "16000017",
+   "ratio_metric": "base_granular_bga_m3_por_m2",
+   "valor": 0.5148,
+   "veces_sobre_mediana": 2.79
+  },
+  {
    "id": "16000024",
-   "ratio_metric": "md19_m2_por_m2",
+   "ratio_metric": "rajon_m3_por_m2",
+   "valor": 0.6846,
+   "veces_sobre_mediana": 2.65
+  },
+  {
+   "id": "16000024",
+   "ratio_metric": "mezcla_asfaltica_md12_md19_m3_por_m2",
    "valor": 0.0978,
+   "veces_sobre_mediana": 2.65
+  },
+  {
+   "id": "16000024",
+   "ratio_metric": "base_granular_bga_m3_por_m2",
+   "valor": 0.489,
    "veces_sobre_mediana": 2.65
   }
  ],
@@ -51722,8 +51737,8 @@
   {
    "id": "H02-200",
    "severidad": "MEDIA",
-   "titulo": "CIV 16000017 outlier en md19_m2_por_m2 (2.79x mediana)",
-   "descripcion": "Ratio md19_m2_por_m2 = 0.1030, 2.79x sobre la mediana de los 27 CIVs.",
+   "titulo": "CIV 16000013: intensidad de andén (m²/m²) 5,49× la mediana",
+   "descripcion": "Ratio anden_m2_por_m2 = 1.2087, 5.49x sobre la mediana de los 27 CIVs.",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
    "fila": "columnas del CIV",
    "impacto_pesos": 0,
@@ -51732,8 +51747,38 @@
   {
    "id": "H02-201",
    "severidad": "MEDIA",
-   "titulo": "CIV 16000024 outlier en md19_m2_por_m2 (2.65x mediana)",
-   "descripcion": "Ratio md19_m2_por_m2 = 0.0978, 2.65x sobre la mediana de los 27 CIVs.",
+   "titulo": "CIV 16000017: intensidad de andén (m²/m²) 3,82× la mediana",
+   "descripcion": "Ratio anden_m2_por_m2 = 0.8416, 3.82x sobre la mediana de los 27 CIVs.",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": "columnas del CIV",
+   "impacto_pesos": 0,
+   "recomendacion": "Verificar en campo si la cantidad final del renglon corresponde al tramo real."
+  },
+  {
+   "id": "H02-202",
+   "severidad": "MEDIA",
+   "titulo": "CIV 16000024: intensidad de andén (m²/m²) 3,33× la mediana",
+   "descripcion": "Ratio anden_m2_por_m2 = 0.7324, 3.33x sobre la mediana de los 27 CIVs.",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": "columnas del CIV",
+   "impacto_pesos": 0,
+   "recomendacion": "Verificar en campo si la cantidad final del renglon corresponde al tramo real."
+  },
+  {
+   "id": "H02-203",
+   "severidad": "MEDIA",
+   "titulo": "CIV 16000017: intensidad de rajón (m³/m²) 2,79× la mediana",
+   "descripcion": "Ratio rajon_m3_por_m2 = 0.7208, 2.79x sobre la mediana de los 27 CIVs.",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": "columnas del CIV",
+   "impacto_pesos": 0,
+   "recomendacion": "Verificar en campo si la cantidad final del renglon corresponde al tramo real."
+  },
+  {
+   "id": "H02-204",
+   "severidad": "MEDIA",
+   "titulo": "CIV 16000017: intensidad de mezcla asfáltica MD12+MD19 (m³/m²) 2,79× la mediana",
+   "descripcion": "Ratio mezcla_asfaltica_md12_md19_m3_por_m2 = 0.1030, 2.79x sobre la mediana de los 27 CIVs.",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
    "fila": "columnas del CIV",
    "impacto_pesos": 0,

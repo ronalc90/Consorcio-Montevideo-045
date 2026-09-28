@@ -336,14 +336,20 @@ def main():
     }
 
     # ---- 5. METRICAS POR M2 y OUTLIERS ----
-    # Ratios: rajon m3/m2, anden m2/m2, MD12 m2/m2, MD19 m2/m2, BG_A m3/m2
+    # Ratios de intensidad de obra = cantidad final V4 del CIV / área del CIV.
+    # Corrección 2026-09-28 (registro de auditoría B-14): la versión anterior buscaba "1005", "3039", "2002" y "1012"
+    # como código IDU, pero son números de ítem sin punto (y 1.005 ni siquiera es el rajón); cuatro de las cinco
+    # métricas daban 0 en los 27 CIV. Ahora se buscan por código IDU verificado en la hoja principal:
+    #   rajón 1.008 = 6016 (M3) · andén 3.039 = 3425 (M2) · MD12 2.002 = 6313 (M3) + NP-123 MD19 = 8618 (M3)
+    #   BG_A 1.012 = 4158 (M3) + NP-124 BG_A reciclado = 4744 (M3). MD12 y BG_A contractuales quedan en 0 en V4
+    #   porque fueron reemplazados por los NP, por eso se miden juntos con su reemplazo.
     KEYS = {
-        "rajon_m3_por_m2": ("1005", "rajon"),
-        "anden_m2_por_m2": ("3039", "anden"),
-        "md12_m2_por_m2": ("2002", "md12"),
-        "md19_m2_por_m2": ("NP-123", "md19"),
-        "bg_a_m3_por_m2": ("1012", "bg_a"),
+        "rajon_m3_por_m2": (("6016",), "rajon"),
+        "anden_m2_por_m2": (("3425",), "anden"),
+        "mezcla_asfaltica_md12_md19_m3_por_m2": (("6313", "8618"), "asfalto"),
+        "base_granular_bga_m3_por_m2": (("4158", "4744"), "base_granular"),
     }
+    RATIO_LBL = {"rajon_m3_por_m2": "rajón (m³/m²)", "anden_m2_por_m2": "andén (m²/m²)", "mezcla_asfaltica_md12_md19_m3_por_m2": "mezcla asfáltica MD12+MD19 (m³/m²)", "base_granular_bga_m3_por_m2": "base granular BG_A (m³/m²)"}
     ratios_por_civ = []
     for cid in civ_ids_v4:
         area = civs_area.get(norm_civ(cid), {}).get("area", 0)
@@ -352,17 +358,12 @@ def main():
             ratios_por_civ.append(row)
             continue
         # Buscar cantidad final por CIV para cada codigo
-        for name, (code_or_np, _) in KEYS.items():
+        for name, (codes, _) in KEYS.items():
             tot = 0.0
             for it in v4["items"]:
-                match = False
-                if code_or_np.startswith("NP-"):
-                    if str(it.get("item_pago") or "") == code_or_np:
-                        match = True
-                else:
-                    if str(it.get("codigo_idu") or "") == code_or_np:
-                        match = True
-                if match:
+                if it.get("row", 0) >= 680:  # bloque ACEROS fuera del total de obras
+                    continue
+                if str(it.get("codigo_idu") or "").strip() in codes:
                     q = it["civ"].get(cid, {}).get("cant") or 0
                     tot += float(q)
             row["ratios"][name] = round(tot / area, 4) if area else None
@@ -430,7 +431,7 @@ def main():
         hallazgos.append({
             "id": f"H02-{200+outliers.index(o):03d}",
             "severidad": "MEDIA",
-            "titulo": f"CIV {o['id']} outlier en {o['ratio_metric']} ({o['veces_sobre_mediana']}x mediana)",
+            "titulo": f"CIV {o['id']}: intensidad de {RATIO_LBL.get(o['ratio_metric'], o['ratio_metric'])} {str(o['veces_sobre_mediana']).replace('.', ',')}× la mediana",
             "descripcion": f"Ratio {o['ratio_metric']} = {o['valor']:.4f}, {o['veces_sobre_mediana']}x sobre la mediana de los 27 CIVs.",
             "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
             "fila": "columnas del CIV",

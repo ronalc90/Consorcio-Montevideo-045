@@ -18,23 +18,23 @@
     }
   },
   "resumen": {
-    "total": 66,
+    "total": 67,
     "por_tipo": {
       "A": 25,
-      "B": 13,
+      "B": 14,
       "C": 16,
       "D": 12
     },
     "por_severidad": {
       "ALTA": 20,
-      "MEDIA": 24,
+      "MEDIA": 25,
       "BAJA": 13,
       "INFO": 9
     },
     "por_estado": {
       "ABIERTO": 28,
       "DOCUMENTADO": 13,
-      "CORREGIDO": 13,
+      "CORREGIDO": 14,
       "LIMITACION": 12
     },
     "abiertos_alta": [
@@ -3738,8 +3738,8 @@
       "responsable": "Analista",
       "pregunta": "",
       "soporte_a_pedir": "",
-      "commit": "(este commit)",
-      "verificable_con": "git log -1 -- analisis/auditoria/",
+      "commit": "0a1bae6",
+      "verificable_con": "git show 0a1bae6",
       "hallazgo_relacionado": "",
       "fecha": "2026-09-28"
     },
@@ -3757,8 +3757,8 @@
       "responsable": "Analista",
       "pregunta": "",
       "soporte_a_pedir": "",
-      "commit": "(este commit)",
-      "verificable_con": "git log -1 -- analisis/auditoria/",
+      "commit": "0a1bae6",
+      "verificable_con": "git show 0a1bae6",
       "hallazgo_relacionado": "",
       "fecha": "2026-09-28"
     },
@@ -3776,8 +3776,8 @@
       "responsable": "Analista",
       "pregunta": "",
       "soporte_a_pedir": "",
-      "commit": "(este commit)",
-      "verificable_con": "git log -1 -- analisis/auditoria/",
+      "commit": "0a1bae6",
+      "verificable_con": "git show 0a1bae6",
       "hallazgo_relacionado": "",
       "fecha": "2026-09-28"
     },
@@ -3787,7 +3787,7 @@
       "categoria": "análisis",
       "severidad": "INFO",
       "titulo": "Consolidado de hallazgos recontado",
-      "detalle": "Tras B-07 a B-09 y B-12 el consolidado pasa de 44 ALTA / 16 MEDIA / 4 BAJA / 6 INFO a la distribución que muestra la app (sección F); ninguna cifra del waterfall, de la variación por ítem ni del costo por CIV cambia.",
+      "detalle": "Tras B-07 a B-09 y B-12 el consolidado pasó de 44 ALTA / 16 MEDIA / 4 BAJA / 6 INFO a 44 / 15 / 4 / 8 (71); con B-14 queda en 44 / 18 / 4 / 8 (74). Ninguna cifra del waterfall, de la variación por ítem ni del costo por CIV cambia.",
       "evidencia": [],
       "impacto_pesos": null,
       "tratamiento": "",
@@ -3795,8 +3795,8 @@
       "responsable": "Analista",
       "pregunta": "",
       "soporte_a_pedir": "",
-      "commit": "(este commit)",
-      "verificable_con": "git log -1 -- analisis/auditoria/",
+      "commit": "0a1bae6",
+      "verificable_con": "git show 0a1bae6",
       "hallazgo_relacionado": "",
       "fecha": "2026-09-28"
     },
@@ -3814,8 +3814,8 @@
       "responsable": "Analista",
       "pregunta": "",
       "soporte_a_pedir": "",
-      "commit": "(este commit)",
-      "verificable_con": "git log -1 -- analisis/auditoria/",
+      "commit": "0a1bae6",
+      "verificable_con": "git show 0a1bae6",
       "hallazgo_relacionado": "",
       "fecha": "2026-09-28"
     },
@@ -3833,8 +3833,8 @@
       "responsable": "Analista",
       "pregunta": "",
       "soporte_a_pedir": "",
-      "commit": "(este commit)",
-      "verificable_con": "git log -1 -- analisis/auditoria/",
+      "commit": "0a1bae6",
+      "verificable_con": "git show 0a1bae6",
       "hallazgo_relacionado": "",
       "fecha": "2026-09-28"
     },
@@ -3852,8 +3852,27 @@
       "responsable": "Analista",
       "pregunta": "",
       "soporte_a_pedir": "",
-      "commit": "(este commit)",
-      "verificable_con": "git log -1 -- analisis/auditoria/",
+      "commit": "0a1bae6",
+      "verificable_con": "git show 0a1bae6",
+      "hallazgo_relacionado": "",
+      "fecha": "2026-09-28"
+    },
+    {
+      "id": "B-14",
+      "tipo": "B",
+      "categoria": "análisis",
+      "severidad": "MEDIA",
+      "titulo": "Análisis 02: las métricas de intensidad de obra por m² (rajón, andén, MD12, BG_A) daban 0 en los 27 CIV",
+      "detalle": "El script buscaba \"1005\", \"3039\", \"2002\" y \"1012\" como código IDU, pero son números de ítem sin punto (y 1.005 no es el rajón). Solo la métrica MD19 (buscada por NP-123) tenía datos, por eso la tabla \"Intensidad de obra por m²\" de cada ficha de CIV mostraba 0,000. Ahora se buscan por código IDU verificado: rajón 6016, andén 3425, mezcla asfáltica MD12 6313 + NP-123 8618 y base granular BG_A 4158 + NP-124 4744 (los contractuales fueron reemplazados por los NP). Los atípicos pasan de 2 a 5 hallazgos MEDIA (H02-200 a H02-204); el más alto es el andén del CIV 16000013 (5,5× la mediana). Ninguna cifra monetaria cambia.",
+      "evidencia": [],
+      "impacto_pesos": null,
+      "tratamiento": "",
+      "estado": "CORREGIDO",
+      "responsable": "Analista",
+      "pregunta": "",
+      "soporte_a_pedir": "",
+      "commit": "git log --grep=B-14",
+      "verificable_con": "git log --grep=B-14",
       "hallazgo_relacionado": "",
       "fecha": "2026-09-28"
     },
@@ -4404,8 +4423,8 @@
     "salidas": [
       {
         "archivo": "analisis_2026_09.json",
-        "sha256": "90d6d421513c907ce91f1f858c7afc45d5f782b317ac884c9715ac8762b68f29",
-        "bytes": 1948895
+        "sha256": "0b7894909eafa31cbc4a87b00582755b9198f1c702bcafea01ea50a43a6573b2",
+        "bytes": 1951648
       },
       {
         "archivo": "presupuesto_2026_09.json",
@@ -4424,13 +4443,13 @@
       },
       {
         "archivo": "analisis/Analisis_Presupuesto_2026-09.xlsx",
-        "sha256": "e279d4df1585ad89e7348cb685e6807da19293f6b7274e0b70714851b7df04fd",
-        "bytes": 93958
+        "sha256": "66c26c6fd23fd307a81250f5a8abbeb3ab92f54a42523862483310b69accc73c",
+        "bytes": 94208
       },
       {
         "archivo": "analisis/INFORME_PRESUPUESTO_2026-09.md",
-        "sha256": "58b562a7c08305fe4ac457509f3d364e92e09080f81e0c9240876235aaca00b3",
-        "bytes": 35897
+        "sha256": "c9a5c86c0ee31e15cb89ad935d1a8ea38970e13ef8ca6a25691155fe43164a51",
+        "bytes": 36907
       },
       {
         "archivo": "analisis/hallazgos/01_variacion_items.json",
@@ -4439,8 +4458,8 @@
       },
       {
         "archivo": "analisis/hallazgos/02_variacion_civ.json",
-        "sha256": "89bbaaa79a3f4d564f87488c318229c35ebf3acc5cae4625dc62858e5341208c",
-        "bytes": 1290687
+        "sha256": "f00863768213976eaaeee1f580f86a2734ea25c2df610c3304f4be6344f98378",
+        "bytes": 1293368
       },
       {
         "archivo": "analisis/hallazgos/03_costo_civ.json",
@@ -4470,7 +4489,7 @@
       "num2words": true
     },
     "git": {
-      "commit_base": "5cb90b9",
+      "commit_base": "7f1709e",
       "rama": "main",
       "repositorio": "https://github.com/ronalc90/Consorcio-Montevideo-045"
     },

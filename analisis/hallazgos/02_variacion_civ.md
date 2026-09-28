@@ -105,8 +105,15 @@
 ## Outliers de cantidad por m2
 | CIV | Metrica | Valor | Veces sobre mediana |
 |---|---|---:|---:|
-| 16000017 | md19_m2_por_m2 | 0.103 | 2.79x |
-| 16000024 | md19_m2_por_m2 | 0.0978 | 2.65x |
+| 16000013 | anden_m2_por_m2 | 1.2087 | 5.49x |
+| 16000017 | anden_m2_por_m2 | 0.8416 | 3.82x |
+| 16000024 | anden_m2_por_m2 | 0.7324 | 3.33x |
+| 16000017 | rajon_m3_por_m2 | 0.7208 | 2.79x |
+| 16000017 | mezcla_asfaltica_md12_md19_m3_por_m2 | 0.103 | 2.79x |
+| 16000017 | base_granular_bga_m3_por_m2 | 0.5148 | 2.79x |
+| 16000024 | rajon_m3_por_m2 | 0.6846 | 2.65x |
+| 16000024 | mezcla_asfaltica_md12_md19_m3_por_m2 | 0.0978 | 2.65x |
+| 16000024 | base_granular_bga_m3_por_m2 | 0.489 | 2.65x |
 
 ## Top 30 celdas (item x CIV) con mayor Δ absoluto
 | Row | Codigo | Item | CIV | Cant ini | Cant fin | Δ Cant | Δ Valor AIU |
@@ -179,16 +186,34 @@
 - **Descripcion**: Obras iniciales $1,773,268,906 -> finales $2,574,430,351. Delta = $801,161,445 (45.2%).
 - **Recomendacion**: Solicitar justificacion tecnica del Δ por CIV con documentacion de campo y tramites IDU.
 
-### H02-200 - [MEDIA] CIV 16000017 outlier en md19_m2_por_m2 (2.79x mediana)
+### H02-200 - [MEDIA] CIV 16000013: intensidad de andén (m²/m²) 5,49× la mediana
 - **Fuente**: PRESUPUESTO TODOS LOS CIV 84 NP · columnas del CIV
 - **Impacto**: $0
-- **Descripcion**: Ratio md19_m2_por_m2 = 0.1030, 2.79x sobre la mediana de los 27 CIVs.
+- **Descripcion**: Ratio anden_m2_por_m2 = 1.2087, 5.49x sobre la mediana de los 27 CIVs.
 - **Recomendacion**: Verificar en campo si la cantidad final del renglon corresponde al tramo real.
 
-### H02-201 - [MEDIA] CIV 16000024 outlier en md19_m2_por_m2 (2.65x mediana)
+### H02-201 - [MEDIA] CIV 16000017: intensidad de andén (m²/m²) 3,82× la mediana
 - **Fuente**: PRESUPUESTO TODOS LOS CIV 84 NP · columnas del CIV
 - **Impacto**: $0
-- **Descripcion**: Ratio md19_m2_por_m2 = 0.0978, 2.65x sobre la mediana de los 27 CIVs.
+- **Descripcion**: Ratio anden_m2_por_m2 = 0.8416, 3.82x sobre la mediana de los 27 CIVs.
+- **Recomendacion**: Verificar en campo si la cantidad final del renglon corresponde al tramo real.
+
+### H02-202 - [MEDIA] CIV 16000024: intensidad de andén (m²/m²) 3,33× la mediana
+- **Fuente**: PRESUPUESTO TODOS LOS CIV 84 NP · columnas del CIV
+- **Impacto**: $0
+- **Descripcion**: Ratio anden_m2_por_m2 = 0.7324, 3.33x sobre la mediana de los 27 CIVs.
+- **Recomendacion**: Verificar en campo si la cantidad final del renglon corresponde al tramo real.
+
+### H02-203 - [MEDIA] CIV 16000017: intensidad de rajón (m³/m²) 2,79× la mediana
+- **Fuente**: PRESUPUESTO TODOS LOS CIV 84 NP · columnas del CIV
+- **Impacto**: $0
+- **Descripcion**: Ratio rajon_m3_por_m2 = 0.7208, 2.79x sobre la mediana de los 27 CIVs.
+- **Recomendacion**: Verificar en campo si la cantidad final del renglon corresponde al tramo real.
+
+### H02-204 - [MEDIA] CIV 16000017: intensidad de mezcla asfáltica MD12+MD19 (m³/m²) 2,79× la mediana
+- **Fuente**: PRESUPUESTO TODOS LOS CIV 84 NP · columnas del CIV
+- **Impacto**: $0
+- **Descripcion**: Ratio mezcla_asfaltica_md12_md19_m3_por_m2 = 0.1030, 2.79x sobre la mediana de los 27 CIVs.
 - **Recomendacion**: Verificar en campo si la cantidad final del renglon corresponde al tramo real.
 
 ### H02-300 - [INFO] Mapeo especial CIV 500002375 = 16004876 = 50002375

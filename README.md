@@ -148,7 +148,7 @@ Consorcio-Montevideo-045/
    - Variacion por CIV con descomposicion del delta (aumentos, disminuciones, NP, contractual nuevo, eliminado).
    - Costo por CIV (obras + componentes + $/m2) para los 27 CIVs, con grupos de alcance de Hoja1.
    - NPs top 20 con contraste frente a abril y clasificacion.
-   - 71 hallazgos por severidad (ALTA / MEDIA / BAJA / INFO) con recomendacion, filtrables por analisis de origen.
+   - 74 hallazgos por severidad (ALTA / MEDIA / BAJA / INFO) con recomendacion, filtrables por analisis de origen.
    - Metodologia, fuentes y verificacion al peso.
    - Exportacion a Excel (8 hojas) y CSV por seccion.
 
@@ -166,7 +166,13 @@ Consorcio-Montevideo-045/
 
 - **Seccion N de la pestaña 75MM** y `analisis/REGISTRO_AUDITORIA.md`: 66 asientos generados por `analisis/scripts/auditoria.py` leyendo el Excel con openpyxl — **A** errores e inconsistencias de la fuente (25, con hoja, celda y formula), **B** correcciones que el propio analisis tuvo que hacerse (13, con el commit), **C** dudas abiertas para el contratista o el IDU (16) y **D** limitaciones del analisis (12). Filtros por tipo, severidad y estado, ficha por asiento con evidencia y "como verificarlo usted mismo", exportacion CSV y enlaces directos (`#p75/aud/A-25`).
 - **Paquete de auditoria**: SHA-256 del Excel fuente y de cada salida, versiones del entorno, tolerancias aceptadas y comandos para reproducir todo el analisis.
-- Hallazgos que salieron del registro y cambian la lectura: el valor inicial del contrato fue **$50.793.789.333** (no $59.426M), asi que el acumulado de adiciones llega al **48,5% nominal** del tope del 50% (A-25, B-11); los VU vigentes estan **+49%** sobre los pactados en la propuesta (A-24); la base de precios y 81 cantidades por CIV dependen de **libros externos no entregados** (A-01, A-02); el codigo 8643 ($2.718M) tiene descripcion de consultoria y cambio de unidad (A-06). Correcciones del analisis: filas del analisis 06 desplazadas (B-07), "doble pago de acero" retirado (B-08), falsos positivos del analisis 04 (B-09), "trasladado" de reubicaciones (B-13).
+- Hallazgos que salieron del registro y cambian la lectura: el valor inicial del contrato fue **$50.793.789.333** (no $59.426M), asi que el acumulado de adiciones llega al **48,5% nominal** del tope del 50% (A-25, B-11); los VU vigentes estan **+49%** sobre los pactados en la propuesta (A-24); la base de precios y 81 cantidades por CIV dependen de **libros externos no entregados** (A-01, A-02); el codigo 8643 ($2.718M) tiene descripcion de consultoria y cambio de unidad (A-06). Correcciones del analisis: filas del analisis 06 desplazadas (B-07), "doble pago de acero" retirado (B-08), falsos positivos del analisis 04 (B-09), "trasladado" de reubicaciones (B-13), metricas de intensidad por m² que daban 0 (B-14).
+
+### Movil y tablet (28-09-2026)
+
+- Fichas a pantalla completa con boton **"✕ Cerrar"** siempre visible (fijo arriba al desplazar); el gesto o boton "atras" del telefono tambien cierra la ficha sin salir de la seccion.
+- Encabezado compacto, pestañas y barras deslizables, tablas con desplazamiento lateral dentro de su caja, tarjetas en dos columnas, tooltips como hoja inferior que se cierra tocando fuera.
+- Verificado con emulacion de iPhone 13, Galaxy S9+ (320 px), iPad Mini e iPad Pro 11 horizontal: sin desbordes ni contenido recortado.
 
 ### Capa explicativa ("explica TODO")
 
