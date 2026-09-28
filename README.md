@@ -171,6 +171,7 @@ Consorcio-Montevideo-045/
 ### Capa explicativa ("explica TODO")
 
 - **Tooltips ricos en toda la app**: cada encabezado de columna, KPI y chip muestra al pasar el mouse que es, de donde sale (hoja · fila · columna del Excel) y como se calcula.
+- **Toda negrilla explica lo que dice**: cada `<b>`/`<strong>` de la pestaña 75MM y de las fichas (cifras, ítems, CIVs, códigos, hallazgos, asientos, términos) recibe un tooltip específico generado por contexto (encabezado de la columna + fila, diccionario de cifras del análisis, patrones) con la fórmula y la fuente; clic abre la ficha o el concepto relacionado. Cobertura verificada por script: 100 % de las negrillas con texto.
 - **Fichas al hacer clic**: cualquier fila (item, codigo, CIV, capitulo, componente, NP, hallazgo), tarjeta KPI o barra de grafica abre una ficha con la formula aplicada a sus numeros reales, la verificacion contra el Excel (✓/✗), la distribucion por CIV, el contraste V1/V2/V4, los hallazgos relacionados y las preguntas sugeridas para el contratista.
 - **Colores validados para daltonismo**: estados calidos suman dinero (aumento, nuevo contractual, NP) y frios restan (disminucion, eliminado); en tablas rojo = suma a la adicion y verde = resta.
 

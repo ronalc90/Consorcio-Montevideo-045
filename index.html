@@ -573,6 +573,9 @@ tr.row-hi td { background: #fef3c7 !important; }
 .p75-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 700; }
 .p75-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .p75-view[hidden] { display: none; }
+#panel-p75mm .bt, #conceptModalBody .bt { text-decoration: underline dotted rgba(44,82,130,.5); text-decoration-thickness: 1px; text-underline-offset: 3px; cursor: help; }
+#panel-p75mm tr.row-click .bt, #panel-p75mm a .bt, #panel-p75mm button .bt, #panel-p75mm .glos-item .bt, #conceptModalBody tr[onclick] .bt { cursor: inherit; }
+#panel-p75mm .bt[data-open], #conceptModalBody .bt[data-open] { cursor: pointer; }
 .p75-view { animation: p75fade .18s ease-out; }
 @keyframes p75fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 .p75-viewbar { display: flex; align-items: center; gap: 6px 14px; flex-wrap: wrap; padding: 10px 16px; margin: 0 0 16px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; font-size: .86em; }
@@ -4386,6 +4389,7 @@ function renderP75() {
   renderP75Nav(); renderP75Exec(); renderP75Legal(); renderP75Precios(); renderP75Reub(); renderP75Sim(); renderP75Checklist(); renderP75Glosario(''); renderP75Aud(); renderP75Footer();
   setupP75Events(); applyGlobalHeaderTips(); p75A11y();
   p75Show(p75InitialView(), { scroll: false, route: false });
+  p75BoldTips(document.getElementById('panel-p75mm'));
   p75OpenFromHash();
 }
 
@@ -4575,7 +4579,7 @@ function renderP75Metodo() {
     <div class="method-card"><h4>3 · Fórmulas vs valores digitados</h4><span class="big">${fmt(f.conteo_formulas || 0)}</span> celdas con fórmula y <span class="big">${fmt(f.conteo_hardcoded || 0)}</span> valores digitados en la hoja principal (${(a.formulas && a.formulas.celdas_error || []).length} celdas con error). Los subtotales de capítulo son fórmulas (ej. <code>T7 = SUM(T8:T11)</code>). Las cantidades por CIV son valores digitados: ahí está el riesgo de error humano y por eso se recalculan todos los totales.<details><summary>Inconsistencias entre hojas</summary><ul>${(a.consistencia_hojas || []).map(x => `<li><b>${esc(x.hoja)}</b> ${esc(x.celda)}: $${fmt(x.valor)} vs esperado $${fmt(x.esperado)} (Δ ${fmtS(x.delta)}) — ${x.hoja === 'Presupuesto estimado' ? 'el literal de la etapa de construcción excluye la fase inicial ($758.734.334)' : 'la celda trae el total del contrato V0, no las obras V4'}.</li>`).join('')}</ul></details></div>
     <div class="method-card"><h4>4 · Línea base por CIV <span class="xp" data-xp="concepto_linea_base">ⓘ</span></h4>${esc(ct.metodo || '')}<br><br>Suma reconstruida <b>$${fmt(ct.total_v4_reconstruidas_ini_por_civ || 0)}</b> vs col N $${fmt(ct.col_N_global_v4 || 0)}: <b>${ct.filas_sin_reparto_por_civ}</b> filas por $${fmt(ct.valor_sin_reparto_por_civ || 0)} sin reparto en el contrato (accesorios de redes, viga de cimentación, SBG_B, losa MR43…) + $86.217 de la fila 34.<details><summary>Ver las ${sin.length} filas sin reparto</summary><div class="scroll-table" style="max-height:220px">${mTable(['Fila', 'Ítem', 'Descripción', '#H', '#Valor inicial'], sin.map(x => `<tr class="row-click" onclick="openP75Item(${x.row})"><td>${x.row}</td><td>${esc(x.item_pago)}</td><td style="font-size:.85em">${esc((x.descripcion || '').substring(0, 60))}</td><td class="num">${fmtD(x.H, 2)}</td><td class="num">$${fmt(x.valor_inicial_aiu)}</td></tr>`))}</div></details></div>
     <div class="method-card"><h4>5 · Reparto de componentes no-obra <span class="xp" data-xp="concepto_reparto">ⓘ</span></h4>${esc(cr.criterio || '')}<div class="modal-formula" style="margin-top:8px">${esc(cr.formula || '')}</div><ul>${(cr.notas || []).map(n => `<li>${esc(n)}</li>`).join('')}</ul></div>
-    <div class="method-card"><h4>6 · Efecto precio vs efecto cantidad <span class="xp" data-xp="concepto_efecto_precio">ⓘ</span></h4>Dentro de V4 el VU es el mismo para H e I: la variación N→M es <b>100% cantidad</b>. Frente al VU de referencia de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 (200 ítems): efecto precio <b>$${fmt(ef.efecto_precio_total || 0)}</b>, efecto cantidad <b>$${fmt(ef.efecto_cantidad_total || 0)}</b>, interacción $${fmt(ef.interaccion_total || 0)}. Mediana de desviación del VU: +9,1%.</div>
+    <div class="method-card"><h4>6 · Efecto precio vs efecto cantidad <span class="xp" data-xp="concepto_efecto_precio">ⓘ</span></h4>Dentro de V4 el VU es el mismo para H e I: la variación N→M es <b>100% cantidad</b>. Frente al VU de referencia de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 (col Q, APU 13-09-2024; ${preciosTable().n} renglones con Δ > 2%): efecto precio <b>$${fmt(ef.efecto_precio_total || 0)}</b>, efecto cantidad <b>$${fmt(ef.efecto_cantidad_total || 0)}</b>, interacción $${fmt(ef.interaccion_total || 0)}. Mediana de desviación del VU: ${fmtSn(preciosTable().mediana, 1)}%; frente al VU pactado en la propuesta (col M): ${fmtSn((((P75.aritmetica || {}).resumen_vu_propuesta) || {}).mediana_delta_pct || 0, 1)}% (registro de auditoría A-24).</div>
     <div class="method-card"><h4>7 · Paleta y lectura de colores</h4>Estados: <b style="color:#dd6b20">cálidos suman</b> dinero (aumento, nuevo contractual, NP) y <b style="color:#3182ce">fríos restan</b> (disminución, eliminado). En las tablas, <span class="negative">rojo</span> = suma a la adición y <span class="positive">verde</span> = resta. Subgrupos: <span class="pill sg-2">SG2</span> Montevideo · <span class="pill sg-5">SG5</span> Puente Aranda. Los colores de las gráficas se validaron para daltonismo (ΔE ≥ 8 en pares adyacentes o con etiqueta directa).</div>`;
 }
 
@@ -5183,6 +5187,229 @@ function openP75Aud(id) {
     ${rel.length ? mSec('Relacionado', `<div class="modal-btns">${rel.join('')}</div>`) : ''}
   </div>`);
 }
+
+
+// ── Tooltips específicos para TODO lo que está en negrilla ─────────────────
+// Cada <b>/<strong> de la pestaña 75MM y de las fichas recibe un tooltip que dice qué es la cifra o el
+// término, de dónde sale y cómo se calcula. Se resuelve por contexto: celda de tabla (encabezado + fila),
+// término del glosario, diccionario de textos, patrones (CIV, NP, hallazgo, asiento, ítem, cifra, %) y,
+// si nada aplica, el título de la tarjeta donde aparece. Se ejecuta tras cada render (MutationObserver).
+const _btNorm = t => String(t || '').replace(/\s+/g, ' ').replace(/[“”"]/g, '"').replace(/’/g, "'").trim();
+const _btMoney = t => { const raw = _btNorm(t).replace(/^Δ\s*/, ''); const m = raw.match(/^([+−-])?\s*(\$)?\s*([\d.]+)(?:,(\d+))?\s*(MM|M)?$/); if (!m) return null; const groups = (m[3].match(/\./g) || []).length; if (!m[2] && !m[5] && groups < 2) return null; let n = parseFloat(m[3].replace(/\./g, '') + (m[4] ? '.' + m[4] : '')); if (m[5] === 'MM') n *= 1e9; else if (m[5] === 'M') n *= 1e6; return { n, neg: m[1] === '−' || m[1] === '-', approx: !!m[5] }; };
+let _btFig = null;
+function p75FigMap() {
+  if (_btFig) return _btFig;
+  const F = []; const add = (n, t, xp, open) => { if (n == null || isNaN(n) || !n) return; F.push({ n: Math.abs(n), t, xp, open }); };
+  const c = normCheck(); const rb = reubStats(); const pr = preciosTable(); const vp = (P75.aritmetica && P75.aritmetica.resumen_vu_propuesta) || {};
+  add(75426575199, 'Total V4 (01-09-2026): M703 = obras con AIU (M688) + componentes (M692…M701) = 75.426.575.199. Es el valor actual 59.426.575.199 + la adición pedida de 16.000.000.000.', 'kpi_total_v4');
+  add(59426575199, 'Valor actual del contrato (V0): celda M705 del libro radicado. Ya incluye 8.632.785.866 sobre el valor inicial de 2021 (adiciones 1-3, actualización de VU y reasignación del fondo de compensaciones).', 'wf_v0', 'aud:A-25');
+  add(50793789333, 'Valor inicial del contrato (propuesta VICON 2021): hoja PRESUPUESTO CONTRACTUAL MAYO 25, fila 279 "COSTO TOTAL DEL PROYECTO" (col O). Coincide con el boletín del IDU. Es la base del tope del 50 % (Ley 80 art. 40).', 'norm_tope', 'aud:A-25');
+  add(16000000000, 'Adición solicitada = 75.426.575.199 − 59.426.575.199 (M707 con signo invertido). Es NP (14.150.924.549) + componentes por plazo (2.106.360.999) + balance de cantidades (−257.285.548).', 'kpi_total_v4');
+  add(58196933800, 'Obras + redes con AIU 31,849 % en V4: M688 = SUM(M8:M679) = 58.196.933.800 (44.139.078.643 en costo directo). El bloque ACEROS (filas 680-687) queda fuera de esta suma.', 'kpi_obras_v4');
+  add(44303294799, 'Obras con AIU en V0: N688 = Σ (cantidad contractual H × VU con AIU L) = 44.303.294.799. Usa los mismos VU de V4.', 'wf_v0');
+  add(13893639001, 'Δ obras V4 − V0 = Q688 = 58.196.933.800 − 44.303.294.799 = balance de cantidades (−257.285.548) + NP incorporados (14.150.924.549).', 'kpi_obras_v4');
+  add(14150924549, 'Valor con AIU de los 105 renglones NP con cantidad (81 códigos): P688 = Σ col P. Equivale al 101,9 % del Δ de obras.', 'kpi_np');
+  add(257285548, 'Balance de mayores y menores cantidades de los ítems contractuales: O688 = Σ (I − H) × L. Negativo: las disminuciones y eliminaciones superan los aumentos.', 'concepto_balance');
+  add(2106360999, 'Δ de los tres componentes de gestión por los 8 meses: PMA-SST +1.167.161.690 (8 × 145.895.211) + diálogo +555.057.738 + PMT +384.141.571.', 'wf_comp');
+  add(c.prev, `Incremento previo del contrato: valor actual ${fmt(c.actual)} − valor inicial ${fmt(c.orig)} = ${fmt(c.prev)} (+${fmtD(c.pctNominalPrev, 1)} %). Se cuenta completo como adición mientras el IDU no acredite qué parte fue reajuste (duda C-01).`, 'norm_tope', 'aud:A-25');
+  add(c.acum, `Acumulado de adiciones sobre el valor inicial: ${fmt(c.prev)} previos + ${fmt(c.ad)} solicitados = ${fmt(c.acum)} = ${fmtD(c.pctNominal, 1)} % del valor inicial (tope 50 %).`, 'norm_tope');
+  add(Math.round(c.margenNominal), `Margen nominal hasta el tope del 50 %: 50 % × ${fmt(c.orig)} − ${fmt(c.acum)} = ${fmt(Math.round(c.margenNominal))}. En SMMLV el margen es mayor (${fmtD(c.margenSm, 0)} SMMLV).`, 'norm_tope');
+  add(rb.bruta, `Valor trasladado entre renglones: Σ por código de min(valor que sale de las filas que bajan, valor que entra en las que suben) = ${fmt(rb.bruta)} en ${rb.det.length} códigos. No es eliminación ni alcance nuevo.`, 'concepto_reubicacion');
+  add(rb.eliminado_total, `Suma de los renglones contractuales que quedan en 0 en V4 (estado "eliminado"): ${fmt(rb.eliminado_total)} con AIU. De ese valor, ${fmt(rb.bruta)} reaparece bajo el mismo código en otro renglón.`, 'concepto_reubicacion');
+  add(rb.eliminado_total - rb.bruta, `Eliminación real de alcance contractual: ${fmt(rb.eliminado_total)} eliminados − ${fmt(rb.bruta)} trasladados = ${fmt(rb.eliminado_total - rb.bruta)}.`, 'concepto_reubicacion');
+  add(rb.nuevo_total, `Renglones contractuales que nacen en V4 (H = 0, I > 0): ${fmt(rb.nuevo_total)} con AIU; ${fmt(rb.bruta)} de ellos son traslados.`, 'concepto_reubicacion');
+  add(rb.nuevo_total - rb.bruta, `Alcance realmente nuevo en ítems del contrato: ${fmt(rb.nuevo_total)} − ${fmt(rb.bruta)} trasladados = ${fmt(rb.nuevo_total - rb.bruta)}.`, 'concepto_reubicacion');
+  add(pr.tot, `Efecto precio frente al APU actualizado 13-09-2024 (col Q de PRESUPUESTO CONTRACTUAL MAYO 25): Σ (K V4 − K referencia) × cantidad final × 1,31849 sobre los ${pr.n} renglones con Δ > 2 % = ${fmtS(pr.tot)}.`, 'concepto_efecto_precio');
+  add(vp.impacto_aiu_total, `Efecto precio frente al VU pactado en la propuesta 2021 (col M): Σ (K V4 − VU pactado) × cantidad final × 1,31849 = ${fmtS(vp.impacto_aiu_total || 0)} sobre ${vp.renglones} renglones; mediana +${vp.mediana_delta_pct} %.`, 'concepto_efecto_precio', 'aud:A-24');
+  add(vp.valor_v4_aiu, `Valor con AIU en V4 de los ${vp.renglones} renglones contractuales con VU pactado conocido: ${fmt(vp.valor_v4_aiu || 0)}.`, null, 'aud:A-24');
+  add(vp.valor_a_vu_pactado_aiu, `Lo que valdrían esos mismos renglones (cantidad final) al VU pactado en la propuesta 2021: ${fmt(vp.valor_a_vu_pactado_aiu || 0)}.`, null, 'aud:A-24');
+  const rs = P75.variacion_items.reemplazos_np || []; const rsPos = rs.filter(r => r.sobrecosto_neto > 0).reduce((s, r) => s + r.sobrecosto_neto, 0), rsNeg = rs.filter(r => r.sobrecosto_neto < 0).reduce((s, r) => s + r.sobrecosto_neto, 0);
+  add(rsPos, `Sobrecosto neto de los ${rs.filter(r => r.sobrecosto_neto > 0).length} reemplazos contractual → NP que encarecen: Σ (valor del NP − valor del ítem contractual sustituido) = ${fmtS(rsPos)}.`, 'concepto_reemplazo');
+  add(rsNeg, `Ahorro neto de los ${rs.filter(r => r.sobrecosto_neto < 0).length} reemplazos contractual → NP que abaratan: ${fmtS(rsNeg)}.`, 'concepto_reemplazo');
+  add(3052987517, 'Bloque ACEROS (filas 680-687): acero de refuerzo, acero liso y dovelas repartidos por CIV, 3.052.987.517 con AIU. Está FUERA del total de obras (M688 = SUM(M8:M679)).', 'concepto_bloque_acero');
+  add(2977517840, 'Bolsa fija F "Costos de actividades acero" (fila 697): 2.977.517.840, igual desde la firma. Es la única partida de acero dentro del total.', 'concepto_bloque_acero');
+  add(75469677, 'Diferencia bloque ACEROS − bolsa F = 3.052.987.517 − 2.977.517.840 = 75.469.677 (+2,5 %). Hallazgo H06-01.', 'concepto_bloque_acero', 'hall:H06-01');
+  add(5942657520, 'Fondo de compensaciones que apareció en V2 (propuesta del 21-04-2026) y vuelve a 0 en V3 y V4 sin trazabilidad. Hallazgo H06-06.', 'wf_comp', 'hall:H06-06');
+  add(2000000000, 'Ritmo mensual implícito: 16.000.000.000 / 8 meses = 2.000.000.000 por mes, unas 3,3 veces el ritmo histórico estimado del contrato (H06-03).', 'concepto_ritmo', 'hall:H06-03');
+  add(145895211, 'Mensualidad del componente PMA-SST con AIU 20,006 %: 1.167.161.690 / 8 = 145.895.211 (detalle en filas 729-738).', 'aiu_20006');
+  WF().forEach((w, i) => { const n = nice(w.componente); add(w.v4, `${n} en V4: ${fmt(w.v4 || 0)} (${esc(w.fuente_v4 || '')}). V0: ${fmt(w.v0 || 0)}; Δ ${fmtS((w.v4 || 0) - (w.v0 || 0))}.`, null, 'comp:' + i); add((w.v4 || 0) - (w.v0 || 0), `Δ V0 → V4 de ${n}: ${fmt(w.v4 || 0)} − ${fmt(w.v0 || 0)} = ${fmtS((w.v4 || 0) - (w.v0 || 0))}.`, null, 'comp:' + i); if (w.v0) add(w.v0, `${n} en V0 (contrato actual): ${fmt(w.v0)}.`, null, 'comp:' + i); });
+  (P75.variacion_items.capitulos || []).forEach(cp => { add(cp.delta, `Δ del capítulo ${esc(cp.chapter)}: valor final ${fmt(cp.valor_final)} − valor inicial ${fmt(cp.valor_inicial)} = ${fmtS(cp.delta)} (balance ${fmtS(cp.balance_may_men || 0)} + NP ${fmtS(cp.incorporacion_np || 0)}).`, null, 'cap:' + cp.chapter); add(cp.valor_final, `Valor final con AIU del capítulo ${esc(cp.chapter)}: ${fmt(cp.valor_final)}.`, null, 'cap:' + cp.chapter); });
+  (P75.hallazgos || []).forEach(h => { if (h.impacto_pesos) add(h.impacto_pesos, `Impacto del hallazgo ${h.id} (${h.severidad}): ${esc(h.titulo)}.`, null, 'hall:' + h.id); });
+  const ct = (P75.variacion_civ || {}).conciliacion_total || {}; if (ct.total_v4_reconstruidas_ini_por_civ) add(ct.total_v4_reconstruidas_ini_por_civ, `Suma de la línea base reconstruida por CIV (col H repartida con la participación del VISOR de mayo 2025): ${fmt(ct.total_v4_reconstruidas_ini_por_civ)}, frente a la col N global ${fmt(ct.col_N_global_v4 || 0)}; la diferencia son los renglones sin reparto.`, 'concepto_linea_base');
+  const ef = (P75.aritmetica || {}).efecto_precio_cantidad_total || {}; add(ef.efecto_precio_total, `Efecto precio (análisis 04): Σ (K V4 − K referencia) × cantidad contractual H, con AIU = ${fmt(ef.efecto_precio_total || 0)}.`, 'concepto_efecto_precio'); add(ef.efecto_cantidad_total, `Efecto cantidad (análisis 04): Σ (I − H) × K referencia, con AIU = ${fmt(ef.efecto_cantidad_total || 0)}.`, 'concepto_efecto_precio');
+  audList().forEach(a => { if (a.impacto_pesos) add(a.impacto_pesos, `Impacto asociado al asiento ${a.id} del registro de auditoría: ${esc(a.titulo)}.`, null, 'aud:' + a.id); });
+  return _btFig = F;
+}
+function _btFindFig(t) {
+  const mo = _btMoney(t); if (!mo) return null; const F = p75FigMap();
+  let best = null; F.forEach(f => { const rel = Math.abs(f.n - mo.n) / Math.max(f.n, 1); if ((mo.approx ? rel < 0.006 : rel < 1e-9) && (!best || rel < best.rel)) best = { rel, f }; });
+  return best ? best.f : null;
+}
+const BOLD_TXT = () => { const c = normCheck(); const vp = (P75.aritmetica && P75.aritmetica.resumen_vu_propuesta) || {}; const alta = (P75.hallazgos || []).filter(h => h.severidad === 'ALTA').length; return {
+  '"4. PRESUPUESTO 01-09-2026 75MM (8 MESES).xlsx"': { tip: 'Archivo radicado por el Consorcio VICON 024 el 01-09-2026: 18 hojas (15 ocultas), 190 vínculos externos, hoja principal PRESUPUESTO TODOS LOS CIV 84 NP. SHA-256 e17f0f39…570a. No está en el repositorio; se identifica por su huella.', open: 'aud:A-21' },
+  '4. PRESUPUESTO 01-09-2026 75MM (8 MESES).xlsx': { tip: 'Archivo radicado por el Consorcio VICON 024 el 01-09-2026: 18 hojas (15 ocultas), 190 vínculos externos, hoja principal PRESUPUESTO TODOS LOS CIV 84 NP. SHA-256 e17f0f39…570a.', open: 'aud:A-21' },
+  'PRESUPUESTO TODOS LOS CIV 84 NP': { tip: 'Hoja principal del libro: 649 renglones (filas 7-679) × 27 CIVs (columnas S…BW en pares cantidad/valor). Columnas clave: H cantidad contractual, I actualizada, K VU, L VU con AIU, M valor final, N valor inicial, O balance, P NP. Total en la fila 688.' },
+  'comparativa.json': { tip: 'Comparativa de abril de 2026: V1 (IDU 25-02-2026, 61.411.887.929) y V2 (propuesta VICON 21-04-2026, 77.944.220.992) por código IDU y en costo directo.', xp: 'wf_v2' },
+  'PRESUPUESTO 63 mm': { tip: 'Hoja oculta con la versión V3 (63.749.467.094, 3 meses, mayo de 2026): total de obras en la fila 652, componentes 656-665, total 667.', xp: 'wf_v3' },
+  'data.json': { tip: 'Base del dashboard original: VISOR IDU del 7 de mayo de 2025 (VU y cantidades por CIV del contrato). Se usa para repartir la línea base por CIV y como referencia de precios.', xp: 'concepto_linea_base' },
+  'Cómo usar esta pestaña:': { tip: 'Guía rápida: la barra de secciones cambia el contenido; ⓘ y las negrillas muestran qué es cada cosa al pasar el mouse; clic en filas, tarjetas y barras abre fichas con la fórmula y la verificación contra el Excel.' },
+  'La adición es NP, no mayores cantidades.': { xp: 'cce_466_x' },
+  'Reemplazos contractual → NP.': { xp: 'concepto_reemplazo' },
+  'Precios unitarios.': { xp: 'concepto_efecto_precio' },
+  'VU pactado en la propuesta': { tip: 'Columna M "VALOR UNITARIO PROPUESTA CONTRATISTA SIN AIU" de la hoja PRESUPUESTO CONTRACTUAL MAYO 25: el precio unitario con el que se adjudicó el contrato en 2021. Frente a él, los VU de V4 están +' + (vp.mediana_delta_pct || 0) + ' % (mediana).', open: 'aud:A-24' },
+  'Tres frentes atípicos.': { xp: 'concepto_outlier' },
+  'Componentes.': { xp: 'wf_comp' },
+  'Ritmo.': { xp: 'concepto_ritmo' },
+  'registro de auditoría': { tip: 'Sección N: ' + audList().length + ' asientos generados por auditoria.py leyendo el Excel con openpyxl: errores de la fuente (A), correcciones del análisis (B), dudas abiertas (C) y limitaciones (D). Clic para abrirla.', open: 'sec:auditoria' },
+  'IDU-1752-2021': { tip: 'Contrato de obra IDU 1752 de 2021, Grupo 2 (Montevideo y Puente Aranda), 27 CIVs; contratista Consorcio VICON 024, interventoría Consorcio Montevideo 045; acta de inicio 02-12-2021.' },
+  'Base correcta:': { tip: 'El tope del 50 % se mide sobre el VALOR INICIAL del contrato en SMMLV, no sobre el valor actual. Registro de auditoría B-11 / A-25.', open: 'aud:A-25' },
+  'Conclusión:': { tip: 'Lectura del analista sobre el tope: cabe en SMMLV (' + fmtD(c.pctCap, 1) + ' % del tope) pero queda al límite en pesos nominales (' + fmtD(c.pctNominal, 1) + ' %).', xp: 'norm_tope' },
+  'no cambia': { tip: 'El componente "ajustes por cambio de vigencia" vale 4.555.525.079 tanto en V0 como en V4 (M695; resumen E11 = 0), aunque la prórroga de 8 meses lleva la ejecución a la vigencia 2027.', open: 'aud:A-07' },
+  'Supuestos.': { tip: 'Reglas del simulador: gestión = V0 + meses × mensualidad de V4; componentes fijos sin cambio; "excluir no alcanza" resta solo obras; "VU de referencia" aplica el Σ impacto de la sección H; vigencia = 3,5 % ilustrativo. No sustituye la propuesta ni el otrosí.' },
+  'APU actualizado con insumos VISOR 13-09-2024': { tip: 'Columna Q de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 ("VALOR ITEM COSTO DIRECTO ACTUALIZACION DE APU INSUMOS VISOR 13-09-2024"). Coincide con el "precio original" del dashboard.', open: 'aud:A-18' },
+  'VISOR de mayo de 2025': { tip: 'Base de precios unitarios de referencia del IDU (VISOR) del 7 de mayo de 2025, tomada de data.json (visor_sin_aiu).', xp: 'aiu_34' },
+  'trasladado = min(sale, entra)': { xp: 'concepto_reubicacion' },
+  'no aparecen con cantidad': { tip: '68 renglones NP quedan con cantidad 0 en V4 (plantilla) y 3 códigos NP (NP-06, NP-08, NP-11) nunca se cuantifican. Registro de auditoría A-15.', open: 'aud:A-15' },
+  '100% cantidad': { tip: 'Dentro de V4, N (valor inicial) y M (valor final) usan el mismo VU (col K): toda la variación N → M es cantidad (I − H) × L. El efecto precio aparece solo al comparar con referencias externas.', xp: 'concepto_efecto_precio' },
+  'cálidos suman': { tip: 'Convención de colores: naranja (aumento), morado (contractual nuevo) y rojo (NP) son estados que SUMAN dinero a la adición.', xp: 'col_estado' },
+  'fríos restan': { tip: 'Convención de colores: azul (disminución) y verde (eliminado) son estados que RESTAN dinero; gris = sin cambio.', xp: 'col_estado' },
+  '25 asientos sobre la fuente': { tip: 'Tipo A del registro: errores e inconsistencias del Excel radicado (vínculos externos, VU digitados, totales que no cuadran, rótulos, código 8643…), cada uno con celda y fórmula verificadas con openpyxl.' },
+  '13 correcciones del propio análisis': { tip: 'Tipo B del registro: lo que el análisis tuvo mal y corrigió (filas del análisis 06, "doble pago" de acero, base del tope del 50 %, VU contractual, traslados…), con el commit de git que lo corrige.' },
+  '16 dudas': { tip: 'Tipo C del registro: preguntas que deben responder el contratista o el IDU antes de emitir concepto, con el soporte que hay que pedir.' },
+  '12 limitaciones': { tip: 'Tipo D del registro: supuestos y alcance del análisis (línea base reconstruida, valores guardados del libro, cruce por código, referencias de precios, índices heurísticos…).' },
+  [`${alta} hallazgos ALTA`]: { tip: `${alta} hallazgos de severidad ALTA de ${(P75.hallazgos || []).length}: pueden cambiar el concepto o el valor de la adición. Todos citan hoja y fila del Excel (sección F).`, open: 'sec:hallazgos' },
+}; };
+function _btPct(t, ctx) {
+  const c = normCheck(); const vp = (P75.aritmetica && P75.aritmetica.resumen_vu_propuesta) || {};
+  const s = _btNorm(t);
+  if (/^\+?49[,.]0 ?%$/.test(s) || s === `+${String(vp.mediana_delta_pct || '').replace('.', ',')}%`) return { tip: `Mediana de (VU V4 ÷ VU pactado − 1) sobre ${vp.renglones} renglones contractuales: +${vp.mediana_delta_pct} %. VU pactado = col M de PRESUPUESTO CONTRACTUAL MAYO 25.`, open: 'aud:A-24' };
+  if (/^48[,.]5 ?% del valor inicial$/.test(s) || s === `${fmtD(c.pctNominal, 1)}% del valor inicial`) return { tip: `(${fmt(c.prev)} previos + ${fmt(c.ad)} solicitados) ÷ ${fmt(c.orig)} inicial = ${fmtD(c.pctNominal, 1)} % en pesos nominales; tope legal 50 %.`, xp: 'norm_tope' };
+  if (/^\+?26[,.]9 ?%/.test(s)) return { tip: '16.000.000.000 ÷ 59.426.575.199 (valor actual) = 26,9 %. Sobre el valor inicial de 2021 la misma adición es 31,5 %.', xp: 'norm_tope' };
+  return null;
+}
+function _btPatterns(t, ctx) {
+  const s = _btNorm(t); const m = p75Maps();
+  let mo;
+  if ((mo = s.match(/^(1600\d{4}|900\d{4}|500002375|50002375|16004876)$/))) { const id = mo[1] === '50002375' || mo[1] === '16004876' ? '500002375' : mo[1]; const cv = m.civById[id]; if (cv) return { tip: `CIV ${id} · ${esc(cv.nomenclatura || '')} ${esc(cv.desde_hasta || '')} · subgrupo ${cv.subgrupo} · ${fmt(Math.round(cv.area_m2 || 0))} m² · obras con AIU en V4 ${fmt(cv.obras_total || 0)} (${fmt(cv.dolarm2_obras || 0)}/m²) · Δ obras ${fmtS((m.resumenCiv[id] || {}).delta_aiu || 0)}.`, cta: 'Clic abre la ficha del CIV', open: 'civ:' + id }; }
+  if ((mo = s.match(/^NP-\d+$/i))) { const it = m.items.find(i => String(i.item_pago || '').toUpperCase() === s.toUpperCase() && (_itV(i).I > 0)) || m.items.find(i => String(i.item_pago || '').toUpperCase() === s.toUpperCase()); if (it) { const v = _itV(it); return { tip: `Ítem no previsto ${s.toUpperCase()}: ${esc(it.descripcion || '')} · ${esc(it.und || '')} · cantidad ${fmtD(v.I, 2)} · VU ${fmt(v.K)} (con AIU ${fmt(v.L)}) · valor ${fmt(v.M)} · fila ${it.row}${(m.rowsByCode && it.codigo_idu && (m.rowsByCode[it.codigo_idu] || []).length > 1) ? ' (código en varias filas)' : ''}.`, cta: 'Clic abre la ficha del renglón', open: 'item:' + it.row }; } }
+  if ((mo = s.match(/^(H\d{2}-\d{2,3}|H-NP-\d{2}|H03-OUT-\d+|H03-NP-\d+|H0\d)$/))) { const h = (P75.hallazgos || []).find(x => x.id === s); if (h) return { tip: `Hallazgo ${h.id} · ${h.severidad} · ${esc(h.titulo)}${h.impacto_pesos ? ' · impacto ' + fmt(h.impacto_pesos) : ''} · ${esc(h.hoja || '')} ${h.fila ? 'fila ' + esc(String(h.fila)) : ''} · análisis ${h.origen || ''}.`, cta: 'Clic abre la ficha del hallazgo', open: 'hall:' + h.id }; }
+  if ((mo = s.match(/^([ABCD])-\d{2}$/))) { const a = audList().find(x => x.id === s); if (a) return { tip: `Asiento ${a.id} (${AUD_TIPO[a.tipo]}) · ${a.severidad} · ${a.estado} · ${esc(a.titulo)}${a.impacto_pesos != null ? ' · ' + fmt(a.impacto_pesos) : ''}.`, cta: 'Clic abre el asiento', open: 'aud:' + a.id }; }
+  if ((mo = s.match(/^\d\.\d{3}$/))) { const its = m.items.filter(i => String(i.item_pago) === s); if (its.length) { const it = its.find(i => _itV(i).I > 0) || its[0]; const v = _itV(it); return { tip: `Ítem de pago ${s} · código IDU ${esc(it.codigo_idu || '')} · ${esc(it.descripcion || '')} · ${esc(it.und || '')} · H ${fmtD(v.H, 2)} → I ${fmtD(v.I, 2)} · Δ ${fmtS(v.D)} · fila ${it.row}${its.length > 1 ? ` (aparece en ${its.length} filas)` : ''}.`, cta: 'Clic abre la ficha del renglón', open: 'item:' + it.row }; } }
+  if ((mo = s.match(/^(\d)\. [A-ZÁÉÍÓÚÑ ]+$/))) { const cp = (P75.variacion_items.capitulos || []).find(x => x.chapter === s); if (cp) return { tip: `Capítulo ${s}: valor inicial ${fmt(cp.valor_inicial)} → final ${fmt(cp.valor_final)} · Δ ${fmtS(cp.delta)} (balance ${fmtS(cp.balance_may_men || 0)} + NP ${fmtS(cp.incorporacion_np || 0)}).`, cta: 'Clic abre la ficha del capítulo', open: 'cap:' + s }; }
+  if ((mo = s.match(/^\d{4,5}$/)) && ctx.code) { const rows = m.rowsByCode[s] || []; if (rows.length) { const it = rows.find(x => _itV(x).I > 0) || rows[0]; const tot = rows.reduce((a, x) => { const v = _itV(x); a.N += v.N; a.M += v.M; return a; }, { N: 0, M: 0 }); return { tip: `Código IDU ${s} · ${esc(it.descripcion || '')} · ${esc(it.und || '')} · en ${rows.length} fila(s): ${rows.map(x => x.row).slice(0, 8).join(', ')} · Σ inicial ${fmt(tot.N)} → Σ final ${fmt(tot.M)} (Δ ${fmtS(tot.M - tot.N)}).`, cta: 'Clic abre la ficha del código', open: 'code:' + s }; } }
+  const pc = _btPct(s, ctx); if (pc) return pc;
+  const f = _btFindFig(s); if (f) return { tip: f.t, xp: f.xp, open: f.open };
+  return null;
+}
+function _btHeader(td) {
+  const table = td.closest('table'); if (!table) return { label: '', q: '' };
+  const idx = td.cellIndex; const hr = table.tHead ? table.tHead.rows[table.tHead.rows.length - 1] : null; const th = hr ? hr.cells[idx] : null; if (!th) return { label: '', q: '' };
+  let q = ''; if (th.dataset.xp) { const x = xpGet(th.dataset.xp); q = x ? (x.q || '') : ''; } else if (th.dataset.tip) q = th.dataset.tip;
+  return { label: _btNorm(th.innerText).replace(/\s*ⓘ\s*$/, ''), q };
+}
+function _btRowCtx(tr, m) {
+  const d = tr.dataset; const r = {};
+  if (d.row) { const it = m.byRow[+d.row]; if (it) { r.txt = `renglón ${it.item_pago} · ${esc((it.descripcion || '').substring(0, 60))} (fila ${it.row})`; r.it = it; r.open = 'item:' + it.row; } }
+  else if (d.civ) { const cv = m.civById[d.civ]; if (cv) { r.txt = `CIV ${d.civ} · ${esc(cv.nomenclatura || '')} ${esc(cv.desde_hasta || '')}`; r.civ = cv; r.open = 'civ:' + d.civ; } }
+  else if (d.hall) { const h = (P75.hallazgos || []).find(x => x.id === d.hall); if (h) { r.txt = `hallazgo ${h.id} (${h.severidad})`; r.open = 'hall:' + h.id; } }
+  else if (d.aud) { const a = audList().find(x => x.id === d.aud); if (a) { r.txt = `asiento ${a.id}`; r.open = 'aud:' + a.id; } }
+  else if (d.code) { r.txt = `código IDU ${d.code}`; r.code = d.code; r.open = 'code:' + d.code; }
+  else if (d.comp != null) { const w = WF()[+d.comp]; if (w) { r.txt = `componente ${esc(nice(w.componente))}`; r.wf = w; r.open = 'comp:' + d.comp; } }
+  else if (d.cap) { r.txt = `capítulo ${esc(d.cap)}`; r.open = 'cap:' + d.cap; }
+  return r;
+}
+function _btCell(el, td, m) {
+  const s = _btNorm(el.innerText); if (!s) return null; const tr = td.closest('tr'); const rc = tr ? _btRowCtx(tr, m) : {}; const h = _btHeader(td);
+  // patrones con contexto de fila (ítem, CIV, NP, hallazgo, asiento, código)
+  const pat = _btPatterns(s, { code: !!rc.code || /código/i.test(h.label) });
+  if (pat && !_btMoney(s)) return Object.assign({ cta: tr && tr.classList.contains('row-click') ? (pat.cta || 'Clic en la fila abre la ficha') : pat.cta }, pat, { open: undefined });
+  // valores monetarios: explicar con encabezado + fila
+  if (rc.it) { const v = _itV(rc.it); const mo = _btMoney(s); const isDelta = /Δ|delta/i.test(h.label); const isM = /valor (con aiu|final)|col m\b/i.test(h.label);
+    const tipD = { tip: `Δ valor del ${rc.txt} = M − N = ${fmt(v.M)} − ${fmt(v.N)} = ${fmtS(v.D)} (con AIU). ${v.D > 0 ? 'Positivo: suma a la adición' : v.D < 0 ? 'Negativo: resta a la adición' : 'Sin cambio'} · estado ${ESTADOS[v.est] ? ESTADOS[v.est].label : v.est}.`, cta: 'Clic en la fila abre la ficha' };
+    const tipM = { tip: `Valor final con AIU del ${rc.txt}: M = L × I = ${fmt(v.L)} × ${fmtD(v.I, 2)} = ${fmt(v.M)}${rc.it.is_np ? ' (ítem no previsto: todo su valor es adición)' : ''}.`, cta: 'Clic en la fila abre la ficha' };
+    if (isDelta) return tipD; if (isM && mo) return tipM;
+    if (mo && Math.abs(mo.n - Math.abs(v.M)) < 1 && !(Math.abs(mo.n - Math.abs(v.D)) < 1 && !rc.it.is_np)) return tipM;
+    if (mo && Math.abs(mo.n - Math.abs(v.D)) < 1) return tipD;
+  }
+  if (rc.civ && _btMoney(s)) { const cv = rc.civ; const d = m.descCiv[cv.id] || {}; const rs = m.resumenCiv[cv.id] || {}; const lab = h.label.toLowerCase(); const mo = _btMoney(s).n;
+    if (Math.abs(mo - Math.abs(cv.total || 0)) < 1) return { tip: `Total del CIV ${cv.id} = obras con AIU ${fmt(cv.obras_total || 0)} + componentes asignados ${fmt(cv.componentes_asignados || 0)} (reparto proporcional al costo directo) = ${fmt(cv.total || 0)}.`, cta: 'Clic abre la ficha del CIV' };
+    if (Math.abs(mo - Math.abs(cv.obras_total || 0)) < 1) return { tip: `Obras con AIU del CIV ${cv.id} en V4: Σ de las celdas de valor del CIV en la hoja principal = ${fmt(cv.obras_total || 0)} (${fmt(cv.dolarm2_obras || 0)}/m²).`, cta: 'Clic abre la ficha del CIV' };
+    if (Math.abs(mo - Math.abs(rs.delta_aiu || 0)) < 1) return { tip: `Δ obras del CIV ${cv.id}: finales ${fmt(rs.obras_finales_aiu || 0)} − iniciales ${fmt(rs.obras_iniciales_aiu || 0)} (línea base reconstruida) = ${fmtS(rs.delta_aiu || 0)} = aumentos ${fmtS(d.delta_por_aumentos || 0)} + disminuciones ${fmtS(d.delta_por_disminuciones || 0)} + NP ${fmtS(d.delta_por_np || 0)} + nuevo ${fmtS(d.delta_por_contractual_nuevo || 0)} + eliminado ${fmtS(d.delta_por_eliminado || 0)}.`, cta: 'Clic abre la ficha del CIV' };
+    return { tip: `${h.label || 'Valor'} del CIV ${cv.id} (${esc(cv.nomenclatura || '')}): ${esc(s)}. ${h.q}`, cta: 'Clic abre la ficha del CIV' };
+  }
+  if (rc.wf && _btMoney(s)) { const w = rc.wf; const n = nice(w.componente); const mo = _btMoney(s).n; const dv = (w.v4 || 0) - (w.v0 || 0);
+    if (Math.abs(mo - Math.abs(dv)) < 1) return { tip: `Δ V0 → V4 de ${n}: ${fmt(w.v4 || 0)} − ${fmt(w.v0 || 0)} = ${fmtS(dv)}. ${w.nota ? esc(w.nota) : ''}`, cta: 'Clic abre la ficha del componente' };
+    if (Math.abs(mo - Math.abs(w.v4 || 0)) < 1) return { tip: `${n} en V4 (01-09-2026): ${fmt(w.v4 || 0)}. Fuente: ${esc(w.fuente_v4 || '')}.`, cta: 'Clic abre la ficha del componente' };
+    return { tip: `${h.label} de ${n}: ${esc(s)}.`, cta: 'Clic abre la ficha del componente' };
+  }
+  if (rc.wf) return { tip: `Componente "${nice(rc.wf.componente)}": V0 ${fmt(rc.wf.v0 || 0)} → V4 ${fmt(rc.wf.v4 || 0)} (Δ ${fmtS((rc.wf.v4 || 0) - (rc.wf.v0 || 0))}). Fuente V4: ${esc(rc.wf.fuente_v4 || '')}.`, cta: 'Clic abre la ficha del componente' };
+  if (rc.code && _btMoney(s)) { const rb = reubStats(); const r = rb.det.find(x => x.codigo_idu === rc.code) || {}; const mo = _btMoney(s).n;
+    if (Math.abs(mo - Math.abs(r.mov || 0)) < 1) return { tip: `Trasladado del código ${rc.code} = min(valor que sale ${fmt(r.elim || 0)}, valor que entra ${fmt(r.nuevo || 0)}) = ${fmt(r.mov || 0)}: la parte que solo cambió de renglón o subcapítulo.`, cta: 'Clic abre la ficha del código' };
+    if (Math.abs(mo - Math.abs(r.delta_valor_neto || 0)) < 1) return { tip: `Δ neto del código ${rc.code} sumando todas sus filas: ${fmt(r.M_valor_final || 0)} (final) − ${fmt(r.N_valor_inicial || 0)} (inicial) = ${fmtS(r.delta_valor_neto || 0)}.`, cta: 'Clic abre la ficha del código' };
+    return { tip: `${h.label} del código ${rc.code}: ${esc(s)}. ${h.q}`, cta: 'Clic abre la ficha del código' };
+  }
+  if (rc.txt) return { tip: `${h.label || 'Valor'} de ${rc.txt}: ${esc(s)}.${h.q ? ' ' + h.q : ''}`, cta: tr && tr.classList.contains('row-click') ? 'Clic en la fila abre la ficha' : '' };
+  // fila de total u otra tabla
+  const first = tr ? _btNorm(tr.cells[0] ? tr.cells[0].innerText : '') : '';
+  if (/total|Σ|suma|códigos reubicados|renglones/i.test(first) || (tr && tr.parentElement && tr.parentElement.tagName === 'TFOOT')) return { tip: `${h.label || 'Total'} de la columna: ${esc(s)}. Suma de las filas mostradas${h.q ? '. ' + h.q : '.'}` };
+  return { tip: `${h.label || 'Valor'}: ${esc(s)}.${h.q ? ' ' + h.q : ''}` };
+}
+function _btProse(el, m) {
+  const s = _btNorm(el.innerText); if (!s) return null;
+  const dict = BOLD_TXT(); if (dict[s]) return dict[s];
+  const k2 = s.replace(/[.:]$/, ''); if (dict[k2]) return dict[k2];
+  const pat = _btPatterns(s, { code: false }); if (pat) return pat;
+  // texto largo con una cifra adentro (p. ej. "El valor inicial del contrato fue $50.793… no $59.426…")
+  const nums = s.match(/\$\s?[\d.]+/g) || []; if (nums.length) { const f = _btFindFig(nums[0]); if (f) return { tip: f.t, xp: f.xp, open: f.open }; }
+  if (/^adición \$16\.000\.000\.000/.test(s)) return { tip: 'Solicitud del 01-09-2026: adición de 16.000.000.000 (26,9 % del valor actual, 31,5 % del inicial) y prórroga de 8 meses; total 75.426.575.199. Firmada por el Director de Obra y el Director de Interventoría.', xp: 'kpi_total_v4' };
+  if (/^Los −?\$?19[,.]4 MM/.test(s) || /eliminados" no son ahorro/.test(s)) return { xp: 'concepto_reubicacion' };
+  if (/^El valor inicial del contrato/.test(s)) return { tip: 'El libro llama "valor actual" a 59.426.575.199, pero el contrato se firmó por 50.793.789.333 (propuesta 2021). Esa es la base del tope del 50 % y ya se consumió 17 % en incrementos previos.', xp: 'norm_tope', open: 'aud:A-25' };
+  // contexto: título de la tarjeta / grupo
+  const card = el.closest('.viz-card, .norm-card, .method-card, .legal-card, .modal-section, .glos-item, .chk-item, .ficha-grid > div, li');
+  const title = card ? _btNorm((card.querySelector('h5, h4, .fl, b') || {}).innerText || '') : '';
+  const mo = _btMoney(s);
+  if (mo) return { tip: `Cifra en pesos${/M$|MM$/.test(s) ? ' (abreviada)' : ''} destacada en "${esc(title || 'esta sección')}": ${esc(s)}. Todas las cifras de la pestaña salen del Excel radicado (hoja ${HOJA}) o de los JSON del análisis; pase el mouse por ⓘ del encabezado para ver la fuente exacta.` };
+  if (/^\d+$/.test(s)) {
+    const par = _btNorm((el.parentElement || {}).innerText || '');
+    const after = ((el.nextSibling && el.nextSibling.textContent) || '').slice(0, 25);
+    if (/informar|hallazgo/i.test(title)) return { tip: `${s} hallazgos de severidad ${/ALTA/.test(after) ? 'ALTA' : /MEDIA/.test(after) ? 'MEDIA' : ''}: conteo de la sección F (${(P75.hallazgos || []).length} hallazgos en total). Ley 1474 art. 84: deben informarse por escrito al IDU.`, open: 'sec:hallazgos' };
+    if (/inventario/i.test(title)) return { tip: `${s}: ${/renglones/.test(par.slice(par.indexOf(s), par.indexOf(s) + 25)) ? 'renglones NP con cantidad > 0 en la hoja principal (col P > 0)' : 'códigos NP distintos con cantidad (de 84 listados)'}. Total NP con AIU 14.150.924.549.`, xp: 'kpi_np' };
+    if (/abril|V2/i.test(title)) return { tip: `${s} NP que estaban en la propuesta de abril (V2, comparativa.json) y ya no tienen cantidad en V4. Hallazgo H-NP-06.`, open: 'hall:H-NP-06' };
+    if (/línea base|linea base/i.test(title)) return { tip: `${s} renglones de V4 cuyo código no tiene participación por CIV en el VISOR de mayo de 2025 (código nuevo o sin CIV): su línea base no se reparte y se muestra aparte en la conciliación (limitación D-01).`, open: 'aud:D-01' };
+    return { tip: `${s}: conteo calculado desde los datos del análisis${title ? ' (' + esc(title) + ')' : ''}. ${esc(par.substring(0, 160))}` };
+  }
+  if (/%$/.test(s)) return { tip: `Porcentaje destacado en "${esc(title || 'esta sección')}": ${esc(s)}. Se calcula con las cifras del Excel radicado; la ficha (clic en la tarjeta o fila) muestra la fórmula completa.` };
+  const par = _btNorm((el.parentElement || {}).innerText || '').replace(s, '').trim();
+  return { tip: `${esc(s)} — término destacado${title ? ' en "' + esc(title) + '"' : ''}. ${esc(par.substring(0, 180))}${par.length > 180 ? '…' : ''}` };
+}
+function p75BoldTips(root) {
+  if (!P75) return; const m = p75Maps(); root = root || document.getElementById('panel-p75mm'); if (!root) return;
+  root.querySelectorAll('b, strong').forEach(el => {
+    if (el.dataset.bt || el.dataset.xp || el.dataset.tip || el.hasAttribute('title')) return;
+    if (el.closest('.p75-viewbar, .p75-nav, .xp-pop, .modal-header, thead')) return;
+    if (el.closest('.glos-item')) { const gi = el.closest('.glos-item'); const def = _btNorm((gi.querySelector('div') || {}).innerText || ''); el.dataset.tip = `${esc(_btNorm(el.innerText))}: ${esc(def.substring(0, 220))}${def.length > 220 ? '…' : ''}`; el.dataset.tipCta = 'Clic abre la explicación completa'; el.dataset.bt = '1'; el.classList.add('bt'); return; }
+    let r = null; try { const td = el.closest('td'); r = td ? _btCell(el, td, m) : _btProse(el, m); } catch (e) { console.warn('boldTip', el.innerText, e); r = null; }
+    if (!r) return;
+    const inRow = !!el.closest('tr.row-click, tr[onclick], a, button, .glos-item, .chk-item label');
+    if (r.tip) {
+      el.dataset.tip = r.tip;
+      const open = r.open || (r.xp && XP[r.xp] ? 'xp:' + r.xp : null);
+      if (open && !inRow) { el.dataset.open = open; el.dataset.tipCta = r.cta || (open.startsWith('xp:') ? 'Clic abre el concepto completo' : 'Clic abre la ficha'); }
+      else if (r.cta) el.dataset.tipCta = r.cta;
+    } else if (r.xp && XP[r.xp]) {
+      if (inRow) { const x = xpGet(r.xp); el.dataset.tip = (x.q || x.t) + (r.cta ? '' : ''); if (r.cta) el.dataset.tipCta = r.cta; } else el.dataset.xp = r.xp;
+    } else return;
+    el.dataset.bt = '1'; el.classList.add('bt');
+  });
+}
+function p75Open(spec) { const [k, ...rest] = String(spec).split(':'); const id = rest.join(':'); try {
+  if (k === 'civ') openP75Civ(id); else if (k === 'item') openP75Item(+id); else if (k === 'hall') openP75Hallazgo(id); else if (k === 'aud') openP75Aud(id); else if (k === 'code') openP75Codigo(id); else if (k === 'comp') openP75Component(+id); else if (k === 'cap') openP75Chapter(id); else if (k === 'sec') p75Show(id); else if (k === 'xp') openExplain(id); else if (k === 'legal') openLegal(id);
+} catch (e) { console.warn('p75Open', e); } }
+document.addEventListener('click', e => { const t = e.target.closest ? e.target.closest('[data-open]') : null; if (!t || t.closest('[data-xp]') || t.closest('a,button,select,input') || (t.closest('tr.row-click'))) return; e.stopPropagation(); p75Open(t.dataset.open); }, true);
+(() => { let pend = false; const run = () => { pend = false; try { p75BoldTips(document.getElementById('panel-p75mm')); p75BoldTips(document.getElementById('conceptModalBody')); } catch (e) { console.warn('boldTips', e); } };
+  const obs = new MutationObserver(() => { if (pend) return; pend = true; requestAnimationFrame(run); });
+  document.addEventListener('DOMContentLoaded', () => { ['panel-p75mm', 'conceptModalBody'].forEach(id => { const n = document.getElementById(id); if (n) obs.observe(n, { childList: true, subtree: true }); }); });
+})();
 
 // ── Enlaces profundos, impresión, accesibilidad, integridad ───────────────
 function p75Route(route) { P75X.route = route; try { history.replaceState(null, '', '#p75/' + route); } catch (_) {} }
