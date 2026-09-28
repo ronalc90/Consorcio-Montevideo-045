@@ -303,6 +303,76 @@ Los 10 más críticos ya están listados en el Resumen ejecutivo.
 
 ---
 
+## 8A. Marco normativo y chequeo legal de la solicitud
+
+Fuentes consultadas el 27-09-2026 (verificar vigencia antes de citar en el informe oficial):
+
+| Norma / concepto | Qué dice | Cómo aplica a este presupuesto |
+|---|---|---|
+| Ley 80 de 1993, art. 40 parágrafo | Los contratos no podrán adicionarse en más del 50% de su valor inicial, expresado en SMMLV. | Valor inicial $59.426.575.199 = 65.410 SMMLV de 2021 ($908.526) → tope 32.705 SMMLV. Adición $16.000.000.000 = 9.138 SMMLV de 2026 ($1.750.905) = 14,0% del valor inicial (27,9% del tope); 26,9% nominal. Dentro del límite si no hay adiciones previas acumuladas: el IDU reportó al inicio una inversión de obra de $50.793M, por lo que hay que confirmar en el expediente si los $59.426M ya incluyen adiciones. |
+| Colombia Compra Eficiente, concepto C-466 de 2024 | En contratos a precios unitarios las mayores cantidades de obra no son adición ni cuentan para el tope; las obras adicionales sí. | El balance de mayores/menores cantidades es −$257.285.548 (no hay mayores cantidades netas). La adición se compone de NP ($14.150.924.549) y componentes por plazo (+$2.106.360.999): es adición en sentido estricto. |
+| Consejo de Estado, Sección Tercera, 10-10-2024, exp. 67.508 | Mayores cantidades se reconocen con medición y recibo; las obras adicionales exigen acuerdo escrito previo al pago. | Los 81 códigos NP (105 renglones) requieren otrosí y acta de fijación de precios antes de ejecutarse o pagarse. |
+| Ley 1474 de 2011, arts. 83–84 | Deber del interventor de informar oportunamente; responsabilidad solidaria si no lo hace (par. 3); falta gravísima (par. 1). | Los 45 hallazgos ALTA y 15 MEDIA deben quedar informados por escrito al IDU con soporte. |
+| IDU, Manual de Gestión Contractual MG-GC-06 v19, §11.1.3 y §11.2.1 | Los ítems no previstos obligan a modificación contractual y cuentan para el tope del art. 40; las mayores cantidades no son modificación, pero el interventor verifica que el balanceo no afecte la funcionalidad. | Certificar funcionalidad tras eliminar 118 renglones (incluido todo el cap. 7 desvíos) y crear 93. |
+| IDU, Guía GUDP017 (presupuestos) | AIU = A + I + U; los imprevistos cubren contingencias normales; ajustes por cambio de vigencia = (valor ÷ meses) × meses en la nueva vigencia × inflación (ICCP para obra). | El componente de ajustes ($4.555.525.079) no cambia en V4 aunque los 8 meses cruzan a 2027: pedir recálculo o justificación. |
+| IDU, PR-IC-01 (base de precios / VISOR) | Base actualizada al menos una vez al año; ítems fuera de la base se soportan con APU (FO-GI-19) y cotizaciones. | Los 81 NP deben venir con APU y compararse con el VISOR vigente y con el ítem contractual más cercano. |
+| Actas de fijación de precios no previstos (IDU FOEO24 / CCE GCON-FM-015) | Registro por NP de descripción, unidad, cantidad, VU y APU aprobado; firmas de contratista, interventor y ordenador del gasto. | En V4 no hay actas: los 105 renglones NP quedan "en revisión". |
+| SMMLV 2026 ($1.750.905, Decreto 1469 de 2025) | Suspendido provisionalmente por el Consejo de Estado el 12-02-2026; decreto transitorio mantiene el valor. | Dejar constancia del SMMLV usado en el otrosí. |
+
+## 8B. Precios unitarios: V4 frente a referencias
+
+Dentro de V4 el VU es el mismo para la cantidad inicial (col N) y la final (col M): la variación es 100% cantidad. Pero el nivel de precios de V4 difiere de dos referencias: el APU actualizado con insumos VISOR 13-09-2024 (hoja PRESUPUESTO CONTRACTUAL MAYO 25, igual al "precio original" del dashboard) y el VISOR de mayo de 2025.
+
+- Ítems con desviación > 2% frente a la referencia: **200**; mediana de la desviación **+9,1%**.
+- Impacto a la cantidad final, con AIU: **+$3.258.662.147** sobre 79 ítems con cantidad.
+
+| Fila | Ítem | Descripción | VU ref. | VU V4 | Δ % | Cant. final | Impacto con AIU |
+|---:|---|---|---:|---:|---:|---:|---:|
+| 34 | 2.003 | LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEA | $979.106 | $1.132.473 | +15,7% | 9.851 | +$1.992.044.177 |
+| 317 | 5.037 | Proyecto: factibilidad, estudios y diseños de | $39.997 | $50.435 | +26,1% | 18.443 | +$253.813.174 |
+| 369 | 5.037 | Proyecto: factibilidad, estudios y diseños de | $39.997 | $50.435 | +26,1% | 17.457 | +$240.252.532 |
+| 14 | 1.006 | TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS E | $40.317 | $41.825 | +3,7% | 52.469 | +$104.322.362 |
+| 81 | 3.035 | LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEA | $738.689 | $850.822 | +15,2% | 500 | +$73.929.891 |
+| 27 | 1.015 | SUBBASE GRANULAR CLASE C (SBG_C) (SUMINISTRO, | $141.769 | $155.185 | +9,5% | 3.516 | +$62.185.724 |
+| 85 | 3.039 | ANDEN CONCRETO GRAVA COMÚN DE 3000 PSI (210 K | $73.210 | $76.194 | +4,1% | 15.469 | +$60.859.378 |
+| 46 | 3.005 | EXCAVACIÓN MANUAL EN MATERIAL COMÚN (INCL CAR | $90.934 | $96.914 | +6,6% | 5.855 | +$46.160.374 |
+| 55 | 3.013 | SUBBASE GRANULAR PEATONAL SBG_PEA. SUMINISTRO | $137.902 | $151.999 | +10,2% | 1.843 | +$34.263.193 |
+| 89 | 3.041 | PUNTO ECOLÓGICO COMPUESTO POR 3 CANECAS TIPO  | $2.024.856 | $2.875.373 | +42,0% | 27 | +$30.277.750 |
+
+Recomendación: pedir el APU que soporta el VU de V4 para los 20 ítems de mayor impacto (losa MR45, ítem 5.037, transporte de escombros, andenes) y dejar explícito en el otrosí qué base de precios rige.
+
+## 8C. Reubicaciones: lo "eliminado" que reaparece
+
+Un mismo código IDU sale de un subcapítulo (fila con H > 0 e I = 0) y entra en otro (fila con H = 0 e I > 0). Renglón a renglón parece eliminado + nuevo; por código es un traslado.
+
+- 32 códigos reubicados. Trasladado = Σ min(valor eliminado, valor nuevo) = **$6.462.266.802** de los $19.443.722.236 "eliminados" (33,2%).
+- Eliminación real de alcance contractual: **$12.981.455.434**. Alcance realmente nuevo en ítems del contrato: **$8.738.275.438** (de $15.200.542.240 de "contractual nuevo").
+
+| Código | Valor eliminado | Valor nuevo | Trasladado | Δ neto del código |
+|---|---:|---:|---:|---:|
+| 5182 | $1.887.583.665 | $2.172.609.354 | $1.887.583.665 | +$289.246.235 |
+| 3895 | $840.308.079 | $1.325.363.962 | $840.308.079 | +$485.055.883 |
+| 3017 | $648.296.376 | $5.104.874.041 | $648.296.376 | +$2.450.379.420 |
+| 4907 | $455.730.066 | $516.315.711 | $455.730.066 | +$430.023.604 |
+| 8643 | $385.754.898 | $2.717.980.069 | $385.754.898 | +$2.332.225.171 |
+| 3009 | $336.141.377 | $390.883.230 | $336.141.377 | +$121.310.523 |
+| 4032 | $243.202.986 | $440.196.331 | $243.202.986 | +$196.993.345 |
+| 3043 | $209.613.001 | $247.840.218 | $209.613.001 | +$48.143.235 |
+
+Reemplazos contractual → NP (12 pares por similitud de descripción ≥ 0,7): 7 encarecen (+$1.691.286.881) y 5 abaratan (−$1.818.400.659); neto −$127.113.778. Los mayores sobrecostos: BG_A → NP-124 BG_A con reciclado (+$707.253.958) y MD12 → NP-123 MD19 (+$684.670.659).
+
+## 8D. Lista de chequeo del revisor (resumen)
+
+Soportes del contratista: memoria de cantidades por CIV; APU (FO-GI-19) y actas de los 81 NP; justificación de los 12 reemplazos; conciliación de las 32 reubicaciones (origen → destino); cronograma con curva S y flujo mensual de los 8 meses; conciliación V2 → V4 (cap. 7 y fondo de compensaciones); recálculo de ajustes por vigencia 2027; certificación de no doble pago de acero; confirmación de que los 14 NP objetados no reingresan; diseños, permisos de ESP y predios de los 9 CIVs "no alcanza".
+
+Verificaciones de la interventoría: aritmética del libro (hecha, cuadra al peso); revisión de los 3 CIVs outlier; saltos extremos (rajón ×14,7; andén ×135); contraste de VU con VISOR y referencia; funcionalidad del balanceo (manual IDU §11.2.1).
+
+Aspectos legales: tope del 50% en SMMLV con adiciones previas; minuta de otrosí (adición + prórroga) con justificación técnica, económica y jurídica, CDP y garantías; informe escrito al IDU (Ley 1474 art. 84); antelación de la radicación.
+
+La app (pestaña "Presupuesto 01-09-2026") trae esta lista con casillas, notas por ítem y exportación a CSV, además de un simulador de escenarios (plazo, % de NP aceptados, rechazo de reemplazos, VU de referencia, exclusión de los 9 CIVs "no alcanza"), un índice de atención por CIV, prioridad de revisión por renglón, búsqueda global y enlaces directos a cada ficha (por ejemplo `#p75/civ/16000024`).
+
+---
+
 ## 9. Anexos
 
 ### 9.1 Datos que soportan este informe

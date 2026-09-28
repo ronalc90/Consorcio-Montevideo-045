@@ -146,6 +146,16 @@ Consorcio-Montevideo-045/
    - Metodologia, fuentes y verificacion al peso.
    - Exportacion a Excel (8 hojas) y CSV por seccion.
 
+### Capa de revisión profesional (v3 · 27-09-2026)
+
+- **Ficha del contrato y resumen ejecutivo** para revisores (8 conclusiones con cifras) y **chequeo normativo** (tope del 50% en SMMLV, naturaleza jurídica de lo pedido, soportes faltantes, deber de informar).
+- **Marco normativo con fuentes** (Ley 80 art. 40, CCE C-466/2024, Consejo de Estado exp. 67.508, Ley 1474 arts. 83-84, manuales y guias IDU MG-GC-06, GUDP017, PR-IC-01, actas FOEO24, SMMLV 2021/2026) con "que dice" y "como aplica aqui".
+- **Indice de atencion por CIV** (0-100, seis factores ponderados) y **prioridad de revision por renglon**, con sus factores explicados en cada ficha.
+- **Precios unitarios**: VU de V4 frente al APU de referencia (13-09-2024) y al VISOR de mayo-2025, con impacto a cantidad final (+$3.259M sobre 79 items).
+- **Reubicaciones**: $6.462M de lo "eliminado" reaparece bajo el mismo codigo IDU en otro subcapitulo.
+- **Simulador de escenarios**: plazo, % de NP aceptados, rechazo de reemplazos, VU de referencia, exclusion de los 9 CIVs "no alcanza", recalculo ilustrativo de vigencia.
+- **Lista de chequeo del revisor** (20 items con notas, estado guardado en el navegador y exportable a CSV), **glosario** buscable, **busqueda global**, **enlaces directos a cada ficha** (`#p75/civ/16000024`, `#p75/item/34`, `#p75/hall/H06-02`), impresion de pestaña y de fichas, navegacion por teclado.
+
 ### Capa explicativa ("explica TODO")
 
 - **Tooltips ricos en toda la app**: cada encabezado de columna, KPI y chip muestra al pasar el mouse que es, de donde sale (hoja · fila · columna del Excel) y como se calcula.
