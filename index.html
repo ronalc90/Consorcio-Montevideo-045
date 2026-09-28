@@ -568,6 +568,19 @@ tr.row-hi td { background: #fef3c7 !important; }
 .p75-nav { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; background: rgba(247,250,252,.96); backdrop-filter: blur(6px); padding: 8px 0 10px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
 .p75-nav a { font-size: .76em; padding: 5px 10px; border-radius: 14px; background: #fff; border: 1px solid var(--border); color: var(--text); text-decoration: none; transition: .15s; white-space: nowrap; }
 .p75-nav a:hover { border-color: var(--accent); color: var(--primary); transform: translateY(-1px); }
+.p75-tab { font-size: .76em; padding: 5px 10px; border-radius: 14px; background: #fff; border: 1px solid var(--border); color: var(--text); cursor: pointer; transition: .15s; white-space: nowrap; font-family: inherit; line-height: 1.4; }
+.p75-tab:hover { border-color: var(--accent); color: var(--primary); transform: translateY(-1px); }
+.p75-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 700; }
+.p75-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.p75-view[hidden] { display: none; }
+.p75-view { animation: p75fade .18s ease-out; }
+@keyframes p75fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.p75-viewbar { display: flex; align-items: center; gap: 6px 14px; flex-wrap: wrap; padding: 10px 16px; margin: 0 0 16px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; font-size: .86em; }
+.p75-viewbar .vb-n { font-size: .72em; text-transform: uppercase; letter-spacing: .5px; color: var(--text-light); white-space: nowrap; }
+.p75-viewbar .vb-t { font-weight: 700; color: var(--primary); font-size: 1.08em; }
+.p75-viewbar .vb-d { color: var(--text-light); flex: 1 1 280px; line-height: 1.4; }
+.p75-viewbar .vb-nav { margin-left: auto; display: flex; gap: 6px; }
+.p75-viewbar .vb-nav .btn { font-size: .78em; padding: 5px 10px; }
 
 .ficha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px 22px; padding: 16px 20px 20px; font-size: .88em; line-height: 1.5; }
 .ficha-grid .fl { display: block; font-size: .72em; text-transform: uppercase; letter-spacing: .5px; color: var(--text-light); margin-bottom: 1px; }
@@ -645,7 +658,8 @@ tr.row-hi td { background: #fef3c7 !important; }
 
 /* Impresión */
 @media print {
-  .header, .tabs, .controls, .viz-toolbar, .p75-nav, .p75-search, .modal-tools, .xp-pop, .logout-btn, .estado-chips, #p75SearchResults { display: none !important; }
+  .header, .tabs, .controls, .viz-toolbar, .p75-nav, .p75-search, .p75-viewbar, .modal-tools, .xp-pop, .logout-btn, .estado-chips, #p75SearchResults { display: none !important; }
+  .p75-view[hidden] { display: block !important; }
   .content { padding: 0; max-width: none; }
   .scroll-table { max-height: none !important; overflow: visible !important; }
   .table-wrap { box-shadow: none; break-inside: avoid; border: 1px solid #ccc; }
@@ -1043,40 +1057,57 @@ tr.row-hi td { background: #fef3c7 !important; }
 
   <!-- PANEL PRESUPUESTO 01-09-2026 75MM · 8 meses -->
   <div class="panel" id="panel-p75mm">
+    <!-- Búsqueda global + índice de secciones -->
+    <div class="p75-search"><input type="text" id="p75SearchBox" placeholder="Buscar en el análisis: CIV (16000024), ítem (NP-123, 2.003), código IDU (7785), hallazgo (H06-02), asiento de auditoría (A-25), concepto (AIU, reubicación), norma…" oninput="p75Search(this.value)" autocomplete="off" aria-label="Buscar en el análisis"><div id="p75SearchResults" class="hidden"></div></div>
+    <div class="p75-nav" id="p75Nav"></div>
+    <div class="p75-viewbar" id="p75ViewBar"></div>
+
+    <section class="p75-view" data-view="resumen" hidden>
     <div style="background: linear-gradient(135deg, #fee2e2, #fff5f5); border-left: 4px solid var(--danger); padding: 16px 20px; border-radius: 8px; margin-bottom: 24px;">
       <h2 style="font-size:1.2em;color:var(--primary);margin-bottom:8px">Presupuesto 01-09-2026 — Adición <span class="xp" data-xp="kpi_total_v4">$16.000M</span> + <span class="xp" data-xp="kpi_plazo">8 meses de plazo</span></h2>
       <p style="color:var(--text);font-size:.9em;line-height:1.6">
         El Consorcio VICON 024 radicó el 01-09-2026 el archivo <strong>"4. PRESUPUESTO 01-09-2026 75MM (8 MESES).xlsx"</strong>. El total pasa de <strong>$59.426.575.199</strong> (<span class="xp" data-xp="wf_v0">V0 contrato firmado</span>) a <strong style="color:var(--danger)">$75.426.575.199</strong> (<span class="xp" data-xp="wf_v4">V4</span>).
         <br>· <span class="xp" data-xp="kpi_obras_v4">Obras con AIU</span> (col M · fila 688): <strong>$58.196.933.800</strong> (+$13.893.639.001 vs V0) con <span class="xp" data-xp="aiu_31849">AIU contractual 31,849%</span>. Dentro de V4 el precio unitario es el mismo para la cantidad inicial y la final: la variación es <span class="xp" data-xp="concepto_efecto_precio">100% efecto cantidad</span>.
         <br>· Componentes no-obra: +$2.106M (<span class="xp" data-xp="aiu_20006">PMA-SST</span> +$1.167M, diálogo +$555M, PMT +$384M; ajustes, acero, laboratorio, SDA, bioseguridad y fase inicial <em>sin cambio</em>). El fondo de compensaciones de abril ($5.943M) desaparece.
-        <br>· <strong>Cómo usar esta pestaña:</strong> pase el mouse sobre cualquier encabezado, cifra o etiqueta con ⓘ para ver qué es, de dónde sale y cómo se calcula. Haga clic en una tarjeta, fila, barra o punto para abrir su ficha con la fórmula aplicada a sus números, la verificación contra el Excel y las preguntas para el contratista.
+        <br>· <strong>Cómo usar esta pestaña:</strong> la barra de secciones (Resumen, Ficha, Chequeo legal, Gráficas, A…N) cambia el contenido: cada botón muestra solo su sección, y las flechas ← → del teclado o los botones "anterior / siguiente" recorren las 19 en orden. Pase el mouse sobre cualquier encabezado, cifra o etiqueta con ⓘ para ver qué es, de dónde sale y cómo se calcula. Haga clic en una tarjeta, fila, barra o punto para abrir su ficha con la fórmula aplicada a sus números, la verificación contra el Excel y las preguntas para el contratista.
       </p>
     </div>
-
-    <!-- Búsqueda global + índice de secciones -->
-    <div class="p75-search"><input type="text" id="p75SearchBox" placeholder="Buscar en el análisis: CIV (16000024), ítem (NP-123, 2.003), código IDU (7785), hallazgo (H06-02), asiento de auditoría (A-25), concepto (AIU, reubicación), norma…" oninput="p75Search(this.value)" autocomplete="off" aria-label="Buscar en el análisis"><div id="p75SearchResults" class="hidden"></div></div>
-    <div class="p75-nav" id="p75Nav"></div>
-
-    <!-- Ficha del contrato -->
-    <div class="table-wrap" id="p75ContratoWrap">
-      <div class="table-header"><h3>Ficha del contrato y de la solicitud</h3><div class="controls"><span style="font-size:.78em;color:var(--text-light)">Datos del Excel radicado + información pública del IDU</span></div></div>
-      <div id="p75Contrato"></div>
-    </div>
-
+    <div class="dashboard" id="p75KPIs"></div>
     <!-- Resumen ejecutivo -->
     <div class="table-wrap" id="p75ExecWrap">
       <div class="table-header"><h3>Resumen ejecutivo para revisores — lo que hay que saber en dos minutos</h3></div>
       <div id="p75Exec"></div>
     </div>
-
+    <div class="table-wrap">
+      <div class="table-header"><h3>Descargas</h3></div>
+      <div style="padding:20px;display:flex;flex-wrap:wrap;gap:10px">
+        <button class="btn btn-primary" onclick="downloadP75All()">⬇ Excel completo (10 hojas)</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('items')">CSV variación ítems</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('cap')">CSV capítulos</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('civ')">CSV Δ por CIV</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('costo')">CSV costo por CIV</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('nps')">CSV NP</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('hall')">CSV hallazgos</button>
+        <a class="btn btn-outline" href="analisis/INFORME_PRESUPUESTO_2026-09.md" target="_blank" style="text-decoration:none">Informe escrito (Markdown)</a>
+        <a class="btn btn-outline" href="analisis/Analisis_Presupuesto_2026-09.xlsx" style="text-decoration:none">Excel de análisis (7 hojas)</a>
+      </div>
+    </div>
+    </section>
+    <section class="p75-view" data-view="ficha" hidden>
+    <!-- Ficha del contrato -->
+    <div class="table-wrap" id="p75ContratoWrap">
+      <div class="table-header"><h3>Ficha del contrato y de la solicitud</h3><div class="controls"><span style="font-size:.78em;color:var(--text-light)">Datos del Excel radicado + información pública del IDU</span></div></div>
+      <div id="p75Contrato"></div>
+    </div>
+    </section>
+    <section class="p75-view" data-view="legal" hidden>
     <!-- Chequeo normativo -->
     <div class="table-wrap" id="p75NormWrap">
       <div class="table-header"><h3>Chequeo normativo de la solicitud <span style="font-weight:400;font-size:.8em;color:var(--text-light)">· Ley 80/1993 · Ley 1474/2011 · CCE C-466/2024 · Manual IDU MG-GC-06 · detalle en la sección K</span></h3></div>
       <div id="p75Norm"></div>
     </div>
-
-    <div class="dashboard" id="p75KPIs"></div>
-
+    </section>
+    <section class="p75-view" data-view="viz" hidden>
     <!-- Explorador visual -->
     <div class="table-wrap" id="p75VizWrap">
       <div class="table-header">
@@ -1088,7 +1119,8 @@ tr.row-hi td { background: #fef3c7 !important; }
       <div class="viz-stage"><canvas id="p75VizCanvas"></canvas><div id="p75VizHtml" class="viz-html hidden"></div></div>
       <div class="viz-desc" id="p75VizDesc"></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="versiones" hidden>
     <!-- A. Waterfall -->
     <div class="table-wrap">
       <div class="table-header">
@@ -1097,7 +1129,8 @@ tr.row-hi td { background: #fef3c7 !important; }
       </div>
       <div class="scroll-table"><table id="p75Waterfall"><thead></thead><tbody id="p75WaterfallBody"></tbody></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="capitulos" hidden>
     <!-- A2. Capítulos -->
     <div class="table-wrap">
       <div class="table-header">
@@ -1109,7 +1142,8 @@ tr.row-hi td { background: #fef3c7 !important; }
         <th class="num" data-xp="col_N">Valor inicial (Σ N)</th><th class="num" data-xp="col_M">Valor final (Σ M)</th><th class="num" data-xp="col_delta_valor">Δ</th><th class="num" data-tip="Δ / valor inicial del capítulo">Δ %</th>
         <th class="num" data-xp="cap_balance">Balance may/men (Σ O)</th><th class="num" data-xp="cap_np">Incorporación NP (Σ P)</th><th class="num" data-xp="cap_part">% del Δ obras</th></tr></thead><tbody id="p75CapBody"></tbody></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="items" hidden>
     <!-- B. Variación de cantidades -->
     <div class="table-wrap">
       <div class="table-header">
@@ -1136,7 +1170,6 @@ tr.row-hi td { background: #fef3c7 !important; }
       <div class="estado-chips" id="p75EstadoChips"></div>
       <div class="scroll-table" style="max-height:620px"><table id="p75Items"><thead></thead><tbody id="p75ItemsBody"></tbody><tfoot id="p75ItemsFoot"></tfoot></table></div>
     </div>
-
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:16px;margin-bottom:24px">
       <div class="table-wrap">
         <div class="table-header"><h3>Top 15 renglones que más suman</h3></div>
@@ -1147,7 +1180,6 @@ tr.row-hi td { background: #fef3c7 !important; }
         <div class="scroll-table" style="max-height:420px"><table id="p75TopDown"><thead></thead><tbody id="p75TopDownBody"></tbody></table></div>
       </div>
     </div>
-
     <div class="table-wrap">
       <div class="table-header"><h3>Reemplazos ítem contractual → NP <span class="xp" data-xp="concepto_reemplazo" style="font-weight:400;font-size:.85em">ⓘ cómo se detectan</span></h3></div>
       <div class="scroll-table"><table id="p75Reemplazos"><thead><tr>
@@ -1155,7 +1187,8 @@ tr.row-hi td { background: #fef3c7 !important; }
         <th data-tip="Ítem No Previsto con descripción similar que entra en su lugar">NP que lo reemplaza</th><th class="num" data-xp="np_valor">Δ valor NP</th>
         <th class="num" data-tip="Similitud de descripción (0–100%)">Similitud</th><th class="num" data-tip="Δ NP + Δ contractual: lo que cuesta el cambio">Sobrecosto neto</th></tr></thead><tbody id="p75ReemplazosBody"></tbody><tfoot id="p75ReemplazosFoot"></tfoot></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="civ" hidden>
     <!-- C. Variación por CIV -->
     <div class="table-wrap">
       <div class="table-header">
@@ -1167,7 +1200,8 @@ tr.row-hi td { background: #fef3c7 !important; }
       </div>
       <div class="scroll-table" style="max-height:620px"><table id="p75CivDesc"><thead></thead><tbody id="p75CivDescBody"></tbody><tfoot id="p75CivDescFoot"></tfoot></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="costo" hidden>
     <!-- D. Costo por CIV -->
     <div class="table-wrap">
       <div class="table-header">
@@ -1179,12 +1213,12 @@ tr.row-hi td { background: #fef3c7 !important; }
       </div>
       <div class="scroll-table" style="max-height:620px"><table id="p75Costo"><thead></thead><tbody id="p75CostoBody"></tbody><tfoot id="p75CostoFoot"></tfoot></table></div>
     </div>
-
     <div class="table-wrap">
       <div class="table-header"><h3>Grupos de alcance según Hoja1 <span class="xp" data-xp="concepto_hoja1" style="font-weight:400;font-size:.85em">ⓘ</span> <span style="font-weight:400;font-size:.8em;color:var(--text-light)">· clic en un CIV abre su ficha</span></h3></div>
       <div id="p75Alcance" style="padding: 20px"></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="np" hidden>
     <!-- E. NPs -->
     <div class="table-wrap">
       <div class="table-header">
@@ -1194,7 +1228,8 @@ tr.row-hi td { background: #fef3c7 !important; }
       <div id="p75NPsResumen"></div>
       <div class="scroll-table" style="max-height:520px"><table id="p75NPs"><thead></thead><tbody id="p75NPsBody"></tbody><tfoot id="p75NPsFoot"></tfoot></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="hallazgos" hidden>
     <!-- F. Hallazgos -->
     <div class="table-wrap">
       <div class="table-header">
@@ -1208,13 +1243,15 @@ tr.row-hi td { background: #fef3c7 !important; }
       </div>
       <div class="scroll-table" style="max-height:620px"><table id="p75Hall"><thead></thead><tbody id="p75HallBody"></tbody></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="metodo" hidden>
     <!-- G. Metodología -->
     <div class="table-wrap">
       <div class="table-header"><h3>G. Metodología, fuentes y verificación <span style="font-weight:400;font-size:.8em;color:var(--text-light)">· cómo se construyó cada número de esta pestaña</span></h3></div>
       <div class="method-grid" id="p75Metodo"></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="precios" hidden>
     <!-- H. Precios unitarios -->
     <div class="table-wrap" id="p75PreciosWrap">
       <div class="table-header">
@@ -1233,7 +1270,8 @@ tr.row-hi td { background: #fef3c7 !important; }
         <th class="num" data-tip="(K V4 − VU referencia) × cantidad final × 1,31849. Cuánto vale la diferencia de precio a la cantidad de V4, con AIU.">Impacto con AIU</th>
       </tr></thead><tbody id="p75PreciosBody"></tbody><tfoot id="p75PreciosFoot"></tfoot></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="reub" hidden>
     <!-- I. Reubicaciones -->
     <div class="table-wrap" id="p75ReubWrap">
       <div class="table-header">
@@ -1247,7 +1285,8 @@ tr.row-hi td { background: #fef3c7 !important; }
         <th class="num" data-tip="min(sale, entra): la parte que solo cambió de renglón o subcapítulo (registro de auditoría B-13)">Trasladado</th><th class="num" data-xp="col_delta_valor">Δ neto del código</th>
       </tr></thead><tbody id="p75ReubBody"></tbody><tfoot id="p75ReubFoot"></tfoot></table></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="sim" hidden>
     <!-- J. Simulador -->
     <div class="table-wrap" id="p75SimWrap">
       <div class="table-header"><h3>J. Simulador de escenarios de la interventoría <span style="font-weight:400;font-size:.8em;color:var(--text-light)">· ¿cuánto quedaría la adición si…?</span></h3></div>
@@ -1268,13 +1307,15 @@ tr.row-hi td { background: #fef3c7 !important; }
         <div><div id="p75SimOut"></div><div class="sim-chart"><canvas id="p75SimChart"></canvas></div></div>
       </div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="normativa" hidden>
     <!-- K. Marco normativo -->
     <div class="table-wrap" id="p75LegalWrap">
       <div class="table-header"><h3 id="p75LegalTitle">K. Marco normativo aplicable, con fuentes <span style="font-weight:400;font-size:.8em;color:var(--text-light)">· consultadas el 27-09-2026 · verifique vigencia antes de citar</span></h3></div>
       <div class="legal-grid" id="p75Legal"></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="checklist" hidden>
     <!-- L. Lista de chequeo -->
     <div class="table-wrap" id="p75ChkWrap">
       <div class="table-header">
@@ -1284,7 +1325,8 @@ tr.row-hi td { background: #fef3c7 !important; }
       <div style="padding:16px 20px 0" id="p75ChkProgress"></div>
       <div id="p75Chk"></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="glosario" hidden>
     <!-- M. Glosario -->
     <div class="table-wrap" id="p75GlosWrap">
       <div class="table-header">
@@ -1293,7 +1335,8 @@ tr.row-hi td { background: #fef3c7 !important; }
       </div>
       <div class="glos-list" id="p75GlosList"></div>
     </div>
-
+    </section>
+    <section class="p75-view" data-view="auditoria" hidden>
     <!-- N. Registro de auditoría -->
     <div class="table-wrap" id="p75AudWrap">
       <div class="table-header">
@@ -1312,21 +1355,7 @@ tr.row-hi td { background: #fef3c7 !important; }
       </tr></thead><tbody id="p75AudBody"></tbody></table></div>
       <div id="p75AudPaquete"></div>
     </div>
-
-    <div class="table-wrap">
-      <div class="table-header"><h3>Descargas</h3></div>
-      <div style="padding:20px;display:flex;flex-wrap:wrap;gap:10px">
-        <button class="btn btn-primary" onclick="downloadP75All()">⬇ Excel completo (10 hojas)</button>
-        <button class="btn btn-outline" onclick="downloadP75Csv('items')">CSV variación ítems</button>
-        <button class="btn btn-outline" onclick="downloadP75Csv('cap')">CSV capítulos</button>
-        <button class="btn btn-outline" onclick="downloadP75Csv('civ')">CSV Δ por CIV</button>
-        <button class="btn btn-outline" onclick="downloadP75Csv('costo')">CSV costo por CIV</button>
-        <button class="btn btn-outline" onclick="downloadP75Csv('nps')">CSV NP</button>
-        <button class="btn btn-outline" onclick="downloadP75Csv('hall')">CSV hallazgos</button>
-        <a class="btn btn-outline" href="analisis/INFORME_PRESUPUESTO_2026-09.md" target="_blank" style="text-decoration:none">Informe escrito (Markdown)</a>
-        <a class="btn btn-outline" href="analisis/Analisis_Presupuesto_2026-09.xlsx" style="text-decoration:none">Excel de análisis (7 hojas)</a>
-      </div>
-    </div>
+    </section>
     <div class="p75-footer" id="p75Footer"></div>
   </div>
 </div>
@@ -4015,7 +4044,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeConcept
 // ── Modal genérico ────────────────────────────────────────────────────────
 function _destroyXpCharts() { P75X.charts.forEach(c => { try { c.destroy(); } catch (_) {} }); P75X.charts = []; }
 const _closeOrig = closeConceptModal;
-closeConceptModal = function () { _closeOrig(); _destroyXpCharts(); if (typeof P75X !== 'undefined' && P75X.route) { P75X.route = null; try { if ((location.hash || '').startsWith('#p75/')) history.replaceState(null, '', '#p75'); } catch (_) {} } };
+closeConceptModal = function () { _closeOrig(); _destroyXpCharts(); if (typeof P75X !== 'undefined' && P75X.route) { P75X.route = null; try { if ((location.hash || '').startsWith('#p75/')) history.replaceState(null, '', '#p75/sec/' + (P75X.view || 'resumen')); } catch (_) {} } };
 function xpModal(html) { hideXpPop(); _destroyXpCharts(); const body = document.getElementById('conceptModalBody'); body.innerHTML = html; const hd = body.querySelector('.modal-header'); if (hd) hd.insertAdjacentHTML('beforeend', `<div class="modal-tools"><button class="btn btn-outline" id="p75CopyBtn" onclick="p75CopyLink()" title="Copiar un enlace directo a esta ficha">🔗 Copiar enlace</button><button class="btn btn-outline" onclick="p75PrintModal()" title="Imprimir o guardar esta ficha en PDF">🖨 Imprimir</button></div>`); document.getElementById('conceptModal').classList.remove('hidden'); body.parentElement.scrollTop = 0; bindTermTooltips(body); const f = body.querySelector('.modal-tools .btn'); if (f) f.focus({ preventScroll: true }); }
 const mSec = (title, body, extra = '') => `<div class="modal-section"><h4>${title}</h4>${body}${extra}</div>`;
 const mKpi = (label, value, sub = '', cls = '') => `<div class="modal-kpi ${cls}"><div class="modal-kpi-label">${label}</div><div class="modal-kpi-value">${value}</div>${sub ? `<div class="modal-kpi-sub">${sub}</div>` : ''}</div>`;
@@ -4265,7 +4294,7 @@ function p75FilterEstadoCap(chapter, estado) {
   const selC = document.getElementById('p75FilterChapter'); const selE = document.getElementById('p75FilterEstado');
   if (selC) selC.value = chapter; if (selE) selE.value = estado; P75X.state.estado = estado;
   _p75RenderItemsTable(p75Maps().items); renderP75EstadoChips();
-  const el = document.getElementById('p75Items'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  p75Show('items');
 }
 
 function openP75Component(idx) {
@@ -4355,7 +4384,9 @@ function renderP75() {
   renderP75Items(); renderP75TopMoves(); renderP75Reemplazos();
   renderP75CivDesc(); renderP75Costo(); renderP75Alcance(); renderP75NPs(); renderP75Hall(); renderP75Metodo();
   renderP75Nav(); renderP75Exec(); renderP75Legal(); renderP75Precios(); renderP75Reub(); renderP75Sim(); renderP75Checklist(); renderP75Glosario(''); renderP75Aud(); renderP75Footer();
-  setupP75Events(); applyGlobalHeaderTips(); p75A11y(); p75OpenFromHash();
+  setupP75Events(); applyGlobalHeaderTips(); p75A11y();
+  p75Show(p75InitialView(), { scroll: false, route: false });
+  p75OpenFromHash();
 }
 
 // ── KPIs ──────────────────────────────────────────────────────────────────
@@ -4976,14 +5007,14 @@ function renderP75Exec() {
       <li><b>Componentes.</b> PMA-SST cuadra al peso con 8 × $145.895.211 (AIU 20,006%); el fondo de compensaciones de abril ($5.943M) desaparece; los "ajustes por cambio de vigencia" ($4.555M) no se recalculan aunque el plazo cruza a 2027; el bloque ACEROS ($3.053M, filas 680–687) está fuera del total de obras y supera en $75,5M la bolsa fija F ($2.978M): hay que aclarar cuál rige (H06-01, corregido en el registro B-08).</li>
       <li><b>Ritmo.</b> $16.000M en 8 meses = $2.000M/mes. Con la información disponible (acta de inicio 02-12-2021 y solo $19.652M de obra en los 9 CIVs "ya iniciados" según Hoja1) el ritmo histórico luce muy inferior: exigir cronograma con curva S, frentes simultáneos y capacidad instalada (H06-03). El libro no trae ejecución mes a mes.</li>
       <li><b>El valor inicial del contrato fue $${fmt(c.orig)}, no $${fmt(c.actual)}.</b> Con los ${fmtB(c.prev)} de incremento previo y los $16.000M pedidos, el acumulado llega al <b>${fmtD(c.pctNominal, 1)}% del valor inicial</b> en pesos (margen $${fmt(Math.round(c.margenNominal))}); en SMMLV usa ~${fmtD(c.pctCap, 0)}% del tope. El IDU debe precisar qué parte del incremento previo fue adición (${xpA('A-25')}, ${xpA('C-01')}).</li>
-      <li><b>${alta} hallazgos ALTA</b> de ${(P75.hallazgos || []).length}, todos con hoja y fila del Excel, y un <b>registro de auditoría</b> (sección N) con ${audList().length} asientos: ${audList().filter(a => a.tipo === 'A').length} errores o dudas de la fuente, ${audList().filter(a => a.tipo === 'B').length} correcciones del propio análisis con su commit, ${audList().filter(a => a.tipo === 'C').length} preguntas abiertas y ${audList().filter(a => a.tipo === 'D').length} limitaciones. La sección L trae la lista de chequeo con los ${CHECKLIST.length} soportes y verificaciones que la interventoría debe cerrar antes de emitir concepto.</li>
+      <li><b>${alta} hallazgos ALTA</b> de ${(P75.hallazgos || []).length}, todos con hoja y fila del Excel, y un <b>registro de auditoría</b> (<a href="#" onclick="p75Show('auditoria');return false">sección N</a>) con ${audList().length} asientos: ${audList().filter(a => a.tipo === 'A').length} errores o dudas de la fuente, ${audList().filter(a => a.tipo === 'B').length} correcciones del propio análisis con su commit, ${audList().filter(a => a.tipo === 'C').length} preguntas abiertas y ${audList().filter(a => a.tipo === 'D').length} limitaciones. La <a href="#" onclick="p75Show('checklist');return false">sección L</a> trae la lista de chequeo con los ${CHECKLIST.length} soportes y verificaciones que la interventoría debe cerrar antes de emitir concepto.</li>
     </ol>`;
   document.getElementById('p75Norm').innerHTML = `
     <div class="norm-grid">
       <div class="norm-card warn"><h5>Tope del 50 % (Ley 80 art. 40) <span class="xp" data-xp="norm_tope">ⓘ</span></h5><div class="big">${fmtD(c.pctNominal, 1)}% nominal acumulado</div><div>Valor inicial <b>$${fmt(c.orig)}</b> (propuesta 2021) · incremento previo $${fmt(c.prev)} (${fmtD(c.pctNominalPrev, 1)}%) + solicitado $${fmt(c.ad)} (${fmtD(c.pctNominalAd, 1)}%) · margen nominal <b>$${fmt(Math.round(c.margenNominal))}</b></div><div style="margin-top:4px">En SMMLV: ${fmtD(c.acumSm, 0)} de ${fmtD(c.origSm, 0)} SMMLV (${fmtD(c.pctSm, 1)}%) → usa ${fmtD(c.pctCap, 1)}% del tope de ${fmtD(c.capSm, 0)} SMMLV, si el incremento previo se cuenta a SMMLV 2025</div><div class="norm-foot">⚠ Al borde en pesos nominales; holgura en SMMLV. Confirmar en el expediente qué parte del incremento previo es adición (registro de auditoría <a href="#" onclick="openP75Aud('A-25');return false">A-25</a> / <a href="#" onclick="openP75Aud('C-01');return false">C-01</a>)</div></div>
-      <div class="norm-card warn"><h5>Naturaleza jurídica de lo pedido <span class="xp" data-xp="norm_naturaleza">ⓘ</span></h5><div>Mayores/menores cantidades (balance): <b>−$257.285.548</b> → no es adición</div><div>Ítems no previstos: <b>+$14.150.924.549</b> → adición (otrosí + actas NP)</div><div>Componentes por plazo: <b>+$2.106.360.999</b> → prórroga + adición</div><div class="norm-foot">⚠ 81 NP sin acta de fijación de precios en el libro</div></div>
-      <div class="norm-card bad"><h5>Soportes faltantes en el libro <span class="xp" data-xp="norm_soportes">ⓘ</span></h5><ul><li>Memoria de cantidades por CIV (la col H no viene repartida)</li><li>APU FO-GI-19 y actas de los 81 NP</li><li>Cronograma / curva S de los 8 meses y flujo mensual</li><li>Recálculo de ajustes por vigencia 2027 (ICCP)</li><li>Conciliación V2 → V4 por capítulo (cap. 7 y fondo)</li></ul><div class="norm-foot">→ sección L: lista de chequeo del revisor</div></div>
-      <div class="norm-card"><h5>Deber de informar (Ley 1474 art. 84) <span class="xp" data-xp="norm_informar">ⓘ</span></h5><div><b>${alta}</b> hallazgos ALTA y <b>${(P75.hallazgos || []).filter(h => h.severidad === 'MEDIA').length}</b> MEDIA deben quedar informados al IDU por escrito con soporte; la omisión genera responsabilidad solidaria del interventor.</div><div class="norm-foot">→ sección F: hallazgos con hoja y fila</div></div>
+      <div class="norm-card warn"><h5>Naturaleza jurídica de lo pedido <span class="xp" data-xp="norm_naturaleza">ⓘ</span></h5><div>Mayores/menores cantidades (balance): <b>−$257.285.548</b> → no es adición</div><div>Ítems no previstos: <b>+$14.150.924.549</b> → adición (otrosí + actas NP)</div><div>Componentes por plazo: <b>+$2.106.360.999</b> → prórroga + adición</div><div class="norm-foot">⚠ 81 NP sin acta de fijación de precios en el libro · <a href="#" onclick="p75Show('np');return false">sección E</a></div></div>
+      <div class="norm-card bad"><h5>Soportes faltantes en el libro <span class="xp" data-xp="norm_soportes">ⓘ</span></h5><ul><li>Memoria de cantidades por CIV (la col H no viene repartida)</li><li>APU FO-GI-19 y actas de los 81 NP</li><li>Cronograma / curva S de los 8 meses y flujo mensual</li><li>Recálculo de ajustes por vigencia 2027 (ICCP)</li><li>Conciliación V2 → V4 por capítulo (cap. 7 y fondo)</li></ul><div class="norm-foot">→ <a href="#" onclick="p75Show('checklist');return false">sección L: lista de chequeo del revisor</a></div></div>
+      <div class="norm-card"><h5>Deber de informar (Ley 1474 art. 84) <span class="xp" data-xp="norm_informar">ⓘ</span></h5><div><b>${alta}</b> hallazgos ALTA y <b>${(P75.hallazgos || []).filter(h => h.severidad === 'MEDIA').length}</b> MEDIA deben quedar informados al IDU por escrito con soporte; la omisión genera responsabilidad solidaria del interventor.</div><div class="norm-foot">→ <a href="#" onclick="p75Show('hallazgos');return false">sección F: hallazgos con hoja y fila</a></div></div>
     </div>`;
 }
 XP.cce_466_x = { t: 'CCE C-466 de 2024 y Consejo de Estado (exp. 67.508)', q: 'Las mayores cantidades de obra (más unidades de ítems pactados) no son adición ni cuentan para el tope del 50%; las obras adicionales e ítems no previstos sí requieren modificación contractual escrita y están sujetas al tope.', s: 'Relatoría ANCP-CCE · C-466/2024 · Consejo de Estado Sección Tercera 10-10-2024', i: 'En V4 el balance de mayores/menores es negativo: la adición se compone de NP y componentes por plazo.', rel: [] };
@@ -5028,7 +5059,9 @@ function simCompute() {
   const dGest = gestion - (2943115324 + 1874965632 + 1623435591 + 8 * (rm.mensualidad_pma_sst + rm.mensualidad_dialogo + rm.mensualidad_pmt)); if (dGest) pasos.push([`Plazo ${SIM.meses} meses (gestión mensual)`, dGest]);
   let vig = 0; if (SIM.vigencia) { vig = Math.round((obras + gestion) / (SIM.meses || 1) * Math.min(SIM.meses, 5) * 0.035); pasos.push(['Recálculo ajustes por vigencia 2027 (supuesto 3,5% ICCP, 5 meses en 2027)', vig]); }
   const total = obras + gestion + compsFijos + vig; const adicion = total - 59426575199; const c = normCheck();
-  return { obras, gestion, compsFijos, vig, total, adicion, pasos, pctNominal: (adicion / 59426575199) * 100, adSm: adicion / SMMLV[2026].valor, pctCap: (adicion / SMMLV[2026].valor) / c.capSm * 100 };
+  // Tope del 50 % (B-11): base = valor inicial del contrato y se acumula el incremento previo (c.prev / c.prevSm)
+  const adSm = adicion / SMMLV[2026].valor;
+  return { obras, gestion, compsFijos, vig, total, adicion, pasos, pctActual: (adicion / 59426575199) * 100, pctNominal: ((c.prev + adicion) / c.orig) * 100, adSm, acumSm: c.prevSm + adSm, pctCap: (c.prevSm + adSm) / c.capSm * 100, margenNominal: c.orig * 0.5 - (c.prev + adicion) };
 }
 function renderP75Sim() {
   const r = simCompute();
@@ -5036,7 +5069,7 @@ function renderP75Sim() {
     <div class="modal-kpis" style="margin-bottom:12px">
       ${mKpi('Total simulado', '$' + fmt(r.total), `obras $${fmt(r.obras)} · gestión $${fmt(r.gestion)} · fijos $${fmt(r.compsFijos + r.vig)}`, 'cont')}
       ${mKpi('Adición resultante', `<span class="${r.adicion > 16000000000 ? 'negative' : 'positive'}">${fmtS(r.adicion)}</span>`, `vs $16.000.000.000 pedidos: ${fmtS(r.adicion - 16000000000)}`, 'delta')}
-      ${mKpi('% del valor inicial', fmtD(r.pctNominal, 1) + '%', `${fmtD(r.adSm, 0)} SMMLV 2026 · ${fmtD(r.pctCap, 1)}% del tope del 50%`, r.pctCap > 100 ? 'delta' : '')}
+      ${mKpi('% acumulado del valor inicial', fmtD(r.pctNominal, 1) + '%', `incremento previo $${fmtB(normCheck().prev).replace('$', '')} + esta adición (${fmtD(r.pctActual, 1)}% del actual) · margen nominal ${fmtS(Math.round(r.margenNominal))} · ${fmtD(r.acumSm, 0)} SMMLV = ${fmtD(r.pctCap, 1)}% del tope`, (r.pctNominal > 50 || r.pctCap > 100) ? 'delta' : '')}
       ${mKpi('Ritmo mensual', '$' + fmt(Math.round(Math.max(0, r.adicion) / (SIM.meses || 1))), `${SIM.meses} meses`)}
     </div>
     ${r.pasos.length ? mTable(['Ajuste', '#Efecto sobre la adición'], r.pasos.map(p => `<tr><td>${p[0]}</td><td class="num ${p[1] > 0 ? 'negative' : 'positive'}">${fmtS(p[1])}</td></tr>`).concat([`<tr class="subtotal"><td>Adición pedida $16.000.000.000 → simulada</td><td class="num">${fmtS(r.adicion)}</td></tr>`])) : '<p style="color:var(--text-light);font-size:.88em">Sin ajustes: la simulación reproduce la solicitud del contratista ($16.000.000.000 · 8 meses).</p>'}
@@ -5066,7 +5099,7 @@ const CHECKLIST = [
   { g: 'Verificaciones de la interventoría', id: 'aritmetica', t: 'Aritmética del libro: Σ col M, Σ col N, Σ por CIV, componentes y total 75.426.575.199', p: 'Recalculado con verificacion.py: todo cuadra al peso salvo $69 y $86.217 de redondeo.', auto: true, link: "openExplain('concepto_verificacion')" },
   { g: 'Verificaciones de la interventoría', id: 'outliers', t: 'Revisión de campo / diseño de los 3 CIVs outlier de $/m² (16000024, 16000010, 16000017)', p: 'Superan 2× la mediana; en 16000010 el box culvert NP-133 explica $1.880M.', link: "openP75Civ('16000024')" },
   { g: 'Verificaciones de la interventoría', id: 'saltos', t: 'Verificación de los saltos extremos de cantidad (rajón ×14,7; andén ×135) contra diseños', p: 'Filas 20 y 85. Hallazgos H01-015 y saltos_extremos.', link: "openP75Item(85)" },
-  { g: 'Verificaciones de la interventoría', id: 'precios', t: 'Contraste del VU de V4 con el VISOR vigente y con el APU de referencia para los 20 ítems de mayor impacto (sección H)', p: () => { const pr = preciosTable(); return `Σ impacto ${fmtS(pr.tot)} a cantidad final frente al APU 13-09-2024 (${pr.n} renglones); losa MR45 +$1.992M. Frente al VU pactado en la propuesta la mediana es +49% (registro A-24).`; }, link: "document.getElementById('p75Precios').scrollIntoView({behavior:'smooth'})" },
+  { g: 'Verificaciones de la interventoría', id: 'precios', t: 'Contraste del VU de V4 con el VISOR vigente y con el APU de referencia para los 20 ítems de mayor impacto (sección H)', p: () => { const pr = preciosTable(); return `Σ impacto ${fmtS(pr.tot)} a cantidad final frente al APU 13-09-2024 (${pr.n} renglones); losa MR45 +$1.992M. Frente al VU pactado en la propuesta la mediana es +49% (registro A-24).`; }, link: "p75Show('precios')" },
   { g: 'Verificaciones de la interventoría', id: 'funcionalidad', t: 'Certificar que el balanceo de mayores y menores cantidades no afecta la funcionalidad de la obra (manual IDU §11.2.1)', p: '118 renglones eliminados, incluido todo el cap. 7 desvíos.', link: "openLegal('idu_mggc06')" },
   { g: 'Aspectos legales y contractuales', id: 'tope', t: 'Cálculo del tope del 50% (art. 40 Ley 80) en SMMLV, incluyendo adiciones previas del contrato', p: 'Base = valor inicial $50.793.789.333 (no el actual). Acumulado 48,5% nominal con el incremento previo de $8.633M; en SMMLV ~54% del tope. Confirmar en el expediente qué parte del incremento previo es adición (registro A-25, C-01).', link: "openLegal('ley80_40')" },
   { g: 'Aspectos legales y contractuales', id: 'historia', t: 'Expediente de otrosíes: cómo pasó el contrato de $50.793.789.333 (propuesta) a $59.426.575.199 y con qué acto se actualizaron los VU pactados a insumos 13-09-2024 (+49% mediana)', p: 'Determina la base del tope del 50% y la legalidad de los precios con que se liquida la adición. Registro de auditoría A-24, A-25 y C-01.', link: "openP75Aud('A-25')" },
@@ -5159,7 +5192,9 @@ function p75OpenFromHash() {
   const parts = h.split('/'); const kind = parts[1], id = decodeURIComponent(parts.slice(2).join('/') || '');
   if (!kind) return;
   setTimeout(() => { try {
-    if (kind === 'civ') openP75Civ(id); else if (kind === 'item') openP75Item(+id); else if (kind === 'cap') { const c = (P75.variacion_items.capitulos || []).find(x => x.chapter.startsWith(id + '.') || x.chapter === id); if (c) openP75Chapter(c.chapter); } else if (kind === 'comp') openP75Component(+id); else if (kind === 'hall') openP75Hallazgo(id); else if (kind === 'xp') openExplain(id); else if (kind === 'code') openP75Codigo(id); else if (kind === 'legal') openLegal(id); else if (kind === 'glos') openGlos(id); else if (kind === 'aud') openP75Aud(id); else if (kind === 'viz') renderP75Viz(id); else if (kind === 'sec') { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    if (kind === 'sec') { p75Show(id, { route: false }); return; }
+    if (P75_KIND_VIEW[kind]) p75Show(P75_KIND_VIEW[kind], { route: false, scroll: false });
+    if (kind === 'civ') openP75Civ(id); else if (kind === 'item') openP75Item(+id); else if (kind === 'cap') { const c = (P75.variacion_items.capitulos || []).find(x => x.chapter.startsWith(id + '.') || x.chapter === id); if (c) openP75Chapter(c.chapter); } else if (kind === 'comp') openP75Component(+id); else if (kind === 'hall') openP75Hallazgo(id); else if (kind === 'xp') openExplain(id); else if (kind === 'code') openP75Codigo(id); else if (kind === 'legal') openLegal(id); else if (kind === 'glos') openGlos(id); else if (kind === 'aud') openP75Aud(id); else if (kind === 'viz') renderP75Viz(id);
   } catch (e) { console.warn('deep link', e); } }, 150);
 }
 function p75CopyLink() { const url = location.origin + location.pathname + '#p75/' + (P75X.route || ''); const done = () => { const b = document.getElementById('p75CopyBtn'); if (b) { b.textContent = '✓ Enlace copiado'; setTimeout(() => b.textContent = '🔗 Copiar enlace', 1800); } }; if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => prompt('Copie el enlace:', url)); else prompt('Copie el enlace:', url); }
@@ -5167,9 +5202,57 @@ function p75PrintModal() { document.body.classList.add('print-modal'); window.pr
 function p75PrintTab() { document.body.classList.add('print-tab'); window.print(); setTimeout(() => document.body.classList.remove('print-tab'), 500); }
 function p75Fingerprint() { const s = JSON.stringify(P75.meta) + '|' + (P75.variacion_items.items || []).length + '|' + P75.variacion_items.resumen.total_valor_final + '|' + (P75.hallazgos || []).length + '|' + JSON.stringify(P75.costo_civ.costo_por_civ.map(c => [c.id, c.total])); let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); }
 function renderP75Footer() { document.getElementById('p75Footer').innerHTML = `Análisis generado el ${P75.meta.fecha_analisis} a partir de <em>${esc(P75.meta.fuente)}</em> · ${(P75.variacion_items.items || []).length} renglones · 27 CIVs · ${(P75.hallazgos || []).length} hallazgos · huella de datos <code>${p75Fingerprint()}</code> · scripts reproducibles en <code>analisis/scripts/</code> · <a href="analisis/INFORME_PRESUPUESTO_2026-09.md" target="_blank">informe escrito</a> · <a href="analisis/REGISTRO_AUDITORIA.md" target="_blank">registro de auditoría</a> (${audList().length} asientos; sección N) · Cómo citar una cifra: "Fuente: hoja ${HOJA}, fila N, columna X (Excel radicado 01-09-2026); análisis Consorcio Montevideo 045, huella ${p75Fingerprint()}".`; }
+// ── Sub-pestañas de la pestaña 75MM: cada botón muestra SOLO su sección ──
+const P75_VIEWS = [
+  ['resumen', 'Resumen', 'Qué se pide, cuánto y por qué: introducción, KPIs, resumen para revisores y descargas.'],
+  ['ficha', 'Ficha del contrato', 'Datos del contrato, valor inicial (propuesta 2021), valor actual y solicitud radicada.'],
+  ['legal', 'Chequeo legal', 'Tope del 50 % (Ley 80 art. 40), naturaleza jurídica de lo pedido, soportes faltantes y deber de informar.'],
+  ['viz', 'Gráficas', '11 gráficas conmutables con su fuente, cálculo y lectura del analista; clic en una barra o punto abre la ficha.'],
+  ['versiones', 'A · Versiones', 'Puente V0 → V1 → V2 → V3 → V4 por componente; clic en una fila abre la ficha del componente.'],
+  ['capitulos', 'A2 · Capítulos', 'Variación por capítulo de obra: valor inicial, final, balance de cantidades y NP incorporados.'],
+  ['items', 'B · Ítems', 'Variación de cantidades por renglón o neta por código; top 15 que suman y restan; reemplazos contractual → NP.'],
+  ['civ', 'C · Δ por CIV', 'Descomposición del Δ de obras por CIV: aumentos, disminuciones, NP, contractual nuevo y eliminado.'],
+  ['costo', 'D · Costo por CIV', 'Obras + componentes por CIV, $/m², atípicos, índice de atención y grupos de alcance (Hoja1).'],
+  ['np', 'E · NP', 'Ítems no previstos: top 20 de 84 códigos, contraste con abril (V2) y clasificación.'],
+  ['hallazgos', 'F · Hallazgos', 'Hallazgos con hoja, fila, impacto y recomendación, filtrables por severidad y análisis de origen.'],
+  ['metodo', 'G · Metodología', 'Cómo se construyó cada número, fuentes, scripts y verificación al peso.'],
+  ['precios', 'H · Precios', 'VU de V4 frente al VU pactado en la propuesta, al APU 13-09-2024 y al VISOR de mayo de 2025.'],
+  ['reub', 'I · Reubicaciones', 'Códigos que bajan en un renglón y suben en otro: lo "eliminado" que reaparece bajo el mismo código IDU.'],
+  ['sim', 'J · Simulador', '¿Cuánto quedaría la adición si…? Plazo, % de NP aceptados, reemplazos, VU de referencia, alcance y vigencia.'],
+  ['normativa', 'K · Normativa', 'Normas, conceptos y manuales aplicables, con fuente verificada y cómo aplican a este presupuesto.'],
+  ['checklist', 'L · Lista de chequeo', 'Soportes y verificaciones que la interventoría debe cerrar antes de emitir concepto; estado guardado en el navegador.'],
+  ['glosario', 'M · Glosario', 'Términos del análisis y del glosario técnico, buscables; clic abre la explicación.'],
+  ['auditoria', 'N · Auditoría', 'Errores de la fuente, correcciones del análisis, dudas abiertas, limitaciones y paquete de auditoría.'],
+];
+const P75_VIEW_ALIAS = { p75Contrato: 'ficha', p75ContratoWrap: 'ficha', p75ExecWrap: 'resumen', p75Exec: 'resumen', p75KPIs: 'resumen', p75Norm: 'legal', p75NormWrap: 'legal', p75VizWrap: 'viz', p75Waterfall: 'versiones', p75Cap: 'capitulos', p75Items: 'items', p75ItemsTitle: 'items', p75CivDesc: 'civ', p75Costo: 'costo', p75Alcance: 'costo', p75NPs: 'np', p75Hall: 'hallazgos', p75Metodo: 'metodo', p75Precios: 'precios', p75PreciosWrap: 'precios', p75Reub: 'reub', p75ReubWrap: 'reub', p75SimWrap: 'sim', p75Legal: 'normativa', p75LegalWrap: 'normativa', p75LegalTitle: 'normativa', p75ChkWrap: 'checklist', p75GlosWrap: 'glosario', p75AudWrap: 'auditoria', p75Aud: 'auditoria', hall: 'hallazgos', nps: 'np', chk: 'checklist', glos: 'glosario', aud: 'auditoria', norm: 'legal', contrato: 'ficha', exec: 'resumen', waterfall: 'versiones', cap: 'capitulos' };
+const P75_KIND_VIEW = { civ: 'civ', item: 'items', code: 'items', cap: 'capitulos', comp: 'versiones', hall: 'hallazgos', legal: 'normativa', glos: 'glosario', aud: 'auditoria', viz: 'viz' };
+function p75ViewIndex(view) { return P75_VIEWS.findIndex(v => v[0] === view); }
+function p75Show(view, opts = {}) {
+  view = P75_VIEW_ALIAS[view] || view; if (p75ViewIndex(view) < 0) view = 'resumen';
+  hideXpPop();
+  document.querySelectorAll('#panel-p75mm .p75-view').forEach(sc => { const on = sc.dataset.view === view; if (on) sc.removeAttribute('hidden'); else sc.setAttribute('hidden', ''); });
+  document.querySelectorAll('#p75Nav .p75-tab').forEach(b => { const on = b.dataset.view === view; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.setAttribute('tabindex', on ? '0' : '-1'); if (on && opts.scroll !== false) { try { b.scrollIntoView({ block: 'nearest', inline: 'center' }); } catch (_) {} } });
+  P75X.view = view; try { sessionStorage.setItem('p75_view', view); } catch (_) {}
+  if (opts.route !== false) p75Route('sec/' + view);
+  const i = p75ViewIndex(view), v = P75_VIEWS[i], prev = P75_VIEWS[i - 1], next = P75_VIEWS[i + 1];
+  const vb = document.getElementById('p75ViewBar');
+  if (vb) vb.innerHTML = `<span class="vb-n">Sección ${i + 1} de ${P75_VIEWS.length}</span><span class="vb-t">${v[1]}</span><span class="vb-d">${v[2]}</span><span class="vb-nav">${prev ? `<button class="btn btn-outline" onclick="p75Show('${prev[0]}')" title="${esc(prev[1])}">← ${esc(prev[1])}</button>` : ''}${next ? `<button class="btn btn-outline" onclick="p75Show('${next[0]}')" title="${esc(next[1])}">${esc(next[1])} →</button>` : ''}</span>`;
+  // Las gráficas creadas en una sección oculta nacen con tamaño 0: al mostrarla se redimensionan.
+  const sec = document.querySelector(`#panel-p75mm .p75-view[data-view="${view}"]`);
+  if (sec && typeof Chart !== 'undefined') requestAnimationFrame(() => sec.querySelectorAll('canvas').forEach(cv => { const ch = Chart.getChart(cv); if (ch) ch.resize(); }));
+  if (opts.scroll !== false) { const anchor = document.querySelector('#panel-p75mm .p75-search'); if (anchor) { const y = anchor.getBoundingClientRect().top + window.scrollY - 8; if (window.scrollY > y) window.scrollTo({ top: y, behavior: 'smooth' }); } }
+  return view;
+}
+function p75InitialView() {
+  const h = (location.hash || '').replace(/^#/, ''); const m = h.match(/^p75\/sec\/([^/]+)/);
+  if (m) return P75_VIEW_ALIAS[decodeURIComponent(m[1])] || decodeURIComponent(m[1]);
+  const k = h.match(/^p75\/([a-z]+)\//); if (k && P75_KIND_VIEW[k[1]]) return P75_KIND_VIEW[k[1]];
+  try { return sessionStorage.getItem('p75_view') || 'resumen'; } catch (_) { return 'resumen'; }
+}
 function renderP75Nav() {
-  const secs = [['p75Contrato', 'Ficha'], ['p75ExecWrap', 'Resumen'], ['p75Norm', 'Chequeo legal'], ['p75VizWrap', 'Gráficas'], ['p75Waterfall', 'A · Versiones'], ['p75Cap', 'A2 · Capítulos'], ['p75Items', 'B · Ítems'], ['p75CivDesc', 'C · Δ por CIV'], ['p75Costo', 'D · Costo por CIV'], ['p75NPs', 'E · NP'], ['p75Hall', 'F · Hallazgos'], ['p75Metodo', 'G · Metodología'], ['p75Precios', 'H · Precios'], ['p75Reub', 'I · Reubicaciones'], ['p75SimWrap', 'J · Simulador'], ['p75Legal', 'K · Normativa'], ['p75ChkWrap', 'L · Lista de chequeo'], ['p75GlosWrap', 'M · Glosario'], ['p75AudWrap', 'N · Auditoría']];
-  document.getElementById('p75Nav').innerHTML = secs.map(([id, l]) => `<a href="#p75/sec/${id}" onclick="event.preventDefault();p75Route('sec/${id}');const el=document.getElementById('${id}');if(el)el.scrollIntoView({behavior:'smooth',block:'start'})">${l}</a>`).join('') + `<button class="btn btn-outline" style="margin-left:auto" onclick="p75PrintTab()">🖨 Imprimir pestaña</button>`;
+  const nav = document.getElementById('p75Nav'); nav.setAttribute('role', 'tablist'); nav.setAttribute('aria-label', 'Secciones del análisis');
+  nav.innerHTML = P75_VIEWS.map(([id, l, d]) => `<button type="button" class="p75-tab" role="tab" data-view="${id}" aria-selected="false" tabindex="-1" title="${esc(d)}" onclick="p75Show('${id}')">${l}</button>`).join('') + `<button class="btn btn-outline" style="margin-left:auto" onclick="p75PrintTab()" title="Imprime todas las secciones, no solo la visible">🖨 Imprimir pestaña</button>`;
+  nav.onkeydown = e => { if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return; const i = p75ViewIndex(P75X.view || 'resumen'); const n = P75_VIEWS[(i + (e.key === 'ArrowRight' ? 1 : -1) + P75_VIEWS.length) % P75_VIEWS.length]; p75Show(n[0]); const b = nav.querySelector(`.p75-tab[data-view="${n[0]}"]`); if (b) b.focus(); e.preventDefault(); };
 }
 // Accesibilidad: filas y tarjetas operables con teclado
 document.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target && e.target.matches && e.target.matches('tr.row-click, .stat-card.xp-block, .civ-chip, .glos-item, .sr')) { e.preventDefault(); e.target.click(); } });

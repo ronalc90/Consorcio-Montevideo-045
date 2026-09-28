@@ -141,7 +141,7 @@ Consorcio-Montevideo-045/
 3. **Frentes (27 CIVs)** — tarjetas visuales con detalle por CIV.
 4. **Presupuesto Detallado** — 206 items con precios VISOR vs originales.
 5. **IDU Oficial vs Propuesta Contratista** — comparativa V1 (25-02-2026) vs V2 (21-04-2026).
-6. **Presupuesto 01-09-2026 · 75MM · 8 meses** — analisis del nuevo presupuesto:
+6. **Presupuesto 01-09-2026 · 75MM · 8 meses** — analisis del nuevo presupuesto, organizado en **19 secciones conmutables** (barra de secciones: cada boton muestra solo su contenido; flechas ← → y botones anterior/siguiente; enlaces directos `#p75/sec/precios`; "Imprimir pestaña" imprime todas):
    - KPIs, puente de versiones V0→V4 por componente y tabla por capitulo.
    - **Explorador visual** con 11 graficas conmutables (puente, evolucion por version, Δ por capitulo y estado, Δ por CIV descompuesto, $/m² vs mediana, costo por CIV × capitulo, mapa de calor, area vs costo, top NP, Pareto, composicion). Cada grafica trae su panel *que muestra / fuente y calculo / lectura del analista*; clic en una barra o punto abre la ficha correspondiente.
    - Variacion de cantidades por item (renglon o neta por codigo), con modo de contraste V2 (abril) y valores con AIU o costo directo.
