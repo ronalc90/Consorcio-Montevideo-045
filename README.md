@@ -136,13 +136,21 @@ Consorcio-Montevideo-045/
 4. **Presupuesto Detallado** — 206 items con precios VISOR vs originales.
 5. **IDU Oficial vs Propuesta Contratista** — comparativa V1 (25-02-2026) vs V2 (21-04-2026).
 6. **Presupuesto 01-09-2026 · 75MM · 8 meses** — analisis del nuevo presupuesto:
-   - Resumen y waterfall V0→V4 por componente.
-   - Variacion de cantidades por item (renglon o neta por codigo).
-   - Variacion por CIV con descomposicion del delta.
-   - Costo por CIV (obras + componentes + $/m2) para los 27 CIVs.
-   - NPs top 20 con clasificacion (aprobado / en revision / objetado / nuevo).
-   - Hallazgos por severidad (ALTA / MEDIA / BAJA / INFO) con recomendacion.
-   - Exportacion a Excel (7 hojas) y CSV por seccion.
+   - KPIs, puente de versiones V0→V4 por componente y tabla por capitulo.
+   - **Explorador visual** con 11 graficas conmutables (puente, evolucion por version, Δ por capitulo y estado, Δ por CIV descompuesto, $/m² vs mediana, costo por CIV × capitulo, mapa de calor, area vs costo, top NP, Pareto, composicion). Cada grafica trae su panel *que muestra / fuente y calculo / lectura del analista*; clic en una barra o punto abre la ficha correspondiente.
+   - Variacion de cantidades por item (renglon o neta por codigo), con modo de contraste V2 (abril) y valores con AIU o costo directo.
+   - Variacion por CIV con descomposicion del delta (aumentos, disminuciones, NP, contractual nuevo, eliminado).
+   - Costo por CIV (obras + componentes + $/m2) para los 27 CIVs, con grupos de alcance de Hoja1.
+   - NPs top 20 con contraste frente a abril y clasificacion.
+   - 70 hallazgos por severidad (ALTA / MEDIA / BAJA / INFO) con recomendacion, filtrables por analisis de origen.
+   - Metodologia, fuentes y verificacion al peso.
+   - Exportacion a Excel (8 hojas) y CSV por seccion.
+
+### Capa explicativa ("explica TODO")
+
+- **Tooltips ricos en toda la app**: cada encabezado de columna, KPI y chip muestra al pasar el mouse que es, de donde sale (hoja · fila · columna del Excel) y como se calcula.
+- **Fichas al hacer clic**: cualquier fila (item, codigo, CIV, capitulo, componente, NP, hallazgo), tarjeta KPI o barra de grafica abre una ficha con la formula aplicada a sus numeros reales, la verificacion contra el Excel (✓/✗), la distribucion por CIV, el contraste V1/V2/V4, los hallazgos relacionados y las preguntas sugeridas para el contratista.
+- **Colores validados para daltonismo**: estados calidos suman dinero (aumento, nuevo contractual, NP) y frios restan (disminucion, eliminado); en tablas rojo = suma a la adicion y verde = resta.
 
 ## Tecnologias
 
