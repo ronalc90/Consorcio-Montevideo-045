@@ -2,7 +2,15 @@
 CLAUDE.md
 memory/
 *.xlsx
+!analisis/Analisis_Presupuesto_2026-09.xlsx
 serve.py
 budget_data.json
 civs_detail.json
 .DS_Store
+
+# CSV intermedios (se regeneran con analisis/scripts/extraer_presupuesto.py)
+analisis/datos/hojas/
+
+# Python cache
+__pycache__/
+*.pyc

@@ -92,12 +92,57 @@ El sistema calcula el presupuesto actualizado con base en los **Analisis de Prec
 
 ```
 Consorcio-Montevideo-045/
-  index.html          # Aplicacion web completa (login + dashboard + graficas)
-  data.json           # Base de datos del presupuesto (206 items x 27 CIVs)
+  index.html                            # Aplicacion web completa (login + dashboard + graficas)
+  data.json                             # Base de datos del presupuesto (206 items x 27 CIVs)
+  comparativa.json                      # Comparativa IDU oficial vs propuesta contratista (V1 y V2)
+  analisis_2026_09.json                 # Consolidado del analisis del presupuesto 01-09-2026 (V4)
+  presupuesto_2026_09.json              # Matriz item x CIV V4 (obras con AIU)
+  analisis/
+    INFORME_PRESUPUESTO_2026-09.md      # Informe ejecutivo para gerencia e interventoria
+    Analisis_Presupuesto_2026-09.xlsx   # Excel con 7 hojas (formato profesional)
+    analisis_2026_09.json               # Consolidado (copia canonica)
+    hallazgos/
+      BRIEF.md                          # Brief comun de los 6 analisis
+      01_variacion_items.{md,json}      # Analisis 01: variacion de cantidades por item
+      02_variacion_civ.{md,json}        # Analisis 02: variacion por CIV
+      03_costo_civ.{md,json}            # Analisis 03: costo por CIV (27 CIVs)
+      04_aritmetica.{md,json}           # Analisis 04: aritmetica, formulas, precios
+      05_nps.{md,json}                  # Analisis 05: items no previstos
+      06_versiones_plazo.{md,json}      # Analisis 06: waterfall V0-V4 y plazo 8 meses
+    scripts/
+      extraer_presupuesto.py            # Extrae la hoja principal a JSON + CSVs
+      analisis_01_variacion_items.py    # Genera 01_variacion_items.{md,json}
+      analisis_02_variacion_civ.py      # Genera 02_variacion_civ.{md,json}
+      analisis_03_costo_civ.py          # Genera 03_costo_civ.{md,json}
+      analisis_04.py                    # Genera 04_aritmetica.{md,json}
+      analisis_05_nps.py                # Genera 05_nps.{md,json}
+      consolidar.py                     # Consolida los 6 en analisis_2026_09.json
+      generar_excel.py                  # Genera Analisis_Presupuesto_2026-09.xlsx
+    datos/
+      presupuesto_2026_09.json          # Extraccion cruda de la hoja principal V4
+      hojas/                            # Las 18 hojas del Excel exportadas como CSV
+  fuentes/
+    4. PRESUPUESTO 01-09-2026 75MM (8 MESES).xlsx   # Excel fuente del contratista
   .github/
     workflows/
-      pages.yml       # Deploy automatico a GitHub Pages
+      pages.yml                         # Deploy automatico a GitHub Pages
 ```
+
+## Pestanas de la aplicacion
+
+1. **Resumen General** — dashboard ejecutivo con KPIs y tabla resumen por frente.
+2. **Reportes Gerencia** — graficas para presentaciones.
+3. **Frentes (27 CIVs)** — tarjetas visuales con detalle por CIV.
+4. **Presupuesto Detallado** — 206 items con precios VISOR vs originales.
+5. **IDU Oficial vs Propuesta Contratista** — comparativa V1 (25-02-2026) vs V2 (21-04-2026).
+6. **Presupuesto 01-09-2026 · 75MM · 8 meses** — analisis del nuevo presupuesto:
+   - Resumen y waterfall V0→V4 por componente.
+   - Variacion de cantidades por item (renglon o neta por codigo).
+   - Variacion por CIV con descomposicion del delta.
+   - Costo por CIV (obras + componentes + $/m2) para los 27 CIVs.
+   - NPs top 20 con clasificacion (aprobado / en revision / objetado / nuevo).
+   - Hallazgos por severidad (ALTA / MEDIA / BAJA / INFO) con recomendacion.
+   - Exportacion a Excel (7 hojas) y CSV por seccion.
 
 ## Tecnologias
 

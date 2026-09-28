@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "titulo": "Waterfall de versiones, componentes y plazo (8 meses)",
+    "fecha_analisis": "2026-09-26",
+    "insumos": [
+      "analisis/datos/hojas/PRESUPUESTO_TODOS_LOS_CIV_84_NP.csv",
+      "analisis/datos/hojas/PRESUPUESTO_63_mm.csv",
+      "analisis/datos/hojas/Aceros.csv",
+      "analisis/datos/hojas/resumen.csv",
+      "analisis/datos/hojas/Presupuesto_estimado.csv",
+      "analisis/datos/hojas/EJECUTIVO.csv",
+      "comparativa.json"
+    ],
+    "definiciones_versiones": {
+      "V0": "Contrato 1752-2021 firma original (comparativa.json -> globales.contrato_original_firma)",
+      "V1": "Actualizacion IDU 25-02-2026 hasta NP-110 (comparativa.json -> globales.iniciales)",
+      "V2": "Propuesta VICON 21-04-2026 Alt 1 (comparativa.json -> globales.actualizadas_alt1)",
+      "V3": "Presupuesto intermedio 63MM (hoja PRESUPUESTO 63 mm; SST/DC/PMT para 3 meses)",
+      "V4": "Presupuesto 01-09-2026 75MM 8 meses (hoja PRESUPUESTO TODOS LOS CIV 84 NP)"
+    }
+  },
+  "waterfall": [
+    {
+      "componente": "Obras civiles + redes + acero (con AIU 31,849%)",
+      "v0": 44303294799,
+      "v1": 49473142875,
+      "v2": 55282021446,
+      "v3": 47836306969,
+      "v4": 58196933800,
+      "delta_v0_v4": 13893639001,
+      "fuente_v0": "PRESUPUESTO TODOS LOS CIV 84 NP fila 692 col N",
+      "fuente_v1": "comparativa.json globales.iniciales.obras_civiles_redes_acero_aiu",
+      "fuente_v2": "comparativa.json globales.actualizadas_alt1.obras_civiles_redes_acero_aiu",
+      "fuente_v3": "PRESUPUESTO 63 mm fila 657 col M",
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 692 col M"
+    },
+    {
+      "componente": "PMA-SST (con AIU 20,006%)",
+      "v0": 2943115324,
+      "v1": 2914808177,
+      "v2": 3672443894,
+      "v3": 3380795309,
+      "v4": 4110277014,
+      "delta_v0_v4": 1167161690,
+      "fuente_v3": "PRESUPUESTO 63 mm fila 661 col M (SST V0 + 3 meses adicionales)",
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 696 col M (SST V0 + 8 meses adicionales)"
+    },
+    {
+      "componente": "Dialogo ciudadano (PGS) con AIU 19,566%",
+      "v0": 1874965632,
+      "v1": 1801692069,
+      "v2": 2339597783,
+      "v3": 2083112282,
+      "v4": 2430023370,
+      "delta_v0_v4": 555057738,
+      "fuente_v3": "PRESUPUESTO 63 mm fila 662 col M",
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 697 col M"
+    },
+    {
+      "componente": "Plan de Manejo de Trafico (PMT) con AIU 19,566%",
+      "v0": 1623435591,
+      "v1": 1570849611,
+      "v2": 2025736496,
+      "v3": 1767488681,
+      "v4": 2007577162,
+      "delta_v0_v4": 384141571,
+      "fuente_v3": "PRESUPUESTO 63 mm fila 663 col M",
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 698 col M"
+    },
+    {
+      "componente": "Ajustes por cambio de vigencia",
+      "v0": 4555525079,
+      "v1": 4555525079,
+      "v2": 4555525079,
+      "v3": 4555525079,
+      "v4": 4555525079,
+      "delta_v0_v4": 0,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 699 col M"
+    },
+    {
+      "componente": "Actividades acero (bolsa fija F)",
+      "v0": 2977517840,
+      "v1": 0,
+      "v2": 2977517840,
+      "v3": 2977517840,
+      "v4": 2977517840,
+      "delta_v0_v4": 0,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 701 col M",
+      "nota": "V1 IDU (25-02-2026) lo trae en 0 porque IDU consolidaba de forma distinta; en V2 y siguientes se restablece la bolsa contractual"
+    },
+    {
+      "componente": "Ensayos laboratorio (G)",
+      "v0": 299267609,
+      "v1": 299267609,
+      "v2": 299267609,
+      "v3": 299267609,
+      "v4": 299267609,
+      "delta_v0_v4": 0,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 700 col M"
+    },
+    {
+      "componente": "SDA (evaluaciones y seguimiento) (H)",
+      "v0": 31328679,
+      "v1": 31328679,
+      "v2": 31328679,
+      "v3": 31328679,
+      "v4": 31328679,
+      "delta_v0_v4": 0,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 702 col M"
+    },
+    {
+      "componente": "Fase obras iniciales (I)",
+      "v0": 758734334,
+      "v1": 705883518,
+      "v2": 758734334,
+      "v3": 758734334,
+      "v4": 758734334,
+      "delta_v0_v4": 0,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 705 col M",
+      "nota": "V1 IDU lo cargaba en 705.883.518; en V2, V3, V4 vuelve a la bolsa contractual"
+    },
+    {
+      "componente": "Bioseguridad (J)",
+      "v0": 59390312,
+      "v1": 59390312,
+      "v2": 59390312,
+      "v3": 59390312,
+      "v4": 59390312,
+      "delta_v0_v4": 0,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 703 col M"
+    },
+    {
+      "componente": "Fondo compensaciones (K)",
+      "v0": 0,
+      "v1": 0,
+      "v2": 5942657520,
+      "v3": 0,
+      "v4": 0,
+      "delta_v0_v4": 0,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 704 col M",
+      "nota": "V2 introdujo un Fondo de Compensaciones de 5.942.657.520 que se retiro en V3 y V4"
+    },
+    {
+      "componente": "TOTAL GENERAL",
+      "v0": 59426575199,
+      "v1": 61411887929,
+      "v2": 77944220992,
+      "v3": 63749467094,
+      "v4": 75426575199,
+      "delta_v0_v4": 16000000000,
+      "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 707 col M / hoja resumen fila 19"
+    }
+  ],
+  "desvios_analisis": {
+    "v0_cap7_con_aiu": 326577225,
+    "v0_cap7_cd": 247686413,
+    "v1_cap7_cd": 247686413,
+    "v2_cap7_cd": 19347297314,
+    "v2_cap7_delta_cd": 19099610901,
+    "v3_cap7_valor": 0,
+    "v4_cap7_valor_col_m": 0,
+    "v4_cap7_balance": -326577225,
+    "delta_v2_v4_cap7": -19347297314,
+    "explicacion": "En V2 el capitulo 7 DESVIOS acumulo 19.347.297.314 en CD porque el contratista metio dentro del capitulo 7 los componentes no-obra completos (Ajustes cambio vigencia 4.555M, PMA-SST 3.672M, Acero fijo 2.977M, Dialogo 2.339M, PMT 2.025M, Fase obras iniciales 758M, Laboratorio 299M, Bioseguridad 59M, SDA 31M) mas 3 items reales de acero agregados (1.339M + 292M + 259M) y una malla electrosoldada agregada (735M). En V3 y V4 la contabilidad se reordeno: los componentes no-obra volvieron a estar como bolsas separadas fuera del capitulo 7 (filas 696-705 en V4) y del capitulo 7 solo quedo el item 7.001 mantenimiento rutinario, que se elimino por completo (cantidad V0 13.481 m2 -> cantidad V4 0 m2, valor V0 con AIU 326.577.225 -> valor V4 0). La reduccion de -326.577.225 se refleja en el balance mayores/menores del proyecto (columna O).",
+    "conclusion": "El cap 7 de V2 no fue eliminado como sobreproyeccion sino RECLASIFICADO: los 19.347M no eran valor real de desvios, eran componentes contractuales mal ubicados en el capitulo. En V4 solo se elimino el unico item real del capitulo (mantenimiento rutinario) por -326.577.225."
+  },
+  "sst_detalle": {
+    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+    "filas": "733-742",
+    "subtotales": {
+      "A_personal": 636053253,
+      "B_actividades_constructivas": 99385568,
+      "C_manejo_vegetacion_paisaje": 62056927.47,
+      "D_gestion_sst": 149578289.07,
+      "E_plan_senalizacion": 25512074.67,
+      "subtotal_ABCDE": 972586112.21
+    },
+    "aiu_pct_sst": 20.006,
+    "aiu_valor": 194575577.61,
+    "subtotal_con_aiu": 1167161689.81,
+    "costo_x_mes_con_aiu": 145895211.23,
+    "costo_x_mes_sin_aiu": 121573264.03,
+    "meses": 8,
+    "total_8_meses_con_aiu": 1167161689.81,
+    "componente_sst_total_v4": 4110277014,
+    "esperado_4110277014": 4110277014,
+    "verificacion_pma_sst": {
+      "v0_sst": 2943115324,
+      "delta_8_meses": 1167161690,
+      "v4_sst_calc": 4110277014,
+      "delta": 0,
+      "estado": "OK"
+    },
+    "aiu_contractual_obras_pct": 31.849,
+    "diferencia_aiu_pct": 11.843,
+    "explicacion_aiu_diferente": "El AIU contractual de obras es 31,849% (Administracion + Imprevistos + Utilidad) pactado para actividades constructivas. Para insumos y actividades de PMA-SST, Dialogo ciudadano y PMT se aplica un AIU reducido porque son bolsas de personal y actividades de soporte donde no aplica el mismo componente de Imprevistos (5%) ni de Utilidad completa. En este contrato se aplican: PMA-SST 20,006%, Dialogo 19,566%, PMT 19,566%. Esta diferenciacion esta prevista en la matriz contractual y en las cartillas IDU: el AIU pleno solo se cobra sobre costos directos de obra civil, redes y acero; los componentes de acompañamiento tienen tarifa diferencial. El delta de 11,843 puntos porcentuales entre 31,849% (obras) y 20,006% (SST) refleja el retiro del renglon Imprevistos y una utilidad parcial."
+  },
+  "componentes_sin_cambio": [
+    {
+      "componente": "Ensayos laboratorio (G)",
+      "v0": 299267609,
+      "v4": 299267609,
+      "delta": 0,
+      "motivo": "Bolsa fija contractual con IVA. El plazo adicional de 8 meses no incrementa la bolsa porque los ensayos se dimensionaron sobre el alcance total del contrato, no sobre el plazo. Si se ejecutaran mas ensayos que los previstos habria que solicitar adicion especifica.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 700
+    },
+    {
+      "componente": "SDA (H)",
+      "v0": 31328679,
+      "v4": 31328679,
+      "delta": 0,
+      "motivo": "Bolsa fija para pago de evaluaciones y seguimiento a la Secretaria Distrital de Ambiente. Tarifas ya definidas por resolucion; no cambia con plazo.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 702
+    },
+    {
+      "componente": "Fase obras iniciales (I)",
+      "v0": 758734334,
+      "v4": 758734334,
+      "delta": 0,
+      "motivo": "Bolsa fija ya causada al inicio del contrato (gestiones preliminares, disenos, IVA). El plazo adicional no genera nuevas gestiones preliminares.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 705
+    },
+    {
+      "componente": "Bioseguridad (J)",
+      "v0": 59390312,
+      "v4": 59390312,
+      "delta": 0,
+      "motivo": "Bolsa fija con AIU. No se justifica por 8 meses adicionales pese a que la bioseguridad es proporcional al plazo; el contratista no la actualizo.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 703
+    },
+    {
+      "componente": "Ajustes por cambio de vigencia (E)",
+      "v0": 4555525079,
+      "v4": 4555525079,
+      "delta": 0,
+      "motivo": "Es un ajuste unico de indexacion por cambio de vigencia pactado desde la firma del contrato; no se recalcula por adicion.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 699
+    },
+    {
+      "componente": "Actividades acero (bolsa F)",
+      "v0": 2977517840,
+      "v4": 2977517840,
+      "delta": 0,
+      "motivo": "Bolsa fija contractual que incluye AIU y cambio de vigencia. Es una unidad global del contrato. Los ITEMS REALES de acero se cargan dentro de obras (filas 685-690) con 3.052.987.517 en V4; ambos coexisten. Ver acero_diferencia.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 701
+    },
+    {
+      "componente": "Fondo compensaciones (K)",
+      "v0": 0,
+      "v4": 0,
+      "delta": 0,
+      "motivo": "En V0 y V4 esta en cero. En V2 se cargo 5.942.657.520 pero se retiro en V3 y V4 porque no habia compensaciones ambientales/arboreas que financiar (posiblemente reemplazadas por NP arqueologia NP-109/NP-110 dentro de obras).",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 704
+    }
+  ],
+  "acero_diferencia": {
+    "bloque_680_687_referencia_brief": "El BRIEF menciona filas 680-687; el bloque acero real esta en filas 685-690",
+    "bloque_interno_v4_filas_685_690": {
+      "fila_685_cabecera_pavimentos_subtotal": 2667280349,
+      "fila_686_3708_acero_refuerzo_pavimentos": 1557630470,
+      "fila_687_4959_acero_liso_1_1_4": 900761414,
+      "fila_688_7713_dovelas_1_1_2": 208888465,
+      "fila_689_cabecera_espacio_publico_subtotal": 385707168,
+      "fila_690_3708_acero_refuerzo_espacio_publico": 385707168,
+      "fila_691_8471_malla_electrosoldada_v4": 0,
+      "suma_pavimentos": 2667280349,
+      "suma_espacio_publico": 385707168,
+      "suma_total_bloque_v4": 3052987517
+    },
+    "bloque_680_687_suma": 3052987517,
+    "componente_fijo_F": 2977517840,
+    "delta": 75469677,
+    "explicacion": "El bloque interno de aceros (filas 685-690, subtotal 3.052.987.517 en V4 con AIU 31,849%) esta cargado como ITEMS REALES DENTRO DE OBRAS con las cantidades actualizadas (247.985 -> 211.290,08 kg acero refuerzo pavimentos + 43.297 -> 52.320,56 kg acero refuerzo espacio publico + 52.558 -> 81.288,82 kg acero liso 1 1/4 + 0 -> 19.704,6 kg dovelas 1 1/2 + 473 -> 0 kg malla). En paralelo el componente F ACTIVIDADES ACERO (fila 701) por 2.977.517.840 es una BOLSA CONTRACTUAL FIJA que incluye AIU y cambio de vigencia, pactada como global desde la firma. La diferencia de 75.469.677 se explica porque: (a) la bolsa F fue dimensionada con precios/cantidades contractuales originales y su composicion incluye cambio de vigencia (indexacion) mientras el bloque interno usa VU actuales; (b) el bloque interno tiene precios directos y AIU 31,849% pero no incluye la banda de cambio de vigencia con la que se dimensiono F; (c) en la conciliacion contable IDU-Interventoria ambos importes deben verificarse: el mayor entre bloque y bolsa deberia pagarse por acero, no ambos.",
+    "riesgo_doble_pago": "SI el bloque interno (3.052.987.517) ya esta incluido en obras+AIU (58.196.933.800) y ademas se paga la bolsa F (2.977.517.840) por separado, existe riesgo de doble pago por aproximadamente 2.977M-3.053M. La interventoria debe exigir aclaracion al contratista: definir si la bolsa F se descuenta del pago de obras cuando se pagan los items reales de acero, o si son componentes independientes.",
+    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP"
+  },
+  "ritmo_mensual": {
+    "adicion_neta": 16000000000,
+    "meses": 8,
+    "mensual": 2000000000,
+    "distribucion": {
+      "obras": 13893639001,
+      "pma_sst": 1167161690,
+      "dialogo": 555057738,
+      "pmt": 384141571,
+      "otros": 0
+    },
+    "verificacion_al_peso": {
+      "suma_distribucion": 15999999999,
+      "diferencia_con_16mil_millones": 1,
+      "estado": "OK: la diferencia es de $1 por redondeo interno en calculo de AIU"
+    },
+    "mensualidad_obras_pura": 1736704875,
+    "mensualidad_pma_sst": 145895211,
+    "mensualidad_dialogo": 69382217,
+    "mensualidad_pmt": 48017696,
+    "ritmo_total_mensual_calculado": 1999999999,
+    "contraste_ejecucion_historica": {
+      "dato_disponible": false,
+      "fuente_ejecutivo": "La hoja EJECUTIVO solo trae el resumen por CIV y el comparativo de condiciones, no ejecucion mes a mes",
+      "observacion": "Segun Hoja1: obra ya iniciada 19.652M, por iniciar 19.034M, no alcanza 19.511M. Si el contrato lleva 3 aprox anos causando 44,3M y ya se ha ejecutado ~19,6M en CIVs iniciados, el ritmo real historico es inferior a $600M/mes. Proyectar $2.000M/mes por 8 meses (3,3x el ritmo historico) es un supuesto agresivo que la Interventoria debe verificar contra cronogramas certificados, disponibilidad de frentes de obra y capacidad instalada del contratista.",
+      "recomendacion": "Solicitar al contratista el cronograma detallado semana a semana con curvas S y las certificaciones de facturacion de los ultimos 12 meses. Comparar contra los $2.000M/mes propuestos."
+    }
+  },
+  "v3_a_v4": {
+    "total_v3": 63749467094,
+    "total_v4": 75426575199,
+    "delta": 11677108105,
+    "drivers": [
+      {
+        "componente": "Obras civiles + redes + acero (con AIU)",
+        "v3": 47836306969,
+        "v4": 58196933800,
+        "delta": 10360626831,
+        "pct_del_delta_total": 88.7
+      },
+      {
+        "componente": "PMA-SST (paso de 3 meses a 8 meses)",
+        "v3": 3380795309,
+        "v4": 4110277014,
+        "delta": 729481705,
+        "pct_del_delta_total": 6.25,
+        "detalle": "V3 tenia SST V0 (2.943.115.324) + 3 meses adicionales (437.679.985). V4 tiene V0 + 8 meses (1.167.161.690). Delta por 5 meses adicionales."
+      },
+      {
+        "componente": "Dialogo ciudadano (paso de 3 meses a 8 meses)",
+        "v3": 2083112282,
+        "v4": 2430023370,
+        "delta": 346911088,
+        "pct_del_delta_total": 2.97
+      },
+      {
+        "componente": "PMT (paso de 3 meses a 8 meses)",
+        "v3": 1767488681,
+        "v4": 2007577162,
+        "delta": 240088481,
+        "pct_del_delta_total": 2.06
+      }
+    ],
+    "efecto_precio_vs_cantidad": {
+      "hipotesis": "Los VU (columna K costo directo y L CD+AIU) son practicamente identicos entre V3 y V4: por ej. replanteo VU 833/1.098 (V3) vs 833/1.098 (V4); demolicion pavimento asfaltico 35.570/46.899 vs 35.570/46.899. Por lo tanto el delta obras (10.361M) es fundamentalmente EFECTO CANTIDAD y agregacion de nuevos NPs, no efecto precio.",
+      "conclusion": "El salto V3->V4 no es reindexacion, es incremento de cantidades y/o alcance en obras (95%+) mas el paso de 3 a 8 meses en las bolsas de acompañamiento SST/PGS/PMT."
+    },
+    "cambio_estructural": "V3 estaba dimensionado para 3 meses adicionales; V4 esta dimensionado para 8 meses adicionales. El delta observable no es solo precio sino: (1) escalar los componentes de acompañamiento por 5 meses mas, y (2) reconocer NPs/mayores cantidades adicionales en obras que en V3 no estaban."
+  },
+  "hallazgos": [
+    {
+      "id": "H06-01",
+      "severidad": "ALTA",
+      "titulo": "Riesgo de doble pago en acero por 2.977M-3.053M",
+      "descripcion": "En V4 coexisten (a) los items reales de acero cargados dentro de obras+AIU sumando 3.052.987.517 (filas 685-690) y (b) la bolsa fija F Actividades Acero de 2.977.517.840 (fila 701) que no se modifica desde V0. La suma total pagable de acero seria 6.030.505.357, lo cual es inconsistente con el diseno estructural (memorias de la hoja Aceros muestran ~2.500M en cantidades teoricas).",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "685-690 y 701",
+      "impacto_pesos": 2977517840,
+      "recomendacion": "Exigir al contratista aclaracion escrita: si la bolsa F se pagara adicional al costo de los items reales, presentar sustento tecnico de esa duplicidad. En caso contrario, descontar la bolsa F del pago cuando se pagan los items reales de acero para evitar doble facturacion."
+    },
+    {
+      "id": "H06-02",
+      "severidad": "ALTA",
+      "titulo": "Capitulo 7 DESVIOS de V2 era un contenedor mal clasificado por 19.347M",
+      "descripcion": "En V2 el capitulo 7 acumulo 19.347.297.314 en CD porque el contratista metio dentro de el todos los componentes no-obra (PMA-SST, Dialogo, PMT, Ajustes vigencia, Acero fijo, Fase obras, Laboratorio, Bioseguridad, SDA). En V3 y V4 esto se reordeno y solo queda el item real 7.001 (mantenimiento rutinario) que se elimina por completo, dejando cap 7 en cero. La reclasificacion V2->V4 no es reduccion de alcance sino re-agrupacion contable.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "679-680",
+      "impacto_pesos": 19347297314,
+      "recomendacion": "Documentar formalmente en la comunicacion oficial que la reduccion del capitulo 7 en V4 no representa un ahorro sino una reclasificacion. Solicitar al contratista una tabla de conciliacion V2-V4 por capitulo antes de proceder con cualquier aprobacion de adicion."
+    },
+    {
+      "id": "H06-03",
+      "severidad": "ALTA",
+      "titulo": "Ritmo mensual propuesto ($2.000M/mes) es 3,3x el ritmo historico del contrato",
+      "descripcion": "La adicion neta de 16.000M en 8 meses implica un ritmo de $2.000M/mes. Segun Hoja1, la obra ya ejecutada en CIVs iniciados suma ~$19.652M. Si esto se causo en 30 meses aprox de contrato (firma 2021, corte 2026), el ritmo real historico es ~$650M/mes. Comprometerse a $2.000M/mes por 8 meses requiere una capacidad operativa 3,3 veces superior a la demostrada.",
+      "hoja": "Hoja1 + resumen EJECUTIVO",
+      "fila": "N/A",
+      "impacto_pesos": 16000000000,
+      "recomendacion": "Solicitar al contratista: (1) cronograma semana a semana con curvas S y frentes de obra activos simultaneos; (2) certificaciones de facturacion mensual de los ultimos 24 meses; (3) plan de recursos (personal, equipo, subcontratistas) que soporte el ritmo triplicado; (4) analisis de riesgo de incumplimiento con matriz de contingencia."
+    },
+    {
+      "id": "H06-04",
+      "severidad": "MEDIA",
+      "titulo": "Bioseguridad no se actualiza a 8 meses pese a ser proporcional al plazo",
+      "descripcion": "El componente J Bioseguridad se mantiene en 59.390.312 (V0 = V4). Sin embargo la bioseguridad requiere insumos periodicos (elementos de proteccion personal, senalizacion, protocolos) que escalan con el tiempo. En un contrato ampliado 8 meses adicionales, tecnicamente deberia haber un incremento proporcional. El contratista no lo pidio.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 703,
+      "impacto_pesos": 40000000,
+      "recomendacion": "Verificar si el contratista renuncia expresamente a solicitar adicion en bioseguridad para el plazo ampliado, o si esta consumiendo la bolsa vigente. Documentar la decision para evitar solicitudes posteriores no previstas."
+    },
+    {
+      "id": "H06-05",
+      "severidad": "MEDIA",
+      "titulo": "Salto V3 (63MM, 3 meses) a V4 (75MM, 8 meses) implica delta de $11.677M",
+      "descripcion": "En 4 meses (mayo a septiembre 2026) el presupuesto adicional pedido paso de $4.323M (V3) a $16.000M (V4), un incremento de $11.677M. El 88,7% del delta se explica por obras (+$10.361M) y el 11,3% por escalar SST/PGS/PMT de 3 a 8 meses. Los VU (precios unitarios) son practicamente identicos entre V3 y V4, por lo que el delta es efecto CANTIDAD y NPs, no efecto PRECIO.",
+      "hoja": "PRESUPUESTO 63 mm vs PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "657 y 692",
+      "impacto_pesos": 11677108105,
+      "recomendacion": "Solicitar al contratista la sustentacion tecnica del incremento de $10.361M en obras entre V3 y V4: (1) que items se incorporaron o crecieron; (2) que NPs se agregaron; (3) por que no se identificaron en V3 (mayo 2026) y aparecen 4 meses despues. Verificar contra memorias de cantidades y bitacora de obra."
+    },
+    {
+      "id": "H06-06",
+      "severidad": "MEDIA",
+      "titulo": "El Fondo de Compensaciones aparecio en V2 y desaparecio en V4 sin trazabilidad",
+      "descripcion": "V2 (Alt 1, 21-04-2026) incluyo un Fondo de Compensaciones de 5.942.657.520 que no existe ni en V0 ni en V4. En V3 y V4 vuelve a 0. No hay comunicacion oficial que explique el origen ni el motivo de su retiro. Podria estar relacionado con compensaciones ambientales/arqueologicas que se movieron a los NP-109 y NP-110 (arqueologia GLB/MES) que aparecen ahora dentro de obras.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 704,
+      "impacto_pesos": 5942657520,
+      "recomendacion": "Solicitar al contratista trazabilidad documental del Fondo de Compensaciones: (1) que compensaciones especificas se planeaban financiar; (2) por que se retiraron; (3) verificar que no se este pagando doble via NPs de arqueologia u otros."
+    },
+    {
+      "id": "H06-07",
+      "severidad": "INFO",
+      "titulo": "AIU diferenciado por componente confirmado por presupuesto",
+      "descripcion": "El presupuesto aplica AIU 31,849% a obras+redes+acero (contractual), AIU 20,006% a PMA-SST y AIU 19,566% a Dialogo y PMT. La diferenciacion esta documentada en las filas 740 del detalle SST y es coherente con las cartillas IDU: el AIU pleno solo aplica a costos directos de obra civil.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": "740",
+      "impacto_pesos": 0,
+      "recomendacion": "Documentar en informe mensual de Interventoria los tres AIU diferenciados para claridad ante IDU."
+    },
+    {
+      "id": "H06-08",
+      "severidad": "BAJA",
+      "titulo": "Fila 707 dice fecha 04-05-2026 pero el archivo es del 01-09-2026",
+      "descripcion": "La celda de la fila 707 rotula VALOR TOTAL CONTRATO PRESUPUESTO 04-05-2026 pero segun BRIEF y el nombre del archivo la version es del 01-09-2026. Es una etiqueta desactualizada.",
+      "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+      "fila": 707,
+      "impacto_pesos": 0,
+      "recomendacion": "Solicitar al contratista corregir la etiqueta de fecha para evitar confusion en revisiones futuras."
+    }
+  ],
+  "resumen_ejecutivo": {
+    "waterfall_correcto": true,
+    "adicion_verificada_al_peso": "15.999.999.999 (diferencia de $1 por redondeo AIU)",
+    "sst_verificacion": "OK - subtotal ABCDE 972.586.112,21 con AIU 20,006% = 1.167.161.689,81 = delta PMA-SST V0->V4",
+    "cap7_desvios": "V2 tenia 19.347M mal clasificados como desvios (era reclasificacion); V4 lo dejo en 0 eliminando item 7.001",
+    "top_drivers_v3_v4": [
+      "Obras +$10.361M (88,7%)",
+      "PMA-SST +$729M por 5 meses adicionales (6,25%)",
+      "Dialogo +$347M por 5 meses adicionales (2,97%)",
+      "PMT +$240M por 5 meses adicionales (2,06%)"
+    ]
+  }
+}

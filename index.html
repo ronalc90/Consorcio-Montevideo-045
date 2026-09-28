@@ -463,6 +463,7 @@ tr:hover td { background: #f7fafc; }
   <div class="tab" data-tab="frentes">Frentes (27 CIVs)</div>
   <div class="tab" data-tab="presupuesto">Presupuesto Detallado</div>
   <div class="tab" data-tab="compba" style="background: linear-gradient(135deg, #fef3c7, #fff); border-left: 3px solid var(--accent);">IDU Oficial vs Propuesta Contratista</div>
+  <div class="tab" data-tab="p75mm" style="background: linear-gradient(135deg, #fee2e2, #fff); border-left: 3px solid var(--danger);">Presupuesto 01-09-2026 · 75MM · 8 meses</div>
 </div>
 
 <div class="content">
@@ -742,7 +743,7 @@ tr:hover td { background: #f7fafc; }
     </div>
 
     <!-- Sección 6: Descargas paquete -->
-    <div class="table-wrap">
+    <div class="table-wrap" id="compbaDescargas">
       <div class="table-header">
         <h3>6. Descargas — Paquete completo de comparativa en Excel</h3>
       </div>
@@ -778,6 +779,254 @@ tr:hover td { background: #f7fafc; }
         <br>
         <strong>Verificación garantizada:</strong> cada hoja de componente verifica que su cálculo cuadre al peso. La hoja Auditoría muestra ✓ cuando la suma de los 11 componentes = total declarado, cuando Σ CIVs = subtotal A, cuando Σ items chapters 1-6 = CD oficial.<br>
         <strong>Formato profesional:</strong> headers congelados, formato moneda colombiana, colores IDU (azul) / Contratista (naranja), deltas rojo/verde según signo.
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL PRESUPUESTO 01-09-2026 75MM · 8 meses -->
+  <div class="panel" id="panel-p75mm">
+    <div style="background: linear-gradient(135deg, #fee2e2, #fff5f5); border-left: 4px solid var(--danger); padding: 16px 20px; border-radius: 8px; margin-bottom: 24px;">
+      <h2 style="font-size:1.2em;color:var(--primary);margin-bottom:8px">Presupuesto 01-09-2026 — Adición $16.000M + 8 meses de plazo</h2>
+      <p style="color:var(--text);font-size:.9em;line-height:1.5">
+        El Consorcio VICON 024 radicó el 01-09-2026 el archivo <strong>"4. PRESUPUESTO 01-09-2026 (75MM) + 8 MESES.xlsx"</strong>. La adición neta solicitada es <strong style="color:var(--danger)">$16.000.000.000</strong> y <strong>8 meses</strong> de plazo. El total pasa de <strong>$59.426.575.199</strong> (V0 contrato firmado) a <strong style="color:var(--danger)">$75.426.575.199</strong> (V4).
+        <br>· Obras con AIU (col M · fila 688): <strong>$58.196.933.800</strong> (+$13.893.639.001 vs V0). AIU contractual 31,849%.
+        <br>· Componentes no-obra: +$2.106M (PMA-SST +$1.167M, Diálogo +$555M, PMT +$384M; ajustes, acero, laboratorio, SDA, bioseguridad y fase inicial <em>sin cambio</em>).
+        <br>· Ritmo mensual implícito: ~$2.000M/mes durante 8 meses.
+      </p>
+    </div>
+
+    <!-- KPIs principales -->
+    <div class="dashboard" id="p75KPIs"></div>
+
+    <!-- Subsección A: Waterfall V0→V4 -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>A. Waterfall V0 → V1 → V2 → V3 → V4 por componente</h3>
+        <div class="controls">
+          <button class="btn btn-outline" onclick="exportTableCSV('p75Waterfall')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table">
+        <table id="p75Waterfall">
+          <thead><tr>
+            <th>Componente</th>
+            <th class="num">V0 Contrato firmado</th>
+            <th class="num">V1 IDU 25-02-2026</th>
+            <th class="num">V2 VICON 21-04-2026</th>
+            <th class="num">V3 63MM intermedia</th>
+            <th class="num">V4 01-09-2026</th>
+            <th class="num">Δ V0 → V4</th>
+          </tr></thead>
+          <tbody id="p75WaterfallBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Subsección B: Variación de cantidades -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>B. Variación de cantidades por ítem — vista por renglón</h3>
+        <div class="controls">
+          <input type="text" id="p75SearchItem" placeholder="Buscar código / ítem / descripción">
+          <select id="p75FilterChapter"><option value="all">Todos los capítulos</option></select>
+          <select id="p75FilterEstado">
+            <option value="all">Todos los estados</option>
+            <option value="aumento">Aumento</option>
+            <option value="disminucion">Disminución</option>
+            <option value="eliminado">Eliminado</option>
+            <option value="nuevo_contractual">Nuevo contractual</option>
+            <option value="np_nuevo">NP nuevo</option>
+            <option value="sin_cambio">Sin cambio</option>
+          </select>
+          <button class="btn btn-outline" onclick="p75ToggleView()">Alternar vista renglón / neta por código</button>
+          <button class="btn btn-outline" onclick="exportTableCSV('p75Items')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table" style="max-height:600px">
+        <table id="p75Items">
+          <thead><tr>
+            <th>Fila</th>
+            <th>Cap</th>
+            <th>Código</th>
+            <th>Ítem</th>
+            <th>Descripción</th>
+            <th>Und</th>
+            <th class="num">Cant inicial (H)</th>
+            <th class="num">Cant final (I)</th>
+            <th class="num">Δ Cant (J)</th>
+            <th class="num">VU CD (K)</th>
+            <th class="num">VU CD+AIU (L)</th>
+            <th class="num">Valor inicial (N)</th>
+            <th class="num">Valor final (M)</th>
+            <th class="num">Δ Valor</th>
+            <th>Estado</th>
+          </tr></thead>
+          <tbody id="p75ItemsBody"></tbody>
+          <tfoot id="p75ItemsFoot"></tfoot>
+        </table>
+      </div>
+    </div>
+
+    <!-- Subsección B2: Top y reemplazos NP -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:16px;margin-bottom:24px">
+      <div class="table-wrap">
+        <div class="table-header"><h3>Top 15 aumentos</h3></div>
+        <div class="scroll-table" style="max-height:400px"><table id="p75TopUp"><thead><tr><th>Fila</th><th>Código</th><th>Descripción</th><th class="num">Δ Valor</th></tr></thead><tbody id="p75TopUpBody"></tbody></table></div>
+      </div>
+      <div class="table-wrap">
+        <div class="table-header"><h3>Top 15 disminuciones</h3></div>
+        <div class="scroll-table" style="max-height:400px"><table id="p75TopDown"><thead><tr><th>Fila</th><th>Código</th><th>Descripción</th><th class="num">Δ Valor</th></tr></thead><tbody id="p75TopDownBody"></tbody></table></div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>Reemplazos ítem contractual → NP (sobrecosto neto)</h3>
+      </div>
+      <div class="scroll-table">
+        <table id="p75Reemplazos"><thead><tr>
+          <th>Contractual eliminado / reducido</th>
+          <th class="num">Δ Valor</th>
+          <th>NP que lo reemplaza</th>
+          <th class="num">Δ Valor NP</th>
+          <th class="num">Sobrecosto neto</th>
+        </tr></thead><tbody id="p75ReemplazosBody"></tbody></table>
+      </div>
+    </div>
+
+    <!-- Subsección C: Variación por CIV -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>C. Variación por CIV — descomposición del Δ obras</h3>
+        <div class="controls">
+          <select id="p75CivSel"></select>
+          <button class="btn btn-outline" onclick="exportTableCSV('p75CivDesc')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table">
+        <table id="p75CivDesc"><thead><tr>
+          <th>CIV</th>
+          <th>Nomenclatura</th>
+          <th class="num">Área m²</th>
+          <th class="num">Obras iniciales</th>
+          <th class="num">Obras finales</th>
+          <th class="num">Δ</th>
+          <th class="num">Δ Aumentos</th>
+          <th class="num">Δ Disminuciones</th>
+          <th class="num">Δ NP</th>
+          <th class="num">Δ Contractual nuevo</th>
+          <th class="num">Δ Eliminado</th>
+        </tr></thead><tbody id="p75CivDescBody"></tbody></table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-header"><h3>Δ por CIV — gráfica</h3></div>
+      <div style="padding:20px;height:420px"><canvas id="p75ChartCivDelta"></canvas></div>
+    </div>
+
+    <!-- Subsección D: Costo por CIV -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>D. Costo por CIV — 27 CIVs: obras + componentes = $75.426.575.199</h3>
+        <div class="controls">
+          <select id="p75CostoSubgrupo"><option value="all">Todos los subgrupos</option><option value="2">SG2 Montevideo</option><option value="5">SG5 Puente Aranda</option></select>
+          <button class="btn btn-outline" onclick="exportTableCSV('p75Costo')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table" style="max-height:600px">
+        <table id="p75Costo"><thead><tr>
+          <th>CIV</th>
+          <th>Nomenclatura</th>
+          <th>SG</th>
+          <th class="num">Área m²</th>
+          <th class="num">Obras CD</th>
+          <th class="num">Obras + AIU</th>
+          <th class="num">Componentes asignados</th>
+          <th class="num">Total con AIU</th>
+          <th class="num">$/m² obras</th>
+          <th class="num">$/m² total</th>
+          <th class="num">% NP</th>
+          <th class="num">V1 obras+AIU</th>
+          <th class="num">V2 obras+AIU</th>
+          <th class="num">Δ obras V4-V2</th>
+        </tr></thead><tbody id="p75CostoBody"></tbody><tfoot id="p75CostoFoot"></tfoot></table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-header"><h3>$/m² por CIV — outliers en rojo</h3></div>
+      <div style="padding:20px;height:420px"><canvas id="p75ChartDolarM2"></canvas></div>
+    </div>
+
+    <!-- Subsección D2: Grupos alcance Hoja1 -->
+    <div class="table-wrap">
+      <div class="table-header"><h3>Grupos alcance (Hoja1): ya iniciados / por iniciar / no alcanza</h3></div>
+      <div id="p75Alcance" style="padding: 20px"></div>
+    </div>
+
+    <!-- Subsección E: NPs -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>E. Ítems No Previstos (NP) — 105 renglones · 81 códigos únicos · $14.150.924.549</h3>
+        <div class="controls">
+          <button class="btn btn-outline" onclick="exportTableCSV('p75NPs')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table" style="max-height:500px">
+        <table id="p75NPs"><thead><tr>
+          <th>Fila</th>
+          <th>Ítem NP</th>
+          <th>Código IDU</th>
+          <th>Descripción</th>
+          <th>Und</th>
+          <th class="num">Cantidad</th>
+          <th class="num">VU CD</th>
+          <th class="num">Valor con AIU</th>
+          <th>Clasificación</th>
+        </tr></thead><tbody id="p75NPsBody"></tbody><tfoot id="p75NPsFoot"></tfoot></table>
+      </div>
+    </div>
+
+    <!-- Subsección F: Hallazgos -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>F. Hallazgos para la Interventoría — por severidad</h3>
+        <div class="controls">
+          <select id="p75HallSev">
+            <option value="all">Todas las severidades</option>
+            <option value="ALTA">ALTA</option>
+            <option value="MEDIA">MEDIA</option>
+            <option value="BAJA">BAJA</option>
+            <option value="INFO">INFO</option>
+          </select>
+          <button class="btn btn-outline" onclick="exportTableCSV('p75Hall')">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="scroll-table" style="max-height:600px">
+        <table id="p75Hall"><thead><tr>
+          <th>ID</th>
+          <th>Severidad</th>
+          <th>Título</th>
+          <th>Fuente</th>
+          <th class="num">Impacto $</th>
+          <th>Recomendación</th>
+        </tr></thead><tbody id="p75HallBody"></tbody></table>
+      </div>
+    </div>
+
+    <!-- Descargas -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>Descargas — Excel y CSV</h3>
+      </div>
+      <div style="padding:20px;display:flex;flex-wrap:wrap;gap:10px">
+        <button class="btn btn-primary" onclick="downloadP75All()">⬇ Descargar Excel completo (7 hojas)</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('items')">CSV Variación ítems</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('civ')">CSV Δ por CIV</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('costo')">CSV Costo por CIV</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('nps')">CSV NPs</button>
+        <button class="btn btn-outline" onclick="downloadP75Csv('hall')">CSV Hallazgos</button>
       </div>
     </div>
   </div>
@@ -841,13 +1090,17 @@ const fmtD = (n, d=2) => n.toLocaleString('es-CO', {maximumFractionDigits:d, min
 const fmtB = n => { if (n >= 1e9) return '$'+fmtD(n/1e9,1)+' MM'; if (n >= 1e6) return '$'+fmtD(n/1e6,0)+' M'; return '$'+fmt(n); };
 
 let COMPBA = null;
+let P75 = null;         // analisis_2026_09.json (consolidado)
+let P75_PRES = null;    // presupuesto_2026_09.json (matriz item x CIV V4)
 
 function loadData() {
   Promise.all([
     fetch('data.json').then(r=>r.json()),
-    fetch('comparativa.json').then(r=>r.json()).catch(()=>null)
-  ]).then(([d, c]) => {
-    DATA = d; COMPBA = c;
+    fetch('comparativa.json').then(r=>r.json()).catch(()=>null),
+    fetch('analisis_2026_09.json').then(r=>r.json()).catch(()=>null),
+    fetch('presupuesto_2026_09.json').then(r=>r.json()).catch(()=>null)
+  ]).then(([d, c, p, pp]) => {
+    DATA = d; COMPBA = c; P75 = p; P75_PRES = pp;
     init();
     document.getElementById('loading').style.display='none';
   });
@@ -857,6 +1110,7 @@ function init() {
   renderDashboard(); renderResumen(); renderChapters(); renderCivGrid();
   renderFullBudget(); populateFilters(); setupEvents(); renderReportDashboard(); renderCharts();
   if (COMPBA) renderCompba();
+  if (P75) renderP75();
 }
 
 function getItemsByCiv(civId) { return DATA.items.filter(i => i.type==='item' && i.cantidades[civId]>0); }
@@ -1463,12 +1717,20 @@ function renderCompbaCIV() {
 
 function renderCompbaAlcance() {
   const alc = COMPBA.alcance_alt2;
-  const civById = {}; (COMPBA.civs_cont || COMPBA.civs).forEach(c => civById[c.id] = c);
+  // Bug fix: los ids de civs_cont pueden venir como "16004876 (50002375)" pero
+  // alcance_alt2.no_alcanza referencia "16004876" sin sufijo. Se indexa por ambas
+  // llaves — la completa y la del primer token — para que el CIV aparezca en "No alcanza".
+  const civById = {};
+  (COMPBA.civs_cont || COMPBA.civs).forEach(c => {
+    civById[c.id] = c;
+    const short = String(c.id).split(' ')[0];
+    if (!civById[short]) civById[short] = c;
+  });
   const block = (label, ids, color, icon) => {
     let cards = '';
     let subtotal = 0;
     ids.forEach(id => {
-      const c = civById[id];
+      const c = civById[id] || civById[String(id).split(' ')[0]];
       if (!c) return;
       subtotal += c.total_componentes;
       cards += `<div class="civ-card-clickable" onclick="openCivDetail('${c.id}')" style="background:#fff;padding:12px 14px;border-radius:6px;border-left:3px solid ${color};box-shadow:0 1px 2px rgba(0,0,0,.08);min-width:200px;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease;position:relative">
@@ -3174,6 +3436,489 @@ function downloadCompba(kind) {
     alert('Error generando Excel: ' + e.message + '\n\nAbre la consola del navegador (F12) para ver el detalle.');
     console.error(e);
   }
+}
+
+// ─────────────────────────────────────────────────────────────
+// ── PESTAÑA PRESUPUESTO 01-09-2026 · 75MM · 8 meses ──
+// ─────────────────────────────────────────────────────────────
+let P75_STATE = { view: 'renglon', filtered: null };
+
+function _p75NormalizeItems() {
+  // analisis_2026_09.json guarda K/L/M/N como K_vu_cd, L_vu_cd_aiu, M_valor_final, N_valor_inicial
+  const items = (P75 && P75.variacion_items && P75.variacion_items.items) || [];
+  items.forEach(i => {
+    if (i.K === undefined && i.K_vu_cd !== undefined) i.K = i.K_vu_cd;
+    if (i.L === undefined && i.L_vu_cd_aiu !== undefined) i.L = i.L_vu_cd_aiu;
+    if (i.M === undefined && i.M_valor_final !== undefined) i.M = i.M_valor_final;
+    if (i.N === undefined && i.N_valor_inicial !== undefined) i.N = i.N_valor_inicial;
+  });
+}
+
+function renderP75() {
+  _p75NormalizeItems();
+  renderP75KPIs();
+  renderP75Waterfall();
+  renderP75Items();
+  renderP75TopMoves();
+  renderP75Reemplazos();
+  renderP75CivDesc();
+  renderP75ChartCivDelta();
+  renderP75Costo();
+  renderP75ChartDolarM2();
+  renderP75Alcance();
+  renderP75NPs();
+  renderP75Hall();
+  setupP75Events();
+}
+
+function renderP75KPIs() {
+  const total_v4 = 75426575199;
+  const total_v0 = 59426575199;
+  const obras_v4 = 58196933800;
+  const obras_v0 = 44303294799;
+  const delta_obras = obras_v4 - obras_v0;
+  const delta_total = total_v4 - total_v0;
+  const npTotal = (P75.nps && P75.nps.inventario) ? P75.nps.inventario.suma_valor_aiu || 14150924549 : 14150924549;
+  document.getElementById('p75KPIs').innerHTML = `
+    <div class="stat-card red"><div class="stat-label">Total V4 01-09-2026</div><div class="stat-value">$${fmt(total_v4)}</div><div class="stat-sub">V0 $${fmt(total_v0)} · Δ +$${fmt(delta_total)}</div></div>
+    <div class="stat-card accent"><div class="stat-label">Obras con AIU (col M)</div><div class="stat-value">$${fmt(obras_v4)}</div><div class="stat-sub">V0 $${fmt(obras_v0)} · Δ +$${fmt(delta_obras)}</div></div>
+    <div class="stat-card"><div class="stat-label">NPs · 105 renglones · 81 códigos</div><div class="stat-value">$${fmt(npTotal)}</div><div class="stat-sub">Aportan ${((npTotal/delta_obras)*100).toFixed(1)}% del Δ obras</div></div>
+    <div class="stat-card green"><div class="stat-label">Plazo adicional</div><div class="stat-value">8 meses</div><div class="stat-sub">Ritmo implícito ~$2.000M/mes</div></div>
+    <div class="stat-card"><div class="stat-label">27 CIVs · 52.286 m²</div><div class="stat-value">$${fmt(Math.round(total_v4/52286))}/m²</div><div class="stat-sub">promedio total con AIU</div></div>
+  `;
+}
+
+function renderP75Waterfall() {
+  const wf = (P75.versiones_plazo && P75.versiones_plazo.waterfall) || [];
+  const rows = wf.map(r => {
+    const dV0V4 = (r.v4 || 0) - (r.v0 || 0);
+    const cls = dV0V4 > 0 ? 'negative' : (dV0V4 < 0 ? 'positive' : '');
+    return `<tr>
+      <td><strong>${r.componente}</strong></td>
+      <td class="num">$${fmt(r.v0||0)}</td>
+      <td class="num">$${fmt(r.v1||0)}</td>
+      <td class="num">$${fmt(r.v2||0)}</td>
+      <td class="num">$${fmt(r.v3||0)}</td>
+      <td class="num"><strong>$${fmt(r.v4||0)}</strong></td>
+      <td class="num ${cls}"><strong>${dV0V4>=0?'+':''}$${fmt(dV0V4)}</strong></td>
+    </tr>`;
+  }).join('');
+  document.getElementById('p75WaterfallBody').innerHTML = rows;
+}
+
+function _p75Estado(it) {
+  // Estado inferido si no viene: comparar H (cant_contractual) vs I (cant_actualizada)
+  if (it.estado) return it.estado;
+  const H = it.H ?? it.cant_contractual ?? 0;
+  const I = it.I ?? it.cant_actualizada ?? 0;
+  if (it.is_np) return 'np_nuevo';
+  if (H === 0 && I > 0) return 'nuevo_contractual';
+  if (H > 0 && I === 0) return 'eliminado';
+  if (H === I) return 'sin_cambio';
+  if (I > H) return 'aumento';
+  return 'disminucion';
+}
+
+function renderP75Items() {
+  const items = (P75.variacion_items && P75.variacion_items.items) || [];
+  const chapters = new Set();
+  items.forEach(i => i.chapter && chapters.add(i.chapter));
+  const sel = document.getElementById('p75FilterChapter');
+  sel.innerHTML = '<option value="all">Todos los capítulos</option>' + [...chapters].sort().map(c => `<option>${c}</option>`).join('');
+  _p75RenderItemsTable(items);
+}
+
+function _p75StateColor(estado) {
+  const map = {
+    aumento: '#dd6b20', disminucion: '#3182ce',
+    eliminado: '#a0aec0', nuevo_contractual: '#805ad5',
+    np_nuevo: '#e53e3e', sin_cambio: '#48bb78',
+    np_vacio: '#a0aec0', vacio: '#e2e8f0',
+  };
+  return map[estado] || '#4a5568';
+}
+
+function _p75RenderItemsTable(items) {
+  P75_STATE.filtered = items;
+  const q = (document.getElementById('p75SearchItem').value || '').toLowerCase();
+  const ch = document.getElementById('p75FilterChapter').value;
+  const est = document.getElementById('p75FilterEstado').value;
+  let filtered = items.filter(i => (ch === 'all' || i.chapter === ch));
+  filtered = filtered.filter(i => (est === 'all' || (_p75Estado(i) === est)));
+  if (q) filtered = filtered.filter(i => (String(i.codigo_idu||'')+' '+String(i.item_pago||'')+' '+String(i.descripcion||'')).toLowerCase().includes(q));
+
+  const rows = filtered.slice(0, 800).map(i => {
+    const est = _p75Estado(i);
+    const color = _p75StateColor(est);
+    const dv = (i.M ?? i.valor_actualizado_aiu ?? 0) - (i.N ?? i.valor_inicial_aiu ?? 0);
+    const dvCls = dv > 0 ? 'negative' : (dv < 0 ? 'positive' : '');
+    return `<tr>
+      <td class="num">${i.row||''}</td>
+      <td>${(i.chapter||'').split('.')[0]||''}</td>
+      <td>${i.codigo_idu||'-'}</td>
+      <td><strong>${i.item_pago||''}</strong></td>
+      <td title="${(i.descripcion||'').replace(/"/g,'&quot;')}">${(i.descripcion||'').substring(0,60)}${(i.descripcion||'').length>60?'…':''}</td>
+      <td>${i.und||''}</td>
+      <td class="num">${fmtD(i.H ?? i.cant_contractual ?? 0, 2)}</td>
+      <td class="num">${fmtD(i.I ?? i.cant_actualizada ?? 0, 2)}</td>
+      <td class="num">${fmtD((i.I ?? i.cant_actualizada ?? 0) - (i.H ?? i.cant_contractual ?? 0), 2)}</td>
+      <td class="num">$${fmt(i.K ?? i.vu_cd ?? 0)}</td>
+      <td class="num">$${fmt(i.L ?? i.vu_cd_aiu ?? 0)}</td>
+      <td class="num">$${fmt(i.N ?? i.valor_inicial_aiu ?? 0)}</td>
+      <td class="num">$${fmt(i.M ?? i.valor_actualizado_aiu ?? 0)}</td>
+      <td class="num ${dvCls}"><strong>${dv>=0?'+':''}$${fmt(dv)}</strong></td>
+      <td><span style="background:${color};color:#fff;padding:2px 8px;border-radius:4px;font-size:.75em">${est}</span></td>
+    </tr>`;
+  }).join('');
+  document.getElementById('p75ItemsBody').innerHTML = rows;
+  // Footer
+  const totIni = filtered.reduce((s,i)=>s+(i.N ?? i.valor_inicial_aiu ?? 0),0);
+  const totFin = filtered.reduce((s,i)=>s+(i.M ?? i.valor_actualizado_aiu ?? 0),0);
+  document.getElementById('p75ItemsFoot').innerHTML = `<tr style="background:#2d3748;color:#fff;font-weight:700">
+    <td colspan="11">Total (${filtered.length} de ${items.length} renglones${filtered.length>800?' — mostrando 800':''})</td>
+    <td class="num">$${fmt(totIni)}</td>
+    <td class="num">$${fmt(totFin)}</td>
+    <td class="num">$${fmt(totFin-totIni)}</td>
+    <td></td>
+  </tr>`;
+}
+
+function _p75RenderNetaTable(items) {
+  // Agrupar por codigo_idu
+  const by = {};
+  items.forEach(i => {
+    const k = i.codigo_idu || `_${i.item_pago||i.row}`;
+    if (!by[k]) by[k] = { codigo_idu: i.codigo_idu, descripcion: i.descripcion, und: i.und, H:0, I:0, N:0, M:0, filas: [] };
+    by[k].H += (i.H ?? i.cant_contractual ?? 0);
+    by[k].I += (i.I ?? i.cant_actualizada ?? 0);
+    by[k].N += (i.N ?? i.valor_inicial_aiu ?? 0);
+    by[k].M += (i.M ?? i.valor_actualizado_aiu ?? 0);
+    by[k].filas.push(i.row);
+  });
+  const arr = Object.values(by).filter(r => r.codigo_idu);
+  arr.sort((a,b) => (b.M-b.N) - (a.M-a.N));
+  const rows = arr.slice(0, 400).map(r => `<tr>
+    <td colspan="2">${r.filas.join(', ')}</td>
+    <td>${r.codigo_idu}</td>
+    <td colspan="2">${(r.descripcion||'').substring(0,60)}</td>
+    <td>${r.und||''}</td>
+    <td class="num">${fmtD(r.H,2)}</td>
+    <td class="num">${fmtD(r.I,2)}</td>
+    <td class="num">${fmtD(r.I-r.H,2)}</td>
+    <td class="num">-</td>
+    <td class="num">-</td>
+    <td class="num">$${fmt(r.N)}</td>
+    <td class="num">$${fmt(r.M)}</td>
+    <td class="num ${(r.M-r.N)>=0?'negative':'positive'}"><strong>${(r.M-r.N)>=0?'+':''}$${fmt(r.M-r.N)}</strong></td>
+    <td>neta</td>
+  </tr>`).join('');
+  document.getElementById('p75ItemsBody').innerHTML = rows;
+  document.getElementById('p75ItemsFoot').innerHTML = `<tr style="background:#2d3748;color:#fff;font-weight:700"><td colspan="15">Vista neta por código IDU (agrupa reubicaciones) — ${arr.length} códigos</td></tr>`;
+}
+
+function p75ToggleView() {
+  P75_STATE.view = (P75_STATE.view === 'renglon') ? 'neta' : 'renglon';
+  const items = (P75.variacion_items && P75.variacion_items.items) || [];
+  if (P75_STATE.view === 'neta') _p75RenderNetaTable(items);
+  else _p75RenderItemsTable(items);
+}
+
+function renderP75TopMoves() {
+  const up = (P75.variacion_items && P75.variacion_items.top_aumentos) || [];
+  const down = (P75.variacion_items && P75.variacion_items.top_disminuciones) || [];
+  document.getElementById('p75TopUpBody').innerHTML = up.slice(0,15).map(i => `<tr>
+    <td>${i.row}</td><td>${i.codigo_idu||'-'}</td>
+    <td title="${(i.descripcion||'').replace(/"/g,'&quot;')}">${(i.descripcion||'').substring(0,50)}</td>
+    <td class="num negative"><strong>+$${fmt(i.delta_valor||0)}</strong></td>
+  </tr>`).join('');
+  document.getElementById('p75TopDownBody').innerHTML = down.slice(0,15).map(i => `<tr>
+    <td>${i.row}</td><td>${i.codigo_idu||'-'}</td>
+    <td title="${(i.descripcion||'').replace(/"/g,'&quot;')}">${(i.descripcion||'').substring(0,50)}</td>
+    <td class="num positive"><strong>$${fmt(i.delta_valor||0)}</strong></td>
+  </tr>`).join('');
+}
+
+function renderP75Reemplazos() {
+  const rs = (P75.variacion_items && P75.variacion_items.reemplazos_np) || [];
+  document.getElementById('p75ReemplazosBody').innerHTML = rs.map(r => {
+    const c = r.contractual || {}, n = r.np || {};
+    return `<tr>
+      <td><strong>${c.code||c.item_pago||'-'}</strong> · fila ${c.row||'-'} · ${(c.desc||c.descripcion||'').substring(0,60)}</td>
+      <td class="num positive">${fmt(c.delta_valor||0)}</td>
+      <td><strong>${n.code||n.item_pago||'-'}</strong> · fila ${n.row||'-'} · ${(n.desc||n.descripcion||'').substring(0,60)}</td>
+      <td class="num negative">+${fmt(n.delta_valor||0)}</td>
+      <td class="num ${(r.sobrecosto_neto||0)>=0?'negative':'positive'}"><strong>${(r.sobrecosto_neto||0)>=0?'+':''}$${fmt(r.sobrecosto_neto||0)}</strong></td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="5" style="color:var(--text-light);text-align:center;padding:20px">Sin reemplazos detectados en el análisis.</td></tr>';
+}
+
+function renderP75CivDesc() {
+  const civs = (P75.variacion_civ && P75.variacion_civ.resumen_por_civ) || [];
+  const desc = (P75.variacion_civ && P75.variacion_civ.descomposicion_delta_civ) || [];
+  const dmap = {}; desc.forEach(d => dmap[d.id] = d);
+  const sel = document.getElementById('p75CivSel');
+  sel.innerHTML = '<option value="all">Todos los CIVs</option>' + civs.map(c => `<option value="${c.id}">${c.id} · ${c.nomenclatura||''}</option>`).join('');
+  const rows = civs.map(c => {
+    const d = dmap[c.id] || {};
+    return `<tr>
+      <td><strong>${c.id}</strong></td>
+      <td>${c.nomenclatura||'-'} ${c.desde_hasta||''}</td>
+      <td class="num">${fmt(c.area_m2||0)}</td>
+      <td class="num">$${fmt(c.obras_iniciales_aiu||0)}</td>
+      <td class="num">$${fmt(c.obras_finales_aiu||0)}</td>
+      <td class="num ${(c.delta_aiu||0)>=0?'negative':'positive'}"><strong>${(c.delta_aiu||0)>=0?'+':''}$${fmt(c.delta_aiu||0)}</strong></td>
+      <td class="num">$${fmt(d.delta_por_aumentos||0)}</td>
+      <td class="num">$${fmt(d.delta_por_disminuciones||0)}</td>
+      <td class="num">$${fmt(d.delta_por_np||0)}</td>
+      <td class="num">$${fmt(d.delta_por_contractual_nuevo||0)}</td>
+      <td class="num">$${fmt(d.delta_por_eliminado||0)}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('p75CivDescBody').innerHTML = rows;
+}
+
+function renderP75ChartCivDelta() {
+  const civs = (P75.variacion_civ && P75.variacion_civ.resumen_por_civ) || [];
+  const sorted = [...civs].sort((a,b) => (b.delta_aiu||0) - (a.delta_aiu||0));
+  const labels = sorted.map(c => (c.nomenclatura||c.id));
+  const data = sorted.map(c => c.delta_aiu||0);
+  const colors = data.map(v => v>=0 ? 'rgba(229,62,62,.75)' : 'rgba(72,187,120,.75)');
+  if (chartInstances.p75Civ) chartInstances.p75Civ.destroy();
+  chartInstances.p75Civ = new Chart(document.getElementById('p75ChartCivDelta'), {
+    type: 'bar',
+    data: { labels, datasets: [{ label: 'Δ obras V4 vs V0 con AIU', data, backgroundColor: colors }] },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: ctx => 'Δ '+((ctx.raw>=0?'+':'')+'$'+fmt(ctx.raw)) } } },
+      scales: { x: { ticks: { callback: v => fmtB(v) } } }
+    }
+  });
+}
+
+function renderP75Costo() {
+  const costos = (P75.costo_civ && P75.costo_civ.costo_por_civ) || [];
+  const civs = (P75.variacion_civ && P75.variacion_civ.resumen_por_civ) || [];
+  const nomMap = {}; civs.forEach(c => nomMap[c.id] = c);
+  const comp = (P75.costo_civ && P75.costo_civ.comparativa_v1_v2_v4) || [];
+  const cmap = {}; comp.forEach(c => cmap[c.id] = c);
+  const sg = document.getElementById('p75CostoSubgrupo').value;
+  const filtered = costos.filter(c => sg === 'all' || String(c.subgrupo||'') === sg);
+  const rows = filtered.map(c => {
+    const cv = cmap[c.id] || {};
+    const dv = (cv.delta_v4_v2 !== undefined) ? cv.delta_v4_v2 : ((c.obras_total||0) - (cv.v2_total||0)); // obras V4 - obras V2 (ambas con AIU)
+    const dvCls = dv>0 ? 'negative' : (dv<0 ? 'positive' : '');
+    return `<tr>
+      <td><strong>${c.id}</strong></td>
+      <td>${c.nomenclatura||'-'}</td>
+      <td>${c.subgrupo||'-'}</td>
+      <td class="num">${fmt(c.area_m2||0)}</td>
+      <td class="num">$${fmt(c.obras_cd||0)}</td>
+      <td class="num">$${fmt(c.obras_total||c.obras_aiu||0)}</td>
+      <td class="num">$${fmt(c.componentes_asignados||0)}</td>
+      <td class="num"><strong>$${fmt(c.total||0)}</strong></td>
+      <td class="num">$${fmt(c.dolarm2_obras||0)}</td>
+      <td class="num">$${fmt(c.dolarm2_total||0)}</td>
+      <td class="num">${(((c.pct_np_en_obras||0) > 1 ? (c.pct_np_en_obras||0) : (c.pct_np_en_obras||0)*100)).toFixed(1)}%</td>
+      <td class="num">$${fmt(cv.v1_total||0)}</td>
+      <td class="num">$${fmt(cv.v2_total||0)}</td>
+      <td class="num ${dvCls}">${dv>=0?'+':''}$${fmt(dv)}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('p75CostoBody').innerHTML = rows;
+  const totObras = filtered.reduce((s,c)=>s+(c.obras_total||c.obras_aiu||0),0);
+  const totTotal = filtered.reduce((s,c)=>s+(c.total||0),0);
+  document.getElementById('p75CostoFoot').innerHTML = `<tr style="background:#2d3748;color:#fff;font-weight:700">
+    <td colspan="5">Total ${filtered.length} CIVs</td>
+    <td class="num">$${fmt(totObras)}</td>
+    <td class="num">-</td>
+    <td class="num">$${fmt(totTotal)}</td>
+    <td colspan="6"></td>
+  </tr>`;
+}
+
+function renderP75ChartDolarM2() {
+  const costos = (P75.costo_civ && P75.costo_civ.costo_por_civ) || [];
+  const sorted = [...costos].sort((a,b) => (b.dolarm2_obras||0) - (a.dolarm2_obras||0));
+  const labels = sorted.map(c => c.nomenclatura||c.id);
+  const data = sorted.map(c => c.dolarm2_obras||0);
+  // outliers > 2x mediana
+  const arr = data.filter(v => v > 0).sort((a,b)=>a-b);
+  const med = arr.length ? arr[Math.floor(arr.length/2)] : 0;
+  const colors = data.map(v => v > 1.5*med ? '#e53e3e' : (v > 1.15*med ? '#dd6b20' : '#3182ce'));
+  if (chartInstances.p75DollarM2) chartInstances.p75DollarM2.destroy();
+  chartInstances.p75DollarM2 = new Chart(document.getElementById('p75ChartDolarM2'), {
+    type: 'bar',
+    data: { labels, datasets: [{ label: '$/m² obras V4', data, backgroundColor: colors }] },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: ctx => '$'+fmt(ctx.raw)+'/m²' } } },
+      scales: { y: { ticks: { callback: v => fmtB(v) } } }
+    }
+  });
+}
+
+function renderP75Alcance() {
+  const g = (P75.costo_civ && P75.costo_civ.grupos_hoja1) || {};
+  const box = (label, obj, color, icon) => {
+    const ids = obj.ids || [];
+    return `<div style="margin-bottom:20px">
+      <h4 style="color:${color};margin-bottom:8px">${icon} ${label} (${ids.length} CIVs · obras $${fmt(obj.obras_total||0)} · total $${fmt(obj.total||0)})</h4>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">${ids.map(id => `<span style="background:#fff;padding:6px 12px;border-radius:6px;border-left:3px solid ${color};font-size:.85em">${id}</span>`).join('')}</div>
+    </div>`;
+  };
+  document.getElementById('p75Alcance').innerHTML =
+    box('Ya iniciados', g.ya_iniciados||{}, '#48bb78', '🟢') +
+    box('Por iniciar', g.por_iniciar||{}, '#3182ce', '🔵') +
+    box('No alcanza (excluidos Alt 2)', g.no_alcanza||{}, '#e53e3e', '🔴');
+}
+
+function renderP75NPs() {
+  const nps = (P75.nps && P75.nps.top20) || [];
+  const objetados = (P75.nps && P75.nps.objetados_incluidos) || [];
+  const objetadoIds = new Set(objetados.filter(o => o.estado !== 'NO_APARECE_EN_V4').map(o => o.item_pago || o.item_pago_objetado));
+  const clas = (P75.nps && P75.nps.clasificacion) || {};
+  const clasMap = {};
+  Object.entries(clas).forEach(([k,v]) => {
+    if (!Array.isArray(v)) return; // 'totales' es un objeto resumen, no una lista
+    v.forEach(x => { const key = (typeof x === 'string') ? x : (x.item_pago || x.codigo_idu); if (key) clasMap[key] = k; });
+  });
+  const rows = nps.map(n => {
+    const isObj = objetadoIds.has(n.item_pago);
+    const cls = clasMap[n.item_pago] || 'nuevo';
+    const bgColor = isObj ? '#fed7d7' : (cls==='aprobado' ? '#c6f6d5' : (cls==='en_revision' ? '#fefcbf' : (cls==='objetado' ? '#fed7d7' : '#e2e8f0')));
+    return `<tr style="background:${bgColor}">
+      <td class="num">${n.row||n.fila||'-'}</td>
+      <td><strong>${n.item_pago||''}</strong></td>
+      <td>${n.codigo_idu||'-'}</td>
+      <td title="${(n.descripcion||'').replace(/"/g,'&quot;')}">${(n.descripcion||'').substring(0,60)}</td>
+      <td>${n.und||''}</td>
+      <td class="num">${fmtD(n.cantidad||0,2)}</td>
+      <td class="num">$${fmt(n.K ?? n.K_vu_cd ?? 0)}</td>
+      <td class="num"><strong>$${fmt(n.valor_aiu||0)}</strong></td>
+      <td>${isObj ? '<strong style="color:#c53030">OBJETADO</strong>' : cls}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('p75NPsBody').innerHTML = rows;
+  const total = nps.reduce((s,n)=>s+(n.valor_aiu||0),0);
+  document.getElementById('p75NPsFoot').innerHTML = `<tr style="background:#2d3748;color:#fff;font-weight:700"><td colspan="7">Total top 20 NPs</td><td class="num">$${fmt(total)}</td><td></td></tr>`;
+}
+
+function renderP75Hall() {
+  const hall = (P75.hallazgos) || [];
+  const sev = document.getElementById('p75HallSev').value;
+  const filtered = hall.filter(h => sev==='all' || h.severidad === sev);
+  const sevColor = { ALTA: '#e53e3e', MEDIA: '#dd6b20', BAJA: '#3182ce', INFO: '#a0aec0' };
+  const rows = filtered.map(h => `<tr>
+    <td><strong>${h.id}</strong></td>
+    <td><span style="background:${sevColor[h.severidad]||'#4a5568'};color:#fff;padding:3px 10px;border-radius:4px;font-weight:600">${h.severidad}</span></td>
+    <td title="${(h.descripcion||'').replace(/"/g,'&quot;')}">${h.titulo||''}</td>
+    <td style="font-size:.8em;color:var(--text-light)">${h.hoja||''} ${h.fila?('· '+h.fila):''}</td>
+    <td class="num">${h.impacto_pesos ? '$'+fmt(h.impacto_pesos) : '-'}</td>
+    <td style="font-size:.85em">${(h.recomendacion||'').substring(0,150)}${(h.recomendacion||'').length>150?'…':''}</td>
+  </tr>`).join('');
+  document.getElementById('p75HallBody').innerHTML = rows;
+}
+
+function setupP75Events() {
+  document.getElementById('p75SearchItem').addEventListener('input', () => _p75RenderItemsTable((P75.variacion_items && P75.variacion_items.items) || []));
+  document.getElementById('p75FilterChapter').addEventListener('change', () => _p75RenderItemsTable((P75.variacion_items && P75.variacion_items.items) || []));
+  document.getElementById('p75FilterEstado').addEventListener('change', () => _p75RenderItemsTable((P75.variacion_items && P75.variacion_items.items) || []));
+  document.getElementById('p75CostoSubgrupo').addEventListener('change', renderP75Costo);
+  document.getElementById('p75HallSev').addEventListener('change', renderP75Hall);
+}
+
+// ── Descargas P75 ──
+function downloadP75Csv(kind) {
+  let rows = [], name = 'p75';
+  if (kind === 'items') {
+    name = 'variacion_items';
+    const its = (P75.variacion_items && P75.variacion_items.items) || [];
+    rows.push(['Fila','Cap','Código','Ítem','Descripción','Und','Cant inicial H','Cant final I','Δ Cant J','VU CD K','VU CD+AIU L','Valor inicial N','Valor final M','Δ Valor','Estado']);
+    its.forEach(i => rows.push([i.row, (i.chapter||'').split('.')[0], i.codigo_idu||'', i.item_pago||'', i.descripcion||'', i.und||'',
+      i.H ?? i.cant_contractual ?? '', i.I ?? i.cant_actualizada ?? '', (i.I ?? i.cant_actualizada ?? 0)-(i.H ?? i.cant_contractual ?? 0),
+      i.K ?? i.vu_cd ?? '', i.L ?? i.vu_cd_aiu ?? '', i.N ?? i.valor_inicial_aiu ?? '', i.M ?? i.valor_actualizado_aiu ?? '',
+      (i.M ?? i.valor_actualizado_aiu ?? 0)-(i.N ?? i.valor_inicial_aiu ?? 0), _p75Estado(i)]));
+  } else if (kind === 'civ') {
+    name = 'variacion_civ';
+    const c = (P75.variacion_civ && P75.variacion_civ.resumen_por_civ) || [];
+    const d = (P75.variacion_civ && P75.variacion_civ.descomposicion_delta_civ) || [];
+    const dm = {}; d.forEach(x => dm[x.id] = x);
+    rows.push(['CIV','Nomenclatura','Área m²','Obras iniciales','Obras finales','Δ','Δ Aumentos','Δ Disminuciones','Δ NP','Δ Contractual nuevo','Δ Eliminado']);
+    c.forEach(cc => { const dd = dm[cc.id]||{}; rows.push([cc.id, cc.nomenclatura||'', cc.area_m2||0, cc.obras_iniciales_aiu||0, cc.obras_finales_aiu||0, cc.delta_aiu||0, dd.delta_por_aumentos||0, dd.delta_por_disminuciones||0, dd.delta_por_np||0, dd.delta_por_contractual_nuevo||0, dd.delta_por_eliminado||0]); });
+  } else if (kind === 'costo') {
+    name = 'costo_civ';
+    const c = (P75.costo_civ && P75.costo_civ.costo_por_civ) || [];
+    rows.push(['CIV','Nomenclatura','Subgrupo','Área m²','Obras CD','Obras+AIU','Componentes','Total','$/m² obras','$/m² total','% NP obras']);
+    c.forEach(cc => rows.push([cc.id, cc.nomenclatura||'', cc.subgrupo||'', cc.area_m2||0, cc.obras_cd||0, cc.obras_aiu||cc.obras_total||0, cc.componentes_asignados||0, cc.total||0, cc.dolarm2_obras||0, cc.dolarm2_total||0, cc.pct_np_en_obras||0]));
+  } else if (kind === 'nps') {
+    name = 'nps';
+    const n = (P75.nps && P75.nps.top20) || [];
+    rows.push(['Fila','Ítem','Código IDU','Descripción','Und','Cantidad','VU CD','Valor con AIU']);
+    n.forEach(x => rows.push([x.row||'', x.item_pago||'', x.codigo_idu||'', x.descripcion||'', x.und||'', x.cantidad||0, x.K||0, x.valor_aiu||0]));
+  } else if (kind === 'hall') {
+    name = 'hallazgos';
+    const h = (P75.hallazgos) || [];
+    rows.push(['ID','Severidad','Título','Fuente','Fila','Impacto $','Recomendación','Descripción']);
+    h.forEach(x => rows.push([x.id, x.severidad, x.titulo, x.hoja, x.fila, x.impacto_pesos||0, x.recomendacion, x.descripcion]));
+  }
+  const csv = rows.map(r => r.map(v => (typeof v === 'string' && v.includes(',')) ? '"'+v.replace(/"/g,'""')+'"' : v).join(',')).join('\n');
+  const blob = new Blob(['﻿'+csv], {type:'text/csv;charset=utf-8;'});
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `p75_${name}_${new Date().toISOString().split('T')[0]}.csv`;
+  link.click();
+}
+
+function downloadP75All() {
+  if (typeof XLSX === 'undefined') { alert('xlsx-js-style no cargado'); return; }
+  const wb = XLSX.utils.book_new();
+  const push = (name, rows) => XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(rows), name.substring(0,31));
+  // Hoja Resumen
+  push('Resumen', [
+    ['Presupuesto 01-09-2026 · 75MM · 8 meses'],
+    ['Fuente', '4. PRESUPUESTO 01-09-2026 75MM (8 MESES).xlsx'],
+    [],
+    ['Concepto', 'V0', 'V4'],
+    ['Total contrato', 59426575199, 75426575199],
+    ['Obras con AIU', 44303294799, 58196933800],
+    ['Componentes no-obra', 15123280400, 17229641399],
+    ['Adición neta', '', 16000000000],
+    ['Plazo adicional (meses)', '', 8],
+  ]);
+  // Variación ítems
+  const its = (P75.variacion_items && P75.variacion_items.items) || [];
+  const itemsRows = [['Fila','Cap','Código','Ítem','Descripción','Und','H','I','Δ Cant','K','L','N','M','Δ Valor','Estado']];
+  its.forEach(i => itemsRows.push([i.row, (i.chapter||'').split('.')[0], i.codigo_idu||'', i.item_pago||'', i.descripcion||'', i.und||'',
+    i.H ?? i.cant_contractual ?? '', i.I ?? i.cant_actualizada ?? '', (i.I ?? i.cant_actualizada ?? 0)-(i.H ?? i.cant_contractual ?? 0),
+    i.K ?? i.vu_cd ?? '', i.L ?? i.vu_cd_aiu ?? '', i.N ?? i.valor_inicial_aiu ?? '', i.M ?? i.valor_actualizado_aiu ?? '',
+    (i.M ?? i.valor_actualizado_aiu ?? 0)-(i.N ?? i.valor_inicial_aiu ?? 0), _p75Estado(i)]));
+  push('Variación ítems', itemsRows);
+  // Variación por CIV
+  const c = (P75.variacion_civ && P75.variacion_civ.resumen_por_civ) || [];
+  const dv = (P75.variacion_civ && P75.variacion_civ.descomposicion_delta_civ) || [];
+  const dm = {}; dv.forEach(x => dm[x.id] = x);
+  const civRows = [['CIV','Nomenclatura','Área m²','Obras iniciales','Obras finales','Δ','Δ Aumentos','Δ Disminuciones','Δ NP','Δ Nuevo contractual','Δ Eliminado']];
+  c.forEach(cc => { const dd = dm[cc.id]||{}; civRows.push([cc.id, cc.nomenclatura||'', cc.area_m2||0, cc.obras_iniciales_aiu||0, cc.obras_finales_aiu||0, cc.delta_aiu||0, dd.delta_por_aumentos||0, dd.delta_por_disminuciones||0, dd.delta_por_np||0, dd.delta_por_contractual_nuevo||0, dd.delta_por_eliminado||0]); });
+  push('Variación por CIV', civRows);
+  // Costo por CIV
+  const cc = (P75.costo_civ && P75.costo_civ.costo_por_civ) || [];
+  const costoRows = [['CIV','Nomenclatura','Subgrupo','Área m²','Obras CD','Obras+AIU','Componentes','Total','$/m² obras','$/m² total','% NP obras']];
+  cc.forEach(x => costoRows.push([x.id, x.nomenclatura||'', x.subgrupo||'', x.area_m2||0, x.obras_cd||0, x.obras_aiu||x.obras_total||0, x.componentes_asignados||0, x.total||0, x.dolarm2_obras||0, x.dolarm2_total||0, x.pct_np_en_obras||0]));
+  push('Costo por CIV', costoRows);
+  // NPs
+  const nps = (P75.nps && P75.nps.top20) || [];
+  const npsRows = [['Fila','Ítem','Código IDU','Descripción','Und','Cantidad','VU CD','Valor con AIU','Pregunta contratista']];
+  nps.forEach(x => npsRows.push([x.row||'', x.item_pago||'', x.codigo_idu||'', x.descripcion||'', x.und||'', x.cantidad||0, x.K||0, x.valor_aiu||0, x.pregunta_contratista||'']));
+  push('NPs (top 20)', npsRows);
+  // Hallazgos
+  const h = (P75.hallazgos) || [];
+  const hallRows = [['ID','Severidad','Título','Fuente','Fila','Impacto $','Recomendación','Descripción']];
+  h.forEach(x => hallRows.push([x.id, x.severidad, x.titulo, x.hoja, x.fila, x.impacto_pesos||0, x.recomendacion, x.descripcion]));
+  push('Hallazgos', hallRows);
+  // Waterfall
+  const wf = (P75.versiones_plazo && P75.versiones_plazo.waterfall) || [];
+  const wfRows = [['Componente','V0','V1','V2','V3','V4','Δ V0-V4']];
+  wf.forEach(x => wfRows.push([x.componente, x.v0||0, x.v1||0, x.v2||0, x.v3||0, x.v4||0, (x.v4||0)-(x.v0||0)]));
+  push('Waterfall', wfRows);
+  XLSX.writeFile(wb, `Analisis_Presupuesto_2026-09_${new Date().toISOString().split('T')[0]}.xlsx`);
 }
 
 // ── INIT ──
