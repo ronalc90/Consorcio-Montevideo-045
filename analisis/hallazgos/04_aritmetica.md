@@ -47,12 +47,7 @@ Desviaciones: **0**
 
 ## 3. Consistencia entre hojas
 
-Discrepancias detectadas: **2**
-
-| Hoja | Celda | Valor | Esperado | Delta |
-|---|---|---|---|---|
-| Presupuesto estimado | `A11` | 74.667.840.865 | 75.426.575.199 | -758.734.334 |
-| EJECUTIVO | `H56` | 59.426.575.199 | 58.196.933.800 | 1.229.641.399 |
+Discrepancias detectadas: **0**
 
 ## 4. Duplicados por codigo IDU
 
@@ -160,22 +155,28 @@ Distribucion por columna: {'N': 1, 'O': 1}. M=I*L, N=H*L, O=(I-H)*L, Q=O+P.
 - Impacto estimado: 172.434
 - Recomendacion: Solicitar re-calculo de columnas M/N/O/Q con formulas. Detectar filas de digitacion manual.
 
-### H02 - Codigos IDU repetidos en la hoja principal (174) [ALTA]
+### H02 - Codigos IDU repetidos en la hoja principal (174) [INFO]
 
-Total duplicados: 174. Aparentes reubicaciones: 158. Duplicados reales: 16.
+Total codigos con mas de un renglon: 174. En subcapitulos distintos (estructura item x subcapitulo, p. ej. IDU vs ESP): 174. Duplicados reales en el mismo subcapitulo: 0. No implican doble suma: cada renglon tiene su propia cantidad. Si afectan el cruce con V1/V2, que se hace por codigo agregado (ver limitaciones del registro de auditoria).
 
-- Recomendacion: Revisar cada duplicado. Si son reubicaciones justificar el cambio de subcapitulo; si son sumas paralelas exigir consolidacion.
+- Recomendacion: Pedir al contratista la conciliacion de los codigos que pasan de un subcapitulo a otro (reubicaciones, seccion I de la app); si hay duplicados en el mismo subcapitulo, exigir consolidacion.
 
-### H03 - VU V4 desviado >2% del PRESUPUESTO CONTRACTUAL (367 items) [ALTA]
+### H03 - VU V4 desviado >2% de la referencia APU actualizado 13-09-2024 (367 renglones) [ALTA]
 
-Top: 4878 70.52%, 4878 70.52%, 4878 70.52%, 4878 70.52%, 8406 42.0%
+Referencia: columna Q 'VALOR ITEM COSTO DIRECTO ACTUALIZACION DE APU INSUMOS VISOR 13-09-2024' de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 (es el 'precio original' del dashboard). Top: 4878 70.52%, 4878 70.52%, 4878 70.52%, 4878 70.52%, 8406 42.0%
 
-- Recomendacion: Verificar autorizacion de cambio de VU respecto al contrato firmado. Los VU deben coincidir con el contractual.
+- Recomendacion: Pedir el APU (FO-GI-19) de cada renglon con VU distinto a la referencia y la autorizacion del IDU para usarlo en la adicion.
 
-### H04 - Inconsistencia entre hojas (2) [MEDIA]
+### H04 - Los VU de V4 estan +49.0% (mediana) sobre los VU pactados en la propuesta: 15.086.222.761 con AIU a cantidades finales [ALTA]
 
-Totales no coinciden entre hojas de resumen y la hoja principal.
+469 renglones contractuales tienen VU pactado (col M de PRESUPUESTO CONTRACTUAL MAYO 25). Valorados al VU pactado valdrian 28.959.881.218 en vez de 44.046.009.245. El valor actual de obras del contrato (N688 = 44.303.294.799) ya esta calculado con los VU de V4 sobre las cantidades contractuales, asi que la actualizacion de precios (a insumos VISOR 13-09-2024) se formalizo antes de esta solicitud; el presupuesto original de la propuesta (fila 246 col O) era 28.420.960.042 de obras y 50.793.789.333 en total. Top impacto: 7785 fila 34 +76.0%, 6016 fila 20 +39.7%, 3017 fila 14 +32.5%, 5182 fila 531 +48.0%, 3425 fila 85 +50.6%
 
-- Impacto estimado: 1.988.375.733
-- Recomendacion: Alinear hojas resumen/EJECUTIVO/Presupuesto estimado con el total final $75.426.575.199.
+- Impacto estimado: 15.086.222.761
+- Recomendacion: Pedir el otrosi o acta que autorizo actualizar los VU pactados a insumos 13-09-2024 y confirmar si ese incremento se contabilizo como adicion (cuenta para el tope del 50% del art. 40 de la Ley 80) o como reajuste.
+
+### H05 - Consistencia entre hojas OK (3 diferencias explicadas) [INFO]
+
+Los totales de resumen, EJECUTIVO y Presupuesto estimado coinciden con la hoja principal. Diferencias explicadas: Presupuesto estimado!A11 = 74.667.840.865 (Excluye 'VALOR ESTIMADO DE FASE DE OBRAS INICIALES' (M701 = 758.734.334); la etiqueta A10 lo dice: valor para la etapa de construccion.); EJECUTIVO!I45 = 58.196.933.869 (Diferencia de redondeo: la hoja EJECUTIVO suma los 27 CIV redondeados uno a uno (ROUND por CIV) y la hoja principal redondea el total del renglon.); EJECUTIVO!I56 = 75.426.575.268 (Diferencia de redondeo: la hoja EJECUTIVO suma los 27 CIV redondeados uno a uno (ROUND por CIV) y la hoja principal redondea el total del renglon.)
+
+- Recomendacion: Sin accion. La hoja EJECUTIVO conserva el encabezado 11/05/2026: pedir que se actualice a la fecha del radicado.
 

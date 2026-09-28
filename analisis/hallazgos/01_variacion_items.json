@@ -20770,11 +20770,27 @@
     654,
     667
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    47,
+    194,
+    318,
+    370,
+    427,
+    536,
+    599,
+    613,
+    654,
+    667
+   ],
    "H_total": 50328.0,
    "I_total": 94762.4,
    "delta_cant": 44434.4,
    "N_valor_inicial": 2775387888,
    "M_valor_final": 5225767308,
+   "valor_disminuido": 527403109,
+   "valor_aumentado": 2977782529,
+   "trasladado": 527403109,
    "delta_valor_neto": 2450379420,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['EXCAVACIONES', 'Excavaciones, Demoliciones y Rellenos', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES MOVISTAR', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -20789,11 +20805,22 @@
     369,
     426
    ],
+   "filas_eliminadas_total": [
+    265
+   ],
+   "filas_nuevas_total": [
+    317,
+    369,
+    426
+   ],
    "H_total": 5801.0,
    "I_total": 40873.11,
    "delta_cant": 35072.11,
    "N_valor_inicial": 385754898,
    "M_valor_final": 2717980069,
+   "valor_disminuido": 385754898,
+   "valor_aumentado": 2717980069,
+   "trasladado": 385754898,
    "delta_valor_neto": 2332225171,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -20806,11 +20833,20 @@
    "filas_nuevas": [
     399
    ],
+   "filas_eliminadas_total": [
+    295
+   ],
+   "filas_nuevas_total": [
+    399
+   ],
    "H_total": 123.0,
    "I_total": 194.0,
    "delta_cant": 71.0,
    "N_valor_inicial": 840308079,
    "M_valor_final": 1325363962,
+   "valor_disminuido": 840308079,
+   "valor_aumentado": 1325363962,
+   "trasladado": 840308079,
    "delta_valor_neto": 485055883,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
   },
@@ -20824,11 +20860,20 @@
    "filas_nuevas": [
     505
    ],
+   "filas_eliminadas_total": [
+    491
+   ],
+   "filas_nuevas_total": [
+    505
+   ],
    "H_total": 3025.0,
    "I_total": 19.6,
    "delta_cant": -3005.4,
    "N_valor_inicial": 444414850,
    "M_valor_final": 2879514,
+   "valor_disminuido": 443533366,
+   "valor_aumentado": 1998030,
+   "trasladado": 1998030,
    "delta_valor_neto": -441535336,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU'] -> ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN']"
   },
@@ -20846,11 +20891,23 @@
     607,
     634
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    158,
+    228,
+    503,
+    544,
+    607,
+    634
+   ],
    "H_total": 2274.0,
    "I_total": 4419.73,
    "delta_cant": 2145.73,
    "N_valor_inicial": 455730066,
    "M_valor_final": 885753670,
+   "valor_disminuido": 86292107,
+   "valor_aumentado": 516315711,
+   "trasladado": 86292107,
    "delta_valor_neto": 430023604,
    "comentario": "Cambio de subcapitulo: ['Excavaciones, Demoliciones y Rellenos'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU']"
   },
@@ -20867,11 +20924,22 @@
     386,
     443
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    161,
+    231,
+    334,
+    386,
+    443
+   ],
    "H_total": 936.0,
    "I_total": 3475.07,
    "delta_cant": 2539.07,
    "N_valor_inicial": 110911320,
    "M_valor_final": 411778420,
+   "valor_disminuido": 108832918,
+   "valor_aumentado": 409700018,
+   "trasladado": 108832918,
    "delta_valor_neto": 300867100,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -20884,11 +20952,18 @@
    "filas_nuevas": [
     531
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    531
+   ],
    "H_total": 3399.0,
    "I_total": 3919.85,
    "delta_cant": 520.85,
    "N_valor_inicial": 1887583665,
    "M_valor_final": 2176829900,
+   "valor_disminuido": 1883363119,
+   "valor_aumentado": 2172609354,
+   "trasladado": 1883363119,
    "delta_valor_neto": 289246235,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN']"
   },
@@ -20908,11 +20983,25 @@
     655,
     668
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    160,
+    230,
+    537,
+    600,
+    614,
+    633,
+    655,
+    668
+   ],
    "H_total": 609.0,
    "I_total": 2110.42,
    "delta_cant": 1501.42,
    "N_valor_inicial": 113812356,
    "M_valor_final": 394403731,
+   "valor_disminuido": 104460681,
+   "valor_aumentado": 385052056,
+   "trasladado": 104460681,
    "delta_valor_neto": 280591375,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES MOVISTAR', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU']"
   },
@@ -20925,11 +21014,20 @@
    "filas_nuevas": [
     60
    ],
+   "filas_eliminadas_total": [
+    22
+   ],
+   "filas_nuevas_total": [
+    60
+   ],
    "H_total": 36297.0,
    "I_total": 17109.11,
    "delta_cant": -19187.89,
    "N_valor_inicial": 401844087,
    "M_valor_final": 189414957,
+   "valor_disminuido": 401844087,
+   "valor_aumentado": 189414957,
+   "trasladado": 189414957,
    "delta_valor_neto": -212429130,
    "comentario": "Cambio de subcapitulo: ['RELLENOS Y CAPAS GRANULARES (BASE Y SUBBASE)'] -> ['Excavaciones, Demoliciones y Rellenos']"
   },
@@ -20942,11 +21040,20 @@
    "filas_nuevas": [
     38
    ],
+   "filas_eliminadas_total": [
+    52
+   ],
+   "filas_nuevas_total": [
+    38
+   ],
    "H_total": 20379.0,
    "I_total": 36885.9,
    "delta_cant": 16506.9,
    "N_valor_inicial": 243202986,
    "M_valor_final": 440196331,
+   "valor_disminuido": 243202986,
+   "valor_aumentado": 440196331,
+   "trasladado": 243202986,
    "delta_valor_neto": 196993345,
    "comentario": "Cambio de subcapitulo: ['Excavaciones, Demoliciones y Rellenos'] -> ['None']"
   },
@@ -20959,11 +21066,18 @@
    "filas_nuevas": [
     15
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    15
+   ],
    "H_total": 7383.0,
    "I_total": 5882.14,
    "delta_cant": -1500.86,
    "N_valor_inicial": 943399740,
    "M_valor_final": 751619850,
+   "valor_disminuido": 195309174,
+   "valor_aumentado": 3529284,
+   "trasladado": 3529284,
    "delta_valor_neto": -191779890,
    "comentario": "Cambio de subcapitulo: ['Excavaciones, Demoliciones y Rellenos'] -> ['EXCAVACIONES']"
   },
@@ -20976,11 +21090,18 @@
    "filas_nuevas": [
     58
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    58
+   ],
    "H_total": 418.0,
    "I_total": 1765.9,
    "delta_cant": 1347.9,
    "N_valor_inicial": 52714398,
    "M_valor_final": 222699415,
+   "valor_disminuido": 26074710,
+   "valor_aumentado": 196059727,
+   "trasladado": 26074710,
    "delta_valor_neto": 169985017,
    "comentario": "Cambio de subcapitulo: ['None'] -> ['Excavaciones, Demoliciones y Rellenos']"
   },
@@ -20994,11 +21115,21 @@
     326,
     378
    ],
+   "filas_eliminadas_total": [
+    274
+   ],
+   "filas_nuevas_total": [
+    326,
+    378
+   ],
    "H_total": 239.0,
    "I_total": 1177.84,
    "delta_cant": 938.84,
    "N_valor_inicial": 36404480,
    "M_valor_final": 179408589,
+   "valor_disminuido": 36404480,
+   "valor_aumentado": 179408589,
+   "trasladado": 36404480,
    "delta_valor_neto": 143004109,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21021,11 +21152,26 @@
     636,
     666
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    193,
+    315,
+    367,
+    424,
+    535,
+    598,
+    612,
+    636,
+    666
+   ],
    "H_total": 5993.0,
    "I_total": 8155.822,
    "delta_cant": 2162.822,
    "N_valor_inicial": 336141377,
    "M_valor_final": 457451900,
+   "valor_disminuido": 269572707,
+   "valor_aumentado": 390883230,
+   "trasladado": 269572707,
    "delta_valor_neto": 121310523,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES MOVISTAR', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21040,11 +21186,20 @@
     368,
     425
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    316,
+    368,
+    425
+   ],
    "H_total": 3411.0,
    "I_total": 19811.98,
    "delta_cant": 16400.98,
    "N_valor_inicial": 23682573,
    "M_valor_final": 137554578,
+   "valor_disminuido": 20214544,
+   "valor_aumentado": 134086549,
+   "trasladado": 20214544,
    "delta_valor_neto": 113872005,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21058,11 +21213,21 @@
     383,
     440
    ],
+   "filas_eliminadas_total": [
+    279
+   ],
+   "filas_nuevas_total": [
+    383,
+    440
+   ],
    "H_total": 43.0,
    "I_total": 148.26,
    "delta_cant": 105.26,
    "N_valor_inicial": 27081400,
    "M_valor_final": 93374148,
+   "valor_disminuido": 27081400,
+   "valor_aumentado": 93374148,
+   "trasladado": 27081400,
    "delta_valor_neto": 66292748,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
   },
@@ -21076,11 +21241,21 @@
     327,
     379
    ],
+   "filas_eliminadas_total": [
+    275
+   ],
+   "filas_nuevas_total": [
+    327,
+    379
+   ],
    "H_total": 712.0,
    "I_total": 979.75,
    "delta_cant": 267.75,
    "N_valor_inicial": 152128056,
    "M_valor_final": 209336324,
+   "valor_disminuido": 152128056,
+   "valor_aumentado": 209336324,
+   "trasladado": 152128056,
    "delta_valor_neto": 57208268,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21093,11 +21268,18 @@
    "filas_nuevas": [
     325
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    325
+   ],
    "H_total": 1949.0,
    "I_total": 2396.64,
    "delta_cant": 447.64,
    "N_valor_inicial": 209613001,
    "M_valor_final": 257756236,
+   "valor_disminuido": 199696983,
+   "valor_aumentado": 247840218,
+   "trasladado": 199696983,
    "delta_valor_neto": 48143235,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21112,11 +21294,20 @@
     597,
     653
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    534,
+    597,
+    653
+   ],
    "H_total": 1080.0,
    "I_total": 1665.29,
    "delta_cant": 585.29,
    "N_valor_inicial": 37217880,
    "M_valor_final": 57387559,
+   "valor_disminuido": 24567247,
+   "valor_aumentado": 44736926,
+   "trasladado": 24567247,
    "delta_valor_neto": 20169679,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP']"
   },
@@ -21129,11 +21320,20 @@
    "filas_nuevas": [
     350
    ],
+   "filas_eliminadas_total": [
+    298
+   ],
+   "filas_nuevas_total": [
+    350
+   ],
    "H_total": 101.0,
    "I_total": 128.0,
    "delta_cant": 27.0,
    "N_valor_inicial": 75269038,
    "M_valor_final": 95390464,
+   "valor_disminuido": 75269038,
+   "valor_aumentado": 95390464,
+   "trasladado": 75269038,
    "delta_valor_neto": 20121426,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21146,11 +21346,20 @@
    "filas_nuevas": [
     543
    ],
+   "filas_eliminadas_total": [
+    502
+   ],
+   "filas_nuevas_total": [
+    543
+   ],
    "H_total": 5.0,
    "I_total": 4.0,
    "delta_cant": -1.0,
    "N_valor_inicial": 92457425,
    "M_valor_final": 73965940,
+   "valor_disminuido": 92457425,
+   "valor_aumentado": 73965940,
+   "trasladado": 73965940,
    "delta_valor_neto": -18491485,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN']"
   },
@@ -21163,11 +21372,18 @@
    "filas_nuevas": [
     212
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    212
+   ],
    "H_total": 13.0,
    "I_total": 17.0,
    "delta_cant": 4.0,
    "N_valor_inicial": 49757383,
    "M_valor_final": 65067347,
+   "valor_disminuido": 26792437,
+   "valor_aumentado": 42102401,
+   "trasladado": 26792437,
    "delta_valor_neto": 15309964,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
   },
@@ -21180,11 +21396,18 @@
    "filas_nuevas": [
     213
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    213
+   ],
    "H_total": 9.0,
    "I_total": 17.0,
    "delta_cant": 8.0,
    "N_valor_inicial": 14281569,
    "M_valor_final": 26976297,
+   "valor_disminuido": 4760523,
+   "valor_aumentado": 17455251,
+   "trasladado": 4760523,
    "delta_valor_neto": 12694728,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
   },
@@ -21199,11 +21422,21 @@
     344,
     396
    ],
+   "filas_eliminadas_total": [
+    630
+   ],
+   "filas_nuevas_total": [
+    344,
+    396
+   ],
    "H_total": 74.0,
    "I_total": 58.0,
    "delta_cant": -16.0,
    "N_valor_inicial": 53228052,
    "M_valor_final": 41719284,
+   "valor_disminuido": 51789456,
+   "valor_aumentado": 40280688,
+   "trasladado": 40280688,
    "delta_valor_neto": -11508768,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21217,11 +21450,21 @@
     351,
     403
    ],
+   "filas_eliminadas_total": [
+    299
+   ],
+   "filas_nuevas_total": [
+    351,
+    403
+   ],
    "H_total": 101.0,
    "I_total": 64.0,
    "delta_cant": -37.0,
    "N_valor_inicial": 27097492,
    "M_valor_final": 17170688,
+   "valor_disminuido": 27097492,
+   "valor_aumentado": 17170688,
+   "trasladado": 17170688,
    "delta_valor_neto": -9926804,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21234,11 +21477,18 @@
    "filas_nuevas": [
     211
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    211
+   ],
    "H_total": 8.0,
    "I_total": 10.0,
    "delta_cant": 2.0,
    "N_valor_inicial": 27367024,
    "M_valor_final": 34208780,
+   "valor_disminuido": 23946146,
+   "valor_aumentado": 30787902,
+   "trasladado": 23946146,
    "delta_valor_neto": 6841756,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
   },
@@ -21253,11 +21503,20 @@
     319,
     371
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    159,
+    319,
+    371
+   ],
    "H_total": 3537.0,
    "I_total": 3038.28,
    "delta_cant": -498.72,
    "N_valor_inicial": 44891604,
    "M_valor_final": 38561850,
+   "valor_disminuido": 44772934,
+   "valor_aumentado": 38443180,
+   "trasladado": 38443180,
    "delta_valor_neto": -6329754,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21270,11 +21529,20 @@
    "filas_nuevas": [
     380
    ],
+   "filas_eliminadas_total": [
+    276
+   ],
+   "filas_nuevas_total": [
+    380
+   ],
    "H_total": 119.0,
    "I_total": 134.41,
    "delta_cant": 15.41,
    "N_valor_inicial": 37297456,
    "M_valor_final": 42127320,
+   "valor_disminuido": 37297456,
+   "valor_aumentado": 42127320,
+   "trasladado": 37297456,
    "delta_valor_neto": 4829864,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
   },
@@ -21289,11 +21557,20 @@
     381,
     438
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    329,
+    381,
+    438
+   ],
    "H_total": 443.0,
    "I_total": 433.45,
    "delta_cant": -9.55,
    "N_valor_inicial": 168280638,
    "M_valor_final": 164652918,
+   "valor_disminuido": 164102112,
+   "valor_aumentado": 160474392,
+   "trasladado": 160474392,
    "delta_valor_neto": -3627720,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
   },
@@ -21306,11 +21583,18 @@
    "filas_nuevas": [
     214
    ],
+   "filas_eliminadas_total": [],
+   "filas_nuevas_total": [
+    214
+   ],
    "H_total": 8.0,
    "I_total": 10.0,
    "delta_cant": 2.0,
    "N_valor_inicial": 11568568,
    "M_valor_final": 14460710,
+   "valor_disminuido": 10122497,
+   "valor_aumentado": 13014639,
+   "trasladado": 10122497,
    "delta_valor_neto": 2892142,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
   },
@@ -21323,11 +21607,20 @@
    "filas_nuevas": [
     400
    ],
+   "filas_eliminadas_total": [
+    296
+   ],
+   "filas_nuevas_total": [
+    400
+   ],
    "H_total": 33.0,
    "I_total": 44.0,
    "delta_cant": 11.0,
    "N_valor_inicial": 7544922,
    "M_valor_final": 10059896,
+   "valor_disminuido": 7544922,
+   "valor_aumentado": 10059896,
+   "trasladado": 7544922,
    "delta_valor_neto": 2514974,
    "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
   },
@@ -21340,11 +21633,20 @@
    "filas_nuevas": [
     542
    ],
+   "filas_eliminadas_total": [
+    501
+   ],
+   "filas_nuevas_total": [
+    542
+   ],
    "H_total": 17.0,
    "I_total": 17.0,
    "delta_cant": 0.0,
    "N_valor_inicial": 160975754,
    "M_valor_final": 160975754,
+   "valor_disminuido": 160975754,
+   "valor_aumentado": 160975754,
+   "trasladado": 160975754,
    "delta_valor_neto": 0,
    "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN']"
   }

@@ -211,6 +211,7 @@ def main():
     # 3) Consistencia entre hojas
     # =====================================
     consistencia_hojas = []
+    observaciones_hojas = []  # diferencias explicadas (redondeo, alcance de la hoja); no son hallazgo
     # fila 688 principal
     obras_total_ppal = num(ws_v.cell(688, 13).value)  # M688
     total_final_ppal = num(ws_v.cell(703, 13).value)  # M703 (total general)
@@ -259,12 +260,16 @@ def main():
                     # asumimos total del presupuesto
                     esperado = 75_426_575_199
                     if abs(v - esperado) > 100:
-                        consistencia_hojas.append({
-                            "hoja": "Presupuesto estimado",
-                            "celda": f"{col_letter(c-1)}{r}",
-                            "valor": v, "esperado": esperado,
-                            "delta": round(v - esperado, 2)
-                        })
+                        reg = {"hoja": "Presupuesto estimado", "celda": f"{col_letter(c-1)}{r}", "valor": v, "esperado": esperado, "delta": round(v - esperado, 2)}
+                        # Corrección 2026-09-28 (B-09): A11 es el 'VALOR PARA LA ETAPA DE CONSTRUCCION', que por
+                        # definicion excluye la fase de obras iniciales (M701). Si la diferencia es exactamente ese
+                        # componente, queda como observacion explicada.
+                        fase_ini = num(ws_v.cell(701, 13).value) or 0
+                        if abs((v + fase_ini) - esperado) <= 100:
+                            reg["explicacion"] = "Excluye 'VALOR ESTIMADO DE FASE DE OBRAS INICIALES' (M701 = %s); la etiqueta A10 lo dice: valor para la etapa de construccion." % fmt_pesos(fase_ini)
+                            observaciones_hojas.append(reg)
+                        else:
+                            consistencia_hojas.append(reg)
     except Exception as e:
         print(f"Presupuesto estimado: {e}")
 
@@ -276,25 +281,24 @@ def main():
             for c in range(1, ws_ej.max_column + 1):
                 v = ws_ej.cell(r, c).value
                 if isinstance(v, (int, float)):
+                    # Corrección 2026-09-28 (registro de auditoría B-09): la versión anterior comparaba por
+                    # magnitud y marcaba H56 (COSTO TOTAL DEL PROYECTO, columna 'actual' = 59.426.575.199)
+                    # contra el total de obras. Ahora se reconoce el valor actual del contrato y las
+                    # diferencias de redondeo (<= $100) se guardan como observaciones, no como hallazgo.
+                    if abs(v - 59_426_575_199) <= 100:
+                        continue  # valor actual del contrato (V0): consistente
+                    esperado = None
                     if 70e9 < v < 80e9:
                         esperado = 75_426_575_199
-                        if abs(v - esperado) > 100:
-                            consistencia_hojas.append({
-                                "hoja": "EJECUTIVO",
-                                "celda": f"{col_letter(c-1)}{r}",
-                                "valor": v, "esperado": esperado,
-                                "delta": round(v - esperado, 2)
-                            })
                     elif 55e9 < v < 60e9:
-                        # esperado obras 58.196.933.800
-                        esperado_obras = 58_196_933_800
-                        if abs(v - esperado_obras) > 100:
-                            consistencia_hojas.append({
-                                "hoja": "EJECUTIVO",
-                                "celda": f"{col_letter(c-1)}{r}",
-                                "valor": v, "esperado": esperado_obras,
-                                "delta": round(v - esperado_obras, 2)
-                            })
+                        esperado = 58_196_933_800
+                    if esperado is not None and abs(v - esperado) > 0:
+                        reg = {"hoja": "EJECUTIVO", "celda": f"{col_letter(c-1)}{r}", "valor": v, "esperado": esperado, "delta": round(v - esperado, 2)}
+                        if abs(v - esperado) > 100:
+                            consistencia_hojas.append(reg)
+                        else:
+                            reg["explicacion"] = "Diferencia de redondeo: la hoja EJECUTIVO suma los 27 CIV redondeados uno a uno (ROUND por CIV) y la hoja principal redondea el total del renglon."
+                            observaciones_hojas.append(reg)
     except Exception as e:
         print(f"EJECUTIVO: {e}")
 
@@ -323,7 +327,9 @@ def main():
                     und_up = ws_v.cell(r_up, 7).value
                     desc_up = ws_v.cell(r_up, 6).value
                     if (und_up in (None, "")) and desc_up:
-                        subs.append(str(desc_up).strip()[:50])
+                        # Corrección 2026-09-28 (B-09): antes se truncaba a 50 caracteres y los subcapitulos
+                        # "...A CARGO DEL IDU" y "...A CARGO DE LA ESP" parecian iguales (16 falsos duplicados).
+                        subs.append(" ".join(str(desc_up).split())[:160])
                         break
                     r_up -= 1
                 else:
@@ -381,8 +387,10 @@ def main():
 
     # Cargar PRESUPUESTO CONTRACTUAL MAYO 25
     contr = load_csv("PRESUPUESTO_CONTRACTUAL_MAYO_25.csv")
-    contr_map = {}  # item_pago o codigo -> VU CD
+    contr_map = {}  # item_pago o codigo -> VU CD (APU actualizado insumos VISOR 13-09-2024, col Q)
     contr_by_ip = {}  # item_pago -> VU CD
+    contr_bid_map = {}  # codigo -> VU CD de la propuesta del contratista (col M) = VU pactado
+    desviaciones_vu_propuesta = []
     if contr:
         # Buscar encabezado
         hdr_row_idx = None
@@ -397,6 +405,7 @@ def main():
         col_cod = None
         col_ip = None
         col_vu = None
+        col_bid = None  # VU de la propuesta del contratista (= VU pactado en el contrato), sin AIU
         for j, h in enumerate(hdr):
             hn = str(h).upper()
             if col_cod is None and "IDU" in hn:
@@ -405,17 +414,24 @@ def main():
                 col_ip = j
             if col_vu is None and ("V/UNIT" in hn or "V.UNIT" in hn or "COSTO DIRECTO" in hn or "VR UNIT" in hn or "V UNIT" in hn):
                 col_vu = j
+            if col_bid is None and "PROPUESTA CONTRATISTA SIN AIU" in hn:
+                col_bid = j
+        # Nota (registro de auditoría B-12): col_vu cae en la columna Q "VALOR ITEM COSTO DIRECTO ACTUALIZACION DE APU'S
+        # INSUMOS VISOR 13 SEPTIEMBRE 2024", no en el VU pactado. El VU del contrato (propuesta VICON) es la columna M.
         for row in contr[hdr_row_idx + 1:]:
-            if len(row) <= max(filter(lambda x: x is not None, [col_cod, col_ip, col_vu])):
+            if len(row) <= max(filter(lambda x: x is not None, [col_cod, col_ip, col_vu, col_bid])):
                 continue
             cod = str(row[col_cod]).strip() if col_cod is not None else ""
             ip = str(row[col_ip]).strip() if col_ip is not None else ""
             vu = num(row[col_vu]) if col_vu is not None else None
+            bid = num(row[col_bid]) if col_bid is not None else None
             if vu:
                 if cod:
                     contr_map[cod] = vu
                 if ip:
                     contr_by_ip[ip] = vu
+            if bid and cod and cod not in contr_bid_map:
+                contr_bid_map[cod] = bid
 
     # Cargar comparativa.json para VU V0
     comp_path = ROOT / "comparativa.json"
@@ -459,7 +475,7 @@ def main():
                     "K_v4": K, "K_visor": vu_visor,
                     "delta_pct": round(delta_pct, 2)
                 })
-        # Contractual
+        # Referencia APU actualizado 13-09-2024 (col Q de PRESUPUESTO CONTRACTUAL MAYO 25)
         vu_contr = contr_map.get(cod_s) or contr_by_ip.get(ip_s) or v0_map.get(cod_s) or v0_map.get(ip_s)
         if vu_contr:
             delta_pct = ((K - vu_contr) / vu_contr) * 100 if vu_contr else 0
@@ -469,9 +485,30 @@ def main():
                     "K_v4": K, "K_contractual": vu_contr,
                     "delta_pct": round(delta_pct, 2)
                 })
+        # VU pactado (propuesta del contratista, col M): todos los renglones contractuales con referencia
+        vu_bid = contr_bid_map.get(cod_s)
+        if vu_bid and not str(ip_s).upper().startswith("NP") and r < 680:
+            I_r = num(ws_v.cell(r, 9).value) or 0
+            desviaciones_vu_propuesta.append({
+                "codigo_idu": cod_s, "row": r, "K_v4": K, "K_propuesta": vu_bid,
+                "delta_pct": round(((K - vu_bid) / vu_bid) * 100, 2), "cant_final": I_r,
+                "impacto_aiu": round((K - vu_bid) * I_r * (1 + AIU)),
+                "valor_v4_aiu": round(round(K * (1 + AIU)) * I_r), "valor_a_vu_pactado_aiu": round(round(vu_bid * (1 + AIU)) * I_r),
+            })
 
     print(f"Desviaciones VU vs VISOR: {len(desviaciones_vu_visor)}")
-    print(f"Desviaciones VU vs Contractual: {len(desviaciones_vu_contractual)}")
+    print(f"Desviaciones VU vs referencia APU 13-09-2024: {len(desviaciones_vu_contractual)}")
+    import statistics as _st
+    _p = desviaciones_vu_propuesta
+    resumen_vu_propuesta = {
+        "renglones": len(_p), "mediana_delta_pct": round(_st.median([x["delta_pct"] for x in _p]), 2) if _p else None,
+        "renglones_mas_2pct": sum(1 for x in _p if abs(x["delta_pct"]) > 2),
+        "impacto_aiu_total": sum(x["impacto_aiu"] for x in _p),
+        "valor_v4_aiu": sum(x["valor_v4_aiu"] for x in _p), "valor_a_vu_pactado_aiu": sum(x["valor_a_vu_pactado_aiu"] for x in _p),
+        "nota": "VU pactado = columna M 'VALOR UNITARIO PROPUESTA CONTRATISTA SIN AIU' de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 (primer renglon por codigo). "
+                "El valor actual de obras del contrato (N688 = H x L) ya usa los VU de V4, de modo que la actualizacion de precios se formalizo antes de esta solicitud: pedir el otrosi que la autorizo.",
+    }
+    print(f"VU V4 vs VU pactado: {resumen_vu_propuesta}")
 
     # =====================================
     # 6) Efecto precio vs efecto cantidad
@@ -590,11 +627,13 @@ def main():
         # Filtrar duplicados con impacto real
         dup_reales = [d for d in duplicados if not d["es_reubicacion"]]
         hallazgos.append({
-            "id": f"H{hid:02d}", "severidad": "ALTA" if dup_reales else "MEDIA",
+            "id": f"H{hid:02d}", "severidad": "MEDIA" if dup_reales else "INFO",
             "titulo": f"Codigos IDU repetidos en la hoja principal ({len(duplicados)})",
-            "descripcion": f"Total duplicados: {len(duplicados)}. Aparentes reubicaciones: {len(duplicados)-len(dup_reales)}. Duplicados reales: {len(dup_reales)}.",
+            "descripcion": (f"Total codigos con mas de un renglon: {len(duplicados)}. En subcapitulos distintos (estructura item x subcapitulo, p. ej. IDU vs ESP): {len(duplicados)-len(dup_reales)}. "
+                            f"Duplicados reales en el mismo subcapitulo: {len(dup_reales)}. No implican doble suma: cada renglon tiene su propia cantidad. "
+                            "Si afectan el cruce con V1/V2, que se hace por codigo agregado (ver limitaciones del registro de auditoria)."),
             "hoja": HOJA_PPAL, "fila": None, "impacto_pesos": None,
-            "recomendacion": "Revisar cada duplicado. Si son reubicaciones justificar el cambio de subcapitulo; si son sumas paralelas exigir consolidacion."
+            "recomendacion": "Pedir al contratista la conciliacion de los codigos que pasan de un subcapitulo a otro (reubicaciones, seccion I de la app); si hay duplicados en el mismo subcapitulo, exigir consolidacion."
         })
         hid += 1
 
@@ -614,11 +653,28 @@ def main():
         top = sorted(desviaciones_vu_contractual, key=lambda x: abs(x["delta_pct"]), reverse=True)[:5]
         hallazgos.append({
             "id": f"H{hid:02d}", "severidad": "ALTA",
-            "titulo": f"VU V4 desviado >2% del PRESUPUESTO CONTRACTUAL ({len(desviaciones_vu_contractual)} items)",
-            "descripcion": "Top: " + ", ".join(f"{t['codigo_idu']} {t['delta_pct']}%" for t in top),
+            "titulo": f"VU V4 desviado >2% de la referencia APU actualizado 13-09-2024 ({len(desviaciones_vu_contractual)} renglones)",
+            "descripcion": "Referencia: columna Q 'VALOR ITEM COSTO DIRECTO ACTUALIZACION DE APU INSUMOS VISOR 13-09-2024' de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 (es el 'precio original' del dashboard). Top: "
+                           + ", ".join(f"{t['codigo_idu']} {t['delta_pct']}%" for t in top),
             "hoja": HOJA_PPAL, "fila": None,
             "impacto_pesos": None,
-            "recomendacion": "Verificar autorizacion de cambio de VU respecto al contrato firmado. Los VU deben coincidir con el contractual."
+            "recomendacion": "Pedir el APU (FO-GI-19) de cada renglon con VU distinto a la referencia y la autorizacion del IDU para usarlo en la adicion."
+        })
+        hid += 1
+
+    if desviaciones_vu_propuesta:
+        rp = resumen_vu_propuesta
+        top = sorted(desviaciones_vu_propuesta, key=lambda x: abs(x["impacto_aiu"]), reverse=True)[:5]
+        hallazgos.append({
+            "id": f"H{hid:02d}", "severidad": "ALTA",
+            "titulo": f"Los VU de V4 estan {rp['mediana_delta_pct']:+.1f}% (mediana) sobre los VU pactados en la propuesta: {fmt_pesos(rp['impacto_aiu_total'])} con AIU a cantidades finales",
+            "descripcion": (f"{rp['renglones']} renglones contractuales tienen VU pactado (col M de PRESUPUESTO CONTRACTUAL MAYO 25). Valorados al VU pactado valdrian {fmt_pesos(rp['valor_a_vu_pactado_aiu'])} en vez de {fmt_pesos(rp['valor_v4_aiu'])}. "
+                            "El valor actual de obras del contrato (N688 = 44.303.294.799) ya esta calculado con los VU de V4 sobre las cantidades contractuales, asi que la actualizacion de precios (a insumos VISOR 13-09-2024) se formalizo antes de esta solicitud; "
+                            "el presupuesto original de la propuesta (fila 246 col O) era 28.420.960.042 de obras y 50.793.789.333 en total. Top impacto: "
+                            + ", ".join(f"{t['codigo_idu']} fila {t['row']} {t['delta_pct']:+.1f}%" for t in top)),
+            "hoja": "PRESUPUESTO CONTRACTUAL MAYO 25", "fila": "246, 279 y col M",
+            "impacto_pesos": rp["impacto_aiu_total"],
+            "recomendacion": "Pedir el otrosi o acta que autorizo actualizar los VU pactados a insumos 13-09-2024 y confirmar si ese incremento se contabilizo como adicion (cuenta para el tope del 50% del art. 40 de la Ley 80) o como reajuste."
         })
         hid += 1
 
@@ -630,6 +686,16 @@ def main():
             "hoja": None, "fila": None,
             "impacto_pesos": round(sum(abs(c["delta"]) for c in consistencia_hojas)),
             "recomendacion": "Alinear hojas resumen/EJECUTIVO/Presupuesto estimado con el total final $75.426.575.199."
+        })
+        hid += 1
+    else:
+        hallazgos.append({
+            "id": f"H{hid:02d}", "severidad": "INFO",
+            "titulo": f"Consistencia entre hojas OK ({len(observaciones_hojas)} diferencias explicadas)",
+            "descripcion": "Los totales de resumen, EJECUTIVO y Presupuesto estimado coinciden con la hoja principal. Diferencias explicadas: "
+                           + "; ".join(f"{o['hoja']}!{o['celda']} = {fmt_pesos(o['valor'])} ({o['explicacion']})" for o in observaciones_hojas),
+            "hoja": None, "fila": None, "impacto_pesos": None,
+            "recomendacion": "Sin accion. La hoja EJECUTIVO conserva el encabezado 11/05/2026: pedir que se actualice a la fecha del radicado."
         })
         hid += 1
 
@@ -649,7 +715,8 @@ def main():
             "fuente": XLSX.name,
             "hoja": HOJA_PPAL,
             "aiu_factor": AIU,
-            "fecha_analisis": "2026-09-26"
+            "fecha_analisis": "2026-09-26",
+            "revision": "2026-09-28: correccion B-09 del registro de auditoria (falsos positivos EJECUTIVO H56 / Presupuesto estimado A11 y subcapitulos truncados)"
         },
         "formulas": {
             "conteo_formulas": conteo_formulas,
@@ -662,9 +729,12 @@ def main():
         "desviaciones_M_N_O_Q": desviaciones_M_N_O_Q[:200],
         "desviaciones_CB_vs_M": desviaciones_CB[:100],
         "consistencia_hojas": consistencia_hojas[:100],
+        "observaciones_hojas": observaciones_hojas,
         "duplicados": duplicados,
-        "desviaciones_vu_visor": desviaciones_vu_visor[:200],
-        "desviaciones_vu_contractual": desviaciones_vu_contractual[:200],
+        "desviaciones_vu_visor": desviaciones_vu_visor,
+        "desviaciones_vu_contractual": desviaciones_vu_contractual,
+        "desviaciones_vu_propuesta": sorted(desviaciones_vu_propuesta, key=lambda x: -abs(x["impacto_aiu"])),
+        "resumen_vu_propuesta": resumen_vu_propuesta,
         "efecto_precio_cantidad": sorted(efecto_pc, key=lambda x: abs(x["delta_valor"]), reverse=True)[:100],
         "resumen_efecto_precio_cantidad_total": resumen_ef,
         "hallazgos": hallazgos

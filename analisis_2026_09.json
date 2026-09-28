@@ -2813,11 +2813,27 @@
      654,
      667
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     47,
+     194,
+     318,
+     370,
+     427,
+     536,
+     599,
+     613,
+     654,
+     667
+    ],
     "H_total": 50328.0,
     "I_total": 94762.4,
     "delta_cant": 44434.4,
     "N_valor_inicial": 2775387888,
     "M_valor_final": 5225767308,
+    "valor_disminuido": 527403109,
+    "valor_aumentado": 2977782529,
+    "trasladado": 527403109,
     "delta_valor_neto": 2450379420,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['EXCAVACIONES', 'Excavaciones, Demoliciones y Rellenos', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES MOVISTAR', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -2832,11 +2848,22 @@
      369,
      426
     ],
+    "filas_eliminadas_total": [
+     265
+    ],
+    "filas_nuevas_total": [
+     317,
+     369,
+     426
+    ],
     "H_total": 5801.0,
     "I_total": 40873.11,
     "delta_cant": 35072.11,
     "N_valor_inicial": 385754898,
     "M_valor_final": 2717980069,
+    "valor_disminuido": 385754898,
+    "valor_aumentado": 2717980069,
+    "trasladado": 385754898,
     "delta_valor_neto": 2332225171,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -2849,11 +2876,20 @@
     "filas_nuevas": [
      399
     ],
+    "filas_eliminadas_total": [
+     295
+    ],
+    "filas_nuevas_total": [
+     399
+    ],
     "H_total": 123.0,
     "I_total": 194.0,
     "delta_cant": 71.0,
     "N_valor_inicial": 840308079,
     "M_valor_final": 1325363962,
+    "valor_disminuido": 840308079,
+    "valor_aumentado": 1325363962,
+    "trasladado": 840308079,
     "delta_valor_neto": 485055883,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
    },
@@ -2867,11 +2903,20 @@
     "filas_nuevas": [
      505
     ],
+    "filas_eliminadas_total": [
+     491
+    ],
+    "filas_nuevas_total": [
+     505
+    ],
     "H_total": 3025.0,
     "I_total": 19.6,
     "delta_cant": -3005.4,
     "N_valor_inicial": 444414850,
     "M_valor_final": 2879514,
+    "valor_disminuido": 443533366,
+    "valor_aumentado": 1998030,
+    "trasladado": 1998030,
     "delta_valor_neto": -441535336,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU'] -> ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN']"
    },
@@ -2889,11 +2934,23 @@
      607,
      634
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     158,
+     228,
+     503,
+     544,
+     607,
+     634
+    ],
     "H_total": 2274.0,
     "I_total": 4419.73,
     "delta_cant": 2145.73,
     "N_valor_inicial": 455730066,
     "M_valor_final": 885753670,
+    "valor_disminuido": 86292107,
+    "valor_aumentado": 516315711,
+    "trasladado": 86292107,
     "delta_valor_neto": 430023604,
     "comentario": "Cambio de subcapitulo: ['Excavaciones, Demoliciones y Rellenos'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU']"
    },
@@ -2910,11 +2967,22 @@
      386,
      443
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     161,
+     231,
+     334,
+     386,
+     443
+    ],
     "H_total": 936.0,
     "I_total": 3475.07,
     "delta_cant": 2539.07,
     "N_valor_inicial": 110911320,
     "M_valor_final": 411778420,
+    "valor_disminuido": 108832918,
+    "valor_aumentado": 409700018,
+    "trasladado": 108832918,
     "delta_valor_neto": 300867100,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -2927,11 +2995,18 @@
     "filas_nuevas": [
      531
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     531
+    ],
     "H_total": 3399.0,
     "I_total": 3919.85,
     "delta_cant": 520.85,
     "N_valor_inicial": 1887583665,
     "M_valor_final": 2176829900,
+    "valor_disminuido": 1883363119,
+    "valor_aumentado": 2172609354,
+    "trasladado": 1883363119,
     "delta_valor_neto": 289246235,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN']"
    },
@@ -2951,11 +3026,25 @@
      655,
      668
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     160,
+     230,
+     537,
+     600,
+     614,
+     633,
+     655,
+     668
+    ],
     "H_total": 609.0,
     "I_total": 2110.42,
     "delta_cant": 1501.42,
     "N_valor_inicial": 113812356,
     "M_valor_final": 394403731,
+    "valor_disminuido": 104460681,
+    "valor_aumentado": 385052056,
+    "trasladado": 104460681,
     "delta_valor_neto": 280591375,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES MOVISTAR', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU']"
    },
@@ -2968,11 +3057,20 @@
     "filas_nuevas": [
      60
     ],
+    "filas_eliminadas_total": [
+     22
+    ],
+    "filas_nuevas_total": [
+     60
+    ],
     "H_total": 36297.0,
     "I_total": 17109.11,
     "delta_cant": -19187.89,
     "N_valor_inicial": 401844087,
     "M_valor_final": 189414957,
+    "valor_disminuido": 401844087,
+    "valor_aumentado": 189414957,
+    "trasladado": 189414957,
     "delta_valor_neto": -212429130,
     "comentario": "Cambio de subcapitulo: ['RELLENOS Y CAPAS GRANULARES (BASE Y SUBBASE)'] -> ['Excavaciones, Demoliciones y Rellenos']"
    },
@@ -2985,11 +3083,20 @@
     "filas_nuevas": [
      38
     ],
+    "filas_eliminadas_total": [
+     52
+    ],
+    "filas_nuevas_total": [
+     38
+    ],
     "H_total": 20379.0,
     "I_total": 36885.9,
     "delta_cant": 16506.9,
     "N_valor_inicial": 243202986,
     "M_valor_final": 440196331,
+    "valor_disminuido": 243202986,
+    "valor_aumentado": 440196331,
+    "trasladado": 243202986,
     "delta_valor_neto": 196993345,
     "comentario": "Cambio de subcapitulo: ['Excavaciones, Demoliciones y Rellenos'] -> ['None']"
    },
@@ -3002,11 +3109,18 @@
     "filas_nuevas": [
      15
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     15
+    ],
     "H_total": 7383.0,
     "I_total": 5882.14,
     "delta_cant": -1500.86,
     "N_valor_inicial": 943399740,
     "M_valor_final": 751619850,
+    "valor_disminuido": 195309174,
+    "valor_aumentado": 3529284,
+    "trasladado": 3529284,
     "delta_valor_neto": -191779890,
     "comentario": "Cambio de subcapitulo: ['Excavaciones, Demoliciones y Rellenos'] -> ['EXCAVACIONES']"
    },
@@ -3019,11 +3133,18 @@
     "filas_nuevas": [
      58
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     58
+    ],
     "H_total": 418.0,
     "I_total": 1765.9,
     "delta_cant": 1347.9,
     "N_valor_inicial": 52714398,
     "M_valor_final": 222699415,
+    "valor_disminuido": 26074710,
+    "valor_aumentado": 196059727,
+    "trasladado": 26074710,
     "delta_valor_neto": 169985017,
     "comentario": "Cambio de subcapitulo: ['None'] -> ['Excavaciones, Demoliciones y Rellenos']"
    },
@@ -3037,11 +3158,21 @@
      326,
      378
     ],
+    "filas_eliminadas_total": [
+     274
+    ],
+    "filas_nuevas_total": [
+     326,
+     378
+    ],
     "H_total": 239.0,
     "I_total": 1177.84,
     "delta_cant": 938.84,
     "N_valor_inicial": 36404480,
     "M_valor_final": 179408589,
+    "valor_disminuido": 36404480,
+    "valor_aumentado": 179408589,
+    "trasladado": 36404480,
     "delta_valor_neto": 143004109,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3064,11 +3195,26 @@
      636,
      666
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     193,
+     315,
+     367,
+     424,
+     535,
+     598,
+     612,
+     636,
+     666
+    ],
     "H_total": 5993.0,
     "I_total": 8155.822,
     "delta_cant": 2162.822,
     "N_valor_inicial": 336141377,
     "M_valor_final": 457451900,
+    "valor_disminuido": 269572707,
+    "valor_aumentado": 390883230,
+    "trasladado": 269572707,
     "delta_valor_neto": 121310523,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES MOVISTAR', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3083,11 +3229,20 @@
      368,
      425
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     316,
+     368,
+     425
+    ],
     "H_total": 3411.0,
     "I_total": 19811.98,
     "delta_cant": 16400.98,
     "N_valor_inicial": 23682573,
     "M_valor_final": 137554578,
+    "valor_disminuido": 20214544,
+    "valor_aumentado": 134086549,
+    "trasladado": 20214544,
     "delta_valor_neto": 113872005,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3101,11 +3256,21 @@
      383,
      440
     ],
+    "filas_eliminadas_total": [
+     279
+    ],
+    "filas_nuevas_total": [
+     383,
+     440
+    ],
     "H_total": 43.0,
     "I_total": 148.26,
     "delta_cant": 105.26,
     "N_valor_inicial": 27081400,
     "M_valor_final": 93374148,
+    "valor_disminuido": 27081400,
+    "valor_aumentado": 93374148,
+    "trasladado": 27081400,
     "delta_valor_neto": 66292748,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
    },
@@ -3119,11 +3284,21 @@
      327,
      379
     ],
+    "filas_eliminadas_total": [
+     275
+    ],
+    "filas_nuevas_total": [
+     327,
+     379
+    ],
     "H_total": 712.0,
     "I_total": 979.75,
     "delta_cant": 267.75,
     "N_valor_inicial": 152128056,
     "M_valor_final": 209336324,
+    "valor_disminuido": 152128056,
+    "valor_aumentado": 209336324,
+    "trasladado": 152128056,
     "delta_valor_neto": 57208268,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3136,11 +3311,18 @@
     "filas_nuevas": [
      325
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     325
+    ],
     "H_total": 1949.0,
     "I_total": 2396.64,
     "delta_cant": 447.64,
     "N_valor_inicial": 209613001,
     "M_valor_final": 257756236,
+    "valor_disminuido": 199696983,
+    "valor_aumentado": 247840218,
+    "trasladado": 199696983,
     "delta_valor_neto": 48143235,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3155,11 +3337,20 @@
      597,
      653
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     534,
+     597,
+     653
+    ],
     "H_total": 1080.0,
     "I_total": 1665.29,
     "delta_cant": 585.29,
     "N_valor_inicial": 37217880,
     "M_valor_final": 57387559,
+    "valor_disminuido": 24567247,
+    "valor_aumentado": 44736926,
+    "trasladado": 24567247,
     "delta_valor_neto": 20169679,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP']"
    },
@@ -3172,11 +3363,20 @@
     "filas_nuevas": [
      350
     ],
+    "filas_eliminadas_total": [
+     298
+    ],
+    "filas_nuevas_total": [
+     350
+    ],
     "H_total": 101.0,
     "I_total": 128.0,
     "delta_cant": 27.0,
     "N_valor_inicial": 75269038,
     "M_valor_final": 95390464,
+    "valor_disminuido": 75269038,
+    "valor_aumentado": 95390464,
+    "trasladado": 75269038,
     "delta_valor_neto": 20121426,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3189,11 +3389,20 @@
     "filas_nuevas": [
      543
     ],
+    "filas_eliminadas_total": [
+     502
+    ],
+    "filas_nuevas_total": [
+     543
+    ],
     "H_total": 5.0,
     "I_total": 4.0,
     "delta_cant": -1.0,
     "N_valor_inicial": 92457425,
     "M_valor_final": 73965940,
+    "valor_disminuido": 92457425,
+    "valor_aumentado": 73965940,
+    "trasladado": 73965940,
     "delta_valor_neto": -18491485,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN']"
    },
@@ -3206,11 +3415,18 @@
     "filas_nuevas": [
      212
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     212
+    ],
     "H_total": 13.0,
     "I_total": 17.0,
     "delta_cant": 4.0,
     "N_valor_inicial": 49757383,
     "M_valor_final": 65067347,
+    "valor_disminuido": 26792437,
+    "valor_aumentado": 42102401,
+    "trasladado": 26792437,
     "delta_valor_neto": 15309964,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
    },
@@ -3223,11 +3439,18 @@
     "filas_nuevas": [
      213
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     213
+    ],
     "H_total": 9.0,
     "I_total": 17.0,
     "delta_cant": 8.0,
     "N_valor_inicial": 14281569,
     "M_valor_final": 26976297,
+    "valor_disminuido": 4760523,
+    "valor_aumentado": 17455251,
+    "trasladado": 4760523,
     "delta_valor_neto": 12694728,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
    },
@@ -3242,11 +3465,21 @@
      344,
      396
     ],
+    "filas_eliminadas_total": [
+     630
+    ],
+    "filas_nuevas_total": [
+     344,
+     396
+    ],
     "H_total": 74.0,
     "I_total": 58.0,
     "delta_cant": -16.0,
     "N_valor_inicial": 53228052,
     "M_valor_final": 41719284,
+    "valor_disminuido": 51789456,
+    "valor_aumentado": 40280688,
+    "trasladado": 40280688,
     "delta_valor_neto": -11508768,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3260,11 +3493,21 @@
      351,
      403
     ],
+    "filas_eliminadas_total": [
+     299
+    ],
+    "filas_nuevas_total": [
+     351,
+     403
+    ],
     "H_total": 101.0,
     "I_total": 64.0,
     "delta_cant": -37.0,
     "N_valor_inicial": 27097492,
     "M_valor_final": 17170688,
+    "valor_disminuido": 27097492,
+    "valor_aumentado": 17170688,
+    "trasladado": 17170688,
     "delta_valor_neto": -9926804,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3277,11 +3520,18 @@
     "filas_nuevas": [
      211
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     211
+    ],
     "H_total": 8.0,
     "I_total": 10.0,
     "delta_cant": 2.0,
     "N_valor_inicial": 27367024,
     "M_valor_final": 34208780,
+    "valor_disminuido": 23946146,
+    "valor_aumentado": 30787902,
+    "trasladado": 23946146,
     "delta_valor_neto": 6841756,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
    },
@@ -3296,11 +3546,20 @@
      319,
      371
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     159,
+     319,
+     371
+    ],
     "H_total": 3537.0,
     "I_total": 3038.28,
     "delta_cant": -498.72,
     "N_valor_inicial": 44891604,
     "M_valor_final": 38561850,
+    "valor_disminuido": 44772934,
+    "valor_aumentado": 38443180,
+    "trasladado": 38443180,
     "delta_valor_neto": -6329754,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3313,11 +3572,20 @@
     "filas_nuevas": [
      380
     ],
+    "filas_eliminadas_total": [
+     276
+    ],
+    "filas_nuevas_total": [
+     380
+    ],
     "H_total": 119.0,
     "I_total": 134.41,
     "delta_cant": 15.41,
     "N_valor_inicial": 37297456,
     "M_valor_final": 42127320,
+    "valor_disminuido": 37297456,
+    "valor_aumentado": 42127320,
+    "trasladado": 37297456,
     "delta_valor_neto": 4829864,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
    },
@@ -3332,11 +3600,20 @@
      381,
      438
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     329,
+     381,
+     438
+    ],
     "H_total": 443.0,
     "I_total": 433.45,
     "delta_cant": -9.55,
     "N_valor_inicial": 168280638,
     "M_valor_final": 164652918,
+    "valor_disminuido": 164102112,
+    "valor_aumentado": 160474392,
+    "trasladado": 160474392,
     "delta_valor_neto": -3627720,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB']"
    },
@@ -3349,11 +3626,18 @@
     "filas_nuevas": [
      214
     ],
+    "filas_eliminadas_total": [],
+    "filas_nuevas_total": [
+     214
+    ],
     "H_total": 8.0,
     "I_total": 10.0,
     "delta_cant": 2.0,
     "N_valor_inicial": 11568568,
     "M_valor_final": 14460710,
+    "valor_disminuido": 10122497,
+    "valor_aumentado": 13014639,
+    "trasladado": 10122497,
     "delta_valor_neto": 2892142,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB']"
    },
@@ -3366,11 +3650,20 @@
     "filas_nuevas": [
      400
     ],
+    "filas_eliminadas_total": [
+     296
+    ],
+    "filas_nuevas_total": [
+     400
+    ],
     "H_total": 33.0,
     "I_total": 44.0,
     "delta_cant": 11.0,
     "N_valor_inicial": 7544922,
     "M_valor_final": 10059896,
+    "valor_disminuido": 7544922,
+    "valor_aumentado": 10059896,
+    "trasladado": 7544922,
     "delta_valor_neto": 2514974,
     "comentario": "Cambio de subcapitulo: ['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU'] -> ['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU']"
    },
@@ -3383,11 +3676,20 @@
     "filas_nuevas": [
      542
     ],
+    "filas_eliminadas_total": [
+     501
+    ],
+    "filas_nuevas_total": [
+     542
+    ],
     "H_total": 17.0,
     "I_total": 17.0,
     "delta_cant": 0.0,
     "N_valor_inicial": 160975754,
     "M_valor_final": 160975754,
+    "valor_disminuido": 160975754,
+    "valor_aumentado": 160975754,
+    "trasladado": 160975754,
     "delta_valor_neto": 0,
     "comentario": "Cambio de subcapitulo: ['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN'] -> ['INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y BAJA TENSIÓN']"
    }
@@ -61678,7 +61980,7 @@
      667
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [14, 47, 124, 194, 266, 318, 370, 427, 495, 536, 575, 599, 613, 632, 654, 667] subcapitulos=['EXCAVACIONES', 'Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[38572.0, 0, 1066.0, 0, 6103.0, 0, 0, 0, 4587.0, 0, 0, 0, 0, 0, 0, 0] I=[52468.569999999985, 6026.9400000000005, 1061.46, 643.09, 912.5999999999999, 12747.180000000002, 10058.77, 4096.65, 218.18, 5842.25, 0, 327.03999999999996, 6.87, 0, 1.98198, 350.81800000000004]"
+    "comentario": "Filas [14, 47, 124, 194, 266, 318, 370, 427, 495, 536, 575, 599, 613, 632, 654, 667] subcapitulos=['EXCAVACIONES', 'Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[38572.0, 0, 1066.0, 0, 6103.0, 0, 0, 0, 4587.0, 0, 0, 0, 0, 0, 0, 0] I=[52468.569999999985, 6026.9400000000005, 1061.46, 643.09, 912.5999999999999, 12747.180000000002, 10058.77, 4096.65, 218.18, 5842.25, 0, 327.03999999999996, 6.87, 0, 1.98198, 350.81800000000004]"
    },
    {
     "codigo_idu": "4390",
@@ -61698,7 +62000,7 @@
      365
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [16, 17, 313, 365] subcapitulos=['EXCAVACIONES', 'EXCAVACIONES', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0, 0, 0] I=[2.0, 1.0, 0, 11.0]"
+    "comentario": "Filas [16, 17, 313, 365] subcapitulos=['EXCAVACIONES', 'EXCAVACIONES', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB'] H=[0, 0, 0, 0] I=[2.0, 1.0, 0, 11.0]"
    },
    {
     "codigo_idu": "6486",
@@ -61759,7 +62061,7 @@
      665
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [54, 157, 227, 301, 353, 405, 462, 504, 665] subcapitulos=['Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES MOVISTAR'] H=[392.0, 0, 0, 0, 0, 0, 0, 0, 0] I=[558.62, 135.95, 71.09, 405.0, 5904.465176464074, 3917.669999999999, 877.1600000000001, 3.9400000000000004, 74.94]"
+    "comentario": "Filas [54, 157, 227, 301, 353, 405, 462, 504, 665] subcapitulos=['Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES MOVISTAR'] H=[392.0, 0, 0, 0, 0, 0, 0, 0, 0] I=[558.62, 135.95, 71.09, 405.0, 5904.465176464074, 3917.669999999999, 877.1600000000001, 3.9400000000000004, 74.94]"
    },
    {
     "codigo_idu": "4907",
@@ -61774,7 +62076,7 @@
      634
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [55, 158, 228, 503, 544, 583, 607, 634] subcapitulos=['Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU'] H=[2274.0, 0, 0, 0, 0, 0, 0, 0] I=[1843.42, 460.3600000000001, 292.51, 49.739999999999995, 1635.21, 0, 137.22999999999996, 1.26]"
+    "comentario": "Filas [55, 158, 228, 503, 544, 583, 607, 634] subcapitulos=['Excavaciones, Demoliciones y Rellenos', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU'] H=[2274.0, 0, 0, 0, 0, 0, 0, 0] I=[1843.42, 460.3600000000001, 292.51, 49.739999999999995, 1635.21, 0, 137.22999999999996, 1.26]"
    },
    {
     "codigo_idu": "3009",
@@ -61794,7 +62096,7 @@
      666
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [123, 193, 263, 315, 367, 424, 494, 535, 574, 598, 612, 636, 666] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[853.0, 0, 1471.0, 0, 0, 0, 3669.0, 0, 0, 0, 0, 0, 0] I=[816.4899999999999, 497.19, 202.5, 639.1400000000001, 540.0, 270.0, 167.85, 4494.0, 0, 251.53000000000003, 5.279999999999999, 1.98198, 269.85999999999996]"
+    "comentario": "Filas [123, 193, 263, 315, 367, 424, 494, 535, 574, 598, 612, 636, 666] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[853.0, 0, 1471.0, 0, 0, 0, 3669.0, 0, 0, 0, 0, 0, 0] I=[816.4899999999999, 497.19, 202.5, 639.1400000000001, 540.0, 270.0, 167.85, 4494.0, 0, 251.53000000000003, 5.279999999999999, 1.98198, 269.85999999999996]"
    },
    {
     "codigo_idu": "3539",
@@ -61803,7 +62105,7 @@
      195
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [125, 195] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[10.0, 0] I=[0, 0]"
+    "comentario": "Filas [125, 195] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[10.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3523",
@@ -61812,7 +62114,7 @@
      196
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [126, 196] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[24.0, 0] I=[0, 0]"
+    "comentario": "Filas [126, 196] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[24.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3515",
@@ -61821,7 +62123,7 @@
      197
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [127, 197] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[21.0, 0] I=[0, 0]"
+    "comentario": "Filas [127, 197] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[21.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3540",
@@ -61830,7 +62132,7 @@
      198
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [128, 198] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[9.0, 0] I=[0, 0]"
+    "comentario": "Filas [128, 198] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[9.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3315",
@@ -61839,7 +62141,7 @@
      199
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [129, 199] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[1.0, 0] I=[37.0, 1.0]"
+    "comentario": "Filas [129, 199] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[1.0, 0] I=[37.0, 1.0]"
    },
    {
     "codigo_idu": "3524",
@@ -61848,7 +62150,7 @@
      200
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [130, 200] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[48.0, 0] I=[0, 0]"
+    "comentario": "Filas [130, 200] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[48.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3516",
@@ -61857,7 +62159,7 @@
      201
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [131, 201] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[25.0, 0] I=[0, 0]"
+    "comentario": "Filas [131, 201] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[25.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "7419",
@@ -61866,7 +62168,7 @@
      202
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [132, 202] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[10.0, 0] I=[0, 0]"
+    "comentario": "Filas [132, 202] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[10.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "7421",
@@ -61875,7 +62177,7 @@
      203
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [133, 203] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[4.0, 0] I=[0, 0]"
+    "comentario": "Filas [133, 203] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[4.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "7423",
@@ -61884,7 +62186,7 @@
      204
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [134, 204] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[19.0, 0] I=[0, 0]"
+    "comentario": "Filas [134, 204] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[19.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "4402",
@@ -61893,7 +62195,7 @@
      205
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [135, 205] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[17.0, 0] I=[21.0, 14.0]"
+    "comentario": "Filas [135, 205] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[17.0, 0] I=[21.0, 14.0]"
    },
    {
     "codigo_idu": "3324",
@@ -61902,7 +62204,7 @@
      206
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [136, 206] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[28.0, 0] I=[29.0, 17.0]"
+    "comentario": "Filas [136, 206] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[28.0, 0] I=[29.0, 17.0]"
    },
    {
     "codigo_idu": "4979",
@@ -61911,7 +62213,7 @@
      207
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [137, 207] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[45.0, 0] I=[0, 0]"
+    "comentario": "Filas [137, 207] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[45.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "4841",
@@ -61922,7 +62224,7 @@
      256
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [138, 186, 208, 256] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[28.0, 0, 0, 0] I=[0, 42.0, 0, 0]"
+    "comentario": "Filas [138, 186, 208, 256] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[28.0, 0, 0, 0] I=[0, 42.0, 0, 0]"
    },
    {
     "codigo_idu": "4839",
@@ -61931,7 +62233,7 @@
      209
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [139, 209] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[43.0, 0] I=[0, 0]"
+    "comentario": "Filas [139, 209] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[43.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "4842",
@@ -61940,7 +62242,7 @@
      210
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [140, 210] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[3.0, 0] I=[0, 0]"
+    "comentario": "Filas [140, 210] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[3.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3328",
@@ -61949,7 +62251,7 @@
      211
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [141, 211] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[8.0, 0] I=[1.0, 9.0]"
+    "comentario": "Filas [141, 211] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[8.0, 0] I=[1.0, 9.0]"
    },
    {
     "codigo_idu": "3329",
@@ -61958,7 +62260,7 @@
      212
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [142, 212] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[13.0, 0] I=[6.0, 11.0]"
+    "comentario": "Filas [142, 212] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[13.0, 0] I=[6.0, 11.0]"
    },
    {
     "codigo_idu": "4858",
@@ -61967,7 +62269,7 @@
      213
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [143, 213] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[9.0, 0] I=[6.0, 11.0]"
+    "comentario": "Filas [143, 213] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[9.0, 0] I=[6.0, 11.0]"
    },
    {
     "codigo_idu": "4901",
@@ -61976,7 +62278,7 @@
      214
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [144, 214] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[8.0, 0] I=[1.0, 9.0]"
+    "comentario": "Filas [144, 214] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[8.0, 0] I=[1.0, 9.0]"
    },
    {
     "codigo_idu": "4411",
@@ -61985,7 +62287,7 @@
      215
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [145, 215] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[2.0, 0] I=[0, 0]"
+    "comentario": "Filas [145, 215] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[2.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "4420",
@@ -61994,7 +62296,7 @@
      216
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [146, 216] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[8.0, 0] I=[0, 0]"
+    "comentario": "Filas [146, 216] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[8.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3405",
@@ -62003,7 +62305,7 @@
      217
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [147, 217] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[13.0, 0] I=[0, 0]"
+    "comentario": "Filas [147, 217] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[13.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3246",
@@ -62012,7 +62314,7 @@
      218
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [148, 218] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[538.0, 0] I=[0, 0]"
+    "comentario": "Filas [148, 218] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[538.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3226",
@@ -62021,7 +62323,7 @@
      219
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [149, 219] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[283.0, 0] I=[860.56, 421.43]"
+    "comentario": "Filas [149, 219] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[283.0, 0] I=[860.56, 421.43]"
    },
    {
     "codigo_idu": "3227",
@@ -62030,7 +62332,7 @@
      220
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [150, 220] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[571.0, 0] I=[1398.3899999999996, 907.0799999999999]"
+    "comentario": "Filas [150, 220] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[571.0, 0] I=[1398.3899999999996, 907.0799999999999]"
    },
    {
     "codigo_idu": "3247",
@@ -62039,7 +62341,7 @@
      221
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [151, 221] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[674.0, 0] I=[0, 0]"
+    "comentario": "Filas [151, 221] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[674.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "8637",
@@ -62048,7 +62350,7 @@
      222
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [152, 222] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[1.0, 0] I=[0, 0]"
+    "comentario": "Filas [152, 222] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[1.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "8318",
@@ -62057,7 +62359,7 @@
      223
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [153, 223] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[13.0, 0] I=[0, 0]"
+    "comentario": "Filas [153, 223] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[13.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "8319",
@@ -62066,7 +62368,7 @@
      224
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [154, 224] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[26.0, 0] I=[0, 0]"
+    "comentario": "Filas [154, 224] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[26.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "4851",
@@ -62075,7 +62377,7 @@
      225
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [155, 225] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[31.0, 0] I=[0, 0]"
+    "comentario": "Filas [155, 225] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[31.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "7947",
@@ -62084,7 +62386,7 @@
      226
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [156, 226] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[101.0, 0] I=[0, 0]"
+    "comentario": "Filas [156, 226] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[101.0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "4848",
@@ -62097,7 +62399,7 @@
      428
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [159, 229, 267, 319, 371, 428] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 3537.0, 0, 0, 0] I=[1306.3000000000002, 0, 9.35, 1715.6799999999998, 6.95, 0]"
+    "comentario": "Filas [159, 229, 267, 319, 371, 428] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0, 3537.0, 0, 0, 0] I=[1306.3000000000002, 0, 9.35, 1715.6799999999998, 6.95, 0]"
    },
    {
     "codigo_idu": "3024",
@@ -62114,7 +62416,7 @@
      668
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [160, 230, 496, 537, 576, 600, 614, 633, 655, 668] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[0, 0, 609.0, 0, 0, 0, 0, 0, 0, 0] I=[292.44, 174.42, 50.04, 1028.8500000000004, 0, 45.89000000000001, 1.13, 324.0, 135.0, 58.65]"
+    "comentario": "Filas [160, 230, 496, 537, 576, 600, 614, 633, 655, 668] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR'] H=[0, 0, 609.0, 0, 0, 0, 0, 0, 0, 0] I=[292.44, 174.42, 50.04, 1028.8500000000004, 0, 45.89000000000001, 1.13, 324.0, 135.0, 58.65]"
    },
    {
     "codigo_idu": "8655",
@@ -62127,7 +62429,7 @@
      443
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [161, 231, 282, 334, 386, 443] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 936.0, 0, 0, 0] I=[51.3, 25.46, 17.540000000000003, 1062.79, 1465.1099999999997, 852.87]"
+    "comentario": "Filas [161, 231, 282, 334, 386, 443] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0, 936.0, 0, 0, 0] I=[51.3, 25.46, 17.540000000000003, 1062.79, 1465.1099999999997, 852.87]"
    },
    {
     "codigo_idu": "3225",
@@ -62136,7 +62438,7 @@
      232
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [162, 232] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[0, 1.27]"
+    "comentario": "Filas [162, 232] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[0, 1.27]"
    },
    {
     "codigo_idu": "3228",
@@ -62145,7 +62447,7 @@
      233
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [163, 233] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[0, 55.82]"
+    "comentario": "Filas [163, 233] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[0, 55.82]"
    },
    {
     "codigo_idu": "10612",
@@ -62154,7 +62456,7 @@
      234
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [164, 234] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[49.86, 0]"
+    "comentario": "Filas [164, 234] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[49.86, 0]"
    },
    {
     "codigo_idu": "4809",
@@ -62163,7 +62465,7 @@
      235
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [165, 235] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[160.49999999999997, 0]"
+    "comentario": "Filas [165, 235] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[160.49999999999997, 0]"
    },
    {
     "codigo_idu": "4849",
@@ -62178,7 +62480,7 @@
      642
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [166, 236, 488, 529, 568, 592, 620, 642] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[0, 0, 2883.0, 0, 0, 0, 3002.0, 0] I=[1154.19, 0, 0, 0, 0, 0, 0, 0]"
+    "comentario": "Filas [166, 236, 488, 529, 568, 592, 620, 642] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[0, 0, 2883.0, 0, 0, 0, 3002.0, 0] I=[1154.19, 0, 0, 0, 0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3404",
@@ -62187,7 +62489,7 @@
      237
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [167, 237] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[2.0, 0]"
+    "comentario": "Filas [167, 237] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[2.0, 0]"
    },
    {
     "codigo_idu": "3620",
@@ -62196,7 +62498,7 @@
      238
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [168, 238] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[6.0, 0]"
+    "comentario": "Filas [168, 238] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[6.0, 0]"
    },
    {
     "codigo_idu": "3317",
@@ -62205,7 +62507,7 @@
      239
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [169, 239] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[10.0, 0]"
+    "comentario": "Filas [169, 239] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[10.0, 0]"
    },
    {
     "codigo_idu": "3391",
@@ -62214,7 +62516,7 @@
      240
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [170, 240] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[26.0, 2.0]"
+    "comentario": "Filas [170, 240] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[26.0, 2.0]"
    },
    {
     "codigo_idu": "3305",
@@ -62223,7 +62525,7 @@
      241
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [171, 241] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[126.0, 0]"
+    "comentario": "Filas [171, 241] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[126.0, 0]"
    },
    {
     "codigo_idu": "3306",
@@ -62232,7 +62534,7 @@
      242
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [172, 242] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[220.0, 0]"
+    "comentario": "Filas [172, 242] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[220.0, 0]"
    },
    {
     "codigo_idu": "3307",
@@ -62241,7 +62543,7 @@
      243
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [173, 243] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[4.0, 0]"
+    "comentario": "Filas [173, 243] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[4.0, 0]"
    },
    {
     "codigo_idu": "3293",
@@ -62250,7 +62552,7 @@
      244
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [174, 244] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[7.0, 8.0]"
+    "comentario": "Filas [174, 244] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[7.0, 8.0]"
    },
    {
     "codigo_idu": "3294",
@@ -62259,7 +62561,7 @@
      245
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [175, 245] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[1.0, 14.0]"
+    "comentario": "Filas [175, 245] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[1.0, 14.0]"
    },
    {
     "codigo_idu": "3258",
@@ -62268,7 +62570,7 @@
      246
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [176, 246] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[2.0, 1.0]"
+    "comentario": "Filas [176, 246] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[2.0, 1.0]"
    },
    {
     "codigo_idu": "3257",
@@ -62277,7 +62579,7 @@
      247
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [177, 247] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[2.0, 0]"
+    "comentario": "Filas [177, 247] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[2.0, 0]"
    },
    {
     "codigo_idu": "3253",
@@ -62286,7 +62588,7 @@
      248
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [178, 248] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[7.0, 0]"
+    "comentario": "Filas [178, 248] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[7.0, 0]"
    },
    {
     "codigo_idu": "3282",
@@ -62295,7 +62597,7 @@
      249
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [179, 249] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[9.0, 11.0]"
+    "comentario": "Filas [179, 249] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[9.0, 11.0]"
    },
    {
     "codigo_idu": "3254",
@@ -62304,7 +62606,7 @@
      250
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [180, 250] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[10.0, 10.0]"
+    "comentario": "Filas [180, 250] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[10.0, 10.0]"
    },
    {
     "codigo_idu": "5750",
@@ -62313,7 +62615,7 @@
      251
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [181, 251] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[5.0, 0]"
+    "comentario": "Filas [181, 251] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[5.0, 0]"
    },
    {
     "codigo_idu": "4872",
@@ -62322,7 +62624,7 @@
      252
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [182, 252] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[4.0, 0]"
+    "comentario": "Filas [182, 252] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[4.0, 0]"
    },
    {
     "codigo_idu": "4385",
@@ -62331,7 +62633,7 @@
      253
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [183, 253] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[8.0, 0]"
+    "comentario": "Filas [183, 253] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[8.0, 0]"
    },
    {
     "codigo_idu": "4386",
@@ -62340,7 +62642,7 @@
      254
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [184, 254] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[15.0, 0]"
+    "comentario": "Filas [184, 254] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[15.0, 0]"
    },
    {
     "codigo_idu": "4840",
@@ -62349,7 +62651,7 @@
      255
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [185, 255] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[4.0, 0]"
+    "comentario": "Filas [185, 255] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[4.0, 0]"
    },
    {
     "codigo_idu": "4845",
@@ -62358,7 +62660,7 @@
      257
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [187, 257] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[0, 1.0]"
+    "comentario": "Filas [187, 257] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[0, 1.0]"
    },
    {
     "codigo_idu": "8151",
@@ -62367,7 +62669,7 @@
      258
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [188, 258] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[3.0, 1.0]"
+    "comentario": "Filas [188, 258] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[3.0, 1.0]"
    },
    {
     "codigo_idu": "8181",
@@ -62376,7 +62678,7 @@
      259
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [189, 259] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[1.0, 0]"
+    "comentario": "Filas [189, 259] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[1.0, 0]"
    },
    {
     "codigo_idu": "8970",
@@ -62385,7 +62687,7 @@
      260
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [190, 260] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[129.0, 0]"
+    "comentario": "Filas [190, 260] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[129.0, 0]"
    },
    {
     "codigo_idu": "3687",
@@ -62394,7 +62696,7 @@
      261
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [191, 261] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL I', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP E'] H=[0, 0] I=[50.0, 28.0]"
+    "comentario": "Filas [191, 261] subcapitulos=['OBRAS PARA LA RED DE ACUEDUCTO OBRAS A CARGO DEL IDU', 'OBRAS PARA LA RED DE ACUEDUCTO A CARGO DE LA ESP EAAB'] H=[0, 0] I=[50.0, 28.0]"
    },
    {
     "codigo_idu": "4262",
@@ -62405,7 +62707,7 @@
      425
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [264, 316, 368, 425] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[3411.0, 0, 0, 0] I=[499.5, 9177.68, 7197.5, 2937.3]"
+    "comentario": "Filas [264, 316, 368, 425] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[3411.0, 0, 0, 0] I=[499.5, 9177.68, 7197.5, 2937.3]"
    },
    {
     "codigo_idu": "8643",
@@ -62416,7 +62718,7 @@
      426
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [265, 317, 369, 426] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[5801.0, 0, 0, 0] I=[0, 18442.509999999995, 17457.17, 4973.43]"
+    "comentario": "Filas [265, 317, 369, 426] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[5801.0, 0, 0, 0] I=[0, 18442.509999999995, 17457.17, 4973.43]"
    },
    {
     "codigo_idu": "3919",
@@ -62427,7 +62729,7 @@
      429
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [268, 320, 372, 429] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[639.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [268, 320, 372, 429] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[639.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3920",
@@ -62438,7 +62740,7 @@
      430
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [269, 321, 373, 430] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[84.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [269, 321, 373, 430] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[84.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3922",
@@ -62449,7 +62751,7 @@
      431
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [270, 322, 374, 431] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[172.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [270, 322, 374, 431] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[172.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3923",
@@ -62460,7 +62762,7 @@
      432
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [271, 323, 375, 432] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[257.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [271, 323, 375, 432] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[257.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3924",
@@ -62471,7 +62773,7 @@
      433
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [272, 324, 376, 433] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[14.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [272, 324, 376, 433] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[14.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3043",
@@ -62482,7 +62784,7 @@
      434
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [273, 325, 377, 434] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[1949.0, 0, 0, 0] I=[92.2, 2304.44, 0, 0]"
+    "comentario": "Filas [273, 325, 377, 434] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[1949.0, 0, 0, 0] I=[92.2, 2304.44, 0, 0]"
    },
    {
     "codigo_idu": "3044",
@@ -62493,7 +62795,7 @@
      435
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [274, 326, 378, 435] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[239.0, 0, 0, 0] I=[0, 552.95, 624.89, 0]"
+    "comentario": "Filas [274, 326, 378, 435] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[239.0, 0, 0, 0] I=[0, 552.95, 624.89, 0]"
    },
    {
     "codigo_idu": "3045",
@@ -62504,7 +62806,7 @@
      436
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [275, 327, 379, 436] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[712.0, 0, 0, 0] I=[0, 700.9699999999999, 278.78, 0]"
+    "comentario": "Filas [275, 327, 379, 436] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[712.0, 0, 0, 0] I=[0, 700.9699999999999, 278.78, 0]"
    },
    {
     "codigo_idu": "6538",
@@ -62515,7 +62817,7 @@
      437
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [276, 328, 380, 437] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[119.0, 0, 0, 0] I=[0, 0, 134.41, 0]"
+    "comentario": "Filas [276, 328, 380, 437] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[119.0, 0, 0, 0] I=[0, 0, 134.41, 0]"
    },
    {
     "codigo_idu": "3046",
@@ -62526,7 +62828,7 @@
      438
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [277, 329, 381, 438] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[443.0, 0, 0, 0] I=[11.0, 206.2, 84.0, 132.25]"
+    "comentario": "Filas [277, 329, 381, 438] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[443.0, 0, 0, 0] I=[11.0, 206.2, 84.0, 132.25]"
    },
    {
     "codigo_idu": "3047",
@@ -62537,7 +62839,7 @@
      439
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [278, 330, 382, 439] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[39.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [278, 330, 382, 439] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[39.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3048",
@@ -62548,7 +62850,7 @@
      440
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [279, 331, 383, 440] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[43.0, 0, 0, 0] I=[0, 0, 108.26, 40.0]"
+    "comentario": "Filas [279, 331, 383, 440] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[43.0, 0, 0, 0] I=[0, 0, 108.26, 40.0]"
    },
    {
     "codigo_idu": "7447",
@@ -62559,7 +62861,7 @@
      441
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [280, 332, 384, 441] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[120.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [280, 332, 384, 441] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[120.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4896",
@@ -62570,7 +62872,7 @@
      442
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [281, 333, 385, 442] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[1945.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [281, 333, 385, 442] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[1945.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4792",
@@ -62581,7 +62883,7 @@
      444
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [283, 335, 387, 444] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[5348.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [283, 335, 387, 444] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[5348.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4291",
@@ -62592,7 +62894,7 @@
      445
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [284, 336, 388, 445] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[454.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [284, 336, 388, 445] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[454.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "7876",
@@ -62603,7 +62905,7 @@
      446
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [285, 337, 389, 446] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[247.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [285, 337, 389, 446] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[247.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "6188",
@@ -62614,7 +62916,7 @@
      447
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [286, 338, 390, 447] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[119.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [286, 338, 390, 447] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[119.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4294",
@@ -62625,7 +62927,7 @@
      448
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [287, 339, 391, 448] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[61.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [287, 339, 391, 448] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[61.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4296",
@@ -62636,7 +62938,7 @@
      449
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [288, 340, 392, 449] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[64.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [288, 340, 392, 449] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[64.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4297",
@@ -62647,7 +62949,7 @@
      450
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [289, 341, 393, 450] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[214.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [289, 341, 393, 450] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[214.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4299",
@@ -62658,7 +62960,7 @@
      451
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [290, 342, 394, 451] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[98.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [290, 342, 394, 451] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[98.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4622",
@@ -62669,7 +62971,7 @@
      452
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [291, 343, 395, 452] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[168.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [291, 343, 395, 452] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[168.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "7512",
@@ -62682,7 +62984,7 @@
      652
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [292, 344, 396, 453, 630, 652] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[58.0, 0, 0, 0, 16.0, 0] I=[2.0, 18.0, 38.0, 0, 0, 0]"
+    "comentario": "Filas [292, 344, 396, 453, 630, 652] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[58.0, 0, 0, 0, 16.0, 0] I=[2.0, 18.0, 38.0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4553",
@@ -62693,7 +62995,7 @@
      454
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [293, 345, 397, 454] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[99.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [293, 345, 397, 454] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[99.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "7888",
@@ -62704,7 +63006,7 @@
      455
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [294, 346, 398, 455] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[99.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [294, 346, 398, 455] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[99.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3895",
@@ -62715,7 +63017,7 @@
      456
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [295, 347, 399, 456] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[123.0, 0, 0, 0] I=[0, 0, 194.0, 0]"
+    "comentario": "Filas [295, 347, 399, 456] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[123.0, 0, 0, 0] I=[0, 0, 194.0, 0]"
    },
    {
     "codigo_idu": "3155",
@@ -62726,7 +63028,7 @@
      457
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [296, 348, 400, 457] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[33.0, 0, 0, 0] I=[0, 0, 44.0, 0]"
+    "comentario": "Filas [296, 348, 400, 457] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[33.0, 0, 0, 0] I=[0, 0, 44.0, 0]"
    },
    {
     "codigo_idu": "8545",
@@ -62737,7 +63039,7 @@
      458
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [297, 349, 401, 458] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[404.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [297, 349, 401, 458] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[404.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "5015",
@@ -62748,7 +63050,7 @@
      459
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [298, 350, 402, 459] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[101.0, 0, 0, 0] I=[0, 128.0, 0, 0]"
+    "comentario": "Filas [298, 350, 402, 459] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[101.0, 0, 0, 0] I=[0, 128.0, 0, 0]"
    },
    {
     "codigo_idu": "4878",
@@ -62759,7 +63061,7 @@
      460
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [299, 351, 403, 460] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[101.0, 0, 0, 0] I=[0, 62.0, 2.0, 0]"
+    "comentario": "Filas [299, 351, 403, 460] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[101.0, 0, 0, 0] I=[0, 62.0, 2.0, 0]"
    },
    {
     "codigo_idu": "4144",
@@ -62770,7 +63072,7 @@
      461
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [300, 352, 404, 461] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[815.0, 0, 0, 0] I=[4.0, 0, 0, 0]"
+    "comentario": "Filas [300, 352, 404, 461] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[815.0, 0, 0, 0] I=[4.0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3879",
@@ -62781,7 +63083,7 @@
      471
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [302, 354, 414, 471] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 73.0, 43.2, 21.8]"
+    "comentario": "Filas [302, 354, 414, 471] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0, 0, 0] I=[0, 73.0, 43.2, 21.8]"
    },
    {
     "codigo_idu": "3878",
@@ -62792,7 +63094,7 @@
      472
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [303, 355, 415, 472] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 73.0, 43.2, 21.8]"
+    "comentario": "Filas [303, 355, 415, 472] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0, 0, 0] I=[0, 73.0, 43.2, 21.8]"
    },
    {
     "codigo_idu": "3442",
@@ -62803,7 +63105,7 @@
      473
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [304, 356, 416, 473] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 5.609999999999999, 2.38, 6.2700000000000005]"
+    "comentario": "Filas [304, 356, 416, 473] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0, 0, 0] I=[0, 5.609999999999999, 2.38, 6.2700000000000005]"
    },
    {
     "codigo_idu": "3471",
@@ -62814,7 +63116,7 @@
      474
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [305, 357, 417, 474] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0, 0, 0] I=[0, 157.63, 57.501, 35.619]"
+    "comentario": "Filas [305, 357, 417, 474] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0, 0, 0] I=[0, 157.63, 57.501, 35.619]"
    },
    {
     "codigo_idu": "3042",
@@ -62822,8 +63124,8 @@
      306,
      358
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [306, 358] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 989.3199999999998]"
+    "es_reubicacion": true,
+    "comentario": "Filas [306, 358] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB'] H=[0, 0] I=[0, 989.3199999999998]"
    },
    {
     "codigo_idu": "4879",
@@ -62831,8 +63133,8 @@
      307,
      359
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [307, 359] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 21.0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [307, 359] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB'] H=[0, 0] I=[0, 21.0]"
    },
    {
     "codigo_idu": "7892",
@@ -62840,8 +63142,8 @@
      308,
      360
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [308, 360] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 216.0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [308, 360] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB'] H=[0, 0] I=[0, 216.0]"
    },
    {
     "codigo_idu": "9325",
@@ -62849,8 +63151,8 @@
      309,
      361
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [309, 361] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 27.0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [309, 361] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB'] H=[0, 0] I=[0, 27.0]"
    },
    {
     "codigo_idu": "9434",
@@ -62858,8 +63160,8 @@
      310,
      362
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [310, 362] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 54000.0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [310, 362] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB'] H=[0, 0] I=[0, 54000.0]"
    },
    {
     "codigo_idu": "8001",
@@ -62867,8 +63169,8 @@
      311,
      363
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [311, 363] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA'] H=[0, 0] I=[0, 104.3]"
+    "es_reubicacion": true,
+    "comentario": "Filas [311, 363] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB'] H=[0, 0] I=[0, 104.3]"
    },
    {
     "codigo_idu": "N/A",
@@ -62888,7 +63190,7 @@
      674
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [312, 364, 421, 422, 478, 479, 480, 481, 513, 522, 552, 561, 674] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CA', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES VANTI'] H=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] I=[0, 71.0, 42.2, 25.5, 21.8, 110.0, 2.0, 0, 0, 0, 0, 73.0, 35.3]"
+    "comentario": "Filas [312, 364, 421, 422, 478, 479, 480, 481, 513, 522, 552, 561, 674] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO SANITARIO A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES VANTI'] H=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] I=[0, 71.0, 42.2, 25.5, 21.8, 110.0, 2.0, 0, 0, 0, 0, 73.0, 35.3]"
    },
    {
     "codigo_idu": "7432",
@@ -62896,8 +63198,8 @@
      406,
      463
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [406, 463] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[97.96, 148.03]"
+    "es_reubicacion": true,
+    "comentario": "Filas [406, 463] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[97.96, 148.03]"
    },
    {
     "codigo_idu": "7433",
@@ -62905,8 +63207,8 @@
      407,
      464
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [407, 464] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[0, 108.96]"
+    "es_reubicacion": true,
+    "comentario": "Filas [407, 464] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[0, 108.96]"
    },
    {
     "codigo_idu": "7435",
@@ -62914,8 +63216,8 @@
      408,
      465
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [408, 465] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[52.29, 122.00999999999999]"
+    "es_reubicacion": true,
+    "comentario": "Filas [408, 465] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[52.29, 122.00999999999999]"
    },
    {
     "codigo_idu": "4265",
@@ -62923,8 +63225,8 @@
      409,
      466
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [409, 466] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[202.39000000000001, 0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [409, 466] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[202.39000000000001, 0]"
    },
    {
     "codigo_idu": "3936",
@@ -62932,8 +63234,8 @@
      410,
      467
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [410, 467] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[72.15, 0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [410, 467] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[72.15, 0]"
    },
    {
     "codigo_idu": "3937",
@@ -62941,8 +63243,8 @@
      411,
      468
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [411, 468] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[199.94, 0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [411, 468] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[199.94, 0]"
    },
    {
     "codigo_idu": "3939",
@@ -62950,8 +63252,8 @@
      412,
      469
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [412, 469] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[39.14, 0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [412, 469] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[39.14, 0]"
    },
    {
     "codigo_idu": "3993",
@@ -62959,8 +63261,8 @@
      413,
      470
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [413, 470] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[70.9, 70.9]"
+    "es_reubicacion": true,
+    "comentario": "Filas [413, 470] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[70.9, 70.9]"
    },
    {
     "codigo_idu": "4892",
@@ -62971,7 +63273,7 @@
      558
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [418, 475, 519, 558] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0, 0, 0] I=[599.07, 0, 1.0, 0]"
+    "comentario": "Filas [418, 475, 519, 558] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0, 0, 0] I=[599.07, 0, 1.0, 0]"
    },
    {
     "codigo_idu": "5887",
@@ -62979,8 +63281,8 @@
      419,
      476
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [419, 476] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[119.01000000000002, 0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [419, 476] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[119.01000000000002, 0]"
    },
    {
     "codigo_idu": "5888",
@@ -62988,8 +63290,8 @@
      420,
      477
     ],
-    "es_reubicacion": false,
-    "comentario": "Filas [420, 477] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARG'] H=[0, 0] I=[17.24, 0]"
+    "es_reubicacion": true,
+    "comentario": "Filas [420, 477] subcapitulos=['OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DEL IDU', 'OBRAS PARA LA RED DE ALCANTARILLADO PLUVIAL A CARGO DE LA EAAB'] H=[0, 0] I=[17.24, 0]"
    },
    {
     "codigo_idu": "6673",
@@ -63000,7 +63302,7 @@
      588
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [484, 525, 564, 588] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[50.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [484, 525, 564, 588] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[50.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "6676",
@@ -63011,7 +63313,7 @@
      589
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [485, 526, 565, 589] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[73.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [485, 526, 565, 589] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[73.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "8498",
@@ -63022,7 +63324,7 @@
      590
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [486, 527, 566, 590] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[1501.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [486, 527, 566, 590] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[1501.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "8131",
@@ -63037,7 +63339,7 @@
      671
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [487, 528, 567, 591, 627, 649, 661, 671] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR', 'INSTALACIONES UNE EPM'] H=[2539.0, 0, 0, 0, 186.0, 0, 1071.0, 1998.0] I=[0, 0, 0, 0, 0, 0, 0, 0]"
+    "comentario": "Filas [487, 528, 567, 591, 627, 649, 661, 671] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP', 'INSTALACIONES MOVISTAR', 'INSTALACIONES UNE EPM'] H=[2539.0, 0, 0, 0, 186.0, 0, 1071.0, 1998.0] I=[0, 0, 0, 0, 0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3159",
@@ -63048,7 +63350,7 @@
      593
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [489, 530, 569, 593] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[3399.0, 0, 0, 0] I=[13.1, 0, 0, 0]"
+    "comentario": "Filas [489, 530, 569, 593] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[3399.0, 0, 0, 0] I=[13.1, 0, 0, 0]"
    },
    {
     "codigo_idu": "5182",
@@ -63059,7 +63361,7 @@
      594
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [490, 531, 570, 594] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[3399.0, 0, 0, 0] I=[7.6, 3912.249999999999, 0, 0]"
+    "comentario": "Filas [490, 531, 570, 594] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[3399.0, 0, 0, 0] I=[7.6, 3912.249999999999, 0, 0]"
    },
    {
     "codigo_idu": "3380",
@@ -63073,7 +63375,7 @@
      648
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [491, 505, 532, 571, 595, 626, 648] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[155.0, 0, 0, 0, 0, 2870.0, 0] I=[0, 13.6, 0, 0, 0, 6.0, 0]"
+    "comentario": "Filas [491, 505, 532, 571, 595, 626, 648] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[155.0, 0, 0, 0, 0, 2870.0, 0] I=[0, 13.6, 0, 0, 0, 6.0, 0]"
    },
    {
     "codigo_idu": "3379",
@@ -63084,7 +63386,7 @@
      596
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [492, 533, 572, 596] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[109.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [492, 533, 572, 596] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[109.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "5023",
@@ -63097,7 +63399,7 @@
      653
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [493, 534, 573, 597, 631, 653] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[1080.0, 0, 0, 0, 0, 0] I=[367.1, 381.17, 0, 899.47, 0, 17.55]"
+    "comentario": "Filas [493, 534, 573, 597, 631, 653] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO', 'INSTALACIONES RED TELEFÓNICA DE ETB - A CARGO IDU', 'INSTALACIONES RED TELEFÓNICA DE ETB A CARGO ESP'] H=[1080.0, 0, 0, 0, 0, 0] I=[367.1, 381.17, 0, 899.47, 0, 17.55]"
    },
    {
     "codigo_idu": "4104",
@@ -63108,7 +63410,7 @@
      601
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [497, 538, 577, 601] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[8.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [497, 538, 577, 601] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[8.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4106",
@@ -63119,7 +63421,7 @@
      602
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [498, 539, 578, 602] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[10.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [498, 539, 578, 602] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[10.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "4107",
@@ -63130,7 +63432,7 @@
      603
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [499, 540, 579, 603] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[167.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [499, 540, 579, 603] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[167.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "3652",
@@ -63141,7 +63443,7 @@
      604
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [500, 541, 580, 604] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[4.0, 0, 0, 0] I=[0, 0, 0, 0]"
+    "comentario": "Filas [500, 541, 580, 604] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[4.0, 0, 0, 0] I=[0, 0, 0, 0]"
    },
    {
     "codigo_idu": "9035",
@@ -63152,7 +63454,7 @@
      605
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [501, 542, 581, 605] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[17.0, 0, 0, 0] I=[0, 17.0, 0, 0]"
+    "comentario": "Filas [501, 542, 581, 605] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[17.0, 0, 0, 0] I=[0, 17.0, 0, 0]"
    },
    {
     "codigo_idu": "5253",
@@ -63163,7 +63465,7 @@
      606
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [502, 543, 582, 606] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[5.0, 0, 0, 0] I=[0, 4.0, 0, 0]"
+    "comentario": "Filas [502, 543, 582, 606] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[5.0, 0, 0, 0] I=[0, 4.0, 0, 0]"
    },
    {
     "codigo_idu": "9030",
@@ -63174,7 +63476,7 @@
      608
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [506, 545, 584, 608] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[0, 0, 0, 0] I=[0, 0, 0, 63.0]"
+    "comentario": "Filas [506, 545, 584, 608] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[0, 0, 0, 0] I=[0, 0, 0, 63.0]"
    },
    {
     "codigo_idu": "9031",
@@ -63185,7 +63487,7 @@
      609
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [507, 546, 585, 609] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[0, 0, 0, 0] I=[0, 34.0, 0, 3.0]"
+    "comentario": "Filas [507, 546, 585, 609] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[0, 0, 0, 0] I=[0, 34.0, 0, 3.0]"
    },
    {
     "codigo_idu": "9032",
@@ -63194,7 +63496,7 @@
      547
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [508, 547] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 165.0]"
+    "comentario": "Filas [508, 547] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 165.0]"
    },
    {
     "codigo_idu": "9034",
@@ -63203,7 +63505,7 @@
      548
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [509, 548] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 12.0]"
+    "comentario": "Filas [509, 548] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 12.0]"
    },
    {
     "codigo_idu": "3382",
@@ -63214,7 +63516,7 @@
      610
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [510, 549, 586, 610] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y ', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO'] H=[0, 0, 0, 0] I=[0, 0, 0, 5.73]"
+    "comentario": "Filas [510, 549, 586, 610] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DEL IDU ALUMBRADO PUBLICO', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL ALUMBRADO PUBLICO'] H=[0, 0, 0, 0] I=[0, 0, 0, 5.73]"
    },
    {
     "codigo_idu": "8739",
@@ -63223,7 +63525,7 @@
      550
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [511, 550] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 0]"
+    "comentario": "Filas [511, 550] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "3408",
@@ -63232,7 +63534,7 @@
      551
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [512, 551] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 619.86]"
+    "comentario": "Filas [512, 551] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 619.86]"
    },
    {
     "codigo_idu": "8737",
@@ -63241,7 +63543,7 @@
      553
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [514, 553] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[60.0, 60.0]"
+    "comentario": "Filas [514, 553] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[60.0, 60.0]"
    },
    {
     "codigo_idu": "3413",
@@ -63250,7 +63552,7 @@
      554
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [515, 554] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 760.0]"
+    "comentario": "Filas [515, 554] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 760.0]"
    },
    {
     "codigo_idu": "3414",
@@ -63259,7 +63561,7 @@
      555
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [516, 555] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 0]"
+    "comentario": "Filas [516, 555] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 0]"
    },
    {
     "codigo_idu": "5873",
@@ -63268,7 +63570,7 @@
      556
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [517, 556] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 6.0]"
+    "comentario": "Filas [517, 556] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 6.0]"
    },
    {
     "codigo_idu": "7369",
@@ -63277,7 +63579,7 @@
      557
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [518, 557] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[2157.2499999999995, 0]"
+    "comentario": "Filas [518, 557] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[2157.2499999999995, 0]"
    },
    {
     "codigo_idu": "5316",
@@ -63286,7 +63588,7 @@
      559
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [520, 559] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[33.0, 0]"
+    "comentario": "Filas [520, 559] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[33.0, 0]"
    },
    {
     "codigo_idu": "6423",
@@ -63295,7 +63597,7 @@
      560
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [521, 560] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[1.0, 0]"
+    "comentario": "Filas [521, 560] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[1.0, 0]"
    },
    {
     "codigo_idu": "8081",
@@ -63304,7 +63606,7 @@
      562
     ],
     "es_reubicacion": true,
-    "comentario": "Filas [523, 562] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y B', 'INSTALACIONES ELECTRICAS A CARGO DE  ENEL MEDIA Y '] H=[0, 0] I=[0, 2688.0]"
+    "comentario": "Filas [523, 562] subcapitulos=['INSTALACIONES ELECTRICAS A CARGO DEL IDU MEDIA Y BAJA TENSIÓN', 'INSTALACIONES ELECTRICAS A CARGO DE ENEL MEDIA Y BAJA TENSIÓN'] H=[0, 0] I=[0, 2688.0]"
    },
    {
     "codigo_idu": "5875",
@@ -64818,8 +65120,1848 @@
     "K_v4": 91204.0,
     "K_contractual": 87336.0,
     "delta_pct": 4.43
+   },
+   {
+    "codigo_idu": "4291",
+    "row": 388,
+    "K_v4": 564169.0,
+    "K_contractual": 552757.0,
+    "delta_pct": 2.06
+   },
+   {
+    "codigo_idu": "7876",
+    "row": 389,
+    "K_v4": 1349981.0,
+    "K_contractual": 1307869.0,
+    "delta_pct": 3.22
+   },
+   {
+    "codigo_idu": "4294",
+    "row": 391,
+    "K_v4": 715237.0,
+    "K_contractual": 700274.0,
+    "delta_pct": 2.14
+   },
+   {
+    "codigo_idu": "4296",
+    "row": 392,
+    "K_v4": 775906.0,
+    "K_contractual": 760098.0,
+    "delta_pct": 2.08
+   },
+   {
+    "codigo_idu": "4297",
+    "row": 393,
+    "K_v4": 1032916.0,
+    "K_contractual": 1009588.0,
+    "delta_pct": 2.31
+   },
+   {
+    "codigo_idu": "4622",
+    "row": 395,
+    "K_v4": 397347.0,
+    "K_contractual": 384755.0,
+    "delta_pct": 3.27
+   },
+   {
+    "codigo_idu": "7512",
+    "row": 396,
+    "K_v4": 545547.0,
+    "K_contractual": 524207.0,
+    "delta_pct": 4.07
+   },
+   {
+    "codigo_idu": "4553",
+    "row": 397,
+    "K_v4": 3562276.0,
+    "K_contractual": 3486034.0,
+    "delta_pct": 2.19
+   },
+   {
+    "codigo_idu": "3895",
+    "row": 399,
+    "K_v4": 5181513.0,
+    "K_contractual": 5072732.0,
+    "delta_pct": 2.14
+   },
+   {
+    "codigo_idu": "3155",
+    "row": 400,
+    "K_v4": 173406.0,
+    "K_contractual": 168752.0,
+    "delta_pct": 2.76
+   },
+   {
+    "codigo_idu": "8545",
+    "row": 401,
+    "K_v4": 42975.0,
+    "K_contractual": 39121.0,
+    "delta_pct": 9.85
+   },
+   {
+    "codigo_idu": "5015",
+    "row": 402,
+    "K_v4": 565221.0,
+    "K_contractual": 548965.0,
+    "delta_pct": 2.96
+   },
+   {
+    "codigo_idu": "4878",
+    "row": 403,
+    "K_v4": 203484.0,
+    "K_contractual": 119332.0,
+    "delta_pct": 70.52
+   },
+   {
+    "codigo_idu": "4144",
+    "row": 404,
+    "K_v4": 84947.0,
+    "K_contractual": 77870.0,
+    "delta_pct": 9.09
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 424,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "4262",
+    "row": 425,
+    "K_v4": 5266.0,
+    "K_contractual": 5043.0,
+    "delta_pct": 4.42
+   },
+   {
+    "codigo_idu": "8643",
+    "row": 426,
+    "K_v4": 50435.0,
+    "K_contractual": 39997.0,
+    "delta_pct": 26.1
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 427,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "4848",
+    "row": 428,
+    "K_v4": 9626.0,
+    "K_contractual": 8906.0,
+    "delta_pct": 8.08
+   },
+   {
+    "codigo_idu": "3919",
+    "row": 429,
+    "K_v4": 669924.0,
+    "K_contractual": 618533.0,
+    "delta_pct": 8.31
+   },
+   {
+    "codigo_idu": "3920",
+    "row": 430,
+    "K_v4": 799680.0,
+    "K_contractual": 721239.0,
+    "delta_pct": 10.88
+   },
+   {
+    "codigo_idu": "3922",
+    "row": 431,
+    "K_v4": 1340174.0,
+    "K_contractual": 1225201.0,
+    "delta_pct": 9.38
+   },
+   {
+    "codigo_idu": "3923",
+    "row": 432,
+    "K_v4": 1787034.0,
+    "K_contractual": 1626863.0,
+    "delta_pct": 9.85
+   },
+   {
+    "codigo_idu": "3924",
+    "row": 433,
+    "K_v4": 2373496.0,
+    "K_contractual": 2158419.0,
+    "delta_pct": 9.96
+   },
+   {
+    "codigo_idu": "3043",
+    "row": 434,
+    "K_v4": 81570.0,
+    "K_contractual": 73046.0,
+    "delta_pct": 11.67
+   },
+   {
+    "codigo_idu": "3044",
+    "row": 435,
+    "K_v4": 115526.0,
+    "K_contractual": 103382.0,
+    "delta_pct": 11.75
+   },
+   {
+    "codigo_idu": "3045",
+    "row": 436,
+    "K_v4": 162051.0,
+    "K_contractual": 144939.0,
+    "delta_pct": 11.81
+   },
+   {
+    "codigo_idu": "6538",
+    "row": 437,
+    "K_v4": 237714.0,
+    "K_contractual": 212979.0,
+    "delta_pct": 11.61
+   },
+   {
+    "codigo_idu": "3046",
+    "row": 438,
+    "K_v4": 288107.0,
+    "K_contractual": 257519.0,
+    "delta_pct": 11.88
+   },
+   {
+    "codigo_idu": "3047",
+    "row": 439,
+    "K_v4": 391575.0,
+    "K_contractual": 349918.0,
+    "delta_pct": 11.9
+   },
+   {
+    "codigo_idu": "3048",
+    "row": 440,
+    "K_v4": 477668.0,
+    "K_contractual": 426811.0,
+    "delta_pct": 11.92
+   },
+   {
+    "codigo_idu": "7447",
+    "row": 441,
+    "K_v4": 3526255.0,
+    "K_contractual": 3208470.0,
+    "delta_pct": 9.9
+   },
+   {
+    "codigo_idu": "4896",
+    "row": 442,
+    "K_v4": 413068.0,
+    "K_contractual": 380596.0,
+    "delta_pct": 8.53
+   },
+   {
+    "codigo_idu": "8655",
+    "row": 443,
+    "K_v4": 89872.0,
+    "K_contractual": 82808.0,
+    "delta_pct": 8.53
+   },
+   {
+    "codigo_idu": "4792",
+    "row": 444,
+    "K_v4": 91204.0,
+    "K_contractual": 87336.0,
+    "delta_pct": 4.43
+   },
+   {
+    "codigo_idu": "4291",
+    "row": 445,
+    "K_v4": 564169.0,
+    "K_contractual": 552757.0,
+    "delta_pct": 2.06
+   },
+   {
+    "codigo_idu": "7876",
+    "row": 446,
+    "K_v4": 1349981.0,
+    "K_contractual": 1307869.0,
+    "delta_pct": 3.22
+   },
+   {
+    "codigo_idu": "4294",
+    "row": 448,
+    "K_v4": 715237.0,
+    "K_contractual": 700274.0,
+    "delta_pct": 2.14
+   },
+   {
+    "codigo_idu": "4296",
+    "row": 449,
+    "K_v4": 775906.0,
+    "K_contractual": 760098.0,
+    "delta_pct": 2.08
+   },
+   {
+    "codigo_idu": "4297",
+    "row": 450,
+    "K_v4": 1032916.0,
+    "K_contractual": 1009588.0,
+    "delta_pct": 2.31
+   },
+   {
+    "codigo_idu": "4622",
+    "row": 452,
+    "K_v4": 397347.0,
+    "K_contractual": 384755.0,
+    "delta_pct": 3.27
+   },
+   {
+    "codigo_idu": "7512",
+    "row": 453,
+    "K_v4": 545547.0,
+    "K_contractual": 524207.0,
+    "delta_pct": 4.07
+   },
+   {
+    "codigo_idu": "4553",
+    "row": 454,
+    "K_v4": 3562276.0,
+    "K_contractual": 3486034.0,
+    "delta_pct": 2.19
+   },
+   {
+    "codigo_idu": "3895",
+    "row": 456,
+    "K_v4": 5181513.0,
+    "K_contractual": 5072732.0,
+    "delta_pct": 2.14
+   },
+   {
+    "codigo_idu": "3155",
+    "row": 457,
+    "K_v4": 173406.0,
+    "K_contractual": 168752.0,
+    "delta_pct": 2.76
+   },
+   {
+    "codigo_idu": "8545",
+    "row": 458,
+    "K_v4": 42975.0,
+    "K_contractual": 39121.0,
+    "delta_pct": 9.85
+   },
+   {
+    "codigo_idu": "5015",
+    "row": 459,
+    "K_v4": 565221.0,
+    "K_contractual": 548965.0,
+    "delta_pct": 2.96
+   },
+   {
+    "codigo_idu": "4878",
+    "row": 460,
+    "K_v4": 203484.0,
+    "K_contractual": 119332.0,
+    "delta_pct": 70.52
+   },
+   {
+    "codigo_idu": "4144",
+    "row": 461,
+    "K_v4": 84947.0,
+    "K_contractual": 77870.0,
+    "delta_pct": 9.09
+   },
+   {
+    "codigo_idu": "6676",
+    "row": 485,
+    "K_v4": 140884.0,
+    "K_contractual": 135244.0,
+    "delta_pct": 4.17
+   },
+   {
+    "codigo_idu": "8498",
+    "row": 486,
+    "K_v4": 9964.0,
+    "K_contractual": 9365.0,
+    "delta_pct": 6.4
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 487,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "4849",
+    "row": 488,
+    "K_v4": 2977.0,
+    "K_contractual": 2689.0,
+    "delta_pct": 10.71
+   },
+   {
+    "codigo_idu": "3159",
+    "row": 489,
+    "K_v4": 37619.0,
+    "K_contractual": 34445.0,
+    "delta_pct": 9.21
+   },
+   {
+    "codigo_idu": "5182",
+    "row": 490,
+    "K_v4": 421190.0,
+    "K_contractual": 389500.0,
+    "delta_pct": 8.14
+   },
+   {
+    "codigo_idu": "3380",
+    "row": 491,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "3379",
+    "row": 492,
+    "K_v4": 237665.0,
+    "K_contractual": 220351.0,
+    "delta_pct": 7.86
+   },
+   {
+    "codigo_idu": "5023",
+    "row": 493,
+    "K_v4": 26137.0,
+    "K_contractual": 23829.0,
+    "delta_pct": 9.69
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 494,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 495,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 496,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "4104",
+    "row": 497,
+    "K_v4": 737472.0,
+    "K_contractual": 716306.0,
+    "delta_pct": 2.95
+   },
+   {
+    "codigo_idu": "4106",
+    "row": 498,
+    "K_v4": 1094433.0,
+    "K_contractual": 1068524.0,
+    "delta_pct": 2.42
+   },
+   {
+    "codigo_idu": "3652",
+    "row": 500,
+    "K_v4": 4364501.0,
+    "K_contractual": 4260226.0,
+    "delta_pct": 2.45
+   },
+   {
+    "codigo_idu": "5253",
+    "row": 502,
+    "K_v4": 14024744.0,
+    "K_contractual": 13636982.0,
+    "delta_pct": 2.84
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 503,
+    "K_v4": 151999.0,
+    "K_contractual": 137902.0,
+    "delta_pct": 10.22
+   },
+   {
+    "codigo_idu": "3380",
+    "row": 505,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "6676",
+    "row": 526,
+    "K_v4": 140884.0,
+    "K_contractual": 135244.0,
+    "delta_pct": 4.17
+   },
+   {
+    "codigo_idu": "8498",
+    "row": 527,
+    "K_v4": 9964.0,
+    "K_contractual": 9365.0,
+    "delta_pct": 6.4
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 528,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "4849",
+    "row": 529,
+    "K_v4": 2977.0,
+    "K_contractual": 2689.0,
+    "delta_pct": 10.71
+   },
+   {
+    "codigo_idu": "3159",
+    "row": 530,
+    "K_v4": 37619.0,
+    "K_contractual": 34445.0,
+    "delta_pct": 9.21
+   },
+   {
+    "codigo_idu": "5182",
+    "row": 531,
+    "K_v4": 421190.0,
+    "K_contractual": 389500.0,
+    "delta_pct": 8.14
+   },
+   {
+    "codigo_idu": "3380",
+    "row": 532,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "3379",
+    "row": 533,
+    "K_v4": 237665.0,
+    "K_contractual": 220351.0,
+    "delta_pct": 7.86
+   },
+   {
+    "codigo_idu": "5023",
+    "row": 534,
+    "K_v4": 26137.0,
+    "K_contractual": 23829.0,
+    "delta_pct": 9.69
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 535,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 536,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 537,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "4104",
+    "row": 538,
+    "K_v4": 737472.0,
+    "K_contractual": 716306.0,
+    "delta_pct": 2.95
+   },
+   {
+    "codigo_idu": "4106",
+    "row": 539,
+    "K_v4": 1094433.0,
+    "K_contractual": 1068524.0,
+    "delta_pct": 2.42
+   },
+   {
+    "codigo_idu": "3652",
+    "row": 541,
+    "K_v4": 4364501.0,
+    "K_contractual": 4260226.0,
+    "delta_pct": 2.45
+   },
+   {
+    "codigo_idu": "5253",
+    "row": 543,
+    "K_v4": 14024744.0,
+    "K_contractual": 13636982.0,
+    "delta_pct": 2.84
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 544,
+    "K_v4": 151999.0,
+    "K_contractual": 137902.0,
+    "delta_pct": 10.22
+   },
+   {
+    "codigo_idu": "6676",
+    "row": 565,
+    "K_v4": 140884.0,
+    "K_contractual": 135244.0,
+    "delta_pct": 4.17
+   },
+   {
+    "codigo_idu": "8498",
+    "row": 566,
+    "K_v4": 9964.0,
+    "K_contractual": 9365.0,
+    "delta_pct": 6.4
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 567,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "4849",
+    "row": 568,
+    "K_v4": 2977.0,
+    "K_contractual": 2689.0,
+    "delta_pct": 10.71
+   },
+   {
+    "codigo_idu": "3159",
+    "row": 569,
+    "K_v4": 37619.0,
+    "K_contractual": 34445.0,
+    "delta_pct": 9.21
+   },
+   {
+    "codigo_idu": "5182",
+    "row": 570,
+    "K_v4": 421190.0,
+    "K_contractual": 389500.0,
+    "delta_pct": 8.14
+   },
+   {
+    "codigo_idu": "3380",
+    "row": 571,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "3379",
+    "row": 572,
+    "K_v4": 237665.0,
+    "K_contractual": 220351.0,
+    "delta_pct": 7.86
+   },
+   {
+    "codigo_idu": "5023",
+    "row": 573,
+    "K_v4": 26137.0,
+    "K_contractual": 23829.0,
+    "delta_pct": 9.69
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 574,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 575,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 576,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "4104",
+    "row": 577,
+    "K_v4": 737472.0,
+    "K_contractual": 716306.0,
+    "delta_pct": 2.95
+   },
+   {
+    "codigo_idu": "4106",
+    "row": 578,
+    "K_v4": 1094433.0,
+    "K_contractual": 1068524.0,
+    "delta_pct": 2.42
+   },
+   {
+    "codigo_idu": "3652",
+    "row": 580,
+    "K_v4": 4364501.0,
+    "K_contractual": 4260226.0,
+    "delta_pct": 2.45
+   },
+   {
+    "codigo_idu": "5253",
+    "row": 582,
+    "K_v4": 14024744.0,
+    "K_contractual": 13636982.0,
+    "delta_pct": 2.84
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 583,
+    "K_v4": 151999.0,
+    "K_contractual": 137902.0,
+    "delta_pct": 10.22
+   },
+   {
+    "codigo_idu": "6676",
+    "row": 589,
+    "K_v4": 140884.0,
+    "K_contractual": 135244.0,
+    "delta_pct": 4.17
+   },
+   {
+    "codigo_idu": "8498",
+    "row": 590,
+    "K_v4": 9964.0,
+    "K_contractual": 9365.0,
+    "delta_pct": 6.4
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 591,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "4849",
+    "row": 592,
+    "K_v4": 2977.0,
+    "K_contractual": 2689.0,
+    "delta_pct": 10.71
+   },
+   {
+    "codigo_idu": "3159",
+    "row": 593,
+    "K_v4": 37619.0,
+    "K_contractual": 34445.0,
+    "delta_pct": 9.21
+   },
+   {
+    "codigo_idu": "5182",
+    "row": 594,
+    "K_v4": 421190.0,
+    "K_contractual": 389500.0,
+    "delta_pct": 8.14
+   },
+   {
+    "codigo_idu": "3380",
+    "row": 595,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "3379",
+    "row": 596,
+    "K_v4": 237665.0,
+    "K_contractual": 220351.0,
+    "delta_pct": 7.86
+   },
+   {
+    "codigo_idu": "5023",
+    "row": 597,
+    "K_v4": 26137.0,
+    "K_contractual": 23829.0,
+    "delta_pct": 9.69
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 598,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 599,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 600,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "4104",
+    "row": 601,
+    "K_v4": 737472.0,
+    "K_contractual": 716306.0,
+    "delta_pct": 2.95
+   },
+   {
+    "codigo_idu": "4106",
+    "row": 602,
+    "K_v4": 1094433.0,
+    "K_contractual": 1068524.0,
+    "delta_pct": 2.42
+   },
+   {
+    "codigo_idu": "3652",
+    "row": 604,
+    "K_v4": 4364501.0,
+    "K_contractual": 4260226.0,
+    "delta_pct": 2.45
+   },
+   {
+    "codigo_idu": "5253",
+    "row": 606,
+    "K_v4": 14024744.0,
+    "K_contractual": 13636982.0,
+    "delta_pct": 2.84
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 607,
+    "K_v4": 151999.0,
+    "K_contractual": 137902.0,
+    "delta_pct": 10.22
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 612,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 613,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 614,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "5875",
+    "row": 615,
+    "K_v4": 192453.0,
+    "K_contractual": 185876.0,
+    "delta_pct": 3.54
+   },
+   {
+    "codigo_idu": "3654",
+    "row": 616,
+    "K_v4": 4129570.0,
+    "K_contractual": 4039623.0,
+    "delta_pct": 2.23
+   },
+   {
+    "codigo_idu": "4131",
+    "row": 617,
+    "K_v4": 1200764.0,
+    "K_contractual": 1174283.0,
+    "delta_pct": 2.26
+   },
+   {
+    "codigo_idu": "8120",
+    "row": 618,
+    "K_v4": 2107810.0,
+    "K_contractual": 2056060.0,
+    "delta_pct": 2.52
+   },
+   {
+    "codigo_idu": "4849",
+    "row": 620,
+    "K_v4": 2977.0,
+    "K_contractual": 2689.0,
+    "delta_pct": 10.71
+   },
+   {
+    "codigo_idu": "3057",
+    "row": 621,
+    "K_v4": 4710046.0,
+    "K_contractual": 4590560.0,
+    "delta_pct": 2.6
+   },
+   {
+    "codigo_idu": "3795",
+    "row": 622,
+    "K_v4": 223868.0,
+    "K_contractual": 203575.0,
+    "delta_pct": 9.97
+   },
+   {
+    "codigo_idu": "3380",
+    "row": 626,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 627,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "3653",
+    "row": 628,
+    "K_v4": 6025816.0,
+    "K_contractual": 5880398.0,
+    "delta_pct": 2.47
+   },
+   {
+    "codigo_idu": "8121",
+    "row": 629,
+    "K_v4": 2316013.0,
+    "K_contractual": 2258820.0,
+    "delta_pct": 2.53
+   },
+   {
+    "codigo_idu": "7512",
+    "row": 630,
+    "K_v4": 545547.0,
+    "K_contractual": 524207.0,
+    "delta_pct": 4.07
+   },
+   {
+    "codigo_idu": "5023",
+    "row": 631,
+    "K_v4": 26137.0,
+    "K_contractual": 23829.0,
+    "delta_pct": 9.69
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 632,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 633,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 634,
+    "K_v4": 151999.0,
+    "K_contractual": 137902.0,
+    "delta_pct": 10.22
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 636,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "5875",
+    "row": 637,
+    "K_v4": 192453.0,
+    "K_contractual": 185876.0,
+    "delta_pct": 3.54
+   },
+   {
+    "codigo_idu": "3654",
+    "row": 638,
+    "K_v4": 4129570.0,
+    "K_contractual": 4039623.0,
+    "delta_pct": 2.23
+   },
+   {
+    "codigo_idu": "4131",
+    "row": 639,
+    "K_v4": 1200764.0,
+    "K_contractual": 1174283.0,
+    "delta_pct": 2.26
+   },
+   {
+    "codigo_idu": "8120",
+    "row": 640,
+    "K_v4": 2107810.0,
+    "K_contractual": 2056060.0,
+    "delta_pct": 2.52
+   },
+   {
+    "codigo_idu": "4849",
+    "row": 642,
+    "K_v4": 2977.0,
+    "K_contractual": 2689.0,
+    "delta_pct": 10.71
+   },
+   {
+    "codigo_idu": "3057",
+    "row": 643,
+    "K_v4": 4710046.0,
+    "K_contractual": 4590560.0,
+    "delta_pct": 2.6
+   },
+   {
+    "codigo_idu": "3795",
+    "row": 644,
+    "K_v4": 223868.0,
+    "K_contractual": 203575.0,
+    "delta_pct": 9.97
+   },
+   {
+    "codigo_idu": "3380",
+    "row": 648,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 649,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "3653",
+    "row": 650,
+    "K_v4": 6025816.0,
+    "K_contractual": 5880398.0,
+    "delta_pct": 2.47
+   },
+   {
+    "codigo_idu": "8121",
+    "row": 651,
+    "K_v4": 2316013.0,
+    "K_contractual": 2258820.0,
+    "delta_pct": 2.53
+   },
+   {
+    "codigo_idu": "7512",
+    "row": 652,
+    "K_v4": 545547.0,
+    "K_contractual": 524207.0,
+    "delta_pct": 4.07
+   },
+   {
+    "codigo_idu": "5023",
+    "row": 653,
+    "K_v4": 26137.0,
+    "K_contractual": 23829.0,
+    "delta_pct": 9.69
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 654,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 655,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "8140",
+    "row": 657,
+    "K_v4": 1308052.0,
+    "K_contractual": 1278903.0,
+    "delta_pct": 2.28
+   },
+   {
+    "codigo_idu": "8134",
+    "row": 659,
+    "K_v4": 877622.0,
+    "K_contractual": 856103.0,
+    "delta_pct": 2.51
+   },
+   {
+    "codigo_idu": "5875",
+    "row": 660,
+    "K_v4": 192453.0,
+    "K_contractual": 185876.0,
+    "delta_pct": 3.54
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 661,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "4128",
+    "row": 662,
+    "K_v4": 111426.0,
+    "K_contractual": 99603.0,
+    "delta_pct": 11.87
+   },
+   {
+    "codigo_idu": "4330",
+    "row": 663,
+    "K_v4": 1007512.0,
+    "K_contractual": 983423.0,
+    "delta_pct": 2.45
+   },
+   {
+    "codigo_idu": "4328",
+    "row": 664,
+    "K_v4": 3705958.0,
+    "K_contractual": 3554017.0,
+    "delta_pct": 4.28
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 666,
+    "K_v4": 42540.0,
+    "K_contractual": 38523.0,
+    "delta_pct": 10.43
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 667,
+    "K_v4": 41825.0,
+    "K_contractual": 40317.0,
+    "delta_pct": 3.74
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 668,
+    "K_v4": 141741.0,
+    "K_contractual": 138797.0,
+    "delta_pct": 2.12
+   },
+   {
+    "codigo_idu": "8626",
+    "row": 670,
+    "K_v4": 2569399.0,
+    "K_contractual": 2512679.0,
+    "delta_pct": 2.26
+   },
+   {
+    "codigo_idu": "8131",
+    "row": 671,
+    "K_v4": 3164.0,
+    "K_contractual": 2675.0,
+    "delta_pct": 18.28
+   },
+   {
+    "codigo_idu": "5875",
+    "row": 672,
+    "K_v4": 192453.0,
+    "K_contractual": 185876.0,
+    "delta_pct": 3.54
+   },
+   {
+    "codigo_idu": "6184",
+    "row": 676,
+    "K_v4": 18373.0,
+    "K_contractual": 17226.0,
+    "delta_pct": 6.66
    }
   ],
+  "desviaciones_vu_propuesta_top": [
+   {
+    "codigo_idu": "7785",
+    "row": 34,
+    "K_v4": 1132473.0,
+    "K_propuesta": 643402.0,
+    "delta_pct": 76.01,
+    "cant_final": 9851.224192000001,
+    "impacto_aiu": 6352416347,
+    "valor_v4_aiu": 14709394807,
+    "valor_a_vu_pactado_aiu": 8356980655
+   },
+   {
+    "codigo_idu": "6016",
+    "row": 20,
+    "K_v4": 134985.0,
+    "K_propuesta": 96609.0,
+    "delta_pct": 39.72,
+    "cant_final": 14162.699999999997,
+    "impacto_aiu": 716609567,
+    "valor_v4_aiu": 2520620695,
+    "valor_a_vu_pactado_aiu": 1804016401
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 14,
+    "K_v4": 41825.0,
+    "K_propuesta": 31579.0,
+    "delta_pct": 32.45,
+    "cant_final": 52468.569999999985,
+    "impacto_aiu": 708810953,
+    "valor_v4_aiu": 2893431761,
+    "valor_a_vu_pactado_aiu": 2184633849
+   },
+   {
+    "codigo_idu": "5182",
+    "row": 531,
+    "K_v4": 421190.0,
+    "K_propuesta": 284569.0,
+    "delta_pct": 48.01,
+    "cant_final": 3912.249999999999,
+    "impacto_aiu": 704726981,
+    "valor_v4_aiu": 2172609354,
+    "valor_a_vu_pactado_aiu": 1467880112
+   },
+   {
+    "codigo_idu": "3425",
+    "row": 85,
+    "K_v4": 76194.0,
+    "K_propuesta": 50583.0,
+    "delta_pct": 50.63,
+    "cant_final": 15468.629999999994,
+    "impacto_aiu": 522342337,
+    "valor_v4_aiu": 1553994038,
+    "valor_a_vu_pactado_aiu": 1031649341
+   },
+   {
+    "codigo_idu": "3895",
+    "row": 399,
+    "K_v4": 5181513.0,
+    "K_propuesta": 3209926.0,
+    "delta_pct": 61.42,
+    "cant_final": 194.0,
+    "impacto_aiu": 504306442,
+    "valor_v4_aiu": 1325363962,
+    "valor_a_vu_pactado_aiu": 821057470
+   },
+   {
+    "codigo_idu": "8643",
+    "row": 317,
+    "K_v4": 50435.0,
+    "K_propuesta": 34574.0,
+    "delta_pct": 45.88,
+    "cant_final": 18442.509999999995,
+    "impacto_aiu": 385680279,
+    "valor_v4_aiu": 1226390030,
+    "valor_a_vu_pactado_aiu": 840701818
+   },
+   {
+    "codigo_idu": "8643",
+    "row": 369,
+    "K_v4": 50435.0,
+    "K_propuesta": 34574.0,
+    "delta_pct": 45.88,
+    "cant_final": 17457.17,
+    "impacto_aiu": 365074288,
+    "valor_v4_aiu": 1160866891,
+    "valor_a_vu_pactado_aiu": 795785094
+   },
+   {
+    "codigo_idu": "4754",
+    "row": 353,
+    "K_v4": 154838.0,
+    "K_propuesta": 124378.0,
+    "delta_pct": 24.49,
+    "cant_final": 5904.465176464074,
+    "impacto_aiu": 237130439,
+    "valor_v4_aiu": 1205408375,
+    "valor_a_vu_pactado_aiu": 968279149
+   },
+   {
+    "codigo_idu": "3748",
+    "row": 81,
+    "K_v4": 850822.0,
+    "K_propuesta": 508511.0,
+    "delta_pct": 67.32,
+    "cant_final": 500.0458,
+    "impacto_aiu": 225687486,
+    "valor_v4_aiu": 560951378,
+    "valor_a_vu_pactado_aiu": 335264207
+   },
+   {
+    "codigo_idu": "4390",
+    "row": 46,
+    "K_v4": 96914.0,
+    "K_propuesta": 67752.0,
+    "delta_pct": 43.04,
+    "cant_final": 5854.52,
+    "impacto_aiu": 225105155,
+    "valor_v4_aiu": 748090566,
+    "valor_a_vu_pactado_aiu": 522984272
+   },
+   {
+    "codigo_idu": "4159",
+    "row": 27,
+    "K_v4": 155185.0,
+    "K_propuesta": 112079.0,
+    "delta_pct": 38.46,
+    "cant_final": 3515.53,
+    "impacto_aiu": 199804550,
+    "valor_v4_aiu": 719312593,
+    "valor_a_vu_pactado_aiu": 519507446
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 318,
+    "K_v4": 41825.0,
+    "K_propuesta": 31579.0,
+    "delta_pct": 32.45,
+    "cant_final": 12747.180000000002,
+    "impacto_aiu": 172204823,
+    "valor_v4_aiu": 702955988,
+    "valor_a_vu_pactado_aiu": 530754334
+   },
+   {
+    "codigo_idu": "4754",
+    "row": 405,
+    "K_v4": 154838.0,
+    "K_propuesta": 124378.0,
+    "delta_pct": 24.49,
+    "cant_final": 3917.669999999999,
+    "impacto_aiu": 157338350,
+    "valor_v4_aiu": 799800166,
+    "valor_a_vu_pactado_aiu": 642462621
+   },
+   {
+    "codigo_idu": "5181",
+    "row": 73,
+    "K_v4": 57072.0,
+    "K_propuesta": 37131.0,
+    "delta_pct": 53.7,
+    "cant_final": 5639.28,
+    "impacto_aiu": 148268001,
+    "valor_v4_aiu": 424350181,
+    "valor_a_vu_pactado_aiu": 276082231
+   },
+   {
+    "codigo_idu": "7090",
+    "row": 96,
+    "K_v4": 98912.0,
+    "K_propuesta": 47173.0,
+    "delta_pct": 109.68,
+    "cant_final": 2052.9,
+    "impacto_aiu": 140043406,
+    "valor_v4_aiu": 267726901,
+    "valor_a_vu_pactado_aiu": 127684221
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 370,
+    "K_v4": 41825.0,
+    "K_propuesta": 31579.0,
+    "delta_pct": 32.45,
+    "cant_final": 10058.77,
+    "impacto_aiu": 135886424,
+    "valor_v4_aiu": 554700930,
+    "valor_a_vu_pactado_aiu": 418817006
+   },
+   {
+    "codigo_idu": "7858",
+    "row": 112,
+    "K_v4": 539253.0,
+    "K_propuesta": 288585.0,
+    "delta_pct": 86.86,
+    "cant_final": 400.0,
+    "impacto_aiu": 132201301,
+    "valor_v4_aiu": 284400000,
+    "valor_a_vu_pactado_aiu": 152198400
+   },
+   {
+    "codigo_idu": "5220",
+    "row": 104,
+    "K_v4": 17213.0,
+    "K_propuesta": 10376.0,
+    "delta_pct": 65.89,
+    "cant_final": 13840.999999999996,
+    "impacto_aiu": 124769918,
+    "valor_v4_aiu": 314121495,
+    "valor_a_vu_pactado_aiu": 189358721
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 55,
+    "K_v4": 151999.0,
+    "K_propuesta": 103093.0,
+    "delta_pct": 47.44,
+    "cant_final": 1843.42,
+    "impacto_aiu": 118867541,
+    "valor_v4_aiu": 369437959,
+    "valor_a_vu_pactado_aiu": 250570550
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 544,
+    "K_v4": 151999.0,
+    "K_propuesta": 103093.0,
+    "delta_pct": 47.44,
+    "cant_final": 1635.21,
+    "impacto_aiu": 105441729,
+    "valor_v4_aiu": 327710801,
+    "valor_a_vu_pactado_aiu": 222269190
+   },
+   {
+    "codigo_idu": "8643",
+    "row": 426,
+    "K_v4": 50435.0,
+    "K_propuesta": 34574.0,
+    "delta_pct": 45.88,
+    "cant_final": 4973.43,
+    "impacto_aiu": 104007202,
+    "valor_v4_aiu": 330723148,
+    "valor_a_vu_pactado_aiu": 226713807
+   },
+   {
+    "codigo_idu": "4908",
+    "row": 56,
+    "K_v4": 103363.0,
+    "K_propuesta": 71769.0,
+    "delta_pct": 44.02,
+    "cant_final": 2458.8199999999997,
+    "impacto_aiu": 102425523,
+    "valor_v4_aiu": 335095366,
+    "valor_a_vu_pactado_aiu": 232670760
+   },
+   {
+    "codigo_idu": "3837",
+    "row": 36,
+    "K_v4": 12635.0,
+    "K_propuesta": 8402.0,
+    "delta_pct": 50.38,
+    "cant_final": 17049.629999999997,
+    "impacto_aiu": 95156852,
+    "valor_v4_aiu": 284029786,
+    "valor_a_vu_pactado_aiu": 188875801
+   },
+   {
+    "codigo_idu": "3009",
+    "row": 535,
+    "K_v4": 42540.0,
+    "K_propuesta": 26699.0,
+    "delta_pct": 59.33,
+    "cant_final": 4494.0,
+    "impacto_aiu": 93862583,
+    "valor_v4_aiu": 252063966,
+    "valor_a_vu_pactado_aiu": 158197788
+   },
+   {
+    "codigo_idu": "3043",
+    "row": 325,
+    "K_v4": 81570.0,
+    "K_propuesta": 52943.0,
+    "delta_pct": 54.07,
+    "cant_final": 2304.44,
+    "impacto_aiu": 86979736,
+    "valor_v4_aiu": 247840218,
+    "valor_a_vu_pactado_aiu": 160861434
+   },
+   {
+    "codigo_idu": "4032",
+    "row": 38,
+    "K_v4": 9051.0,
+    "K_propuesta": 7305.0,
+    "delta_pct": 23.9,
+    "cant_final": 36885.9,
+    "impacto_aiu": 84914423,
+    "valor_v4_aiu": 440196331,
+    "valor_a_vu_pactado_aiu": 355284989
+   },
+   {
+    "codigo_idu": "3227",
+    "row": 150,
+    "K_v4": 136786.0,
+    "K_propuesta": 92379.0,
+    "delta_pct": 48.07,
+    "cant_final": 1398.3899999999996,
+    "impacto_aiu": 81875994,
+    "valor_v4_aiu": 252201035,
+    "valor_a_vu_pactado_aiu": 170325300
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 47,
+    "K_v4": 41825.0,
+    "K_propuesta": 31579.0,
+    "delta_pct": 32.45,
+    "cant_final": 6026.9400000000005,
+    "impacto_aiu": 81419430,
+    "valor_v4_aiu": 332361633,
+    "valor_a_vu_pactado_aiu": 250943701
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 536,
+    "K_v4": 41825.0,
+    "K_propuesta": 31579.0,
+    "delta_pct": 32.45,
+    "cant_final": 5842.25,
+    "impacto_aiu": 78924407,
+    "valor_v4_aiu": 322176718,
+    "valor_a_vu_pactado_aiu": 243253763
+   },
+   {
+    "codigo_idu": "8655",
+    "row": 386,
+    "K_v4": 89872.0,
+    "K_propuesta": 49331.0,
+    "delta_pct": 82.18,
+    "cant_final": 1465.1099999999997,
+    "impacto_aiu": 78314383,
+    "valor_v4_aiu": 173608209,
+    "valor_a_vu_pactado_aiu": 95293685
+   },
+   {
+    "codigo_idu": "8566",
+    "row": 108,
+    "K_v4": 141917.0,
+    "K_propuesta": 98829.0,
+    "delta_pct": 43.6,
+    "cant_final": 1265.9999999999998,
+    "impacto_aiu": 71922849,
+    "valor_v4_aiu": 236888856,
+    "valor_a_vu_pactado_aiu": 164966130
+   },
+   {
+    "codigo_idu": "9035",
+    "row": 542,
+    "K_v4": 7181823.0,
+    "K_propuesta": 4323965.0,
+    "delta_pct": 66.09,
+    "cant_final": 17.0,
+    "impacto_aiu": 64056972,
+    "valor_v4_aiu": 160975754,
+    "valor_a_vu_pactado_aiu": 96918785
+   },
+   {
+    "codigo_idu": "3024",
+    "row": 537,
+    "K_v4": 141741.0,
+    "K_propuesta": 95345.0,
+    "delta_pct": 48.66,
+    "cant_final": 1028.8500000000004,
+    "impacto_aiu": 62937493,
+    "valor_v4_aiu": 192275603,
+    "valor_a_vu_pactado_aiu": 129337762
+   },
+   {
+    "codigo_idu": "8655",
+    "row": 334,
+    "K_v4": 89872.0,
+    "K_propuesta": 49331.0,
+    "delta_pct": 82.18,
+    "cant_final": 1062.79,
+    "impacto_aiu": 56809211,
+    "valor_v4_aiu": 125935301,
+    "valor_a_vu_pactado_aiu": 69125987
+   },
+   {
+    "codigo_idu": "3017",
+    "row": 427,
+    "K_v4": 41825.0,
+    "K_propuesta": 31579.0,
+    "delta_pct": 32.45,
+    "cant_final": 4096.65,
+    "impacto_aiu": 55342663,
+    "valor_v4_aiu": 225913861,
+    "valor_a_vu_pactado_aiu": 170572216
+   },
+   {
+    "codigo_idu": "3227",
+    "row": 220,
+    "K_v4": 136786.0,
+    "K_propuesta": 92379.0,
+    "delta_pct": 48.07,
+    "cant_final": 907.0799999999999,
+    "impacto_aiu": 53109702,
+    "valor_v4_aiu": 163592785,
+    "valor_a_vu_pactado_aiu": 110483251
+   },
+   {
+    "codigo_idu": "3045",
+    "row": 327,
+    "K_v4": 162051.0,
+    "K_propuesta": 104972.0,
+    "delta_pct": 54.38,
+    "cant_final": 700.9699999999999,
+    "impacto_aiu": 52753664,
+    "valor_v4_aiu": 149771353,
+    "valor_a_vu_pactado_aiu": 97017753
+   },
+   {
+    "codigo_idu": "4700",
+    "row": 90,
+    "K_v4": 202497.0,
+    "K_propuesta": 130538.0,
+    "delta_pct": 55.12,
+    "cant_final": 515.0,
+    "impacto_aiu": 48861769,
+    "valor_v4_aiu": 137499850,
+    "valor_a_vu_pactado_aiu": 88638195
+   },
+   {
+    "codigo_idu": "5196",
+    "row": 58,
+    "K_v4": 95648.0,
+    "K_propuesta": 72969.0,
+    "delta_pct": 31.08,
+    "cant_final": 1554.6599999999999,
+    "impacto_aiu": 46487497,
+    "valor_v4_aiu": 196059727,
+    "valor_a_vu_pactado_aiu": 149572284
+   },
+   {
+    "codigo_idu": "8655",
+    "row": 443,
+    "K_v4": 89872.0,
+    "K_propuesta": 49331.0,
+    "delta_pct": 82.18,
+    "cant_final": 852.87,
+    "impacto_aiu": 45588377,
+    "valor_v4_aiu": 101060831,
+    "valor_a_vu_pactado_aiu": 55472371
+   },
+   {
+    "codigo_idu": "3800",
+    "row": 19,
+    "K_v4": 1612.0,
+    "K_propuesta": 997.0,
+    "delta_pct": 61.69,
+    "cant_final": 54275.796,
+    "impacto_aiu": 44010688,
+    "valor_v4_aiu": 115336066,
+    "valor_a_vu_pactado_aiu": 71372672
+   },
+   {
+    "codigo_idu": "5734",
+    "row": 107,
+    "K_v4": 53342.0,
+    "K_propuesta": 37134.0,
+    "delta_pct": 43.65,
+    "cant_final": 2022.0000000000005,
+    "impacto_aiu": 43210314,
+    "valor_v4_aiu": 142209282,
+    "valor_a_vu_pactado_aiu": 98999142
+   },
+   {
+    "codigo_idu": "3710",
+    "row": 13,
+    "K_v4": 5266.0,
+    "K_propuesta": 4519.0,
+    "delta_pct": 16.53,
+    "cant_final": 39827.40616,
+    "impacto_aiu": 39226491,
+    "valor_v4_aiu": 276521681,
+    "valor_a_vu_pactado_aiu": 237291686
+   },
+   {
+    "codigo_idu": "4913",
+    "row": 624,
+    "K_v4": 2070808.0,
+    "K_propuesta": 1290284.0,
+    "delta_pct": 60.49,
+    "cant_final": 35.0,
+    "impacto_aiu": 36018958,
+    "valor_v4_aiu": 95561900,
+    "valor_a_vu_pactado_aiu": 59542945
+   },
+   {
+    "codigo_idu": "4754",
+    "row": 462,
+    "K_v4": 154838.0,
+    "K_propuesta": 124378.0,
+    "delta_pct": 24.49,
+    "cant_final": 877.1600000000001,
+    "impacto_aiu": 35227803,
+    "valor_v4_aiu": 179073968,
+    "valor_a_vu_pactado_aiu": 143846346
+   },
+   {
+    "codigo_idu": "3044",
+    "row": 378,
+    "K_v4": 115526.0,
+    "K_propuesta": 74929.0,
+    "delta_pct": 54.18,
+    "cant_final": 624.89,
+    "impacto_aiu": 33448324,
+    "valor_v4_aiu": 95183245,
+    "valor_a_vu_pactado_aiu": 61734758
+   },
+   {
+    "codigo_idu": "5015",
+    "row": 350,
+    "K_v4": 565221.0,
+    "K_propuesta": 367125.0,
+    "delta_pct": 53.96,
+    "cant_final": 128.0,
+    "impacto_aiu": 33432012,
+    "valor_v4_aiu": 95390464,
+    "valor_a_vu_pactado_aiu": 61958528
+   },
+   {
+    "codigo_idu": "8406",
+    "row": 89,
+    "K_v4": 2875373.0,
+    "K_propuesta": 1982666.0,
+    "delta_pct": 45.03,
+    "cant_final": 27.0,
+    "impacto_aiu": 31779682,
+    "valor_v4_aiu": 102361077,
+    "valor_a_vu_pactado_aiu": 70581375
+   },
+   {
+    "codigo_idu": "4907",
+    "row": 158,
+    "K_v4": 151999.0,
+    "K_propuesta": 103093.0,
+    "delta_pct": 47.44,
+    "cant_final": 460.3600000000001,
+    "impacto_aiu": 29684967,
+    "valor_v4_aiu": 92260287,
+    "valor_a_vu_pactado_aiu": 62575354
+   },
+   {
+    "codigo_idu": "3044",
+    "row": 326,
+    "K_v4": 115526.0,
+    "K_propuesta": 74929.0,
+    "delta_pct": 54.18,
+    "cant_final": 552.95,
+    "impacto_aiu": 29597610,
+    "valor_v4_aiu": 84225344,
+    "valor_a_vu_pactado_aiu": 54627589
+   },
+   {
+    "codigo_idu": "3226",
+    "row": 149,
+    "K_v4": 68280.0,
+    "K_propuesta": 43738.0,
+    "delta_pct": 56.11,
+    "cant_final": 860.56,
+    "impacto_aiu": 27846329,
+    "valor_v4_aiu": 77472775,
+    "valor_a_vu_pactado_aiu": 49626774
+   },
+   {
+    "codigo_idu": "3046",
+    "row": 329,
+    "K_v4": 288107.0,
+    "K_propuesta": 186707.0,
+    "delta_pct": 54.31,
+    "cant_final": 206.2,
+    "impacto_aiu": 27567885,
+    "valor_v4_aiu": 78328369,
+    "valor_a_vu_pactado_aiu": 50760460
+   },
+   {
+    "codigo_idu": "3324",
+    "row": 136,
+    "K_v4": 1913341.0,
+    "K_propuesta": 1195690.0,
+    "delta_pct": 60.02,
+    "cant_final": 29.0,
+    "impacto_aiu": 27440254,
+    "valor_v4_aiu": 73158909,
+    "valor_a_vu_pactado_aiu": 45718645
+   },
+   {
+    "codigo_idu": "5253",
+    "row": 543,
+    "K_v4": 14024744.0,
+    "K_propuesta": 9185189.0,
+    "delta_pct": 52.69,
+    "cant_final": 4.0,
+    "impacto_aiu": 25523619,
+    "valor_v4_aiu": 73965940,
+    "valor_a_vu_pactado_aiu": 48442320
+   },
+   {
+    "codigo_idu": "4912",
+    "row": 623,
+    "K_v4": 2404186.0,
+    "K_propuesta": 1618506.0,
+    "delta_pct": 48.54,
+    "cant_final": 24.0,
+    "impacto_aiu": 24861869,
+    "valor_v4_aiu": 76077480,
+    "valor_a_vu_pactado_aiu": 51215616
+   },
+   {
+    "codigo_idu": "3048",
+    "row": 383,
+    "K_v4": 477668.0,
+    "K_propuesta": 309518.0,
+    "delta_pct": 54.33,
+    "cant_final": 108.26,
+    "impacto_aiu": 24001685,
+    "valor_v4_aiu": 68182148,
+    "valor_a_vu_pactado_aiu": 44180473
+   },
+   {
+    "codigo_idu": "4030",
+    "row": 60,
+    "K_v4": 8397.0,
+    "K_propuesta": 7339.0,
+    "delta_pct": 14.42,
+    "cant_final": 17109.11,
+    "impacto_aiu": 23866565,
+    "valor_v4_aiu": 189414957,
+    "valor_a_vu_pactado_aiu": 165547748
+   },
+   {
+    "codigo_idu": "3454",
+    "row": 48,
+    "K_v4": 107716.0,
+    "K_propuesta": 74444.0,
+    "delta_pct": 44.69,
+    "cant_final": 527.39,
+    "impacto_aiu": 23135966,
+    "valor_v4_aiu": 74900983,
+    "valor_a_vu_pactado_aiu": 51765438
+   },
+   {
+    "codigo_idu": "4754",
+    "row": 54,
+    "K_v4": 154838.0,
+    "K_propuesta": 124378.0,
+    "delta_pct": 24.49,
+    "cant_final": 558.62,
+    "impacto_aiu": 22434853,
+    "valor_v4_aiu": 114043390,
+    "valor_a_vu_pactado_aiu": 91608652
+   }
+  ],
+  "resumen_vu_propuesta": {
+   "renglones": 469,
+   "mediana_delta_pct": 49.0,
+   "renglones_mas_2pct": 469,
+   "impacto_aiu_total": 15086222761,
+   "valor_v4_aiu": 44046009245,
+   "valor_a_vu_pactado_aiu": 28959881218,
+   "nota": "VU pactado = columna M 'VALOR UNITARIO PROPUESTA CONTRATISTA SIN AIU' de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 (primer renglon por codigo). El valor actual de obras del contrato (N688 = H x L) ya usa los VU de V4, de modo que la actualizacion de precios se formalizo antes de esta solicitud: pedir el otrosi que la autorizo."
+  },
   "efecto_precio_cantidad_total": {
    "efecto_precio_total": 2391076226,
    "efecto_cantidad_total": 3802952844,
@@ -64828,20 +66970,31 @@
    "suma_p_q_i": 6377081904,
    "verificacion_delta": 2391187456
   },
-  "consistencia_hojas": [
+  "consistencia_hojas": [],
+  "observaciones_hojas": [
    {
     "hoja": "Presupuesto estimado",
     "celda": "A11",
     "valor": 74667840865,
     "esperado": 75426575199,
-    "delta": -758734334
+    "delta": -758734334,
+    "explicacion": "Excluye 'VALOR ESTIMADO DE FASE DE OBRAS INICIALES' (M701 = 758.734.334); la etiqueta A10 lo dice: valor para la etapa de construccion."
    },
    {
     "hoja": "EJECUTIVO",
-    "celda": "H56",
-    "valor": 59426575199,
+    "celda": "I45",
+    "valor": 58196933869,
     "esperado": 58196933800,
-    "delta": 1229641399
+    "delta": 69,
+    "explicacion": "Diferencia de redondeo: la hoja EJECUTIVO suma los 27 CIV redondeados uno a uno (ROUND por CIV) y la hoja principal redondea el total del renglon."
+   },
+   {
+    "hoja": "EJECUTIVO",
+    "celda": "I56",
+    "valor": 75426575268,
+    "esperado": 75426575199,
+    "delta": 69,
+    "explicacion": "Diferencia de redondeo: la hoja EJECUTIVO suma los 27 CIV redondeados uno a uno (ROUND por CIV) y la hoja principal redondea el total del renglon."
    }
   ],
   "desviaciones_MNOQ_top": [
@@ -67769,11 +69922,11 @@
     "v3": 47836306969,
     "v4": 58196933800,
     "delta_v0_v4": 13893639001,
-    "fuente_v0": "PRESUPUESTO TODOS LOS CIV 84 NP fila 692 col N",
+    "fuente_v0": "PRESUPUESTO TODOS LOS CIV 84 NP fila 688 col N",
     "fuente_v1": "comparativa.json globales.iniciales.obras_civiles_redes_acero_aiu",
     "fuente_v2": "comparativa.json globales.actualizadas_alt1.obras_civiles_redes_acero_aiu",
-    "fuente_v3": "PRESUPUESTO 63 mm fila 657 col M",
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 692 col M"
+    "fuente_v3": "PRESUPUESTO 63 mm fila 652 col M",
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 688 col M"
    },
    {
     "componente": "PMA-SST (con AIU 20,006%)",
@@ -67783,8 +69936,8 @@
     "v3": 3380795309,
     "v4": 4110277014,
     "delta_v0_v4": 1167161690,
-    "fuente_v3": "PRESUPUESTO 63 mm fila 661 col M (SST V0 + 3 meses adicionales)",
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 696 col M (SST V0 + 8 meses adicionales)"
+    "fuente_v3": "PRESUPUESTO 63 mm fila 656 col M (SST V0 + 3 meses adicionales)",
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 692 col M (SST V0 + 8 meses adicionales)"
    },
    {
     "componente": "Dialogo ciudadano (PGS) con AIU 19,566%",
@@ -67794,8 +69947,8 @@
     "v3": 2083112282,
     "v4": 2430023370,
     "delta_v0_v4": 555057738,
-    "fuente_v3": "PRESUPUESTO 63 mm fila 662 col M",
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 697 col M"
+    "fuente_v3": "PRESUPUESTO 63 mm fila 657 col M",
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 693 col M"
    },
    {
     "componente": "Plan de Manejo de Trafico (PMT) con AIU 19,566%",
@@ -67805,8 +69958,8 @@
     "v3": 1767488681,
     "v4": 2007577162,
     "delta_v0_v4": 384141571,
-    "fuente_v3": "PRESUPUESTO 63 mm fila 663 col M",
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 698 col M"
+    "fuente_v3": "PRESUPUESTO 63 mm fila 658 col M",
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 694 col M"
    },
    {
     "componente": "Ajustes por cambio de vigencia",
@@ -67816,7 +69969,7 @@
     "v3": 4555525079,
     "v4": 4555525079,
     "delta_v0_v4": 0,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 699 col M"
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 695 col M"
    },
    {
     "componente": "Actividades acero (bolsa fija F)",
@@ -67826,7 +69979,7 @@
     "v3": 2977517840,
     "v4": 2977517840,
     "delta_v0_v4": 0,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 701 col M",
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 697 col M",
     "nota": "V1 IDU (25-02-2026) lo trae en 0 porque IDU consolidaba de forma distinta; en V2 y siguientes se restablece la bolsa contractual"
    },
    {
@@ -67837,7 +69990,7 @@
     "v3": 299267609,
     "v4": 299267609,
     "delta_v0_v4": 0,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 700 col M"
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 696 col M"
    },
    {
     "componente": "SDA (evaluaciones y seguimiento) (H)",
@@ -67847,7 +70000,7 @@
     "v3": 31328679,
     "v4": 31328679,
     "delta_v0_v4": 0,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 702 col M"
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 698 col M"
    },
    {
     "componente": "Fase obras iniciales (I)",
@@ -67857,7 +70010,7 @@
     "v3": 758734334,
     "v4": 758734334,
     "delta_v0_v4": 0,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 705 col M",
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 701 col M",
     "nota": "V1 IDU lo cargaba en 705.883.518; en V2, V3, V4 vuelve a la bolsa contractual"
    },
    {
@@ -67868,7 +70021,7 @@
     "v3": 59390312,
     "v4": 59390312,
     "delta_v0_v4": 0,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 703 col M"
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 699 col M"
    },
    {
     "componente": "Fondo compensaciones (K)",
@@ -67878,7 +70031,7 @@
     "v3": 0,
     "v4": 0,
     "delta_v0_v4": 0,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 704 col M",
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 700 col M",
     "nota": "V2 introdujo un Fondo de Compensaciones de 5.942.657.520 que se retiro en V3 y V4"
    },
    {
@@ -67889,7 +70042,7 @@
     "v3": 63749467094,
     "v4": 75426575199,
     "delta_v0_v4": 16000000000,
-    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 707 col M / hoja resumen fila 19"
+    "fuente_v4": "PRESUPUESTO TODOS LOS CIV 84 NP fila 703 col M / hoja resumen fila 19"
    }
   ],
   "desvios_analisis": {
@@ -67902,12 +70055,12 @@
    "v4_cap7_valor_col_m": 0,
    "v4_cap7_balance": -326577225,
    "delta_v2_v4_cap7": -19347297314,
-   "explicacion": "En V2 el capitulo 7 DESVIOS acumulo 19.347.297.314 en CD porque el contratista metio dentro del capitulo 7 los componentes no-obra completos (Ajustes cambio vigencia 4.555M, PMA-SST 3.672M, Acero fijo 2.977M, Dialogo 2.339M, PMT 2.025M, Fase obras iniciales 758M, Laboratorio 299M, Bioseguridad 59M, SDA 31M) mas 3 items reales de acero agregados (1.339M + 292M + 259M) y una malla electrosoldada agregada (735M). En V3 y V4 la contabilidad se reordeno: los componentes no-obra volvieron a estar como bolsas separadas fuera del capitulo 7 (filas 696-705 en V4) y del capitulo 7 solo quedo el item 7.001 mantenimiento rutinario, que se elimino por completo (cantidad V0 13.481 m2 -> cantidad V4 0 m2, valor V0 con AIU 326.577.225 -> valor V4 0). La reduccion de -326.577.225 se refleja en el balance mayores/menores del proyecto (columna O).",
+   "explicacion": "En V2 el capitulo 7 DESVIOS acumulo 19.347.297.314 en CD porque el contratista metio dentro del capitulo 7 los componentes no-obra completos (Ajustes cambio vigencia 4.555M, PMA-SST 3.672M, Acero fijo 2.977M, Dialogo 2.339M, PMT 2.025M, Fase obras iniciales 758M, Laboratorio 299M, Bioseguridad 59M, SDA 31M) mas 3 items reales de acero agregados (1.339M + 292M + 259M) y una malla electrosoldada agregada (735M). En V3 y V4 la contabilidad se reordeno: los componentes no-obra volvieron a estar como bolsas separadas fuera del capitulo 7 (filas 692-701 en V4) y del capitulo 7 solo quedo el item 7.001 mantenimiento rutinario, que se elimino por completo (cantidad V0 13.481 m2 -> cantidad V4 0 m2, valor V0 con AIU 326.577.225 -> valor V4 0). La reduccion de -326.577.225 se refleja en el balance mayores/menores del proyecto (columna O).",
    "conclusion": "El cap 7 de V2 no fue eliminado como sobreproyeccion sino RECLASIFICADO: los 19.347M no eran valor real de desvios, eran componentes contractuales mal ubicados en el capitulo. En V4 solo se elimino el unico item real del capitulo (mantenimiento rutinario) por -326.577.225."
   },
   "sst_detalle": {
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "filas": "733-742",
+   "filas": "729-738",
    "subtotales": {
     "A_personal": 636053253,
     "B_actividades_constructivas": 99385568,
@@ -67944,7 +70097,7 @@
     "delta": 0,
     "motivo": "Bolsa fija contractual con IVA. El plazo adicional de 8 meses no incrementa la bolsa porque los ensayos se dimensionaron sobre el alcance total del contrato, no sobre el plazo. Si se ejecutaran mas ensayos que los previstos habria que solicitar adicion especifica.",
     "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-    "fila": 700
+    "fila": 696
    },
    {
     "componente": "SDA (H)",
@@ -67953,7 +70106,7 @@
     "delta": 0,
     "motivo": "Bolsa fija para pago de evaluaciones y seguimiento a la Secretaria Distrital de Ambiente. Tarifas ya definidas por resolucion; no cambia con plazo.",
     "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-    "fila": 702
+    "fila": 698
    },
    {
     "componente": "Fase obras iniciales (I)",
@@ -67962,7 +70115,7 @@
     "delta": 0,
     "motivo": "Bolsa fija ya causada al inicio del contrato (gestiones preliminares, disenos, IVA). El plazo adicional no genera nuevas gestiones preliminares.",
     "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-    "fila": 705
+    "fila": 701
    },
    {
     "componente": "Bioseguridad (J)",
@@ -67971,7 +70124,7 @@
     "delta": 0,
     "motivo": "Bolsa fija con AIU. No se justifica por 8 meses adicionales pese a que la bioseguridad es proporcional al plazo; el contratista no la actualizo.",
     "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-    "fila": 703
+    "fila": 699
    },
    {
     "componente": "Ajustes por cambio de vigencia (E)",
@@ -67980,16 +70133,16 @@
     "delta": 0,
     "motivo": "Es un ajuste unico de indexacion por cambio de vigencia pactado desde la firma del contrato; no se recalcula por adicion.",
     "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-    "fila": 699
+    "fila": 695
    },
    {
     "componente": "Actividades acero (bolsa F)",
     "v0": 2977517840,
     "v4": 2977517840,
     "delta": 0,
-    "motivo": "Bolsa fija contractual que incluye AIU y cambio de vigencia. Es una unidad global del contrato. Los ITEMS REALES de acero se cargan dentro de obras (filas 685-690) con 3.052.987.517 en V4; ambos coexisten. Ver acero_diferencia.",
+    "motivo": "Bolsa fija contractual que incluye AIU y cambio de vigencia; unidad global del contrato. El bloque ACEROS (filas 680-687, 3.052.987.517 en V4) es un detalle por CIV que está FUERA del rango de suma de obras (M688 = SUM(M8:M679)); no se paga dos veces en el libro, pero la diferencia de 75.469.677 frente a la bolsa debe aclararse. Ver acero_diferencia.",
     "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-    "fila": 701
+    "fila": 697
    },
    {
     "componente": "Fondo compensaciones (K)",
@@ -67998,29 +70151,35 @@
     "delta": 0,
     "motivo": "En V0 y V4 esta en cero. En V2 se cargo 5.942.657.520 pero se retiro en V3 y V4 porque no habia compensaciones ambientales/arboreas que financiar (posiblemente reemplazadas por NP arqueologia NP-109/NP-110 dentro de obras).",
     "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-    "fila": 704
+    "fila": 700
    }
   ],
   "acero_diferencia": {
-   "bloque_680_687_referencia_brief": "El BRIEF menciona filas 680-687; el bloque acero real esta en filas 685-690",
-   "bloque_interno_v4_filas_685_690": {
-    "fila_685_cabecera_pavimentos_subtotal": 2667280349,
-    "fila_686_3708_acero_refuerzo_pavimentos": 1557630470,
-    "fila_687_4959_acero_liso_1_1_4": 900761414,
-    "fila_688_7713_dovelas_1_1_2": 208888465,
-    "fila_689_cabecera_espacio_publico_subtotal": 385707168,
-    "fila_690_3708_acero_refuerzo_espacio_publico": 385707168,
-    "fila_691_8471_malla_electrosoldada_v4": 0,
+   "bloque_680_687_suma": 3052987517,
+   "componente_fijo_F": 2977517840,
+   "delta": 75469677,
+   "explicacion": "El bloque ACEROS (filas 680-687, subtotal 3.052.987.517 con AIU 31,849%) lista acero de refuerzo, acero liso y dovelas repartidos por CIV, con cantidades actualizadas (247.985 -> 211.290,08 kg refuerzo pavimentos; 43.297 -> 52.320,56 kg refuerzo espacio público; 52.558 -> 81.288,82 kg acero liso 1 1/4; 0 -> 19.704,6 kg dovelas 1 1/2; 473 -> 0 kg malla). Está FUERA del rango de suma de obras: M688 = SUM(M8:M679) y CB688 = SUM(CB7:CB679)/2, de modo que el libro NO lo suma en los 58.196.933.800. El acero se paga por la bolsa fija F 'Costos de actividades acero' (fila 697) de 2.977.517.840, que no cambia desde V0. La diferencia de 75.469.677 (+2,5%) entre el bloque y la bolsa debe aclararse: si el bloque es la memoria de la bolsa, la bolsa quedaría corta; si es alcance adicional, requeriría adición.",
+   "riesgo_doble_pago": "Con las fórmulas actuales no hay doble conteo en el libro. El riesgo aparecería solo si en el otrosí o en las actas de obra se pagara el bloque por ítems y además la bolsa F. La interventoría debe dejar por escrito cuál de los dos rige y que el otro no se factura.",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "bloque_interno_v4_filas_680_687": {
+    "fila_681_cabecera_pavimentos_subtotal": 2667280349,
+    "fila_682_3708_acero_refuerzo_pavimentos": 1557630470,
+    "fila_683_4959_acero_liso_1_1_4": 900761414,
+    "fila_684_7713_dovelas_1_1_2": 208888465,
+    "fila_685_cabecera_espacio_publico_subtotal": 385707168,
+    "fila_686_3708_acero_refuerzo_espacio_publico": 385707168,
+    "fila_687_8471_malla_electrosoldada_v4": 0,
     "suma_pavimentos": 2667280349,
     "suma_espacio_publico": 385707168,
     "suma_total_bloque_v4": 3052987517
    },
-   "bloque_680_687_suma": 3052987517,
-   "componente_fijo_F": 2977517840,
-   "delta": 75469677,
-   "explicacion": "El bloque interno de aceros (filas 685-690, subtotal 3.052.987.517 en V4 con AIU 31,849%) esta cargado como ITEMS REALES DENTRO DE OBRAS con las cantidades actualizadas (247.985 -> 211.290,08 kg acero refuerzo pavimentos + 43.297 -> 52.320,56 kg acero refuerzo espacio publico + 52.558 -> 81.288,82 kg acero liso 1 1/4 + 0 -> 19.704,6 kg dovelas 1 1/2 + 473 -> 0 kg malla). En paralelo el componente F ACTIVIDADES ACERO (fila 701) por 2.977.517.840 es una BOLSA CONTRACTUAL FIJA que incluye AIU y cambio de vigencia, pactada como global desde la firma. La diferencia de 75.469.677 se explica porque: (a) la bolsa F fue dimensionada con precios/cantidades contractuales originales y su composicion incluye cambio de vigencia (indexacion) mientras el bloque interno usa VU actuales; (b) el bloque interno tiene precios directos y AIU 31,849% pero no incluye la banda de cambio de vigencia con la que se dimensiono F; (c) en la conciliacion contable IDU-Interventoria ambos importes deben verificarse: el mayor entre bloque y bolsa deberia pagarse por acero, no ambos.",
-   "riesgo_doble_pago": "SI el bloque interno (3.052.987.517) ya esta incluido en obras+AIU (58.196.933.800) y ademas se paga la bolsa F (2.977.517.840) por separado, existe riesgo de doble pago por aproximadamente 2.977M-3.053M. La interventoria debe exigir aclaracion al contratista: definir si la bolsa F se descuenta del pago de obras cuando se pagan los items reales de acero, o si son componentes independientes.",
-   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP"
+   "verificacion_formulas": {
+    "M688": "=SUM(M8:M679)",
+    "CB688": "=SUM(CB7:CB679)/2",
+    "fila_697_bolsa_F": 2977517840,
+    "bloque_680_687": 3052987517,
+    "delta": 75469677
+   }
   },
   "ritmo_mensual": {
    "adicion_neta": 16000000000,
@@ -68099,7 +70258,7 @@
    "titulo": "Capitulo 7 DESVIOS de V2 era un contenedor mal clasificado por 19.347M",
    "descripcion": "En V2 el capitulo 7 acumulo 19.347.297.314 en CD porque el contratista metio dentro de el todos los componentes no-obra (PMA-SST, Dialogo, PMT, Ajustes vigencia, Acero fijo, Fase obras, Laboratorio, Bioseguridad, SDA). En V3 y V4 esto se reordeno y solo queda el item real 7.001 (mantenimiento rutinario) que se elimina por completo, dejando cap 7 en cero. La reclasificacion V2->V4 no es reduccion de alcance sino re-agrupacion contable.",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": "679-680",
+   "fila": "675-676",
    "impacto_pesos": 19347297314,
    "recomendacion": "Documentar formalmente en la comunicacion oficial que la reduccion del capitulo 7 en V4 no representa un ahorro sino una reclasificacion. Solicitar al contratista una tabla de conciliacion V2-V4 por capitulo antes de proceder con cualquier aprobacion de adicion.",
    "origen": "06"
@@ -68114,6 +70273,17 @@
    "impacto_pesos": 16000000000,
    "recomendacion": "Solicitar al contratista: (1) cronograma semana a semana con curvas S y frentes de obra activos simultaneos; (2) certificaciones de facturacion mensual de los ultimos 24 meses; (3) plan de recursos (personal, equipo, subcontratistas) que soporte el ritmo triplicado; (4) analisis de riesgo de incumplimiento con matriz de contingencia.",
    "origen": "06"
+  },
+  {
+   "id": "H04",
+   "severidad": "ALTA",
+   "titulo": "Los VU de V4 estan +49.0% (mediana) sobre los VU pactados en la propuesta: 15.086.222.761 con AIU a cantidades finales",
+   "descripcion": "469 renglones contractuales tienen VU pactado (col M de PRESUPUESTO CONTRACTUAL MAYO 25). Valorados al VU pactado valdrian 28.959.881.218 en vez de 44.046.009.245. El valor actual de obras del contrato (N688 = 44.303.294.799) ya esta calculado con los VU de V4 sobre las cantidades contractuales, asi que la actualizacion de precios (a insumos VISOR 13-09-2024) se formalizo antes de esta solicitud; el presupuesto original de la propuesta (fila 246 col O) era 28.420.960.042 de obras y 50.793.789.333 en total. Top impacto: 7785 fila 34 +76.0%, 6016 fila 20 +39.7%, 3017 fila 14 +32.5%, 5182 fila 531 +48.0%, 3425 fila 85 +50.6%",
+   "hoja": "PRESUPUESTO CONTRACTUAL MAYO 25",
+   "fila": "246, 279 y col M",
+   "impacto_pesos": 15086222761,
+   "recomendacion": "Pedir el otrosi o acta que autorizo actualizar los VU pactados a insumos 13-09-2024 y confirmar si ese incremento se contabilizo como adicion (cuenta para el tope del 50% del art. 40 de la Ley 80) o como reajuste.",
+   "origen": "04"
   },
   {
    "id": "H01-013",
@@ -68180,17 +70350,6 @@
    "impacto_pesos": 3269600612.0,
    "recomendacion": "Revisar aprobacion IDU del NP, analisis de precio unitario y sustento tecnico. Verificar que no exista un item contractual equivalente.",
    "origen": "01"
-  },
-  {
-   "id": "H06-01",
-   "severidad": "ALTA",
-   "titulo": "Riesgo de doble pago en acero por 2.977M-3.053M",
-   "descripcion": "En V4 coexisten (a) los items reales de acero cargados dentro de obras+AIU sumando 3.052.987.517 (filas 685-690) y (b) la bolsa fija F Actividades Acero de 2.977.517.840 (fila 701) que no se modifica desde V0. La suma total pagable de acero seria 6.030.505.357, lo cual es inconsistente con el diseno estructural (memorias de la hoja Aceros muestran ~2.500M en cantidades teoricas).",
-   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": "685-690 y 701",
-   "impacto_pesos": 2977517840,
-   "recomendacion": "Exigir al contratista aclaracion escrita: si la bolsa F se pagara adicional al costo de los items reales, presentar sustento tecnico de esa duplicidad. En caso contrario, descontar la bolsa F del pago cuando se pagan los items reales de acero para evitar doble facturacion.",
-   "origen": "06"
   },
   {
    "id": "H01-015",
@@ -68567,25 +70726,14 @@
    "origen": "04"
   },
   {
-   "id": "H02",
-   "severidad": "ALTA",
-   "titulo": "Codigos IDU repetidos en la hoja principal (174)",
-   "descripcion": "Total duplicados: 174. Aparentes reubicaciones: 158. Duplicados reales: 16.",
-   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": null,
-   "impacto_pesos": null,
-   "recomendacion": "Revisar cada duplicado. Si son reubicaciones justificar el cambio de subcapitulo; si son sumas paralelas exigir consolidacion.",
-   "origen": "04"
-  },
-  {
    "id": "H03",
    "severidad": "ALTA",
-   "titulo": "VU V4 desviado >2% del PRESUPUESTO CONTRACTUAL (367 items)",
-   "descripcion": "Top: 4878 70.52%, 4878 70.52%, 4878 70.52%, 4878 70.52%, 8406 42.0%",
+   "titulo": "VU V4 desviado >2% de la referencia APU actualizado 13-09-2024 (367 renglones)",
+   "descripcion": "Referencia: columna Q 'VALOR ITEM COSTO DIRECTO ACTUALIZACION DE APU INSUMOS VISOR 13-09-2024' de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 (es el 'precio original' del dashboard). Top: 4878 70.52%, 4878 70.52%, 4878 70.52%, 4878 70.52%, 8406 42.0%",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
    "fila": null,
    "impacto_pesos": null,
-   "recomendacion": "Verificar autorizacion de cambio de VU respecto al contrato firmado. Los VU deben coincidir con el contractual.",
+   "recomendacion": "Pedir el APU (FO-GI-19) de cada renglon con VU distinto a la referencia y la autorizacion del IDU para usarlo en la adicion.",
    "origen": "04"
   },
   {
@@ -68594,7 +70742,7 @@
    "titulo": "Salto V3 (63MM, 3 meses) a V4 (75MM, 8 meses) implica delta de $11.677M",
    "descripcion": "En 4 meses (mayo a septiembre 2026) el presupuesto adicional pedido paso de $4.323M (V3) a $16.000M (V4), un incremento de $11.677M. El 88,7% del delta se explica por obras (+$10.361M) y el 11,3% por escalar SST/PGS/PMT de 3 a 8 meses. Los VU (precios unitarios) son practicamente identicos entre V3 y V4, por lo que el delta es efecto CANTIDAD y NPs, no efecto PRECIO.",
    "hoja": "PRESUPUESTO 63 mm vs PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": "657 y 692",
+   "fila": "652 (63 mm) y 688",
    "impacto_pesos": 11677108105,
    "recomendacion": "Solicitar al contratista la sustentacion tecnica del incremento de $10.361M en obras entre V3 y V4: (1) que items se incorporaron o crecieron; (2) que NPs se agregaron; (3) por que no se identificaron en V3 (mayo 2026) y aparecen 4 meses despues. Verificar contra memorias de cantidades y bitacora de obra.",
    "origen": "06"
@@ -68605,7 +70753,7 @@
    "titulo": "El Fondo de Compensaciones aparecio en V2 y desaparecio en V4 sin trazabilidad",
    "descripcion": "V2 (Alt 1, 21-04-2026) incluyo un Fondo de Compensaciones de 5.942.657.520 que no existe ni en V0 ni en V4. En V3 y V4 vuelve a 0. No hay comunicacion oficial que explique el origen ni el motivo de su retiro. Podria estar relacionado con compensaciones ambientales/arqueologicas que se movieron a los NP-109 y NP-110 (arqueologia GLB/MES) que aparecen ahora dentro de obras.",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": 704,
+   "fila": 700,
    "impacto_pesos": 5942657520,
    "recomendacion": "Solicitar al contratista trazabilidad documental del Fondo de Compensaciones: (1) que compensaciones especificas se planeaban financiar; (2) por que se retiraron; (3) verificar que no se este pagando doble via NPs de arqueologia u otros.",
    "origen": "06"
@@ -68631,17 +70779,6 @@
    "impacto_pesos": 2308849811,
    "recomendacion": "Auditar NPs asignados a este CIV, verificar códigos IDU, análisis de precios unitarios y actas de fijación.",
    "origen": "03"
-  },
-  {
-   "id": "H04",
-   "severidad": "MEDIA",
-   "titulo": "Inconsistencia entre hojas (2)",
-   "descripcion": "Totales no coinciden entre hojas de resumen y la hoja principal.",
-   "hoja": null,
-   "fila": null,
-   "impacto_pesos": 1988375733,
-   "recomendacion": "Alinear hojas resumen/EJECUTIVO/Presupuesto estimado con el total final $75.426.575.199.",
-   "origen": "04"
   },
   {
    "id": "H01-007",
@@ -68688,6 +70825,17 @@
    "origen": "01"
   },
   {
+   "id": "H06-01",
+   "severidad": "MEDIA",
+   "titulo": "Bloque de aceros (3.053M) fuera del total de obras vs bolsa fija F (2.978M): aclarar cuál rige",
+   "descripcion": "El bloque ACEROS (filas 680-687) suma 3.052.987.517 con AIU y reparte acero de refuerzo, acero liso y dovelas por CIV con cantidades actualizadas. Verificado con las fórmulas del libro: M688 = SUM(M8:M679) y CB688 = SUM(CB7:CB679)/2, por lo que el bloque NO está incluido en los 58.196.933.800 de obras; no hay doble conteo en el Excel. El acero se paga por la bolsa fija F (fila 697, 2.977.517.840), sin cambio desde V0. Diferencia bloque - bolsa: 75.469.677 (+2,5%). La memoria de la hoja Aceros muestra cantidades teóricas menores (~2.500M).",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": "680-687 y 697",
+   "impacto_pesos": 75469677,
+   "recomendacion": "Pedir al contratista que aclare por escrito si el bloque ACEROS es la memoria de cantidades de la bolsa F o alcance adicional; en el primer caso, justificar la diferencia de 75.469.677 y confirmar que la bolsa alcanza; en el segundo, tramitarlo como adición. Dejar en el otrosí que el acero se paga únicamente por la bolsa F (o únicamente por ítems), nunca por ambos.",
+   "origen": "06"
+  },
+  {
    "id": "H01-012",
    "severidad": "MEDIA",
    "titulo": "Salto extremo de cantidad (I/H = 11.9861x) - fila 48",
@@ -68715,7 +70863,7 @@
    "titulo": "Bioseguridad no se actualiza a 8 meses pese a ser proporcional al plazo",
    "descripcion": "El componente J Bioseguridad se mantiene en 59.390.312 (V0 = V4). Sin embargo la bioseguridad requiere insumos periodicos (elementos de proteccion personal, senalizacion, protocolos) que escalan con el tiempo. En un contrato ampliado 8 meses adicionales, tecnicamente deberia haber un incremento proporcional. El contratista no lo pidio.",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": 703,
+   "fila": 699,
    "impacto_pesos": 40000000,
    "recomendacion": "Verificar si el contratista renuncia expresamente a solicitar adicion en bioseguridad para el plazo ampliado, o si esta consumiendo la bolsa vigente. Documentar la decision para evitar solicitudes posteriores no previstas.",
    "origen": "06"
@@ -68789,10 +70937,10 @@
   {
    "id": "H06-08",
    "severidad": "BAJA",
-   "titulo": "Fila 707 dice fecha 04-05-2026 pero el archivo es del 01-09-2026",
-   "descripcion": "La celda de la fila 707 rotula VALOR TOTAL CONTRATO PRESUPUESTO 04-05-2026 pero segun BRIEF y el nombre del archivo la version es del 01-09-2026. Es una etiqueta desactualizada.",
+   "titulo": "Fila 703 dice fecha 04-05-2026 pero el archivo es del 01-09-2026",
+   "descripcion": "La celda de la fila 703 rotula VALOR TOTAL CONTRATO PRESUPUESTO 04-05-2026 pero segun BRIEF y el nombre del archivo la version es del 01-09-2026. Es una etiqueta desactualizada.",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": 707,
+   "fila": 703,
    "impacto_pesos": 0,
    "recomendacion": "Solicitar al contratista corregir la etiqueta de fecha para evitar confusion en revisiones futuras.",
    "origen": "06"
@@ -68853,12 +71001,34 @@
    "origen": "02"
   },
   {
+   "id": "H02",
+   "severidad": "INFO",
+   "titulo": "Codigos IDU repetidos en la hoja principal (174)",
+   "descripcion": "Total codigos con mas de un renglon: 174. En subcapitulos distintos (estructura item x subcapitulo, p. ej. IDU vs ESP): 174. Duplicados reales en el mismo subcapitulo: 0. No implican doble suma: cada renglon tiene su propia cantidad. Si afectan el cruce con V1/V2, que se hace por codigo agregado (ver limitaciones del registro de auditoria).",
+   "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
+   "fila": null,
+   "impacto_pesos": null,
+   "recomendacion": "Pedir al contratista la conciliacion de los codigos que pasan de un subcapitulo a otro (reubicaciones, seccion I de la app); si hay duplicados en el mismo subcapitulo, exigir consolidacion.",
+   "origen": "04"
+  },
+  {
+   "id": "H05",
+   "severidad": "INFO",
+   "titulo": "Consistencia entre hojas OK (3 diferencias explicadas)",
+   "descripcion": "Los totales de resumen, EJECUTIVO y Presupuesto estimado coinciden con la hoja principal. Diferencias explicadas: Presupuesto estimado!A11 = 74.667.840.865 (Excluye 'VALOR ESTIMADO DE FASE DE OBRAS INICIALES' (M701 = 758.734.334); la etiqueta A10 lo dice: valor para la etapa de construccion.); EJECUTIVO!I45 = 58.196.933.869 (Diferencia de redondeo: la hoja EJECUTIVO suma los 27 CIV redondeados uno a uno (ROUND por CIV) y la hoja principal redondea el total del renglon.); EJECUTIVO!I56 = 75.426.575.268 (Diferencia de redondeo: la hoja EJECUTIVO suma los 27 CIV redondeados uno a uno (ROUND por CIV) y la hoja principal redondea el total del renglon.)",
+   "hoja": null,
+   "fila": null,
+   "impacto_pesos": null,
+   "recomendacion": "Sin accion. La hoja EJECUTIVO conserva el encabezado 11/05/2026: pedir que se actualice a la fecha del radicado.",
+   "origen": "04"
+  },
+  {
    "id": "H06-07",
    "severidad": "INFO",
    "titulo": "AIU diferenciado por componente confirmado por presupuesto",
-   "descripcion": "El presupuesto aplica AIU 31,849% a obras+redes+acero (contractual), AIU 20,006% a PMA-SST y AIU 19,566% a Dialogo y PMT. La diferenciacion esta documentada en las filas 740 del detalle SST y es coherente con las cartillas IDU: el AIU pleno solo aplica a costos directos de obra civil.",
+   "descripcion": "El presupuesto aplica AIU 31,849% a obras+redes+acero (contractual), AIU 20,006% a PMA-SST y AIU 19,566% a Dialogo y PMT. La diferenciacion esta documentada en las filas 736 del detalle SST y es coherente con las cartillas IDU: el AIU pleno solo aplica a costos directos de obra civil.",
    "hoja": "PRESUPUESTO TODOS LOS CIV 84 NP",
-   "fila": "740",
+   "fila": "736",
    "impacto_pesos": 0,
    "recomendacion": "Documentar en informe mensual de Interventoria los tres AIU diferenciados para claridad ante IDU.",
    "origen": "06"

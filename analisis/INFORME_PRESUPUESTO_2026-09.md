@@ -35,14 +35,16 @@ Cifras verificadas al peso contra la fila 703 del Excel (`PRESUPUESTO TODOS LOS 
 |---|---|---|---:|---|
 | 1 | H06-02 | ALTA | 19.347.297.314 | El capítulo 7 DESVÍOS de V2 era un contenedor mal clasificado; en V4 quedó en $0 |
 | 2 | H06-03 | ALTA | 16.000.000.000 | Ritmo mensual propuesto (~$2.000M/mes) es 3× el ritmo histórico del contrato |
-| 3 | H01-013 | ALTA | 6.777.852.537 | Redes hidrosanitarias absorben el 49% del crecimiento de obras (cap. 5) |
-| 4 | H03-OUT · 16000024 | ALTA | 5.899.197.969 | CIV 16000024 KR 65A es outlier: $2.454.941/m² obras (2,4× mediana) |
-| 5 | H03-OUT · 16000010 | ALTA | 3.950.103.092 | CIV 16000010 CL18B es outlier: $2.317.646/m² obras (2,3× mediana) |
-| 6 | H02-101 | ALTA | 3.672.527.262 | CIV 16000024 KR 65A concentra el Δ obras más grande de los 27 CIVs (+165%) |
-| 7 | H01-014 | ALTA | 3.556.107.781 | Pavimentos (cap. 2) sube por reemplazo MD12 → NP-123 MD19 |
-| 8 | H01-035 | ALTA | 3.269.600.612 | NP-123 MEZCLA ASFÁLTICA MD19 · $3.269M (reemplaza al contractual 2.002 MD12) |
-| 9 | H06-01 | ALTA | 2.977.517.840 | Riesgo de doble pago en acero: bloque interno ($3.052M) + bolsa fija F ($2.977M) coexisten |
+| 3 | H04 (análisis 04) | ALTA | 15.086.222.761 | Los VU vigentes están +49,0% (mediana) sobre los pactados en la propuesta 2021; la actualización ya está en el "valor actual" y hay que ver con qué acto se formalizó (registro de auditoría A-24) |
+| 4 | H01-013 | ALTA | 6.777.852.537 | Redes hidrosanitarias absorben el 49% del crecimiento de obras (cap. 5) |
+| 5 | H03-OUT · 16000024 | ALTA | 5.899.197.969 | CIV 16000024 KR 65A es outlier: $2.454.941/m² obras (2,4× mediana) |
+| 6 | H03-OUT · 16000010 | ALTA | 3.950.103.092 | CIV 16000010 CL18B es outlier: $2.317.646/m² obras (2,3× mediana) |
+| 7 | H02-101 | ALTA | 3.672.527.262 | CIV 16000024 KR 65A concentra el Δ obras más grande de los 27 CIVs (+165%) |
+| 8 | H01-014 | ALTA | 3.556.107.781 | Pavimentos (cap. 2) sube por reemplazo MD12 → NP-123 MD19 |
+| 9 | H01-035 | ALTA | 3.269.600.612 | NP-123 MEZCLA ASFÁLTICA MD19 · $3.269M (reemplaza al contractual 2.002 MD12) |
 | 10 | H01-015 | ALTA | 2.787.734.305 | Preliminares (cap. 1) sube por rajón (fila 20: 965 → 14.163 m³) |
+
+> **Corrección 2026-09-28.** La versión anterior de esta tabla incluía H06-01 como "riesgo de doble pago en acero por $2.977M". Las fórmulas del libro (`M688 = SUM(M8:M679)`) demuestran que el bloque ACEROS (filas 680-687) está fuera del total de obras: no hay doble conteo. H06-01 pasa a MEDIA con impacto $75.469.677 (diferencia bloque − bolsa F). Detalle en el registro de auditoría, asiento B-08.
 
 ---
 
@@ -119,7 +121,7 @@ La incorporación bruta (NP + nuevo contractual + aumentos = $38.160.573.464) fi
 
 ### 3.1 Verificaciones
 
-- Suma de los 27 CIVs (obras con AIU) = **$58.196.933.869** (esperado 58.196.933.800; Δ +$69 por redondeo de fila 692 = 780 vs fila 694 = 800; documentado en hallazgo H04).
+- Suma de los 27 CIVs (obras con AIU) = **$58.196.933.869** (esperado 58.196.933.800; Δ +$69 porque cada celda por CIV es ROUND(cantidad × L) y el total del renglón es ROUND(L × I); documentado en el registro de auditoría A-12).
 - Suma total con componentes = **$75.426.575.268** (esperado 75.426.575.199; Δ +$69 por el mismo redondeo).
 
 ### 3.2 Criterio de reparto de componentes no-obra
@@ -249,7 +251,7 @@ El contratista redujo de 216 NPs (V2 abril) a 81 códigos (V4 septiembre). Se re
 ### 6.2 Componentes que NO crecen
 
 - **Ajustes cambio vigencia $4.555M**: bolsa fija contractual, no depende del avance.
-- **Actividades acero $2.977M**: bolsa fija F contractual. **Riesgo de doble pago**: el bloque de ACEROS interno (filas 680-687) suma $3.052.987.517 y también hay $2.977M en bolsa fija — coexisten. Interventoría debe validar que el pago del bloque interno no duplique la bolsa F.
+- **Actividades acero $2.977M**: bolsa fija F contractual (fila 697). El bloque ACEROS (filas 680-687) suma $3.052.987.517 con AIU pero está **fuera** del total de obras (`M688 = SUM(M8:M679)`), así que el libro no lo cobra dos veces. Lo que debe aclararse es cuál de las dos representaciones rige para pagar y por qué el bloque supera la bolsa en $75.469.677 (+2,5%): si el bloque es la memoria de la bolsa, la bolsa queda corta; si es alcance adicional, requiere adición (H06-01, corregido; registro de auditoría A-05 y B-08).
 - **Ensayos laboratorio $299M · SDA $31M · Fase inicial $758M · Bioseguridad $59M**: bolsas fijas no ajustadas.
 - **Fondo compensaciones $0**: en V2 aparecía por $5.942.657.520 (10% del contrato); en V4 desaparece sin trazabilidad documental.
 
@@ -296,7 +298,7 @@ Los 10 más críticos ya están listados en el Resumen ejecutivo.
 6. **Ritmo $2.000M/mes**: cronograma detallado con hitos mensuales, personal, maquinaria y frentes activos simultáneos.
 7. **CIVs outliers 16000024 y 16000010**: por qué el $/m² es >2× la mediana. ¿Diseño con mayor complejidad de redes? Soporte de campo.
 8. **Fondo de compensaciones**: en V2 estaba en $5.942M, en V4 en $0. ¿Se subrogó a otro componente? ¿Se cerró como sobrecosto no reembolsable?
-9. **Riesgo doble pago acero**: el bloque interno ACEROS suma $3.052M y coexiste con la bolsa fija F de $2.977M. Aclarar el flujo de facturación para que no se paguen ambos.
+9. **Acero: bloque vs bolsa F**: el bloque ACEROS (filas 680-687) suma $3.052M y está fuera del total de obras; la bolsa fija F vale $2.977M. ¿Cuál rige para pagar y por qué difieren en $75,5M? Dejar en el otrosí que el acero se paga por una sola vía.
 10. **CIV 500002375**: unificar la nomenclatura (500002375 IDU actual = 16004876 en data.json = 50002375 en MEMORIA CANTIDADES = 16004876 en Hoja1). Documentar el segmento compartido con 16000047 (91029906) y cómo se factura para no duplicar.
 11. **Desvíos capítulo 7**: en V2 subió a $19.347M en CD, en V4 quedó en $0. Confirmar que ningún ítem de desvíos fue reasignado a los capítulos 1-6 con cambio de código para no duplicar.
 12. **NPs objetados**: los 14 NPs que el IDU rechazó no aparecen en V4 — verificar oficialmente que ninguno se reintroduzca con otro código o descripción.
@@ -309,10 +311,10 @@ Fuentes consultadas el 27-09-2026 (verificar vigencia antes de citar en el infor
 
 | Norma / concepto | Qué dice | Cómo aplica a este presupuesto |
 |---|---|---|
-| Ley 80 de 1993, art. 40 parágrafo | Los contratos no podrán adicionarse en más del 50% de su valor inicial, expresado en SMMLV. | Valor inicial $59.426.575.199 = 65.410 SMMLV de 2021 ($908.526) → tope 32.705 SMMLV. Adición $16.000.000.000 = 9.138 SMMLV de 2026 ($1.750.905) = 14,0% del valor inicial (27,9% del tope); 26,9% nominal. Dentro del límite si no hay adiciones previas acumuladas: el IDU reportó al inicio una inversión de obra de $50.793M, por lo que hay que confirmar en el expediente si los $59.426M ya incluyen adiciones. |
+| Ley 80 de 1993, art. 40 parágrafo | Los contratos no podrán adicionarse en más del 50% de su valor inicial, expresado en SMMLV. | **Base corregida (registro de auditoría B-11):** el valor inicial del contrato es **$50.793.789.333** (hoja PRESUPUESTO CONTRACTUAL MAYO 25, fila 279; coincide con el boletín del IDU de 2021), no los $59.426.575.199 "actuales", que ya traen $8.632.785.866 de incremento (adiciones 1-3 de la fase inicial, actualización de VU a insumos 13-09-2024 y reasignación del fondo de compensaciones). En pesos: $8.632.785.866 previos + $16.000.000.000 = $24.632.785.866 = **48,5% del valor inicial** (margen $764.108.801). En SMMLV: 55.908 SMMLV iniciales (2021, $908.526) → tope 27.954; adición 9.138 SMMLV (2026, $1.750.905) + incremento previo ≈ 6.064 SMMLV (si se cuenta a SMMLV 2025, $1.423.500) = 15.203 SMMLV = 54,4% del tope. Cabe en SMMLV pero queda al límite en pesos: el IDU debe precisar qué parte del incremento previo fue adición (cuenta) y qué parte reajuste (no cuenta). Duda C-01 del registro. |
 | Colombia Compra Eficiente, concepto C-466 de 2024 | En contratos a precios unitarios las mayores cantidades de obra no son adición ni cuentan para el tope; las obras adicionales sí. | El balance de mayores/menores cantidades es −$257.285.548 (no hay mayores cantidades netas). La adición se compone de NP ($14.150.924.549) y componentes por plazo (+$2.106.360.999): es adición en sentido estricto. |
 | Consejo de Estado, Sección Tercera, 10-10-2024, exp. 67.508 | Mayores cantidades se reconocen con medición y recibo; las obras adicionales exigen acuerdo escrito previo al pago. | Los 81 códigos NP (105 renglones) requieren otrosí y acta de fijación de precios antes de ejecutarse o pagarse. |
-| Ley 1474 de 2011, arts. 83–84 | Deber del interventor de informar oportunamente; responsabilidad solidaria si no lo hace (par. 3); falta gravísima (par. 1). | Los 45 hallazgos ALTA y 15 MEDIA deben quedar informados por escrito al IDU con soporte. |
+| Ley 1474 de 2011, arts. 83–84 | Deber del interventor de informar oportunamente; responsabilidad solidaria si no lo hace (par. 3); falta gravísima (par. 1). | Los 44 hallazgos ALTA y 15 MEDIA, y los asientos ABIERTOS de severidad ALTA del registro de auditoría (A-01, A-02, A-06, A-24, A-25), deben quedar informados por escrito al IDU con soporte. |
 | IDU, Manual de Gestión Contractual MG-GC-06 v19, §11.1.3 y §11.2.1 | Los ítems no previstos obligan a modificación contractual y cuentan para el tope del art. 40; las mayores cantidades no son modificación, pero el interventor verifica que el balanceo no afecte la funcionalidad. | Certificar funcionalidad tras eliminar 118 renglones (incluido todo el cap. 7 desvíos) y crear 93. |
 | IDU, Guía GUDP017 (presupuestos) | AIU = A + I + U; los imprevistos cubren contingencias normales; ajustes por cambio de vigencia = (valor ÷ meses) × meses en la nueva vigencia × inflación (ICCP para obra). | El componente de ajustes ($4.555.525.079) no cambia en V4 aunque los 8 meses cruzan a 2027: pedir recálculo o justificación. |
 | IDU, PR-IC-01 (base de precios / VISOR) | Base actualizada al menos una vez al año; ítems fuera de la base se soportan con APU (FO-GI-19) y cotizaciones. | Los 81 NP deben venir con APU y compararse con el VISOR vigente y con el ítem contractual más cercano. |
@@ -321,57 +323,89 @@ Fuentes consultadas el 27-09-2026 (verificar vigencia antes de citar en el infor
 
 ## 8B. Precios unitarios: V4 frente a referencias
 
-Dentro de V4 el VU es el mismo para la cantidad inicial (col N) y la final (col M): la variación es 100% cantidad. Pero el nivel de precios de V4 difiere de dos referencias: el APU actualizado con insumos VISOR 13-09-2024 (hoja PRESUPUESTO CONTRACTUAL MAYO 25, igual al "precio original" del dashboard) y el VISOR de mayo de 2025.
+Dentro de V4 el VU es el mismo para la cantidad inicial (col N) y la final (col M): la variación es 100% cantidad. Pero el nivel de precios de V4 difiere de tres referencias de la hoja PRESUPUESTO CONTRACTUAL MAYO 25 y del VISOR:
 
-- Ítems con desviación > 2% frente a la referencia: **200**; mediana de la desviación **+9,1%**.
-- Impacto a la cantidad final, con AIU: **+$3.258.662.147** sobre 79 ítems con cantidad.
+| Referencia | Columna | Renglones | Mediana Δ VU V4 | Efecto a cantidad final (con AIU) |
+|---|---|---:|---:|---:|
+| VU pactado en la propuesta del contratista (2021) | M | 469 | **+49,0%** | **+$15.086.222.761** (los ítems contractuales valen $44.046M en V4 y valdrían $28.960M al VU pactado) |
+| APU actualizado con insumos VISOR 13-09-2024 (= "precio original" del dashboard) | Q | 367 con Δ > 2% | +8,1% | +$3.639.050.739 sobre 126 renglones con cantidad |
+| VISOR IDU 07-05-2025 (data.json) | — | según código | −8% aprox. | ver sección H de la app |
+
+**Dato clave (registro de auditoría A-24 y A-25):** el valor actual de obras del contrato (N688 = $44.303.294.799 = H × L) ya está calculado con los VU de V4, de modo que la actualización de los precios pactados a insumos 13-09-2024 se formalizó **antes** de esta solicitud (el libro externo vinculado se llama "EJERCICIO ACTUALIZACIÓN IDU / ANEXO MODIF"). La pregunta para el IDU no es si V4 cambia precios, sino con qué otrosí se pasó de los VU pactados a los actualizados y si ese mayor valor contó como adición para el tope del 50%.
+
+> La versión anterior de esta sección llamaba "presupuesto contractual" a la columna Q (APU 2024) y mostraba 200 ítems / +$3.259M porque la lista estaba truncada a 200 renglones (registro de auditoría B-12).
+
+Top 10 frente a la referencia APU 13-09-2024:
 
 | Fila | Ítem | Descripción | VU ref. | VU V4 | Δ % | Cant. final | Impacto con AIU |
 |---:|---|---|---:|---:|---:|---:|---:|
 | 34 | 2.003 | LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEA | $979.106 | $1.132.473 | +15,7% | 9.851 | +$1.992.044.177 |
 | 317 | 5.037 | Proyecto: factibilidad, estudios y diseños de | $39.997 | $50.435 | +26,1% | 18.443 | +$253.813.174 |
 | 369 | 5.037 | Proyecto: factibilidad, estudios y diseños de | $39.997 | $50.435 | +26,1% | 17.457 | +$240.252.532 |
+| 531 | 6.007 | 6 DUCTOS D=6" + 2 DUCTOS D=3" PVC TDP | $389.500 | $421.190 | +8,1% | 3.912 | +$163.465.339 |
 | 14 | 1.006 | TRANSPORTE Y DISPOSICIÓN FINAL DE ESCOMBROS E | $40.317 | $41.825 | +3,7% | 52.469 | +$104.322.362 |
 | 81 | 3.035 | LOSA DE CONCRETO MR45 (SUMINISTRO, FORMALETEA | $738.689 | $850.822 | +15,2% | 500 | +$73.929.891 |
+| 426 | 5.037 | Proyecto: factibilidad, estudios y diseños de | $39.997 | $50.435 | +26,1% | 4.973 | +$68.446.326 |
 | 27 | 1.015 | SUBBASE GRANULAR CLASE C (SBG_C) (SUMINISTRO, | $141.769 | $155.185 | +9,5% | 3.516 | +$62.185.724 |
 | 85 | 3.039 | ANDEN CONCRETO GRAVA COMÚN DE 3000 PSI (210 K | $73.210 | $76.194 | +4,1% | 15.469 | +$60.859.378 |
 | 46 | 3.005 | EXCAVACIÓN MANUAL EN MATERIAL COMÚN (INCL CAR | $90.934 | $96.914 | +6,6% | 5.855 | +$46.160.374 |
-| 55 | 3.013 | SUBBASE GRANULAR PEATONAL SBG_PEA. SUMINISTRO | $137.902 | $151.999 | +10,2% | 1.843 | +$34.263.193 |
-| 89 | 3.041 | PUNTO ECOLÓGICO COMPUESTO POR 3 CANECAS TIPO  | $2.024.856 | $2.875.373 | +42,0% | 27 | +$30.277.750 |
 
-Recomendación: pedir el APU que soporta el VU de V4 para los 20 ítems de mayor impacto (losa MR45, ítem 5.037, transporte de escombros, andenes) y dejar explícito en el otrosí qué base de precios rige.
+Recomendación: pedir el APU que soporta el VU de V4 para los 20 ítems de mayor impacto (losa MR45, ítem 5.037, ductos TDP, transporte de escombros, andenes), el otrosí que autorizó actualizar los VU pactados y dejar explícito en el otrosí de la adición qué base de precios rige. El ítem 5.037 (código 8643) merece revisión aparte: descripción de consultoría, unidad M2/MES → M2, VU +33,8% y $2.718M en V4 (registro de auditoría A-06).
 
 ## 8C. Reubicaciones: lo "eliminado" que reaparece
 
-Un mismo código IDU sale de un subcapítulo (fila con H > 0 e I = 0) y entra en otro (fila con H = 0 e I > 0). Renglón a renglón parece eliminado + nuevo; por código es un traslado.
+Un mismo código IDU baja en un renglón (se elimina o disminuye) y sube en otro (nace o aumenta), casi siempre en otro subcapítulo. Renglón a renglón parece eliminado + nuevo; por código es un traslado.
 
-- 32 códigos reubicados. Trasladado = Σ min(valor eliminado, valor nuevo) = **$6.462.266.802** de los $19.443.722.236 "eliminados" (33,2%).
-- Eliminación real de alcance contractual: **$12.981.455.434**. Alcance realmente nuevo en ítems del contrato: **$8.738.275.438** (de $15.200.542.240 de "contractual nuevo").
+- 32 códigos reubicados. Trasladado = Σ min(valor que sale de los renglones que bajan, valor que entra en los que suben) = **$5.807.343.956** de los $19.443.722.236 "eliminados" (29,9%).
+- Eliminación real de alcance contractual: **$13.636.378.280**. Alcance realmente nuevo en ítems del contrato: **$9.393.198.284** (de $15.200.542.240 de "contractual nuevo").
 
-| Código | Valor eliminado | Valor nuevo | Trasladado | Δ neto del código |
+> Corrección 2026-09-28 (registro de auditoría B-13): la versión anterior computaba el traslado con el valor completo de los renglones (Σ N de los que bajan, Σ M de los que suben) y mostraba $6.462.266.802; ahora solo cuenta la parte que cambia. Columnas de la tabla: "valor que sale" y "valor que entra".
+
+| Código | Valor que sale | Valor que entra | Trasladado | Δ neto del código |
 |---|---:|---:|---:|---:|
-| 5182 | $1.887.583.665 | $2.172.609.354 | $1.887.583.665 | +$289.246.235 |
-| 3895 | $840.308.079 | $1.325.363.962 | $840.308.079 | +$485.055.883 |
-| 3017 | $648.296.376 | $5.104.874.041 | $648.296.376 | +$2.450.379.420 |
-| 4907 | $455.730.066 | $516.315.711 | $455.730.066 | +$430.023.604 |
-| 8643 | $385.754.898 | $2.717.980.069 | $385.754.898 | +$2.332.225.171 |
-| 3009 | $336.141.377 | $390.883.230 | $336.141.377 | +$121.310.523 |
-| 4032 | $243.202.986 | $440.196.331 | $243.202.986 | +$196.993.345 |
-| 3043 | $209.613.001 | $247.840.218 | $209.613.001 | +$48.143.235 |
+| 5182 | $1.883.363.119 | $2.172.609.354 | $1.883.363.119 | +289.246.235 |
+| 3895 | $840.308.079 | $1.325.363.962 | $840.308.079 | +485.055.883 |
+| 3017 | $527.403.109 | $2.977.782.529 | $527.403.109 | +2.450.379.420 |
+| 8643 | $385.754.898 | $2.717.980.069 | $385.754.898 | +2.332.225.171 |
+| 3009 | $269.572.707 | $390.883.230 | $269.572.707 | +121.310.523 |
+| 4032 | $243.202.986 | $440.196.331 | $243.202.986 | +196.993.345 |
+| 3043 | $199.696.983 | $247.840.218 | $199.696.983 | +48.143.235 |
+| 4030 | $401.844.087 | $189.414.957 | $189.414.957 | -212.429.130 |
+| 9035 | $160.975.754 | $160.975.754 | $160.975.754 | 0 |
+| 3046 | $164.102.112 | $160.474.392 | $160.474.392 | -3.627.720 |
 
 Reemplazos contractual → NP (12 pares por similitud de descripción ≥ 0,7): 7 encarecen (+$1.691.286.881) y 5 abaratan (−$1.818.400.659); neto −$127.113.778. Los mayores sobrecostos: BG_A → NP-124 BG_A con reciclado (+$707.253.958) y MD12 → NP-123 MD19 (+$684.670.659).
 
 ## 8D. Lista de chequeo del revisor (resumen)
 
-Soportes del contratista: memoria de cantidades por CIV; APU (FO-GI-19) y actas de los 81 NP; justificación de los 12 reemplazos; conciliación de las 32 reubicaciones (origen → destino); cronograma con curva S y flujo mensual de los 8 meses; conciliación V2 → V4 (cap. 7 y fondo de compensaciones); recálculo de ajustes por vigencia 2027; certificación de no doble pago de acero; confirmación de que los 14 NP objetados no reingresan; diseños, permisos de ESP y predios de los 9 CIVs "no alcanza".
+Soportes del contratista: memoria de cantidades por CIV; APU (FO-GI-19) y actas de los 81 NP; justificación de los 12 reemplazos; conciliación de las 32 reubicaciones (origen → destino); cronograma con curva S y flujo mensual de los 8 meses; conciliación V2 → V4 (cap. 7 y fondo de compensaciones); recálculo de ajustes por vigencia 2027; aclaración de qué rige para pagar el acero (bolsa F o bloque ACEROS); libros externos vinculados (APU 28-07-2025 y "PRESUPUESTO TOTAL $80 MIL"); soporte del código 8643; confirmación de que los 14 NP objetados no reingresan; diseños, permisos de ESP y predios de los 9 CIVs "no alcanza".
 
 Verificaciones de la interventoría: aritmética del libro (hecha, cuadra al peso); revisión de los 3 CIVs outlier; saltos extremos (rajón ×14,7; andén ×135); contraste de VU con VISOR y referencia; funcionalidad del balanceo (manual IDU §11.2.1).
 
-Aspectos legales: tope del 50% en SMMLV con adiciones previas; minuta de otrosí (adición + prórroga) con justificación técnica, económica y jurídica, CDP y garantías; informe escrito al IDU (Ley 1474 art. 84); antelación de la radicación.
+Aspectos legales: tope del 50% en SMMLV sobre el valor inicial de $50.793.789.333 con el incremento previo de $8.633M; expediente de otrosíes y acto que autorizó la actualización de VU; minuta de otrosí (adición + prórroga) con justificación técnica, económica y jurídica, CDP y garantías; informe escrito al IDU (Ley 1474 art. 84); antelación de la radicación.
 
 La app (pestaña "Presupuesto 01-09-2026") trae esta lista con casillas, notas por ítem y exportación a CSV, además de un simulador de escenarios (plazo, % de NP aceptados, rechazo de reemplazos, VU de referencia, exclusión de los 9 CIVs "no alcanza"), un índice de atención por CIV, prioridad de revisión por renglón, búsqueda global y enlaces directos a cada ficha (por ejemplo `#p75/civ/16000024`).
 
 ---
+
+## 10. Registro de auditoría
+
+Todo lo que el análisis encontró mal o dudoso en la fuente, lo que tuvo que corregir de sí mismo y lo que no puede resolver solo quedó en un registro reproducible (`python analisis/scripts/auditoria.py` → `analisis/auditoria/registro_auditoria.json`, `.csv` y `analisis/REGISTRO_AUDITORIA.md`; sección N de la app). Cada asiento de la sección A se calcula leyendo el libro con openpyxl e indica hoja, celda y fórmula. Resumen: 66 asientos — 25 sobre la fuente (A), 13 correcciones del análisis con su commit (B), 16 dudas abiertas (C) y 12 limitaciones (D).
+
+Los asientos que cambian la lectura de la solicitud:
+
+| ID | Sev. | Qué dice | Qué se pide |
+|---|---|---|---|
+| A-25 | ALTA | El valor inicial del contrato fue $50.793.789.333 (hoja PRESUPUESTO CONTRACTUAL MAYO 25, fila 279). El "valor actual" ($59.426.575.199) ya trae +$8.632.785.866; con la solicitud el acumulado es 48,5% del inicial en pesos. | Expediente de otrosíes: qué parte del incremento previo fue adición. |
+| A-24 | ALTA | Los VU vigentes están +49,0% (mediana) sobre los pactados en la propuesta (Δ $15.086M con AIU a cantidades finales); la actualización ya está en el valor actual. | Acto que autorizó actualizar los VU y si contó para el tope. |
+| A-01 | ALTA | La columna K (VU) depende de un libro externo no entregado ("ANEXO APU MODIF 28-07-2025.xlsx") vía CONSOLIDADO!Q; sin él el libro no se recalcula. | El libro APU y los FO-GI-19. |
+| A-02 | ALTA | 81 cantidades por CIV (NP-101 y ductos ENEL) están vinculadas a "PRESUPUESTO TOTAL $80 MIL.xlsx" y al acta ENEL 03-10-2025, no entregados. | Los libros vinculados; explicar la versión "$80 MIL". |
+| A-06 | ALTA | Código 8643 (ítem 5.037, $2.718M): descripción de consultoría, unidad M2/MES → M2, VU +33,8%, no está en el VISOR. | Especificación, APU y memoria por CIV. |
+| A-04 | MEDIA | BY688 (total SG5, fórmula /2) = 43.258.118.071,5 ≠ Σ CIV SG5 = 43.258.244.367; AH688 + BY688 ≠ CB688. | Libro con totales por CIV recalculados. |
+| A-05 | MEDIA | Bloque ACEROS ($3.053M, fuera del total) supera en $75,5M la bolsa fija F. | Cuál rige para pagar. |
+| A-03 | MEDIA | 175 renglones con VU digitado (los NP): $14.151M con AIU sin fórmula. | APU de cada NP. |
+
+Correcciones del propio análisis registradas en esta versión (todas verificables con `git log`): B-07 referencias de fila del análisis 06 desplazadas +4/+5; B-08 H06-01 "doble pago" retirado; B-09 falsos positivos del análisis 04; B-11 base del tope del 50%; B-12 "VU contractual" era el APU 2024 y la lista estaba truncada a 200; B-13 cálculo de "trasladado" en reubicaciones.
 
 ## 9. Anexos
 
@@ -386,6 +420,7 @@ La app (pestaña "Presupuesto 01-09-2026") trae esta lista con casillas, notas p
 - `analisis/hallazgos/05_nps.{md,json}` — análisis de NPs.
 - `analisis/hallazgos/06_versiones_plazo.{md,json}` — waterfall V0-V4, componentes y plazo.
 - `analisis/analisis_2026_09.json` — consolidado (insumo de la pestaña web).
+- `analisis/auditoria/registro_auditoria.{json,csv}` y `analisis/REGISTRO_AUDITORIA.md` — registro de auditoría (sección 10).
 
 ### 9.2 Metodología
 
@@ -398,8 +433,8 @@ La app (pestaña "Presupuesto 01-09-2026") trae esta lista con casillas, notas p
 ### 9.3 Trampas conocidas
 
 - El CIV `500002375` (V4) = `16004876` (data.json) = `50002375` (MEMORIA) = `16004876` (Hoja1) — todos son el tramo KR65 CL17-CL18.
-- La hoja se llama "84 NP" pero hay 81 códigos NP con cantidad en 105 renglones.
-- Diferencias de redondeo de peso: filas 692 ($780) vs 694 ($800), y total 703 dice $75.426.575.199 pero la suma exacta es $75.426.575.268.
+- La hoja se llama "84 NP": lista 84 códigos NP, de los cuales 81 tienen cantidad (105 renglones); NP-06, NP-08 y NP-11 nunca se cuantifican y 68 renglones NP quedan en cero.
+- Diferencias de redondeo de peso: la suma de los 27 CIV da $58.196.933.869 y $75.426.575.268 (ROUND por celda) frente a M688 = $58.196.933.800 y M703 = $75.426.575.199 (ROUND por renglón); O690 tiene una constante mal digitada (…780). Detalle en el registro de auditoría A-10 y A-12.
 - La fila 703 dice "04-05-2026" pero el archivo es del 01-09-2026 (probable copia de una versión anterior).
 
 ---

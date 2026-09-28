@@ -344,16 +344,25 @@ for entry in neta_por_codigo:
             comentario = f"Cambio de subcapitulo: {sorted(str(s) for s in subs_elim)} -> {sorted(str(s) for s in subs_nue)}"
         else:
             comentario = "Reasignacion dentro del mismo subcapitulo"
+        # Valor que sale de los renglones que bajan y valor que entra en los que suben (registro de auditoría B-13):
+        # solo la parte que cambia, no el renglón completo. Trasladado = min(sale, entra).
+        valor_disminuido = round(sum(-(x["delta_valor"]) for x in eliminadas))
+        valor_aumentado = round(sum(x["delta_valor"] for x in nuevas))
         reubicaciones.append({
             "codigo_idu": code,
             "und": entry["und"],
             "filas_eliminadas": [x["row"] for x in eliminadas],
             "filas_nuevas": [x["row"] for x in nuevas],
+            "filas_eliminadas_total": [x["row"] for x in eliminadas if x["estado"] == "eliminado"],
+            "filas_nuevas_total": [x["row"] for x in nuevas if x["estado"] == "nuevo_contractual"],
             "H_total": entry["H_total"],
             "I_total": entry["I_total"],
             "delta_cant": entry["delta_cant"],
             "N_valor_inicial": entry["N_valor_inicial"],
             "M_valor_final": entry["M_valor_final"],
+            "valor_disminuido": valor_disminuido,
+            "valor_aumentado": valor_aumentado,
+            "trasladado": min(valor_disminuido, valor_aumentado),
             "delta_valor_neto": delta_neto,
             "comentario": comentario,
         })

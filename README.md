@@ -99,8 +99,11 @@ Consorcio-Montevideo-045/
   presupuesto_2026_09.json              # Matriz item x CIV V4 (obras con AIU)
   analisis/
     INFORME_PRESUPUESTO_2026-09.md      # Informe ejecutivo para gerencia e interventoria
+    REGISTRO_AUDITORIA.md               # Registro de auditoria (errores de la fuente, correcciones, dudas, limitaciones)
     Analisis_Presupuesto_2026-09.xlsx   # Excel con 7 hojas (formato profesional)
     analisis_2026_09.json               # Consolidado (copia canonica)
+    auditoria/
+      registro_auditoria.{json,csv}     # Registro de auditoria generado por auditoria.py (insumo de la seccion N)
     hallazgos/
       BRIEF.md                          # Brief comun de los 6 analisis
       01_variacion_items.{md,json}      # Analisis 01: variacion de cantidades por item
@@ -116,8 +119,11 @@ Consorcio-Montevideo-045/
       analisis_03_costo_civ.py          # Genera 03_costo_civ.{md,json}
       analisis_04.py                    # Genera 04_aritmetica.{md,json}
       analisis_05_nps.py                # Genera 05_nps.{md,json}
+      corregir_06.py                    # Corrige filas y H06-01 del analisis 06 (idempotente, documentado en el registro B-07/B-08)
       consolidar.py                     # Consolida los 6 en analisis_2026_09.json
       generar_excel.py                  # Genera Analisis_Presupuesto_2026-09.xlsx
+      verificacion.py                   # Verifica al peso los totales contra el Excel
+      auditoria.py                      # Genera el registro de auditoria (JSON, CSV y Markdown)
     datos/
       presupuesto_2026_09.json          # Extraccion cruda de la hoja principal V4
       hojas/                            # Las 18 hojas del Excel exportadas como CSV
@@ -142,7 +148,7 @@ Consorcio-Montevideo-045/
    - Variacion por CIV con descomposicion del delta (aumentos, disminuciones, NP, contractual nuevo, eliminado).
    - Costo por CIV (obras + componentes + $/m2) para los 27 CIVs, con grupos de alcance de Hoja1.
    - NPs top 20 con contraste frente a abril y clasificacion.
-   - 70 hallazgos por severidad (ALTA / MEDIA / BAJA / INFO) con recomendacion, filtrables por analisis de origen.
+   - 71 hallazgos por severidad (ALTA / MEDIA / BAJA / INFO) con recomendacion, filtrables por analisis de origen.
    - Metodologia, fuentes y verificacion al peso.
    - Exportacion a Excel (8 hojas) y CSV por seccion.
 
@@ -151,10 +157,16 @@ Consorcio-Montevideo-045/
 - **Ficha del contrato y resumen ejecutivo** para revisores (8 conclusiones con cifras) y **chequeo normativo** (tope del 50% en SMMLV, naturaleza jurídica de lo pedido, soportes faltantes, deber de informar).
 - **Marco normativo con fuentes** (Ley 80 art. 40, CCE C-466/2024, Consejo de Estado exp. 67.508, Ley 1474 arts. 83-84, manuales y guias IDU MG-GC-06, GUDP017, PR-IC-01, actas FOEO24, SMMLV 2021/2026) con "que dice" y "como aplica aqui".
 - **Indice de atencion por CIV** (0-100, seis factores ponderados) y **prioridad de revision por renglon**, con sus factores explicados en cada ficha.
-- **Precios unitarios**: VU de V4 frente al APU de referencia (13-09-2024) y al VISOR de mayo-2025, con impacto a cantidad final (+$3.259M sobre 79 items).
-- **Reubicaciones**: $6.462M de lo "eliminado" reaparece bajo el mismo codigo IDU en otro subcapitulo.
+- **Precios unitarios**: VU de V4 frente a tres referencias: el VU pactado en la propuesta 2021 (mediana +49%, Δ $15.086M), el APU actualizado 13-09-2024 (367 renglones con Δ > 2%, +$3.639M) y el VISOR de mayo-2025.
+- **Reubicaciones**: $5.807M de lo "eliminado" reaparece bajo el mismo codigo IDU en otro renglon o subcapitulo (solo la parte que cambia).
 - **Simulador de escenarios**: plazo, % de NP aceptados, rechazo de reemplazos, VU de referencia, exclusion de los 9 CIVs "no alcanza", recalculo ilustrativo de vigencia.
-- **Lista de chequeo del revisor** (20 items con notas, estado guardado en el navegador y exportable a CSV), **glosario** buscable, **busqueda global**, **enlaces directos a cada ficha** (`#p75/civ/16000024`, `#p75/item/34`, `#p75/hall/H06-02`), impresion de pestaña y de fichas, navegacion por teclado.
+- **Lista de chequeo del revisor** (23 items con notas, estado guardado en el navegador y exportable a CSV), **glosario** buscable, **busqueda global**, **enlaces directos a cada ficha** (`#p75/civ/16000024`, `#p75/item/34`, `#p75/hall/H06-02`), impresion de pestaña y de fichas, navegacion por teclado.
+
+### Registro de auditoría (v4 · 28-09-2026)
+
+- **Seccion N de la pestaña 75MM** y `analisis/REGISTRO_AUDITORIA.md`: 66 asientos generados por `analisis/scripts/auditoria.py` leyendo el Excel con openpyxl — **A** errores e inconsistencias de la fuente (25, con hoja, celda y formula), **B** correcciones que el propio analisis tuvo que hacerse (13, con el commit), **C** dudas abiertas para el contratista o el IDU (16) y **D** limitaciones del analisis (12). Filtros por tipo, severidad y estado, ficha por asiento con evidencia y "como verificarlo usted mismo", exportacion CSV y enlaces directos (`#p75/aud/A-25`).
+- **Paquete de auditoria**: SHA-256 del Excel fuente y de cada salida, versiones del entorno, tolerancias aceptadas y comandos para reproducir todo el analisis.
+- Hallazgos que salieron del registro y cambian la lectura: el valor inicial del contrato fue **$50.793.789.333** (no $59.426M), asi que el acumulado de adiciones llega al **48,5% nominal** del tope del 50% (A-25, B-11); los VU vigentes estan **+49%** sobre los pactados en la propuesta (A-24); la base de precios y 81 cantidades por CIV dependen de **libros externos no entregados** (A-01, A-02); el codigo 8643 ($2.718M) tiene descripcion de consultoria y cambio de unidad (A-06). Correcciones del analisis: filas del analisis 06 desplazadas (B-07), "doble pago de acero" retirado (B-08), falsos positivos del analisis 04 (B-09), "trasladado" de reubicaciones (B-13).
 
 ### Capa explicativa ("explica TODO")
 
