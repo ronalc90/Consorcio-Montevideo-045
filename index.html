@@ -677,6 +677,170 @@ tr.row-hi td { background: #fef3c7 !important; }
 @media (max-width: 640px) { .ficha-grid > div[style] { grid-column: span 1 !important; } .chk-item { grid-template-columns: 1fr; } .chk-why { white-space: normal; } }
 @media (max-width: 900px) { .p75-nav { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; } .p75-nav .btn { display: none; } .modal-tools { position: static; margin-top: 8px; } }
 
+
+/* ══════════════════════════════════════════════════════════════
+   CAPA RESPONSIVA (móvil y tablet) — 28-09-2026
+   ══════════════════════════════════════════════════════════════ */
+/* Botón de cerrar las fichas: siempre por encima del encabezado y fijo mientras se desplaza la ficha */
+.modal-content { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.modal-close {
+  position: sticky; top: 10px; z-index: 40; margin: 10px 12px -48px auto;
+  width: 38px; height: 38px; background: #fff; color: var(--primary);
+  border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(0,0,0,.18); font-weight: 700;
+}
+.modal-close:hover { background: #fef3c7; }
+.modal-close .mc-x { font-size: 18px; line-height: 1; }
+.modal-close .mc-label { display: none; }
+.modal-close:focus { outline: none; }
+.modal-close:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.modal-tools .btn:focus { outline: none; }
+.modal-tools .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 759px) { .modal-header h2 { padding-right: 48px; } }
+body.modal-open { overflow: hidden; }
+
+/* Tablas anchas dentro de las fichas: se desplazan de lado dentro de su caja, con sombra que indica "hay más" */
+.tbl-x, .scroll-table {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background:
+    linear-gradient(to right, #fff 30%, rgba(255,255,255,0)) left center / 36px 100% no-repeat local,
+    linear-gradient(to left, #fff 30%, rgba(255,255,255,0)) right center / 36px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgba(0,0,0,.16), rgba(0,0,0,0)) left center / 12px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.16), rgba(0,0,0,0)) right center / 12px 100% no-repeat scroll;
+}
+.tbl-x { max-width: 100%; margin: 0; }
+.tbl-x > table { margin: 0; }
+
+/* Rejillas que nunca recortan contenido en pantallas angostas */
+.dashboard { grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+.civ-grid { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
+.viz-desc { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); }
+.modal-grid2 { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.method-grid { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.ficha-grid { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.norm-grid { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); }
+.legal-grid { grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); }
+.glos-list { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
+.modal-kpis { grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
+.modal-kpi-value { overflow-wrap: anywhere; }
+
+/* Tablet (≤ 1024 px) */
+@media (max-width: 1024px) {
+  .content { padding: 16px 18px; }
+  .header { padding: 16px 20px; }
+  .tabs { padding: 0 12px; }
+  .modal-overlay { padding: 12px; }
+  .modal-content { max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); }
+  .modal-header { padding: 20px 24px 16px; }
+  .modal-body { padding: 18px 24px; }
+}
+
+/* Teléfono (≤ 640 px) */
+@media (max-width: 640px) {
+  body { -webkit-text-size-adjust: 100%; }
+  /* Encabezado compacto */
+  .header { padding: 10px 12px 10px; }
+  .header-top { align-items: flex-start; gap: 10px; }
+  .header h1 { font-size: 1em; line-height: 1.25; }
+  .header p { font-size: .72em; line-height: 1.35; margin-top: 2px; }
+  .header-top > div:last-child { gap: 8px !important; flex-shrink: 0; }
+  .user-badge span { display: none; }
+  .user-badge svg { width: 18px; height: 18px; }
+  .logout-btn { padding: 6px 10px; font-size: .74em; white-space: nowrap; }
+  .header-meta { gap: 6px; margin-top: 8px; }
+  .header-meta span { font-size: .68em; padding: 3px 8px; }
+  /* Pestañas principales: fila deslizable con sombra al borde */
+  .tabs { padding: 0 4px; scrollbar-width: none;
+    background:
+      linear-gradient(to right, #fff 30%, rgba(255,255,255,0)) left center / 30px 100% no-repeat local,
+      linear-gradient(to left, #fff 30%, rgba(255,255,255,0)) right center / 30px 100% no-repeat local,
+      radial-gradient(farthest-side at 0 50%, rgba(0,0,0,.18), rgba(0,0,0,0)) left center / 10px 100% no-repeat scroll,
+      radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.18), rgba(0,0,0,0)) right center / 10px 100% no-repeat scroll, #fff; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { padding: 11px 12px; font-size: .88em; }
+  .content { padding: 10px 10px 24px; }
+  /* Tarjetas y tablas */
+  .dashboard { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 16px; }
+  .stat-card { padding: 10px 11px; border-left-width: 3px; }
+  .stat-label { font-size: .64em; letter-spacing: .3px; }
+  .stat-value { font-size: 1.02em; overflow-wrap: anywhere; }
+  .stat-sub { font-size: .66em; }
+  .table-wrap { margin-bottom: 14px; border-radius: 8px; }
+  .table-header { padding: 12px 12px; gap: 8px; }
+  .table-header h3 { font-size: .95em; line-height: 1.3; }
+  .controls { width: 100%; gap: 6px; }
+  .controls input, .controls input[type=text] { width: auto; flex: 1 1 100%; min-width: 0; font-size: 16px; padding: 8px 10px; }
+  .controls select { flex: 1 1 auto; max-width: 100%; font-size: 14px; padding: 7px 8px; }
+  .controls .btn { padding: 8px 12px; }
+  .scroll-table { max-height: 64vh; }
+  table { font-size: .78em; }
+  th, td { padding: 6px 7px; }
+  .btn { min-height: 34px; }
+  /* Selector de gráficas y chips de estado: fila deslizable */
+  .viz-toolbar, .estado-chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 10px 12px 8px; }
+  .viz-toolbar::-webkit-scrollbar, .estado-chips::-webkit-scrollbar { display: none; }
+  .viz-btn, .estado-chips > * { flex: 0 0 auto; white-space: nowrap; }
+  .viz-stage { padding: 10px 8px 4px; height: 340px; }
+  .viz-desc { padding: 10px 12px 14px; gap: 8px; }
+  .viz-card { font-size: .84em; padding: 10px 12px; }
+  .method-grid, .norm-grid, .legal-grid, .glos-list, .ficha-grid { padding: 12px; gap: 10px; }
+  .civ-grid { gap: 10px; }
+  /* Pestaña 75MM: barra de secciones, buscador y barra de sección */
+  .p75-search input { font-size: 16px; padding: 10px 12px 10px 40px; background-position: 12px center; }
+  .p75-nav { padding: 6px 0 8px; margin-bottom: 10px; scrollbar-width: none; }
+  .p75-nav::-webkit-scrollbar { display: none; }
+  .p75-tab { padding: 8px 12px; font-size: .8em; flex: 0 0 auto; }
+  .p75-viewbar { padding: 10px 12px; gap: 4px 10px; margin-bottom: 12px; }
+  .p75-viewbar .vb-d { flex-basis: 100%; font-size: .92em; }
+  .p75-viewbar .vb-nav { margin-left: 0; width: 100%; }
+  .p75-viewbar .vb-nav .btn { flex: 1 1 0; min-height: 36px; font-size: .8em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #panel-p75mm > div:first-child h2, #panel-p75mm .p75-view[data-view=resumen] > div:first-child h2 { font-size: 1.05em !important; }
+  .sim-grid { padding: 12px; gap: 12px; }
+  .chk-group { padding: 4px 12px 10px; }
+  .aud-filters { padding: 6px 12px 10px; }
+  .p75-footer { padding: 12px 12px 24px; }
+  /* Fichas: hoja a pantalla completa, botón "Cerrar" visible y fijo arriba */
+  .modal-overlay { padding: 0; align-items: stretch; }
+  .modal-content { height: 100vh; height: 100dvh; max-height: none; border-radius: 0; box-shadow: none; }
+  .modal-close { top: 8px; margin: 8px 8px -48px auto; width: auto; height: 40px; padding: 0 14px 0 12px; border-radius: 20px; gap: 6px;
+    background: var(--primary); color: #fff; border: none; box-shadow: 0 4px 14px rgba(26,54,93,.35); }
+  .modal-close:hover { background: var(--primary-light); }
+  .modal-close .mc-label { display: inline; font-size: 14px; font-weight: 600; letter-spacing: .2px; }
+  .modal-close .mc-x { font-size: 15px; }
+  .modal-header { padding: 58px 14px 12px; border-radius: 0; }
+  .modal-header h2 { font-size: 1.06em; padding-right: 0; line-height: 1.3; }
+  .modal-header .modal-sub { font-size: .8em; }
+  .modal-header .badges .pill { font-size: .7em; }
+  .modal-tools { position: static; margin-top: 10px; flex-wrap: wrap; }
+  .modal-tools .btn { font-size: .78em; padding: 6px 10px; min-height: 32px; }
+  .modal-body { padding: 12px 12px 40px; }
+  .modal-section { margin-bottom: 18px; }
+  .modal-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
+  .modal-kpi { padding: 9px 10px; border-left-width: 3px; }
+  .modal-kpi-label { font-size: .64em; }
+  .modal-kpi-value { font-size: .98em; }
+  .modal-kpi-sub { font-size: .66em; }
+  .modal-btns .btn { flex: 1 1 auto; min-height: 36px; }
+  .modal-grid2 { gap: 10px; }
+  /* Tooltips en teléfono: hoja inferior legible; se cierra tocando fuera */
+  .xp-pop { left: 8px !important; right: 8px !important; top: auto !important; bottom: 10px !important; width: auto; max-width: none; font-size: .86em; transform: translateY(10px); }
+  .xp-pop.show { transform: none; }
+}
+
+/* Teléfonos muy angostos (≤ 360 px) */
+@media (max-width: 360px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .modal-kpis { grid-template-columns: 1fr 1fr; }
+  .modal-kpi-value { font-size: .84em; }
+  .stat-value { font-size: 1.1em; }
+  .header-meta span:nth-child(n+3) { display: none; }
+}
+
+/* Pantallas táctiles: objetivos de toque más cómodos */
+@media (pointer: coarse) {
+  .p75-tab, .viz-btn { min-height: 34px; }
+  .row-click td { padding-top: 8px; padding-bottom: 8px; }
+}
+@media print { .modal-close { display: none !important; } }
 </style>
 </head>
 <body>
@@ -1367,7 +1531,7 @@ tr.row-hi td { background: #fef3c7 !important; }
 <!-- MODAL EXPLICATIVO POR CONCEPTO -->
 <div id="conceptModal" class="modal-overlay hidden" onclick="if(event.target===this)closeConceptModal()">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeConceptModal()" title="Cerrar">×</button>
+    <button class="modal-close" onclick="closeConceptModal()" title="Cerrar (Esc)" aria-label="Cerrar ficha"><span class="mc-x" aria-hidden="true">✕</span><span class="mc-label">Cerrar</span></button>
     <div id="conceptModalBody"></div>
   </div>
 </div>
@@ -3789,7 +3953,12 @@ const P75X = { charts: [], maps: null, state: { view: 'renglon', valMode: 'aiu',
 const fmtS = n => (n >= 0 ? '+' : '−') + '$' + fmt(Math.abs(Math.round(n)));
 const fmtBs = n => (n < 0 ? '−' : '') + fmtB(Math.abs(n));
 // Plugin: etiquetas directas sobre barras (secondary encoding para daltonismo)
-const barLabelsPlugin = { id: 'barLabels', afterDatasetsDraw(chart, args, opts) { if (!opts || !opts.fn) return; const { ctx } = chart; ctx.save(); ctx.font = '600 11px Segoe UI, system-ui, sans-serif'; ctx.fillStyle = '#2d3748'; ctx.textAlign = 'center'; ctx.textBaseline = 'bottom'; chart.data.datasets.forEach((ds, di) => { if (opts.datasets && !opts.datasets.includes(di)) return; const meta = chart.getDatasetMeta(di); if (meta.hidden) return; meta.data.forEach((el, i) => { const label = opts.fn(ds.data[i], i, di); if (!label) return; const pos = el.tooltipPosition ? el.tooltipPosition() : el; const raw = ds.data[i]; const y = Array.isArray(raw) ? Math.min(el.y, el.base) : Math.min(el.y, el.base); ctx.fillText(label, el.x, y - 4); }); }); ctx.restore(); } };
+const barLabelsPlugin = { id: 'barLabels', afterDatasetsDraw(chart, args, opts) { if (!opts || !opts.fn) return; const { ctx, chartArea } = chart; ctx.save(); ctx.fillStyle = '#2d3748'; ctx.textAlign = 'center'; ctx.textBaseline = 'bottom'; const drawn = []; const F = sz => `600 ${sz}px Segoe UI, system-ui, sans-serif`;
+  chart.data.datasets.forEach((ds, di) => { if (opts.datasets && !opts.datasets.includes(di)) return; const meta = chart.getDatasetMeta(di); if (meta.hidden) return; const slot = ((chartArea ? chartArea.right - chartArea.left : chart.width) / Math.max(1, meta.data.length));
+    meta.data.forEach((el, i) => { const label = opts.fn(ds.data[i], i, di); if (!label) return; let sz = 11; ctx.font = F(sz); while (sz > 8 && ctx.measureText(label).width > slot - 2) { sz--; ctx.font = F(sz); } // en pantallas angostas la etiqueta se achica para caber en su barra
+      const w = ctx.measureText(label).width, x = el.x; let y = Math.min(el.y, el.base) - 4, k = 0;
+      while (k < 3 && drawn.some(r => Math.abs(r.x - x) < (r.w + w) / 2 + 3 && Math.abs(r.y - y) < sz + 2)) { y -= sz + 3; k++; } // si choca con otra etiqueta, sube un renglón
+      if (k >= 3) return; ctx.fillText(label, x, y); drawn.push({ x, y, w }); }); }); ctx.restore(); } };
 if (typeof Chart !== 'undefined') Chart.register(barLabelsPlugin);
 const fmtSn = (n, d = 2) => (n >= 0 ? '+' : '−') + fmtD(Math.abs(n), d);
 const pctOf = (a, b, d = 1) => (b ? fmtD((a / b) * 100, d) + '%' : '—');
@@ -4030,6 +4199,7 @@ function showXpPop(target) {
   } else if (target.dataset.tip) {
     html = `<div class="xp-pop-q">${target.dataset.tip}</div>` + (target.dataset.tipCta ? `<div class="xp-pop-cta">${target.dataset.tipCta}</div>` : '');
   } else return;
+  if (_isCoarse()) html = html.replace(/\bClic en\b/g, 'Toque').replace(/\bClic\b/g, 'Toque').replace(/\bclic\b/g, 'toque');
   pop.innerHTML = html; _xpPlace(pop, target);
 }
 function hideXpPop() { if (_xpPop) _xpPop.classList.remove('show'); }
@@ -4048,7 +4218,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeConcept
 function _destroyXpCharts() { P75X.charts.forEach(c => { try { c.destroy(); } catch (_) {} }); P75X.charts = []; }
 const _closeOrig = closeConceptModal;
 closeConceptModal = function () { _closeOrig(); _destroyXpCharts(); if (typeof P75X !== 'undefined' && P75X.route) { P75X.route = null; try { if ((location.hash || '').startsWith('#p75/')) history.replaceState(null, '', '#p75/sec/' + (P75X.view || 'resumen')); } catch (_) {} } };
-function xpModal(html) { hideXpPop(); _destroyXpCharts(); const body = document.getElementById('conceptModalBody'); body.innerHTML = html; const hd = body.querySelector('.modal-header'); if (hd) hd.insertAdjacentHTML('beforeend', `<div class="modal-tools"><button class="btn btn-outline" id="p75CopyBtn" onclick="p75CopyLink()" title="Copiar un enlace directo a esta ficha">🔗 Copiar enlace</button><button class="btn btn-outline" onclick="p75PrintModal()" title="Imprimir o guardar esta ficha en PDF">🖨 Imprimir</button></div>`); document.getElementById('conceptModal').classList.remove('hidden'); body.parentElement.scrollTop = 0; bindTermTooltips(body); const f = body.querySelector('.modal-tools .btn'); if (f) f.focus({ preventScroll: true }); }
+function xpModal(html) { hideXpPop(); _destroyXpCharts(); const body = document.getElementById('conceptModalBody'); body.innerHTML = html; const hd = body.querySelector('.modal-header'); if (hd) hd.insertAdjacentHTML('beforeend', `<div class="modal-tools"><button class="btn btn-outline" id="p75CopyBtn" onclick="p75CopyLink()" title="Copiar un enlace directo a esta ficha">🔗 Copiar enlace</button><button class="btn btn-outline" onclick="p75PrintModal()" title="Imprimir o guardar esta ficha en PDF">🖨 Imprimir</button></div>`); document.getElementById('conceptModal').classList.remove('hidden'); body.parentElement.scrollTop = 0; bindTermTooltips(body); if (!_isCoarse()) { const f = document.querySelector('#conceptModal .modal-close'); if (f) f.focus({ preventScroll: true }); } }
 const mSec = (title, body, extra = '') => `<div class="modal-section"><h4>${title}</h4>${body}${extra}</div>`;
 const mKpi = (label, value, sub = '', cls = '') => `<div class="modal-kpi ${cls}"><div class="modal-kpi-label">${label}</div><div class="modal-kpi-value">${value}</div>${sub ? `<div class="modal-kpi-sub">${sub}</div>` : ''}</div>`;
 const mFormula = lines => `<div class="modal-formula">${lines.join('<br>')}</div>`;
@@ -5411,6 +5581,44 @@ document.addEventListener('click', e => { const t = e.target.closest ? e.target.
   document.addEventListener('DOMContentLoaded', () => { ['panel-p75mm', 'conceptModalBody'].forEach(id => { const n = document.getElementById(id); if (n) obs.observe(n, { childList: true, subtree: true }); }); });
 })();
 
+
+// ── Capa responsiva: ciclo de vida de las fichas, botón atrás del teléfono, tablas deslizables y tooltips táctiles ──
+const _isCoarse = () => { try { return matchMedia('(pointer: coarse)').matches; } catch (_) { return false; } };
+let _modalHist = false, _modalBackPending = false, _ignoreHashUntil = 0;
+function _modalIsOpen() { const m = document.getElementById('conceptModal'); return !!m && !m.classList.contains('hidden'); }
+function p75WrapTables(root) {
+  if (!root) return;
+  root.querySelectorAll('table').forEach(t => { if (t.closest('.tbl-x, .scroll-table, .viz-html')) return; const w = document.createElement('div'); w.className = 'tbl-x'; t.parentNode.insertBefore(w, t); w.appendChild(t); });
+}
+function _onModalOpen() {
+  document.body.classList.add('modal-open');
+  if (!_modalHist) { try { history.pushState({ p75modal: 1 }, '', location.href); _modalHist = true; } catch (_) {} }
+  p75WrapTables(document.getElementById('conceptModalBody'));
+  hideXpPop();
+}
+function _onModalClose() {
+  document.body.classList.remove('modal-open');
+  if (_modalHist) { _modalHist = false; _modalBackPending = true; try { history.back(); } catch (_) { _modalBackPending = false; } }
+}
+window.addEventListener('popstate', () => {
+  if (_modalBackPending) { // regreso provocado por cerrar la ficha: conservar la sección visible
+    _modalBackPending = false; _ignoreHashUntil = Date.now() + 400;
+    if (typeof P75X !== 'undefined' && document.querySelector('.tab[data-tab="p75mm"].active')) { try { history.replaceState(null, '', '#p75/sec/' + (P75X.view || 'resumen')); } catch (_) {} }
+    return;
+  }
+  if (_modalHist && _modalIsOpen()) { _modalHist = false; _ignoreHashUntil = Date.now() + 400; closeConceptModal(); } // botón/gesto "atrás" cierra la ficha
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const m = document.getElementById('conceptModal'); if (!m) return;
+  let was = _modalIsOpen();
+  new MutationObserver(() => { const now = _modalIsOpen(); if (now && !was) _onModalOpen(); else if (!now && was) _onModalClose(); was = now; }).observe(m, { attributes: true, attributeFilter: ['class'] });
+  new MutationObserver(() => { if (_modalIsOpen()) p75WrapTables(document.getElementById('conceptModalBody')); }).observe(document.getElementById('conceptModalBody'), { childList: true, subtree: true });
+  // pestañas principales: llevar la activa a la vista en la fila deslizable
+  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => { try { t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); } catch (_) {} }));
+});
+// Tooltips en pantallas táctiles: tocar fuera (o sobre el tooltip) lo cierra; el texto dice "Toque" en vez de "Clic"
+document.addEventListener('touchstart', e => { const t = e.target; if (!(t.closest && t.closest('[data-tip],[data-xp]'))) hideXpPop(); }, { passive: true });
+
 // ── Enlaces profundos, impresión, accesibilidad, integridad ───────────────
 function p75Route(route) { P75X.route = route; try { history.replaceState(null, '', '#p75/' + route); } catch (_) {} }
 function p75OpenFromHash() {
@@ -5419,7 +5627,7 @@ function p75OpenFromHash() {
   const parts = h.split('/'); const kind = parts[1], id = decodeURIComponent(parts.slice(2).join('/') || '');
   if (!kind) return;
   setTimeout(() => { try {
-    if (kind === 'sec') { p75Show(id, { route: false }); return; }
+    if (kind === 'sec') { const vv = P75_VIEW_ALIAS[id] || id; if (vv !== P75X.view) p75Show(id, { route: false }); return; }
     if (P75_KIND_VIEW[kind]) p75Show(P75_KIND_VIEW[kind], { route: false, scroll: false });
     if (kind === 'civ') openP75Civ(id); else if (kind === 'item') openP75Item(+id); else if (kind === 'cap') { const c = (P75.variacion_items.capitulos || []).find(x => x.chapter.startsWith(id + '.') || x.chapter === id); if (c) openP75Chapter(c.chapter); } else if (kind === 'comp') openP75Component(+id); else if (kind === 'hall') openP75Hallazgo(id); else if (kind === 'xp') openExplain(id); else if (kind === 'code') openP75Codigo(id); else if (kind === 'legal') openLegal(id); else if (kind === 'glos') openGlos(id); else if (kind === 'aud') openP75Aud(id); else if (kind === 'viz') renderP75Viz(id);
   } catch (e) { console.warn('deep link', e); } }, 150);
@@ -5484,7 +5692,7 @@ function renderP75Nav() {
 // Accesibilidad: filas y tarjetas operables con teclado
 document.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target && e.target.matches && e.target.matches('tr.row-click, .stat-card.xp-block, .civ-chip, .glos-item, .sr')) { e.preventDefault(); e.target.click(); } });
 function p75A11y() { document.querySelectorAll('#panel-p75mm tr.row-click, #panel-p75mm .stat-card.xp-block, #panel-p75mm .civ-chip, #panel-p75mm .glos-item').forEach(el => { if (!el.hasAttribute('tabindex')) { el.setAttribute('tabindex', '0'); el.setAttribute('role', 'button'); } }); const m = document.getElementById('conceptModal'); if (m) { m.setAttribute('role', 'dialog'); m.setAttribute('aria-modal', 'true'); } }
-window.addEventListener('hashchange', p75OpenFromHash);
+window.addEventListener('hashchange', () => { if (Date.now() < _ignoreHashUntil) return; p75OpenFromHash(); });
 
 // ── INIT ──
 checkAuth();
