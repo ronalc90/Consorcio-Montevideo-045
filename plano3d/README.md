@@ -4,6 +4,43 @@ Plano 3D interactivo de los **27 CIV del Grupo 2** (contrato IDU 1752-2021, Cons
 
 Se abre desde la pestaña **Presupuesto 01-09-2026 · 75MM · 8 meses → Resumen → «Plano 3D · antes vs. ahora»**. Usa la misma sesión que la aplicación: si se abre sin sesión, muestra el acceso y, después de ingresar, vuelve al plano.
 
+## Experiencia (v2 · inmersiva)
+
+- **Barra de comandos** arriba con los 8 tipos de mapa (teclas `1`…`8`). A la derecha: recorrido guiado (`T`), captura de imagen, ajustes, pantalla completa y ayuda.
+- **Panel de análisis**, plegable, que responde una pregunta por mapa (p. ej. «¿Qué materiales explican el aumento?»). Muestra:
+  - la cifra clave antes → ahora;
+  - la comparación Antes / Ahora / Ambos;
+  - **«Lo que hay que ver»**: 3 hallazgos calculados de los datos; al tocar uno, la cámara vuela al CIV;
+  - la leyenda y el ranking con CSV.
+- **Recorrido guiado** de 8 paradas. Cada parada usa formato de cine (franjas negras, cámara en órbita lenta y tarjeta de narración con cifras calculadas):
+  1. el panorama;
+  2. la mayor alza;
+  3. los materiales que explican el aumento;
+  4. el subsuelo;
+  5. el pavimento;
+  6. los no previstos;
+  7. los grupos de alcance;
+  8. la simulación de los 8 meses.
+
+  Avanza solo, o con ← →; se pausa y se sale con `Esc`.
+- **Minimapa** con el encuadre de la cámara. Clic para ir a un punto; vistas Todo, SG2, SG5 y Planta.
+- **Detalle del CIV** en pestañas: Resumen (con la descomposición del cambio), Materiales, Estructura, Redes, Ítems y Hallazgos. Se abre con un contorno luminoso sobre la calle seleccionada.
+- **Línea de tiempo** abajo, como un reproductor. «Analítica» despliega los parámetros, la curva S, el flujo mensual, el Gantt y el veredicto.
+- **Captura PNG** del plano con etiquetas, título y leyenda, lista para informes.
+- **Pantalla de bienvenida** en la primera visita (se puede desactivar).
+- **Render**:
+  - oclusión ambiental (GTAO), brillo (bloom) en las líneas de flujo y en el frente de obra, contorno de selección y antialias ×4;
+  - tono neutro (Khronos PBR Neutral, que respeta los colores de datos);
+  - cielo con horizonte y niebla del mismo tono;
+  - iluminación ambiental derivada del cielo de cada paleta;
+  - árboles instanciados en parques, demarcación de avenidas y líneas de flujo animadas en los bordes de cada frente.
+- **Calidad automática**:
+  - Alta: oclusión, brillo y contorno.
+  - Media: brillo y contorno.
+  - Básica: render directo, sin efectos.
+  - Si el equipo no alcanza a dibujar con fluidez, la calidad baja sola, salvo que el usuario la haya elegido en Ajustes.
+- **Carga**: la tipografía Inter se carga sin bloquear el dibujo; si no llega, se usa la del sistema.
+
 ## Qué muestra
 
 | Tipo de mapa | Altura | Color | «Ambos» (V0 vs V4) |
@@ -32,12 +69,15 @@ Se abre desde la pestaña **Presupuesto 01-09-2026 · 75MM · 8 meses → Resume
   - Realista usa colores figurativos de obra: asfalto, concreto, granular, ladrillo.
 
   Las cuatro primeras se validaron con el verificador de paletas (separación para daltonismo ΔE ≥ 8 entre capas vecinas y banda de luminosidad). La realista es figurativa y se apoya en leyenda y etiquetas.
-- **Vistas** General, SG2 · Montevideo, SG5 · Puente Aranda y Planta; brújula, escala, exageración vertical, capas (edificios, nombres de vías, sombras, alertas de hallazgos).
+- **Vistas** Todo, SG2 · Montevideo, SG5 · Puente Aranda y Planta.
+- **Brújula y escala.**
+- **Ajustes**: exageración vertical y capas (etiquetas, edificios, árboles, nombres de vías, alertas de hallazgos, líneas de flujo animadas).
 - **Ranking** de los 27 CIV según el mapa activo y **descarga CSV** (27 filas × 50 columnas).
 - **Enlace compartible**: el estado (mapa, comparación, paleta, CIV, simulación) queda en la URL (`#m=materiales&c=ambos&p=noche&civ=16000024`).
 - Responsivo:
   - En el teléfono los paneles son hojas inferiores con botón **✕ Cerrar** siempre visible.
-  - Una barra inferior da acceso a Mapa, Leyenda, Simular y Detalle.
+  - Una barra inferior da acceso a Análisis, Simular, Detalle y Ajustes.
+  - Los tipos de mapa quedan en una fila deslizable bajo el título, y las vistas rápidas en una columna a la derecha.
   - Un mini-reproductor queda visible mientras corre la simulación.
 
 ## Simulación por plazos (4D tiempo + 5D costo)
@@ -99,6 +139,9 @@ Para verlo en local sírvalo con un servidor web desde la raíz del repositorio 
   - `MapControls` con zoom hacia el cursor.
   - `CSS2DRenderer` para las etiquetas HTML flotantes.
   - `mergeGeometries` para el contexto urbano (pocas llamadas de dibujo).
+  - `InstancedMesh` para el arbolado.
+  - `EffectComposer` con `GTAOPass`, `OutlinePass`, `UnrealBloomPass` y `OutputPass`.
+  - Entorno PMREM a partir de un degradado del cielo, con 16 px por cara.
   - Sombras suaves.
 - Cada calle es un prisma extruido a lo largo de su polilínea, con juntas en inglete. Un atributo `aT` (distancia recorrida 0→1) permite al sombreador cortar el volumen en el frente de obra (`discard`) y dibujar el halo de avance: es la técnica de construcción progresiva 4D.
 - Sin dependencias de compilación: HTML + un módulo JS.

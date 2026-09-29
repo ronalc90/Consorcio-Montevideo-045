@@ -197,6 +197,7 @@ Consorcio-Montevideo-045/
 - **Costos y materiales flotantes**: etiquetas sobre cada calle que se ordenan solas para no taparse. **Cinco paletas**: Noche, Claro, Plano azul, Alto contraste y Realista; las cuatro primeras estan validadas para daltonismo.
 - **Simulacion por plazos en tiempo real** (4D + 5D): frentes, produccion por frente, movilizacion, orden de ataque y ritmo (solicitado $1.737M/mes, historico ≈ $600M/mes o personalizado). Muestra la obra construyendose calle por calle, la curva S con el plazo de 8 meses, el flujo mensual y el Gantt por frente, con un veredicto de si cabe en el plazo y que haria falta.
 - Detalle por CIV con corte de la estructura, materiales, redes, renglones que mas cambian y enlaces a la ficha y a los hallazgos del analisis. Tambien: ranking con CSV, enlace compartible y diseño movil con hojas inferiores. Metodo completo en `plano3d/README.md`.
+- **v2 inmersiva**: barra de comandos, panel «Lo que hay que ver» con hallazgos calculados que llevan la camara a cada CIV, **recorrido guiado de 8 paradas** con formato de cine, minimapa, detalle por pestañas, captura PNG para informes y pantalla de bienvenida. Render con oclusion ambiental, brillo, contorno de seleccion, cielo con horizonte, arbolado y lineas de flujo animadas; la calidad baja sola en equipos lentos.
 
 ## Tecnologias
 
