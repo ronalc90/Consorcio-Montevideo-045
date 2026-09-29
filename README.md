@@ -129,6 +129,15 @@ Consorcio-Montevideo-045/
       hojas/                            # Las 18 hojas del Excel exportadas como CSV
   fuentes/
     4. PRESUPUESTO 01-09-2026 75MM (8 MESES).xlsx   # Excel fuente del contratista
+  plano3d/                              # Plano 3D antes vs. ahora (rama plano-3d)
+    index.html                          # Visor: paneles, paletas, simulacion (misma sesion que la app)
+    app.js                              # Escena three.js r170: calles extruidas, etiquetas CSS2D, simulacion 4D/5D
+    README.md                           # Metodo, modos, simulacion y como regenerar
+    datos/plano3d_datos.json            # 27 CIV: geometria OSM + V0/V4 por material, fase, capa y red
+    datos/contexto.json                 # Manzanas, edificios, vias, zonas verdes y rieles (OpenStreetMap)
+    datos/osm/                          # Descarga cruda de Overpass (ODbL)
+    scripts/descargar_osm.py            # Descarga OSM (varios espejos de Overpass)
+    scripts/generar_plano3d.py          # Genera los dos JSON del visor
   .github/
     workflows/
       pages.yml                         # Deploy automatico a GitHub Pages
@@ -181,10 +190,20 @@ Consorcio-Montevideo-045/
 - **Fichas al hacer clic**: cualquier fila (item, codigo, CIV, capitulo, componente, NP, hallazgo), tarjeta KPI o barra de grafica abre una ficha con la formula aplicada a sus numeros reales, la verificacion contra el Excel (✓/✗), la distribucion por CIV, el contraste V1/V2/V4, los hallazgos relacionados y las preguntas sugeridas para el contratista.
 - **Colores validados para daltonismo**: estados calidos suman dinero (aumento, nuevo contractual, NP) y frios restan (disminucion, eliminado); en tablas rojo = suma a la adicion y verde = resta.
 
+### Plano 3D · antes vs. ahora (rama `plano-3d` · 28-09-2026)
+
+- Boton **«Abrir el plano 3D»** en la seccion Resumen de la pestaña 75MM → `plano3d/index.html`. Los 27 CIV sobre la geometria real de OpenStreetMap, con V0 (contrato) frente a V4 (01-09-2026).
+- **8 tipos de mapa**: costos, variacion, estructural (capas del pavimento), materiales, redes (subsuelo), no previstos, alcance (grupos de la Hoja1) y simulacion. Cada uno tiene comparacion **Antes / Ahora / Ambos** (vidrio o alambre = V0, solido = V4).
+- **Costos y materiales flotantes**: etiquetas sobre cada calle que se ordenan solas para no taparse. **Cinco paletas**: Noche, Claro, Plano azul, Alto contraste y Realista; las cuatro primeras estan validadas para daltonismo.
+- **Simulacion por plazos en tiempo real** (4D + 5D): frentes, produccion por frente, movilizacion, orden de ataque y ritmo (solicitado $1.737M/mes, historico ≈ $600M/mes o personalizado). Muestra la obra construyendose calle por calle, la curva S con el plazo de 8 meses, el flujo mensual y el Gantt por frente, con un veredicto de si cabe en el plazo y que haria falta.
+- Detalle por CIV con corte de la estructura, materiales, redes, renglones que mas cambian y enlaces a la ficha y a los hallazgos del analisis. Tambien: ranking con CSV, enlace compartible y diseño movil con hojas inferiores. Metodo completo en `plano3d/README.md`.
+
 ## Tecnologias
 
 - **HTML5 + CSS3 + JavaScript** - Aplicacion 100% estatica, sin backend
 - **Chart.js 4.x** - Graficas interactivas
+- **three.js r170** - Plano 3D (MapControls, CSS2DRenderer, sombreado de avance por frente de obra)
+- **OpenStreetMap** (ODbL, via Overpass API) - Geometria de calles, manzanas y edificios del plano 3D
 - **GitHub Pages** - Hosting gratuito con deploy automatico
 
 ---

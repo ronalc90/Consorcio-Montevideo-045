@@ -841,6 +841,17 @@ body.modal-open { overflow: hidden; }
   .row-click td { padding-top: 8px; padding-bottom: 8px; }
 }
 @media print { .modal-close { display: none !important; } }
+/* Acceso al plano 3D (rama plano-3d) */
+.p75-3d-cta { display: flex; align-items: center; gap: 16px; margin: 0 0 22px; padding: 16px 20px; border-radius: 12px; text-decoration: none; color: #fff; background: radial-gradient(120% 140% at 0% 0%, #1c5cab 0%, #0d366b 55%, #1a1a19 100%); box-shadow: 0 8px 24px rgba(13,54,107,.28); position: relative; overflow: hidden; }
+.p75-3d-cta::after { content: ""; position: absolute; right: -40px; top: -30px; width: 220px; height: 220px; background: repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 2px, transparent 2px 14px); border-radius: 50%; }
+.p75-3d-cta:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(13,54,107,.36); }
+.p75-3d-cta .ic { flex: none; width: 52px; height: 52px; border-radius: 12px; background: rgba(255,255,255,.12); display: grid; place-items: center; }
+.p75-3d-cta .ic svg { width: 32px; height: 32px; }
+.p75-3d-cta .tx { flex: 1; min-width: 0; line-height: 1.4; }
+.p75-3d-cta .tx b { display: block; font-size: 1.08em; }
+.p75-3d-cta .tx small { display: block; font-size: .86em; color: #cde2fb; }
+.p75-3d-cta .go { flex: none; background: #fff; color: #0d366b; font-weight: 700; padding: 9px 16px; border-radius: 999px; font-size: .9em; position: relative; z-index: 1; }
+@media (max-width: 640px) { .p75-3d-cta { flex-wrap: wrap; padding: 14px; gap: 12px; } .p75-3d-cta .go { width: 100%; text-align: center; } }
 </style>
 </head>
 <body>
@@ -1239,6 +1250,11 @@ body.modal-open { overflow: hidden; }
         <br>· <strong>Cómo usar esta pestaña:</strong> la barra de secciones (Resumen, Ficha, Chequeo legal, Gráficas, A…N) cambia el contenido: cada botón muestra solo su sección, y las flechas ← → del teclado o los botones "anterior / siguiente" recorren las 19 en orden. Pase el mouse sobre cualquier encabezado, cifra o etiqueta con ⓘ para ver qué es, de dónde sale y cómo se calcula. Haga clic en una tarjeta, fila, barra o punto para abrir su ficha con la fórmula aplicada a sus números, la verificación contra el Excel y las preguntas para el contratista.
       </p>
     </div>
+    <a class="p75-3d-cta" href="plano3d/index.html" data-tip="Abre el plano 3D en esta misma pestaña y con la misma sesión. Para volver use «← Análisis» o el botón atrás del navegador.">
+      <span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M4 22 16 28 28 22 16 16Z" fill="rgba(57,135,229,.55)"/><path d="M9 19V9l7-4 7 4v10l-7 4z" stroke="#f4a6a5"/><path d="M9 9l7 4 7-4M16 13v10" stroke="#f4a6a5"/></svg></span>
+      <span class="tx"><b data-tip="Plano 3D de los 27 CIV: presupuesto contractual (V0) frente al radicado el 01-09-2026 (V4), sobre la geometría real de OpenStreetMap.">Plano 3D · antes vs. ahora</b><small>Los 27 CIV sobre el mapa real: costos y materiales flotantes, capas del pavimento, redes en el subsuelo, no previstos, 5 paletas y simulación de avance por plazos (8 meses).</small></span>
+      <span class="go">Abrir el plano 3D →</span>
+    </a>
     <div class="dashboard" id="p75KPIs"></div>
     <!-- Resumen ejecutivo -->
     <div class="table-wrap" id="p75ExecWrap">
@@ -1552,6 +1568,7 @@ document.getElementById('loginForm').addEventListener('submit', e => {
   if (u === VALID_USER && p === VALID_PASS) {
     sessionStorage.setItem('auth', 'true');
     sessionStorage.setItem('user', u);
+    if (location.hash === '#plano3d') { location.replace('plano3d/index.html'); return; }
     showApp();
   } else {
     document.getElementById('loginError').style.display = 'block';
